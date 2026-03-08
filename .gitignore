@@ -1,0 +1,23 @@
+# Credentials and secrets
+credentials.json
+token.json
+.env
+
+# Disposable intermediates
+.tmp/
+
+# Large data files (download separately, see README)
+opentargets/20.02_association_data.json.gz
+
+# Raw SEC filings (large, not needed for pipeline)
+raw/
+
+# Python
+*.pyc
+__pycache__/
+
+# Claude Code
+.claude/
+
+# macOS
+.DS_Store

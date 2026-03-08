@@ -1,0 +1,46 @@
+ticker	return_total_pct	outcome	acquirer	source_note
+ACHN	1.7	acquired	Johnson & Johnson ($14.04/sh, Jan 2020)	SEC 8-K, deal announced Nov 2019
+AIMT	40.8	acquired	Nestlé Health Science ($34.50/sh, Sep 2020)	SEC 8-K
+AKCA	-1.9	acquired	Ionis Pharmaceuticals ($18.15/sh, Oct 2020)	SEC 8-K
+ALXN	61.4	acquired	AstraZeneca ($39B, Dec 2020)	SEC 8-K
+AMAG	-16.7	acquired	Covis Pharma ($13.75/sh, Oct 2020)	SEC 8-K
+ARQL	0.5	acquired	Merck ($20/sh, Jan 2020)	SEC 8-K, deal announced Dec 2019
+ARNA	92.4	acquired	Pfizer ($6.7B, Mar 2022)	SEC 8-K
+BHVN	230.0	acquired	Pfizer ($148.50/sh + BHVN spinoff, Oct 2022)	SEC 8-K
+BLUE	-97.0	bankrupt	Filed Chapter 11, acquired by buyers 2024	SEC filings
+BOLD	11.1	acquired	Astellas ($60/sh, Jan 2020)	SEC 8-K
+BPMC	260.0	acquired	Sanofi ($216/sh, Oct 2023)	SEC 8-K
+CCXI	39.9	acquired	Amgen ($3.7B, Oct 2022)	SEC 8-K
+DCPH	-3.4	acquired	ONO Pharmaceutical ($25.60/sh, Jun 2024)	SEC 8-K
+DRNA	118.7	acquired	Novo Nordisk ($3.3B, Dec 2021)	SEC 8-K
+EPZM	105.2	acquired	Ipsen ($1.45B, Jul 2022)	SEC 8-K
+FIXX	-85.0	acquired	Q32 Bio (reverse merger, Jun 2023)	SEC 8-K
+FLXN	-63.0	acquired	Pacira BioSciences ($8.50/sh, Nov 2021)	SEC 8-K
+GBT	-2.6	acquired	Pfizer ($5.4B, Oct 2022)	SEC 8-K
+GTHX	-75.2	acquired	Pharma Solutions (2024)	SEC 8-K
+ICPT	-86.1	acquired	Alfasigma (~$19/sh, 2023)	SEC 8-K
+IMGN	651.4	acquired	AbbVie ($10.1B, Mar 2024)	SEC 8-K
+IMMU	319.5	acquired	Gilead ($21B, Oct 2020)	SEC 8-K
+KDMN	171.4	acquired	Sanofi ($9.50/sh, Oct 2021)	SEC 8-K
+KRTX	227.4	acquired	Bristol Myers Squibb ($14B, Mar 2024)	SEC 8-K
+MDCO	1.8	acquired	Novartis ($85/sh, Jan 2020)	SEC 8-K, deal announced Nov 2019
+MNTA	109.3	acquired	Johnson & Johnson ($6.5B, Aug 2020)	SEC 8-K
+MRTX	-47.3	acquired	Bristol Myers Squibb ($4.8B, Jan 2024)	SEC 8-K
+PGNX	3.6	acquired	Lantheus Holdings ($7.56/sh, Jun 2020)	SEC 8-K
+PRNB	90.3	acquired	Sanofi ($3.68B, Sep 2020)	SEC 8-K
+PTLA	-36.8	acquired	Alexion Pharmaceuticals ($18/sh, Jul 2020)	SEC 8-K
+RARX	113.3	acquired	UCB ($48/sh, Apr 2020)	SEC 8-K
+RDUS	-42.9	acquired	Gurnet Point Capital ($10/sh, Jun 2022)	SEC 8-K
+SAGE	-93.0	acquired	Biogen ($7.22/sh, Dec 2023)	SEC 8-K
+SGEN	109.7	acquired	Pfizer ($43B, Dec 2023)	SEC 8-K
+SPPI	-74.0	acquired	Hanmi Pharmaceutical ($1.12/sh, Sep 2022)	SEC 8-K
+STML	-7.4	acquired	Menarini ($12.50/sh, May 2021)	SEC 8-K
+TPTX	25.0	acquired	Bristol Myers Squibb ($4.1B, Aug 2022)	SEC 8-K
+XLRN	236.4	acquired	Merck ($11.5B, Nov 2021)	SEC 8-K
+YMAB	-86.2	acquired	Advent International (~$5.80/sh, 2024)	SEC 8-K
+ADVM	-100.0	bankrupt		Dissolved 2024
+ALLK	-100.0	bankrupt		Pipeline failure Nov 2021, dissolved 2023
+ATNX	-99.0	bankrupt		Delisted 2023
+AVRO	-90.0	bankrupt		Operations wound down 2022
+CLVS	-100.0	bankrupt		Filed Chapter 11 Dec 2022
+NVTA	-100.0	bankrupt		Filed bankruptcy Feb 2024

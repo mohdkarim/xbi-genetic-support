@@ -1,0 +1,10 @@
+# Core pipeline (scripts 03-06)
+pandas==2.3.3
+numpy==2.0.2
+scipy==1.13.1
+yfinance==1.2.0
+
+# Google Sheets export only (script 07)
+google-auth==2.39.0
+google-auth-oauthlib>=1.0.0
+google-api-python-client>=2.70.0
