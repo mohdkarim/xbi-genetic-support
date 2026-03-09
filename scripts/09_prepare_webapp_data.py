@@ -149,26 +149,24 @@ def build_companies(raw):
 
 
 def build_pipeline():
-    pairs = {}
+    """Build lead-program-only pipeline: one pair per GS company."""
+    # First pass: find lead program row for each GS company
+    # (matching on ticker + lead_efo_id + lead_gene from company-level fields)
+    leads = {}  # ticker -> best row
     with open(PIPELINE_PATH) as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
-            if row["is_scoreable"] != "True":
+            if row["is_gs"] != "True":
                 continue
-            score_str = row["genetic_association_score"]
-            if not score_str or score_str == "":
+            # Match lead program: same gene and disease as company's lead
+            if row["gene_symbol"] != row.get("lead_gene", ""):
                 continue
-            try:
-                score = float(score_str)
-            except ValueError:
+            if row["disease_efo_id"] != row.get("lead_efo_id", ""):
                 continue
-            if score <= 0:
-                continue
-
-            key = (row["ticker"], row["ensembl_id"], row["disease_efo_id"])
-            if key not in pairs or score > pairs[key]["score"]:
+            ticker = row["ticker"]
+            score = float(row["genetic_association_score"] or 0)
+            if ticker not in leads or score > leads[ticker]["_score"]:
                 condition = row["conditions"].split("|")[0].strip() if row["conditions"] else row["disease_efo_id"]
-                # Validation label for OT API rows
                 bq_method = row.get("bq_validation_method", "")
                 validation = ""
                 if row["ot_score_source"] == "ot_recent_fallback":
@@ -176,13 +174,10 @@ def build_pipeline():
                         validation = "bq_confirmed"
                     elif bq_method == "mendelian_ancestor":
                         validation = "mendelian_ancestor"
-                    elif bq_method == "bq_post_2020":
-                        validation = "bq_post_2020"
-                # Evidence date for any BQ-verified rows
                 evidence_date = ""
-                if bq_method in ("bq_direct", "bq_ancestor", "bq_descendant", "mendelian_ancestor", "bq_post_2020"):
+                if bq_method in ("bq_direct", "bq_ancestor", "bq_descendant", "mendelian_ancestor"):
                     evidence_date = row.get("bq_earliest_date", "")
-                pairs[key] = {
+                leads[ticker] = {
                     "gene": row["gene_symbol"],
                     "ensembl_id": row["ensembl_id"],
                     "disease": condition,
@@ -192,13 +187,13 @@ def build_pipeline():
                     "drug": row.get("intervention_name", ""),
                     "validation": validation,
                     "evidence_date": evidence_date,
+                    "_score": score,
                 }
 
     by_ticker = {}
-    for (ticker, _, _), pair in pairs.items():
-        by_ticker.setdefault(ticker, []).append(pair)
-    for ticker in by_ticker:
-        by_ticker[ticker].sort(key=lambda p: -p["score"])
+    for ticker, lead in leads.items():
+        del lead["_score"]
+        by_ticker[ticker] = [lead]
     return by_ticker
 
 
