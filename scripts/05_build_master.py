@@ -73,8 +73,7 @@ company_cols = [
     "is_company_gs_A_at_0_2", "is_company_gs_A_at_0_4", "is_company_gs_A_at_0_8",
     "is_company_gs_B_at_0_05", "is_company_gs_B_at_0_15", "is_company_gs_B_at_0_2",
     "mendelian_only_gs_A",
-    "n_total_programs", "n_gs_programs", "pct_pipeline_gs",
-    "is_gs_A_prop_25", "is_gs_A_prop_33", "is_gs_A_prop_50", "is_gs_A_prop_75",
+    "is_gs_A_prop_10", "is_gs_A_prop_20", "is_gs_A_prop_50", "is_gs_A_prop_70",
 ]
 
 company_meta = (
@@ -272,13 +271,10 @@ for _, best in best_df.iterrows():
     gs_B_020     = best.get("is_company_gs_B_at_0_2", False)
     mend_gs_A    = best.get("mendelian_only_gs_A", False)
 
-    n_total_prog = best.get("n_total_programs", 0)
-    n_gs_prog    = best.get("n_gs_programs", 0)
-    pct_pipe_gs  = best.get("pct_pipeline_gs", 0.0)
-    gs_A_p25     = best.get("is_gs_A_prop_25", False)
-    gs_A_p33     = best.get("is_gs_A_prop_33", False)
+    gs_A_p10     = best.get("is_gs_A_prop_10", False)
+    gs_A_p20     = best.get("is_gs_A_prop_20", False)
     gs_A_p50     = best.get("is_gs_A_prop_50", False)
-    gs_A_p75     = best.get("is_gs_A_prop_75", False)
+    gs_A_p70     = best.get("is_gs_A_prop_70", False)
 
     # Company type
     row_flag = best.get("row_flag", "valid")
@@ -328,13 +324,10 @@ for _, best in best_df.iterrows():
         "gs_B_at_0_15":             bool(gs_B_015),
         "gs_B_at_0_20":             bool(gs_B_020),
         "mendelian_only_gs_A":      bool(mend_gs_A),
-        "n_total_programs":         int(n_total_prog) if pd.notna(n_total_prog) else 0,
-        "n_gs_programs":            int(n_gs_prog) if pd.notna(n_gs_prog) else 0,
-        "pct_pipeline_gs":          round(float(pct_pipe_gs), 4) if pd.notna(pct_pipe_gs) else 0.0,
-        "gs_A_prop_25":             bool(gs_A_p25),
-        "gs_A_prop_33":             bool(gs_A_p33),
+        "gs_A_prop_10":             bool(gs_A_p10),
+        "gs_A_prop_20":             bool(gs_A_p20),
         "gs_A_prop_50":             bool(gs_A_p50),
-        "gs_A_prop_75":             bool(gs_A_p75),
+        "gs_A_prop_70":             bool(gs_A_p70),
         "return_total_pct":         return_total_pct,
         "price_start":              price_start,
         "price_end":                price_end,

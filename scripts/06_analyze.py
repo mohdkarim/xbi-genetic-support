@@ -241,13 +241,13 @@ for thresh_col, thresh_label in [
         "gs_ci_hi":        round(ci[1], 2) if ci[1] is not None else None,
     }
 
-# ── GS-A pipeline-proportion sensitivity ──────────────────────────────────
+# ── GS-A pair-proportion sensitivity ──────────────────────────────────────
 sensitivity_A_prop = {}
 for prop_col, prop_label in [
-    ("gs_A_prop_25",  "25%"),
-    ("gs_A_prop_33",  "33%"),
+    ("gs_A_prop_10",  "10%"),
+    ("gs_A_prop_20",  "20%"),
     ("gs_A_prop_50",  "50%"),
-    ("gs_A_prop_75",  "75%"),
+    ("gs_A_prop_70",  "70%"),
 ]:
     mask = master[prop_col].fillna(False).astype(bool)
     gs_ret   = master.loc[mask,  "return_total_pct"].values
@@ -377,10 +377,10 @@ for th, sv in sorted(sensitivity_A.items(), key=lambda x: float(x[0])):
           f"{alpha_str} {ci_lo:>12} {ci_hi:>10}")
 
 print()
-print("=== Sensitivity: GS-A by pipeline proportion (≥X% of programs GS at OT > 0.10) ===")
+print("=== Sensitivity: GS-A by pair proportion (≥X% of scoreable pairs > 0.10) ===")
 print(f"{'Proportion':<12} {'n_GS':>6} {'n_nonGS':>8} {'GS mean':>10} {'nonGS mean':>12} "
       f"{'Alpha':>8} {'95% CI low':>12} {'95% CI hi':>10}")
-for th in ["25%", "33%", "50%", "75%"]:
+for th in ["10%", "20%", "50%", "70%"]:
     sv = sensitivity_A_prop[th]
     ci_lo = f"{sv['gs_ci_lo']:+.1f}%" if sv['gs_ci_lo'] is not None else "   n/a"
     ci_hi = f"{sv['gs_ci_hi']:+.1f}%" if sv['gs_ci_hi'] is not None else "   n/a"

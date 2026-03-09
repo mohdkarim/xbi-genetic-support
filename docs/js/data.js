@@ -49,44 +49,44 @@ const RESULTS = {
   },
   "sensitivity_proportion": [
     {
-      "label": "25%",
-      "n_gs": 40,
-      "n_nongs": 86,
-      "gs_mean": 45.21,
-      "nongs_mean": 45.96,
-      "alpha": -0.75,
-      "gs_ci_lo": 5.29,
-      "gs_ci_hi": 91.65
+      "label": "10%",
+      "n_gs": 118,
+      "n_nongs": 8,
+      "gs_mean": 48.33,
+      "nongs_mean": 7.23,
+      "alpha": 41.1,
+      "gs_ci_lo": 21.72,
+      "gs_ci_hi": 79.2
     },
     {
-      "label": "33%",
-      "n_gs": 31,
-      "n_nongs": 95,
-      "gs_mean": 37.02,
-      "nongs_mean": 48.56,
-      "alpha": -11.54,
-      "gs_ci_lo": -14.83,
-      "gs_ci_hi": 99.1
+      "label": "20%",
+      "n_gs": 118,
+      "n_nongs": 8,
+      "gs_mean": 48.33,
+      "nongs_mean": 7.23,
+      "alpha": 41.1,
+      "gs_ci_lo": 21.72,
+      "gs_ci_hi": 79.2
     },
     {
       "label": "50%",
-      "n_gs": 16,
-      "n_nongs": 110,
-      "gs_mean": 17.89,
-      "nongs_mean": 49.77,
-      "alpha": -31.88,
-      "gs_ci_lo": -42.76,
-      "gs_ci_hi": 90.82
+      "n_gs": 118,
+      "n_nongs": 8,
+      "gs_mean": 48.33,
+      "nongs_mean": 7.23,
+      "alpha": 41.1,
+      "gs_ci_lo": 21.72,
+      "gs_ci_hi": 79.2
     },
     {
-      "label": "75%",
-      "n_gs": 7,
-      "n_nongs": 119,
-      "gs_mean": -69.73,
-      "nongs_mean": 52.51,
-      "alpha": -122.24,
-      "gs_ci_lo": -94.13,
-      "gs_ci_hi": -42.66
+      "label": "70%",
+      "n_gs": 117,
+      "n_nongs": 9,
+      "gs_mean": 44.98,
+      "nongs_mean": 55.32,
+      "alpha": -10.34,
+      "gs_ci_lo": 17.04,
+      "gs_ci_hi": 75.76
     }
   ],
   "subgroup": {

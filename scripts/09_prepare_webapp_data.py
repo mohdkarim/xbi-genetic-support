@@ -101,7 +101,7 @@ def build_results(raw):
     }
 
     # Convert proportion sensitivity from dict to sorted array
-    for key in ["25%", "33%", "50%", "75%"]:
+    for key in ["10%", "20%", "50%", "70%"]:
         entry = raw["sensitivity_GS_A_proportion"][key]
         results["sensitivity_proportion"].append({
             "label": key,

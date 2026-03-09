@@ -175,7 +175,7 @@ GERMLINE_GENETIC_SOURCES = {
 GS_THRESHOLDS = [0.05, 0.10, 0.15, 0.20]       # GS-B sensitivity
 GS_A_THRESHOLDS = [0.1, 0.2, 0.4, 0.8]         # GS-A sensitivity
 GS_PRIMARY_THRESHOLD = 0.10  # Main threshold
-GS_A_PROPORTION_THRESHOLDS = [0.25, 0.33, 0.50, 0.75]  # GS-A pipeline-proportion sensitivity
+GS_A_PROPORTION_THRESHOLDS = [0.10, 0.20, 0.50, 0.70]  # GS-A pair-proportion sensitivity
 
 
 # ─── Helper: OT GraphQL query with retry ─────────────────────────────────────
@@ -584,37 +584,13 @@ def main():
     if primary_A_col in company_stats.columns:
         company_stats.drop(columns=[primary_A_col], inplace=True)
 
-    # GS-A pipeline-proportion: gs_programs / total_programs at OT > 0.10
-    # A "program" = unique (intervention_name, conditions) among valid rows
-    # A program is GS if ANY of its rows has genetic_association_score > 0.10
-    valid_rows = df[df["row_flag"] == "valid"]
-    program_gs = (
-        valid_rows.groupby(["ticker", "intervention_name", "conditions"])
-        ["genetic_association_score"]
-        .apply(lambda x: (x > GS_PRIMARY_THRESHOLD).any())
-        .reset_index(name="is_gs_program")
-    )
-    n_total_programs = program_gs.groupby("ticker").size().rename("n_total_programs")
-    n_gs_programs = (
-        program_gs[program_gs["is_gs_program"]]
-        .groupby("ticker").size().rename("n_gs_programs")
-    )
-    prop_stats = pd.DataFrame({
-        "n_total_programs": n_total_programs,
-        "n_gs_programs": n_gs_programs,
-    }).fillna({"n_gs_programs": 0}).astype(int).reset_index()
-    prop_stats["pct_pipeline_gs"] = (
-        prop_stats["n_gs_programs"] / prop_stats["n_total_programs"]
-    )
-
-    # Classify at each proportion threshold
+    # GS-A pair-proportion sensitivity: ≥X% of scoreable pairs > 0.10
+    # Same definition as GS-A but with varying proportion thresholds
     for pct_thresh in GS_A_PROPORTION_THRESHOLDS:
         col = f"is_gs_A_prop_{int(pct_thresh * 100)}"
-        prop_stats[col] = prop_stats["pct_pipeline_gs"] >= pct_thresh
-
-    # NOTE: prop_stats covers all tickers with valid rows (not just scoreable).
-    # Don't merge into company_stats (which only has scoreable tickers) —
-    # merge directly into df after company_stats merge so all tickers get values.
+        company_stats[col] = (company_stats["pct_gs_pairs"] >= pct_thresh).where(
+            company_stats["n_scoreable_pairs"] > 0, False
+        )
 
     # GS-B at multiple thresholds: any Phase 2/3/4 pair > threshold
     # Include split phases that span Phase 2+ territory
@@ -680,16 +656,7 @@ def main():
         if col in df.columns:
             df[col] = df[col].fillna(False)
 
-    # Merge pipeline-proportion stats directly into df (covers ALL tickers with valid rows)
-    prop_cols = (["n_total_programs", "n_gs_programs", "pct_pipeline_gs"]
-                 + [f"is_gs_A_prop_{int(t*100)}" for t in GS_A_PROPORTION_THRESHOLDS])
-    df = df.merge(prop_stats[["ticker"] + prop_cols], on="ticker", how="left")
-    for c in ["n_total_programs", "n_gs_programs"]:
-        df[c] = df[c].fillna(0).astype(int)
-    df["pct_pipeline_gs"] = df["pct_pipeline_gs"].fillna(0.0)
-    for pct_thresh in GS_A_PROPORTION_THRESHOLDS:
-        col = f"is_gs_A_prop_{int(pct_thresh * 100)}"
-        df[col] = df[col].fillna(False)
+    # Pair-proportion columns are already in company_stats (merged above via gs_cols)
 
     # ── Output ───────────────────────────────────────────────────────────────
     print(f"\n{'=' * 70}")
@@ -741,14 +708,12 @@ def main():
             n = gs_summary[col].sum()
             print(f"  GS-A at {thresh:.2f}:                      {n:>3} tickers")
 
-    print(f"\nSensitivity thresholds (GS-A, pipeline proportion ≥ X% programs GS at OT > 0.10):")
-    # Use per-ticker deduped view from df (prop_stats covers all tickers)
-    ticker_props = df.drop_duplicates("ticker")
+    print(f"\nSensitivity thresholds (GS-A, ≥X% of scoreable pairs > 0.10):")
     for pct_thresh in GS_A_PROPORTION_THRESHOLDS:
         col = f"is_gs_A_prop_{int(pct_thresh * 100)}"
-        if col in ticker_props.columns:
-            n = ticker_props[col].sum()
-            print(f"  GS-A at ≥{pct_thresh:.0%} pipeline:             {n:>3} tickers")
+        if col in gs_summary.columns:
+            n = gs_summary[col].sum()
+            print(f"  GS-A at ≥{pct_thresh:.0%} of pairs:             {n:>3} tickers")
 
     print(f"\nSensitivity thresholds (GS-B):")
     for thresh in GS_THRESHOLDS:
