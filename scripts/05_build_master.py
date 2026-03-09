@@ -67,13 +67,12 @@ print("\n[2/5] Extracting company-level metadata...")
 
 # Columns that are already company-level (same value on every row for a ticker)
 company_cols = [
-    "n_scoreable_pairs", "n_gs_pairs", "pct_gs_pairs",
-    "best_genetic_assoc_score",
-    "is_company_gs_A", "is_company_gs_B",
-    "is_company_gs_A_at_0_2", "is_company_gs_A_at_0_4", "is_company_gs_A_at_0_8",
-    "is_company_gs_B_at_0_05", "is_company_gs_B_at_0_15", "is_company_gs_B_at_0_2",
-    "mendelian_only_gs_A",
-    "is_gs_A_prop_10", "is_gs_A_prop_20", "is_gs_A_prop_50", "is_gs_A_prop_70",
+    "n_scoreable_pairs", "n_gs_pairs", "best_genetic_assoc_score",
+    "lead_phase", "lead_phase_rank", "lead_score",
+    "lead_gene", "lead_ensembl_id", "lead_efo_id", "lead_conditions",
+    "lead_ot_source", "lead_evidence_predates_2020", "lead_datasources",
+    "is_gs", "is_gs_at_0_1", "is_gs_at_0_5", "is_gs_at_0_8", "is_gs_at_0_95",
+    "mendelian_only_gs",
 ]
 
 company_meta = (
@@ -256,25 +255,25 @@ for _, best in best_df.iterrows():
     pipe_source     = pipeline_source_map.get(ticker, "ctgov")
 
     # GS flags from per-ticker meta (first occurrence already consistent)
-    n_sc   = best.get("n_scoreable_pairs")
-    n_gs   = best.get("n_gs_pairs")
-    pct_gs = best.get("pct_gs_pairs")
+    n_sc       = best.get("n_scoreable_pairs")
+    n_gs       = best.get("n_gs_pairs")
     best_score = best.get("best_genetic_assoc_score")
 
-    gs_A         = best.get("is_company_gs_A", False)
-    gs_A_020     = best.get("is_company_gs_A_at_0_2", False)
-    gs_A_040     = best.get("is_company_gs_A_at_0_4", False)
-    gs_A_080     = best.get("is_company_gs_A_at_0_8", False)
-    gs_B         = best.get("is_company_gs_B", False)
-    gs_B_005     = best.get("is_company_gs_B_at_0_05", False)
-    gs_B_015     = best.get("is_company_gs_B_at_0_15", False)
-    gs_B_020     = best.get("is_company_gs_B_at_0_2", False)
-    mend_gs_A    = best.get("mendelian_only_gs_A", False)
+    # Lead program details
+    lead_phase  = best.get("lead_phase", "")
+    lead_score  = best.get("lead_score")
+    lead_gene_sym = best.get("lead_gene", "")
+    lead_efo    = best.get("lead_efo_id", "")
+    lead_cond   = best.get("lead_conditions", "")
+    lead_ot_src = best.get("lead_ot_source", "")
+    lead_ev_pred = best.get("lead_evidence_predates_2020", "")
 
-    gs_A_p10     = best.get("is_gs_A_prop_10", False)
-    gs_A_p20     = best.get("is_gs_A_prop_20", False)
-    gs_A_p50     = best.get("is_gs_A_prop_50", False)
-    gs_A_p70     = best.get("is_gs_A_prop_70", False)
+    is_gs       = best.get("is_gs", False)
+    is_gs_010   = best.get("is_gs_at_0_1", False)
+    is_gs_050   = best.get("is_gs_at_0_5", False)
+    is_gs_080   = best.get("is_gs_at_0_8", False)
+    is_gs_095   = best.get("is_gs_at_0_95", False)
+    mend_gs     = best.get("mendelian_only_gs", False)
 
     # Company type
     row_flag = best.get("row_flag", "valid")
@@ -308,26 +307,25 @@ for _, best in best_df.iterrows():
         "efo_id":                   efo_id if pd.notna(efo_id) else "",
         "n_scoreable_pairs":        int(n_sc)   if pd.notna(n_sc)   else 0,
         "n_gs_pairs":               int(n_gs)   if pd.notna(n_gs)   else 0,
-        "pct_gs_pairs":             round(float(pct_gs), 4) if pd.notna(pct_gs) else None,
         "best_genetic_assoc_score": round(float(best_score), 6) if pd.notna(best_score) else None,
+        "lead_phase":               str(lead_phase) if pd.notna(lead_phase) else "",
+        "lead_score":               round(float(lead_score), 6) if pd.notna(lead_score) else None,
+        "lead_gene":                str(lead_gene_sym) if pd.notna(lead_gene_sym) else "",
+        "lead_efo_id":              str(lead_efo) if pd.notna(lead_efo) else "",
+        "lead_conditions":          str(lead_cond)[:120] if pd.notna(lead_cond) else "",
+        "lead_ot_source":           str(lead_ot_src) if pd.notna(lead_ot_src) else "",
+        "lead_evidence_predates":   str(lead_ev_pred) if pd.notna(lead_ev_pred) else "",
         "best_pair_ga_score":       round(float(ga_score), 6) if pd.notna(ga_score) else None,
         "ot_score_source_best":     str(ot_src) if pd.notna(ot_src) else "",
         "ot_score_sources_all":     ot_sources,
         "evidence_predates_2020":   str(evidence_pred),
         "genetic_datasources":      str(gen_datasrc) if pd.notna(gen_datasrc) else "",
-        "is_company_gs_A":          bool(gs_A),
-        "gs_A_at_0_20":             bool(gs_A_020),
-        "gs_A_at_0_40":             bool(gs_A_040),
-        "gs_A_at_0_80":             bool(gs_A_080),
-        "is_company_gs_B":          bool(gs_B),
-        "gs_B_at_0_05":             bool(gs_B_005),
-        "gs_B_at_0_15":             bool(gs_B_015),
-        "gs_B_at_0_20":             bool(gs_B_020),
-        "mendelian_only_gs_A":      bool(mend_gs_A),
-        "gs_A_prop_10":             bool(gs_A_p10),
-        "gs_A_prop_20":             bool(gs_A_p20),
-        "gs_A_prop_50":             bool(gs_A_p50),
-        "gs_A_prop_70":             bool(gs_A_p70),
+        "is_gs":                    bool(is_gs),
+        "is_gs_at_0_10":            bool(is_gs_010),
+        "is_gs_at_0_50":            bool(is_gs_050),
+        "is_gs_at_0_80":            bool(is_gs_080),
+        "is_gs_at_0_95":            bool(is_gs_095),
+        "mendelian_only_gs":        bool(mend_gs),
         "return_total_pct":         return_total_pct,
         "price_start":              price_start,
         "price_end":                price_end,
@@ -350,17 +348,15 @@ print("\n[5/5] Validation & summary...")
 
 n_returns    = master["return_total_pct"].notna().sum()
 n_missing_rt = master["return_total_pct"].isna().sum()
-n_gs_A       = master["is_company_gs_A"].sum()
-n_gs_B       = master["is_company_gs_B"].sum()
-n_mend       = master["mendelian_only_gs_A"].sum()
+n_gs         = master["is_gs"].sum()
+n_mend       = master["mendelian_only_gs"].sum()
 n_diag       = (master["company_type"] == "diagnostics_platform").sum()
 
 print(f"\n  Returns coverage: {n_returns}/{len(master)} ({n_missing_rt} missing)")
-print(f"  GS-A (≥50% pairs >0.10):     {n_gs_A} tickers")
-print(f"  GS-B (any Ph2/3/4 >0.10):    {n_gs_B} tickers")
-print(f"  Mendelian-only GS-A:          {n_mend} tickers")
-print(f"  Diagnostic platforms:         {n_diag} tickers")
-print(f"  non-GS-A:                     {len(master) - n_gs_A}")
+print(f"  GS (lead program >0.10):      {n_gs} tickers")
+print(f"  Mendelian-only GS:             {n_mend} tickers")
+print(f"  Diagnostic platforms:          {n_diag} tickers")
+print(f"  non-GS:                        {len(master) - n_gs}")
 
 print("\n  Outcome distribution:")
 print(master["outcome"].value_counts().to_string())
@@ -382,13 +378,14 @@ print("\n  Spot checks:")
 for ticker, note in spot_checks:
     row = master[master["ticker"] == ticker]
     if len(row) == 0:
-        print(f"    ❌ {ticker}: NOT FOUND — {note}")
+        print(f"    {ticker}: NOT FOUND — {note}")
         continue
     r = row.iloc[0]
     ret_str = f"return={r['return_total_pct']:.1f}%" if pd.notna(r['return_total_pct']) else "return=MISSING"
-    gs_str = f"gs_A={r['is_company_gs_A']}, gs_B={r['is_company_gs_B']}"
-    score_str = f"best_score={r['best_genetic_assoc_score']}" if pd.notna(r['best_genetic_assoc_score']) else "best_score=null"
-    print(f"    {ticker}: {ret_str}, {gs_str}, {score_str}  ← {note}")
+    gs_str = f"gs={r['is_gs']}"
+    lead_str = f"lead_score={r['lead_score']:.4f}" if pd.notna(r['lead_score']) else "lead_score=null"
+    lead_phase = r.get('lead_phase', '')
+    print(f"    {ticker}: {ret_str}, {gs_str}, {lead_str}, phase={lead_phase}  <- {note}")
 
 # ── Write output ─────────────────────────────────────────────────────────────
 master.to_csv(OUT_TSV, sep="\t", index=False)

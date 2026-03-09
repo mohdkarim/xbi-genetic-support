@@ -146,6 +146,29 @@ section.section-alt { background: var(--bg-alt); }
 .results-table tr:hover { background: var(--gray-light); }
 .results-table .row-label { font-weight: 600; color: var(--text); }
 
+/* === Threshold Toggle === */
+.threshold-toggle-wrap {
+  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+}
+.threshold-label {
+  font-size: 0.85rem; font-weight: 600; color: var(--text-secondary);
+}
+.threshold-toggle {
+  display: flex; gap: 0; border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; background: var(--bg-card);
+}
+.threshold-btn {
+  font-family: inherit; font-size: 0.82rem; font-weight: 600;
+  padding: 8px 16px; border: none; background: transparent;
+  color: var(--text-secondary); cursor: pointer; transition: all 0.15s;
+  border-right: 1px solid var(--border);
+}
+.threshold-btn:last-child { border-right: none; }
+.threshold-btn:hover { background: var(--gray-light); color: var(--text); }
+.threshold-btn.active {
+  background: var(--blue); color: white;
+}
+
 /* === Charts === */
 .chart-container {
   background: var(--bg-card); border-radius: var(--radius);
@@ -159,6 +182,24 @@ section.section-alt { background: var(--bg-alt); }
 }
 .chart-grid {
   display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+}
+.chart-header-row {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  margin-bottom: 8px;
+}
+.chart-header-row .chart-title { margin-bottom: 4px; }
+.chart-header-row .chart-subtitle { margin-bottom: 0; }
+
+/* === Scatter Dropdown === */
+.scatter-dropdown {
+  font-family: inherit; font-size: 0.82rem; font-weight: 600;
+  padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg-card); color: var(--text); cursor: pointer;
+  flex-shrink: 0;
+}
+.scatter-dropdown:focus {
+  outline: none; border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1);
 }
 
 /* === Company Table === */
@@ -250,13 +291,6 @@ section.section-alt { background: var(--bg-alt); }
 }
 .pipeline-source { font-size: 0.72rem; color: var(--text-muted); }
 
-/* === Sensitivity === */
-.sensitivity-note {
-  background: var(--blue-light); border-radius: 8px;
-  padding: 16px 20px; font-size: 0.85rem; color: #1e40af;
-  margin-bottom: 24px; line-height: 1.5;
-}
-
 /* === Methodology === */
 .methods-content {
   max-width: 800px; margin: 0 auto;
@@ -295,4 +329,6 @@ section.section-alt { background: var(--bg-alt); }
   .filter-count { margin-left: 0; }
   .company-table { font-size: 0.75rem; }
   .company-table th, .company-table td { padding: 6px 8px; }
+  .threshold-toggle-wrap { flex-direction: column; align-items: flex-start; }
+  .chart-header-row { flex-direction: column; gap: 8px; }
 }

@@ -2,6 +2,16 @@
  * table.js — Company table sort, filter, and rendering
  */
 
+const PHASE_RANK = {
+  'PHASE4': 7, 'PHASE3': 6, 'PHASE2/PHASE3': 5, 'PHASE2': 4,
+  'PHASE1/PHASE2': 3, 'PHASE1': 2, 'EARLY_PHASE1': 1,
+};
+
+const PHASE_ABBREV = {
+  'PHASE4': 'P4', 'PHASE3': 'P3', 'PHASE2/PHASE3': 'P2/3', 'PHASE2': 'P2',
+  'PHASE1/PHASE2': 'P1/2', 'PHASE1': 'P1', 'EARLY_PHASE1': 'EP1',
+};
+
 let currentSort = { key: 'return_pct', dir: 'desc' };
 let filteredCompanies = [...COMPANIES];
 
@@ -12,8 +22,8 @@ function getFilteredCompanies() {
   const search = document.getElementById('filter-search').value.toLowerCase().trim();
 
   return COMPANIES.filter(c => {
-    if (gsFilter === 'gs' && !c.is_gs_a) return false;
-    if (gsFilter === 'nongs' && c.is_gs_a) return false;
+    if (gsFilter === 'gs' && !c.is_gs) return false;
+    if (gsFilter === 'nongs' && c.is_gs) return false;
     if (gsFilter === 'mendelian' && !c.mendelian_only) return false;
     if (outcomeFilter !== 'all' && c.outcome !== outcomeFilter) return false;
     if (oncologyFilter === 'oncology' && !c.is_oncology) return false;
@@ -33,6 +43,11 @@ function sortCompanies(companies) {
     if (va == null && vb == null) return 0;
     if (va == null) return 1;
     if (vb == null) return -1;
+    // Special: sort lead_phase by rank
+    if (key === 'lead_phase') {
+      va = PHASE_RANK[va] || 0;
+      vb = PHASE_RANK[vb] || 0;
+    }
     // Booleans
     if (typeof va === 'boolean') { va = va ? 1 : 0; vb = vb ? 1 : 0; }
     // Strings
@@ -54,6 +69,8 @@ function renderTableBody() {
   };
 
   const fmtScore = (v) => v != null ? v.toFixed(2) : '<span class="dash">—</span>';
+
+  const fmtPhase = (v) => v != null ? (PHASE_ABBREV[v] || v) : '<span class="dash">—</span>';
 
   const badge = (outcome) => {
     const cls = { active: 'badge-active', acquired: 'badge-acquired', bankrupt: 'badge-bankrupt' };
@@ -89,9 +106,9 @@ function renderTableBody() {
         <td class="ticker">${chevron}${c.ticker}</td>
         <td>${c.company}</td>
         <td>${fmt(c.return_pct)}</td>
-        <td>${c.is_gs_a ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
-        <td>${fmtScore(c.best_score)}</td>
-        <td>${c.n_gs}/${c.n_scoreable}</td>
+        <td>${c.is_gs ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
+        <td>${fmtScore(c.lead_score)}</td>
+        <td>${fmtPhase(c.lead_phase)}</td>
         <td>${badge(c.outcome)}</td>
         <td>${c.is_oncology ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
       </tr>
@@ -133,7 +150,6 @@ function initExpandToggle() {
   document.getElementById('company-tbody').addEventListener('click', (e) => {
     const row = e.target.closest('tr.expandable');
     if (!row) return;
-    const ticker = row.dataset.ticker;
     const isOpen = row.classList.contains('expanded');
 
     // Toggle expanded state

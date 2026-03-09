@@ -10,23 +10,32 @@ from pathlib import Path
 
 BASE = Path(__file__).parent.parent
 RESULTS_PATH = BASE / "final" / "portfolio_results.json"
-QUARTERLY_PATH = BASE / "final" / "quarterly_returns.tsv"
+QUARTERLY_JSON = BASE / "final" / "quarterly_returns.json"
+QUARTERLY_TSV = BASE / "final" / "quarterly_returns.tsv"
 PIPELINE_PATH = BASE / "processed" / "scored_pipeline.tsv"
 OUT_PATH = BASE / "docs" / "js" / "data.js"
 
 
 def load_results():
-    """Load portfolio_results.json, replacing NaN with null before parsing."""
     text = RESULTS_PATH.read_text()
-    # Python's json.dump serializes float('nan') as NaN (invalid JSON)
     text = re.sub(r'\bNaN\b', 'null', text)
     return json.loads(text)
 
 
 def load_quarterly():
-    """Load quarterly_returns.tsv and prepend initial $1000 row."""
+    """Load quarterly data for all thresholds from JSON, with TSV fallback."""
+    if QUARTERLY_JSON.exists():
+        with open(QUARTERLY_JSON) as f:
+            all_quarterly = json.load(f)
+        # Prepend initial $1000 row to each threshold
+        for thresh, rows in all_quarterly.items():
+            initial = {"date": "2020-01-02", "gs": 1000, "nongs": 1000, "xbi": 1000, "sp500": 1000}
+            rows.insert(0, initial)
+        return all_quarterly
+
+    # Fallback: TSV (primary threshold only)
     rows = []
-    with open(QUARTERLY_PATH) as f:
+    with open(QUARTERLY_TSV) as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
             rows.append({
@@ -36,52 +45,50 @@ def load_quarterly():
                 "xbi": round(float(row["xbi_etf_value"]), 2),
                 "sp500": round(float(row["sp500_value"]), 2),
             })
-
-    # Prepend initial $1000 row
     initial = {"date": "2020-01-02", "gs": 1000, "nongs": 1000, "xbi": 1000, "sp500": 1000}
     rows.insert(0, initial)
-    return rows
+    return {"0.10": rows}
 
 
 def compute_drawdowns(quarterly):
-    """Compute drawdown from peak for each portfolio at each quarter."""
-    portfolios = ["gs", "nongs", "xbi"]
-    running_max = {p: 0 for p in portfolios}
-
-    for row in quarterly:
-        for p in portfolios:
-            val = row[p]
-            if val > running_max[p]:
-                running_max[p] = val
-            dd = round((val - running_max[p]) / running_max[p] * 100, 2)
-            row[f"{p}_dd"] = dd
-
+    """Compute drawdown from peak for each portfolio at each quarter, for all thresholds."""
+    for thresh, rows in quarterly.items():
+        portfolios = ["gs", "nongs", "xbi"]
+        running_max = {p: 0 for p in portfolios}
+        for row in rows:
+            for p in portfolios:
+                val = row.get(p)
+                if val is None:
+                    continue
+                if val > running_max[p]:
+                    running_max[p] = val
+                dd = round((val - running_max[p]) / running_max[p] * 100, 2) if running_max[p] > 0 else 0
+                row[f"{p}_dd"] = dd
     return quarterly
 
 
 def build_results(raw):
-    """Restructure results for the frontend."""
     xbi_return = raw["benchmarks"]["XBI_return_pct"]
-    gs_a = raw["primary_GS_A"]
+    primary = raw["primary"]
 
     results = {
         "methodology": raw["methodology"],
         "benchmarks": raw["benchmarks"],
         "primary": {
-            "n_gs": gs_a["n_gs"],
-            "n_nongs": gs_a["n_nongs"],
-            "gs_mean": gs_a["gs_mean_return_pct"],
-            "nongs_mean": gs_a["nongs_mean_return_pct"],
-            "gs_median": gs_a["gs_median_return_pct"],
-            "nongs_median": gs_a["nongs_median_return_pct"],
-            "gs_ci_lo": gs_a["gs_ci_lo"],
-            "gs_ci_hi": gs_a["gs_ci_hi"],
-            "nongs_ci_lo": gs_a["nongs_ci_lo"],
-            "nongs_ci_hi": gs_a["nongs_ci_hi"],
-            "gs_dollar": gs_a["gs_dollar_1000"],
-            "nongs_dollar": gs_a["nongs_dollar_1000"],
-            "alpha_vs_nongs": gs_a["alpha_pct"],
-            "alpha_vs_xbi": round(gs_a["gs_mean_return_pct"] - xbi_return, 2),
+            "n_gs": primary["n_gs"],
+            "n_nongs": primary["n_nongs"],
+            "gs_mean": primary["gs_mean_return_pct"],
+            "nongs_mean": primary["nongs_mean_return_pct"],
+            "gs_median": primary["gs_median_return_pct"],
+            "nongs_median": primary["nongs_median_return_pct"],
+            "gs_ci_lo": primary["gs_ci_lo"],
+            "gs_ci_hi": primary["gs_ci_hi"],
+            "nongs_ci_lo": primary["nongs_ci_lo"],
+            "nongs_ci_hi": primary["nongs_ci_hi"],
+            "gs_dollar": primary["gs_dollar_1000"],
+            "nongs_dollar": primary["nongs_dollar_1000"],
+            "alpha_vs_nongs": primary["alpha_pct"],
+            "alpha_vs_xbi": round(primary["gs_mean_return_pct"] - xbi_return, 2),
         },
         "mendelian": {
             "n_gs": raw["mendelian_only"]["n_gs"],
@@ -96,14 +103,13 @@ def build_results(raw):
             "nongs_ci_hi": raw["mendelian_only"]["nongs_ci_hi"],
             "alpha": raw["mendelian_only"]["alpha_pct"],
         },
-        "sensitivity_proportion": [],
+        "sensitivity": [],
         "subgroup": raw["subgroup"],
     }
 
-    # Convert proportion sensitivity from dict to sorted array
-    for key in ["10%", "20%", "50%", "70%"]:
-        entry = raw["sensitivity_GS_A_proportion"][key]
-        results["sensitivity_proportion"].append({
+    for key in ["0.10", "0.50", "0.80", "0.95"]:
+        entry = raw["sensitivity"][key]
+        results["sensitivity"].append({
             "label": key,
             "n_gs": entry["n_gs"],
             "n_nongs": entry["n_nongs"],
@@ -118,7 +124,6 @@ def build_results(raw):
 
 
 def build_companies(raw):
-    """Extract curated company list from all_companies."""
     companies = []
     for c in raw["all_companies"]:
         companies.append({
@@ -126,12 +131,15 @@ def build_companies(raw):
             "company": c["company"],
             "return_pct": c["return_total_pct"],
             "outcome": c["outcome"],
-            "is_gs_a": c["is_company_gs_A"],
-            "mendelian_only": c["mendelian_only_gs_A"],
+            "is_gs": c["is_gs"],
+            "mendelian_only": c["mendelian_only_gs"],
+            "lead_score": c["lead_score"],
+            "lead_phase": c["lead_phase"],
+            "lead_gene": c["lead_gene"],
+            "lead_conditions": c["lead_conditions"],
             "best_score": c["best_genetic_assoc_score"],
             "n_scoreable": c["n_scoreable_pairs"],
             "n_gs": c["n_gs_pairs"],
-            "pct_gs": c["pct_gs_pairs"],
             "is_oncology": c["is_oncology_primary"],
             "score_source": c["ot_score_source_best"],
         })
@@ -139,12 +147,7 @@ def build_companies(raw):
 
 
 def build_pipeline():
-    """Extract deduplicated scoreable gene-disease pairs per company from scored_pipeline.tsv.
-
-    Returns dict mapping ticker -> list of {gene, ensembl_id, disease, efo_id, score, source}.
-    Deduplicates on (ticker, ensembl_id, disease_efo_id), keeping highest score.
-    """
-    pairs = {}  # (ticker, ensembl_id, efo_id) -> row dict
+    pairs = {}
     with open(PIPELINE_PATH) as f:
         reader = csv.DictReader(f, delimiter='\t')
         for row in reader:
@@ -162,7 +165,6 @@ def build_pipeline():
 
             key = (row["ticker"], row["ensembl_id"], row["disease_efo_id"])
             if key not in pairs or score > pairs[key]["score"]:
-                # Use first condition label (before pipe) as display name
                 condition = row["conditions"].split("|")[0].strip() if row["conditions"] else row["disease_efo_id"]
                 pairs[key] = {
                     "gene": row["gene_symbol"],
@@ -173,20 +175,15 @@ def build_pipeline():
                     "source": row["ot_score_source"],
                 }
 
-    # Group by ticker
     by_ticker = {}
     for (ticker, _, _), pair in pairs.items():
         by_ticker.setdefault(ticker, []).append(pair)
-
-    # Sort each company's pairs by score descending
     for ticker in by_ticker:
         by_ticker[ticker].sort(key=lambda p: -p["score"])
-
     return by_ticker
 
 
 def write_js(results, companies, quarterly, pipeline):
-    """Write all data as JS constants to docs/js/data.js."""
     parts = []
     parts.append(f"const RESULTS = {json.dumps(results, indent=2)};")
     parts.append(f"const COMPANIES = {json.dumps(companies, indent=2)};")
@@ -202,13 +199,17 @@ def main():
     print(f"Loaded portfolio_results.json: {len(raw['all_companies'])} companies")
 
     quarterly = load_quarterly()
-    print(f"Loaded quarterly_returns.tsv: {len(quarterly)} rows (including initial)")
+    thresholds = list(quarterly.keys())
+    n_rows = len(next(iter(quarterly.values())))
+    print(f"Loaded quarterly data: {len(thresholds)} thresholds, {n_rows} rows each")
 
     quarterly = compute_drawdowns(quarterly)
-    # Report max drawdowns
-    for p in ["gs", "nongs", "xbi"]:
-        max_dd = min(row[f"{p}_dd"] for row in quarterly)
-        print(f"  {p} max drawdown: {max_dd}%")
+    for thresh in thresholds:
+        rows = quarterly[thresh]
+        for p in ["gs", "nongs", "xbi"]:
+            vals = [row.get(f"{p}_dd", 0) for row in rows]
+            max_dd = min(vals) if vals else 0
+            print(f"  [{thresh}] {p} max drawdown: {max_dd}%")
 
     results = build_results(raw)
     companies = build_companies(raw)

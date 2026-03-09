@@ -20,8 +20,8 @@
       <ul class="nav-links">
         <li><a href="#findings">Findings</a></li>
         <li><a href="#performance">Performance</a></li>
+        <li><a href="#analysis">Analysis</a></li>
         <li><a href="#companies">Companies</a></li>
-        <li><a href="#sensitivity">Sensitivity</a></li>
         <li><a href="#methods">Methods</a></li>
         <li><a href="https://github.com/mohdkarim/xbi-genetic-support" target="_blank" class="nav-code">Code</a></li>
       </ul>
@@ -57,6 +57,16 @@
         <h2 class="section-title">Portfolio Performance</h2>
         <p class="section-subtitle">Equal-weight portfolios of genetically-supported vs non-supported companies, benchmarked against XBI ETF and S&P 500.</p>
 
+        <div class="threshold-toggle-wrap">
+          <span class="threshold-label">GS Score Threshold:</span>
+          <div class="threshold-toggle">
+            <button class="threshold-btn active" data-threshold="0.10">&gt;0.10</button>
+            <button class="threshold-btn" data-threshold="0.50">&gt;0.50</button>
+            <button class="threshold-btn" data-threshold="0.80">&gt;0.80</button>
+            <button class="threshold-btn" data-threshold="0.95">&gt;0.95</button>
+          </div>
+        </div>
+
         <div class="chart-container">
           <h3 class="chart-title">$1,000 Invested January 2, 2020</h3>
           <p class="chart-subtitle">Cumulative portfolio value over time</p>
@@ -71,8 +81,45 @@
       </div>
     </section>
 
-    <!-- Section 3: Companies -->
-    <section id="companies">
+    <!-- Section 3: Analysis -->
+    <section id="analysis">
+      <div class="container">
+        <h2 class="section-title">Analysis</h2>
+        <p class="section-subtitle">Testing robustness of the genetic alpha signal across different thresholds and evidence standards.</p>
+
+        <div class="chart-container">
+          <div class="chart-header-row">
+            <div>
+              <h3 class="chart-title">Genetic Score vs Return</h3>
+              <p class="chart-subtitle">Each dot is a company — hover for details. Dashed line shows the GS classification threshold.</p>
+            </div>
+            <select id="scatter-threshold" class="scatter-dropdown">
+              <option value="0.10">&gt;0.10 (primary)</option>
+              <option value="0.50">&gt;0.50</option>
+              <option value="0.80">&gt;0.80</option>
+              <option value="0.95">&gt;0.95</option>
+            </select>
+          </div>
+          <div id="scatter-chart" style="width:100%;height:450px;"></div>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-container">
+            <h3 class="chart-title">Evidence Quality</h3>
+            <p class="chart-subtitle">Mendelian-only evidence (zero look-ahead bias) vs all evidence types</p>
+            <div id="mendelian-chart" style="width:100%;height:400px;"></div>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Score Threshold Sensitivity</h3>
+            <p class="chart-subtitle">Alpha increases monotonically with higher genetic association score thresholds</p>
+            <div id="threshold-chart" style="width:100%;height:400px;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Companies -->
+    <section id="companies" class="section-alt">
       <div class="container">
         <h2 class="section-title">Company Explorer</h2>
         <p class="section-subtitle">All 126 companies in the XBI January 2020 universe with genetic support classification and returns.</p>
@@ -106,9 +153,9 @@
                 <th data-sort="ticker">Ticker <span class="sort-arrow"></span></th>
                 <th data-sort="company">Company <span class="sort-arrow"></span></th>
                 <th data-sort="return_pct">Return <span class="th-tip" data-tip="Total stock return from Jan 2, 2020 to Feb 21, 2026. Includes delisting/acquisition payouts.">?</span> <span class="sort-arrow"></span></th>
-                <th data-sort="is_gs_a">GS <span class="th-tip" data-tip="Genetically-supported: ≥50% of scoreable gene–disease pairs have an Open Targets genetic association score > 0.10.">?</span> <span class="sort-arrow"></span></th>
-                <th data-sort="best_score">Best Score <span class="th-tip" data-tip="Highest Open Targets genetic association score across all the company's gene–disease pairs (0–1 scale).">?</span> <span class="sort-arrow"></span></th>
-                <th data-sort="n_gs">Programs <span class="th-tip" data-tip="Number of genetically-supported gene–disease pairs / total scoreable pairs for this company.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="is_gs">GS <span class="th-tip" data-tip="Genetically-supported: lead program's Open Targets genetic association score > 0.10.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="lead_score">Lead Score <span class="th-tip" data-tip="Open Targets genetic association score of the company's most advanced scoreable program (0–1 scale).">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="lead_phase">Phase <span class="th-tip" data-tip="Clinical phase of the lead (most advanced) scoreable program.">?</span> <span class="sort-arrow"></span></th>
                 <th data-sort="outcome">Outcome <span class="th-tip" data-tip="Company status as of Feb 2026: active (still trading), acquired (buyout), or bankrupt (delisted at $0).">?</span> <span class="sort-arrow"></span></th>
                 <th data-sort="is_oncology">Oncology <span class="th-tip" data-tip="Whether the company's primary therapeutic focus is oncology.">?</span> <span class="sort-arrow"></span></th>
               </tr>
@@ -117,33 +164,6 @@
               <!-- Populated by table.js -->
             </tbody>
           </table>
-        </div>
-
-        <div class="chart-container">
-          <h3 class="chart-title">Genetic Score vs Return</h3>
-          <p class="chart-subtitle">Each dot is a company — hover for details</p>
-          <div id="scatter-chart" style="width:100%;height:450px;"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 4: Sensitivity -->
-    <section id="sensitivity" class="section-alt">
-      <div class="container">
-        <h2 class="section-title">Sensitivity Analysis</h2>
-        <p class="section-subtitle">Testing robustness of the genetic alpha signal across different definitions and evidence standards.</p>
-
-        <div class="chart-grid">
-          <div class="chart-container">
-            <h3 class="chart-title">Evidence Quality</h3>
-            <p class="chart-subtitle">Mendelian-only evidence (zero look-ahead bias) vs all evidence types</p>
-            <div id="mendelian-chart" style="width:100%;height:400px;"></div>
-          </div>
-          <div class="chart-container">
-            <h3 class="chart-title">Pipeline Proportion Threshold</h3>
-            <p class="chart-subtitle">Varying the % of pipeline required to be genetically-supported</p>
-            <div id="proportion-chart" style="width:100%;height:400px;"></div>
-          </div>
         </div>
       </div>
     </section>
@@ -154,10 +174,10 @@
         <h2 class="section-title">Methodology</h2>
         <div class="methods-content">
           <h3>Study Design</h3>
-          <p>We analyzed the complete set of 126 holdings in the SPDR S&P Biotech ETF (XBI) as of January 2020, sourced from the fund's SEC N-PORT filing. Companies were classified as genetically-supported (GS) or non-GS based on their clinical pipeline's overlap with genetic evidence from the Open Targets Platform. Equal-weight portfolio returns were measured from January 2, 2020 to February 21, 2026.</p>
+          <p>We analyzed the complete set of 126 holdings in the SPDR S&P Biotech ETF (XBI) as of January 2020, sourced from the fund's SEC N-PORT filing. Companies were classified as genetically-supported (GS) or non-GS based on their most advanced clinical program's overlap with genetic evidence from the Open Targets Platform. Equal-weight portfolio returns were measured from January 2, 2020 to February 21, 2026.</p>
 
           <h3>Genetic Support Classification</h3>
-          <p>A company is classified as <strong>genetically-supported (GS)</strong> if at least 50% of its scoreable gene–disease pairs have an Open Targets genetic association score greater than 0.10. Each company's clinical pipeline was mapped to gene–disease pairs via ClinicalTrials.gov data linked to ChEMBL drug–target annotations.</p>
+          <p>A company is classified as <strong>genetically-supported (GS)</strong> if its most advanced scoreable clinical program has an Open Targets genetic association score greater than 0.10. The "lead program" is the gene–disease pair at the highest clinical phase; ties are broken by genetic association score. This approach uses a single, unambiguous score per company and is independent of pipeline completeness.</p>
 
           <h3>Open Targets Scoring</h3>
           <p>Genetic association scores were obtained using a two-tier approach to minimize look-ahead bias:</p>
@@ -182,7 +202,7 @@
           <ul>
             <li>Equal-weight portfolios do not reflect actual XBI ETF weighting (modified equal-weight with quarterly rebalancing).</li>
             <li>Tier 2 OT API scores may incorporate data not available in January 2020, introducing potential look-ahead bias for non-Mendelian sources.</li>
-            <li>Company-level GS classification aggregates across all pipeline programs; individual drug outcomes may vary.</li>
+            <li>Classification depends on a single lead program per company; individual drug outcomes may vary.</li>
             <li>No transaction costs, slippage, or rebalancing are modeled.</li>
           </ul>
         </div>

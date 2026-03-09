@@ -172,10 +172,19 @@ GERMLINE_GENETIC_SOURCES = {
 }
 
 # GS score thresholds for sensitivity analysis
-GS_THRESHOLDS = [0.05, 0.10, 0.15, 0.20]       # GS-B sensitivity
-GS_A_THRESHOLDS = [0.1, 0.2, 0.4, 0.8]         # GS-A sensitivity
 GS_PRIMARY_THRESHOLD = 0.10  # Main threshold
-GS_A_PROPORTION_THRESHOLDS = [0.10, 0.20, 0.50, 0.70]  # GS-A pair-proportion sensitivity
+GS_SCORE_THRESHOLDS = [0.10, 0.50, 0.80, 0.95]  # Sensitivity on lead-program score
+
+# Phase ranking for lead-program selection (higher = more advanced)
+PHASE_RANK = {
+    "PHASE4":        7,
+    "PHASE3":        6,
+    "PHASE2/PHASE3": 5,
+    "PHASE2":        4,
+    "PHASE1/PHASE2": 3,
+    "PHASE1":        2,
+    "EARLY_PHASE1":  1,
+}
 
 
 # ─── Helper: OT GraphQL query with retry ─────────────────────────────────────
@@ -541,6 +550,9 @@ def main():
     print(f"      Tier 2 hits: {tier2_hits:,} unique pairs scored from recent OT API")
 
     # ── STEP 6: Company-level GS classification ─────────────────────────────
+    # Lead-program definition: GS = best genetic_association_score of the
+    # company's most advanced scoreable program is > threshold.
+    # "Most advanced" = highest phase rank, tiebreak by OT score.
     print("\n[7/7] Computing company-level GS classification...")
 
     # Convert genetic_association_score to float
@@ -549,10 +561,10 @@ def main():
     # Per-company aggregates from scoreable rows
     scoreable_df = df[df["is_scoreable"] == True].copy()
 
-    # Deduplicate by (ticker, gene_symbol, disease_efo_id) — unique pairs
+    # Deduplicate by (ticker, ensembl_id, disease_efo_id) — unique pairs
     unique_pairs = scoreable_df.drop_duplicates(subset=["ticker", "ensembl_id", "disease_efo_id"])
 
-    # Company-level stats
+    # Basic company-level stats (counts)
     company_stats = (
         unique_pairs.groupby("ticker")
         .agg(
@@ -562,85 +574,62 @@ def main():
         )
         .reset_index()
     )
-    company_stats["pct_gs_pairs"] = (
-        company_stats["n_gs_pairs"] / company_stats["n_scoreable_pairs"]
-    ).where(company_stats["n_scoreable_pairs"] > 0)
 
-    # GS-A: ≥50% of scoreable pairs > threshold
-    company_stats["is_company_gs_A"] = company_stats["pct_gs_pairs"] >= 0.50
+    # ── Lead-program selection ──────────────────────────────────────────────
+    # For each company: most advanced scoreable pair (highest phase, tiebreak by score)
+    scoreable_df["phase_rank"] = scoreable_df["phase"].map(PHASE_RANK).fillna(0)
 
-    # GS-A at multiple OT score thresholds (≥50% of pairs > threshold)
-    for thresh in GS_A_THRESHOLDS:
-        col = f"is_company_gs_A_at_{str(thresh).replace('.', '_')}"
-        n_above = unique_pairs.groupby("ticker")["genetic_association_score"].apply(
-            lambda x, t=thresh: (x > t).sum()
-        )
+    # Deduplicate pairs, keeping the highest-phase instance of each pair
+    lead_candidates = (
+        scoreable_df
+        .sort_values(["ticker", "phase_rank", "genetic_association_score"], ascending=[True, False, False])
+        .drop_duplicates(subset=["ticker", "ensembl_id", "disease_efo_id"], keep="first")
+    )
+
+    # Now pick the lead program per company: highest phase_rank, tiebreak by score
+    lead_programs = (
+        lead_candidates
+        .sort_values(["ticker", "phase_rank", "genetic_association_score"], ascending=[True, False, False])
+        .groupby("ticker", sort=False)
+        .first()
+        .reset_index()
+    )[["ticker", "phase", "phase_rank", "genetic_association_score",
+       "gene_symbol", "ensembl_id", "disease_efo_id", "conditions",
+       "ot_score_source", "evidence_predates_2020", "genetic_datasources"]]
+
+    lead_programs = lead_programs.rename(columns={
+        "phase": "lead_phase",
+        "phase_rank": "lead_phase_rank",
+        "genetic_association_score": "lead_score",
+        "gene_symbol": "lead_gene",
+        "ensembl_id": "lead_ensembl_id",
+        "disease_efo_id": "lead_efo_id",
+        "conditions": "lead_conditions",
+        "ot_score_source": "lead_ot_source",
+        "evidence_predates_2020": "lead_evidence_predates_2020",
+        "genetic_datasources": "lead_datasources",
+    })
+
+    company_stats = company_stats.merge(lead_programs, on="ticker", how="left")
+
+    # GS classification: lead program score > threshold
+    for thresh in GS_SCORE_THRESHOLDS:
+        col = f"is_gs_at_{str(thresh).replace('.', '_')}"
         company_stats[col] = (
-            (n_above.reindex(company_stats["ticker"]).values / company_stats["n_scoreable_pairs"]) >= 0.50
-        ).astype(bool).where(company_stats["n_scoreable_pairs"] > 0, False)
-
-    # Drop the 0.1 duplicate (already captured as is_company_gs_A)
-    primary_A_col = f"is_company_gs_A_at_{str(GS_PRIMARY_THRESHOLD).replace('.', '_')}"
-    if primary_A_col in company_stats.columns:
-        company_stats.drop(columns=[primary_A_col], inplace=True)
-
-    # GS-A pair-proportion sensitivity: ≥X% of scoreable pairs > 0.10
-    # Same definition as GS-A but with varying proportion thresholds
-    for pct_thresh in GS_A_PROPORTION_THRESHOLDS:
-        col = f"is_gs_A_prop_{int(pct_thresh * 100)}"
-        company_stats[col] = (company_stats["pct_gs_pairs"] >= pct_thresh).where(
-            company_stats["n_scoreable_pairs"] > 0, False
+            company_stats["lead_score"].notna()
+            & (company_stats["lead_score"] > thresh)
         )
 
-    # GS-B at multiple thresholds: any Phase 2/3/4 pair > threshold
-    # Include split phases that span Phase 2+ territory
-    PHASE_2_PLUS = ["PHASE2", "PHASE3", "PHASE4", "PHASE1/PHASE2", "PHASE2/PHASE3"]
-    phase_scoreable = scoreable_df[
-        scoreable_df["phase"].isin(PHASE_2_PLUS)
-    ].drop_duplicates(subset=["ticker", "ensembl_id", "disease_efo_id"])
+    # Primary GS flag at 0.10
+    company_stats["is_gs"] = company_stats["is_gs_at_0_1"]
 
-    for thresh in GS_THRESHOLDS:
-        col = f"is_company_gs_B_at_{str(thresh).replace('.', '_')}"
-        gs_b = (
-            phase_scoreable[phase_scoreable["genetic_association_score"] > thresh]
-            .groupby("ticker")
-            .size()
-            .gt(0)
-            .reset_index(name=col)
-        )
-        company_stats = company_stats.merge(gs_b, on="ticker", how="left")
-        company_stats[col] = company_stats[col].fillna(False)
+    # Mendelian-only GS: lead program score > 0.10 AND evidence predates 2020
+    company_stats["mendelian_only_gs"] = (
+        company_stats["is_gs"]
+        & (company_stats["lead_evidence_predates_2020"].astype(str) == "True")
+    )
 
-    # Rename GS-B at primary threshold for clarity
-    primary_col = f"is_company_gs_B_at_{str(GS_PRIMARY_THRESHOLD).replace('.', '_')}"
-    company_stats = company_stats.rename(columns={primary_col: "is_company_gs_B"})
-
-    # Mendelian-only GS-A: only count pairs where evidence_predates_2020 == True
-    mendelian_pairs = unique_pairs[
-        unique_pairs["evidence_predates_2020"].astype(str) == "True"
-    ]
-    if len(mendelian_pairs) > 0:
-        mono_stats = (
-            mendelian_pairs.groupby("ticker")
-            .agg(
-                n_mendelian_pairs=("genetic_association_score", "count"),
-                n_mendelian_gs_pairs=("genetic_association_score",
-                                      lambda x: (x > GS_PRIMARY_THRESHOLD).sum()),
-            )
-            .reset_index()
-        )
-        mono_stats["mendelian_only_gs_A"] = (
-            mono_stats["n_mendelian_gs_pairs"] / mono_stats["n_mendelian_pairs"] >= 0.50
-        )
-        company_stats = company_stats.merge(
-            mono_stats[["ticker", "mendelian_only_gs_A"]], on="ticker", how="left"
-        )
-    else:
-        company_stats["mendelian_only_gs_A"] = False
-
-    company_stats["mendelian_only_gs_A"] = company_stats["mendelian_only_gs_A"].fillna(False)
-
-    # Diagnostic companies: all GS flags = False (already False since not scoreable)
+    # Diagnostic companies: all GS flags = False
     diag_tickers = set(DIAGNOSTIC_COMPANIES.keys())
     for col in [c for c in company_stats.columns if "gs" in c.lower()]:
         company_stats.loc[company_stats["ticker"].isin(diag_tickers), col] = False
@@ -649,14 +638,13 @@ def main():
     gs_cols = [c for c in company_stats.columns if c != "ticker"]
     df = df.merge(company_stats[["ticker"] + gs_cols], on="ticker", how="left")
 
-    # Fill GS flags for rows where no scoreable pairs
-    bool_cols = [c for c in company_stats.columns
-                 if c.startswith("is_company_") or c.endswith("_gs_A") or c.endswith("_gs_B")]
+    # Fill GS flags for companies with no scoreable pairs
+    bool_cols = [c for c in company_stats.columns if c.startswith("is_gs")]
     for col in bool_cols:
         if col in df.columns:
             df[col] = df[col].fillna(False)
-
-    # Pair-proportion columns are already in company_stats (merged above via gs_cols)
+    if "mendelian_only_gs" in df.columns:
+        df["mendelian_only_gs"] = df["mendelian_only_gs"].fillna(False)
 
     # ── Output ───────────────────────────────────────────────────────────────
     print(f"\n{'=' * 70}")
@@ -689,42 +677,31 @@ def main():
         print(f"  {str(val):<30} {cnt:>6,}")
 
     gs_summary = company_stats[company_stats["n_scoreable_pairs"].notna()].copy()
-    n_gs_A = gs_summary["is_company_gs_A"].sum()
-    n_gs_B = gs_summary["is_company_gs_B"].sum()
-    n_mono = gs_summary["mendelian_only_gs_A"].sum()
+    n_gs = gs_summary["is_gs"].sum()
+    n_mono = gs_summary["mendelian_only_gs"].sum()
     n_total = df["ticker"].nunique()
 
-    print(f"\nGS classification (unique tickers: {n_total}):")
-    print(f"  GS-A (≥50% of pairs > 0.10):      {n_gs_A:>3} tickers")
-    print(f"  GS-B (any Phase2/3/4 pair > 0.10): {n_gs_B:>3} tickers")
-    print(f"  Mendelian-only GS-A:                {n_mono:>3} tickers")
+    print(f"\nGS classification — lead program (unique tickers: {n_total}):")
+    print(f"  GS (lead program score > 0.10):    {n_gs:>3} tickers")
+    print(f"  Mendelian-only GS:                  {n_mono:>3} tickers")
 
-    print(f"\nSensitivity thresholds (GS-A, ≥50% of pairs > threshold):")
-    for thresh in GS_A_THRESHOLDS:
-        col = f"is_company_gs_A_at_{str(thresh).replace('.', '_')}"
-        if thresh == GS_PRIMARY_THRESHOLD:
-            col = "is_company_gs_A"
+    print(f"\nSensitivity across score thresholds (lead program):")
+    for thresh in GS_SCORE_THRESHOLDS:
+        col = f"is_gs_at_{str(thresh).replace('.', '_')}"
         if col in gs_summary.columns:
             n = gs_summary[col].sum()
-            print(f"  GS-A at {thresh:.2f}:                      {n:>3} tickers")
+            print(f"  GS at {thresh:.2f}:                        {n:>3} tickers")
 
-    print(f"\nSensitivity thresholds (GS-A, ≥X% of scoreable pairs > 0.10):")
-    for pct_thresh in GS_A_PROPORTION_THRESHOLDS:
-        col = f"is_gs_A_prop_{int(pct_thresh * 100)}"
-        if col in gs_summary.columns:
-            n = gs_summary[col].sum()
-            print(f"  GS-A at ≥{pct_thresh:.0%} of pairs:             {n:>3} tickers")
-
-    print(f"\nSensitivity thresholds (GS-B):")
-    for thresh in GS_THRESHOLDS:
-        col = f"is_company_gs_B_at_{str(thresh).replace('.', '_')}"
-        if col == "is_company_gs_B":
-            col_lookup = "is_company_gs_B"
-        else:
-            col_lookup = col
-        if col_lookup in gs_summary.columns:
-            n = gs_summary[col_lookup].sum()
-            print(f"  GS-B at {thresh:.2f}:                      {n:>3} tickers")
+    # Show lead program score distribution
+    lead_scores = gs_summary["lead_score"].dropna()
+    if len(lead_scores) > 0:
+        print(f"\nLead program score distribution ({len(lead_scores)} companies with scores):")
+        print(f"  min={lead_scores.min():.4f}  25%={lead_scores.quantile(0.25):.4f}  "
+              f"median={lead_scores.median():.4f}  75%={lead_scores.quantile(0.75):.4f}  "
+              f"max={lead_scores.max():.4f}")
+        for thresh in [0.0, 0.05, 0.10, 0.15, 0.20, 0.30, 0.50, 0.80]:
+            n_above = (lead_scores > thresh).sum()
+            print(f"  > {thresh:.2f}: {n_above:>3} companies")
 
     print(f"\nSpot-check rows (expected values):")
     spot_checks = [

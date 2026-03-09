@@ -28,6 +28,17 @@ function renderMetricCards() {
 
   const fmtRet = (v) => v >= 0 ? `+${v.toFixed(1)}%` : `${v.toFixed(1)}%`;
 
+  // Compute max drawdowns from primary threshold data
+  const primaryQ = QUARTERLY['0.10'];
+  let gsMaxDD = 0, nongsMaxDD = 0, xbiMaxDD = 0;
+  if (primaryQ) {
+    primaryQ.forEach(q => {
+      if (q.gs_dd < gsMaxDD) gsMaxDD = q.gs_dd;
+      if (q.nongs_dd < nongsMaxDD) nongsMaxDD = q.nongs_dd;
+      if (q.xbi_dd < xbiMaxDD) xbiMaxDD = q.xbi_dd;
+    });
+  }
+
   const cards = [
     {
       value: `+${p.alpha_vs_xbi}pp`,
@@ -54,9 +65,9 @@ function renderMetricCards() {
       cls: '', positive: b.XBI_return_pct >= 0
     },
     {
-      value: '-19.6%',
+      value: `${gsMaxDD.toFixed(1)}%`,
       label: 'GS Max Drawdown',
-      detail: `vs non-GS: -42.6% &middot; XBI: -48.1%`,
+      detail: `vs non-GS: ${nongsMaxDD.toFixed(1)}% &middot; XBI: ${xbiMaxDD.toFixed(1)}%`,
       cls: 'green', positive: false
     }
   ];
@@ -67,7 +78,7 @@ function renderMetricCards() {
       <div class="label">${c.label}</div>
       <div class="detail">${c.detail}</div>
     </div>
-  `).join('') + `<p class="metric-footnote">*GS (genetically-supported): &ge;50% of a company's scoreable gene–disease pairs have an Open Targets genetic association score &gt; 0.10</p>`;
+  `).join('') + `<p class="metric-footnote">*GS (genetically-supported): lead program's Open Targets genetic association score &gt; 0.10</p>`;
 }
 
 /* --- Results Table --- */
