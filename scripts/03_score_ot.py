@@ -7,7 +7,7 @@ Steps:
   2. Resolve gene symbols for gene therapy / monogenic rows
   3. Add 6 missing diagnostic companies
   4. Map gene_symbol → Ensembl ID
-  5. Stepwise OT scoring:
+  5. Stepwise OT scoring (germline sources only — excludes somatic evidence):
        Tier 1: OT 20.02 NDJSON (primary, zero look-ahead bias)
        Tier 2: Recent OT API fallback + datasource check for time-invariance
   6. Company-level GS classification (GS-A and GS-B, 4 thresholds, Mendelian-only sensitivity)
@@ -162,6 +162,15 @@ DIAGNOSTIC_COMPANIES = {
 # Mendelian (time-invariant) OT datasources
 MENDELIAN_SOURCES = {"orphanet", "eva", "gene2phenotype", "uniprot_variants", "genomics_england"}
 
+# Germline genetic association datasources — excludes somatic evidence
+# (cancer_gene_census, eva_somatic, intogen, cancer_biomarkers)
+GERMLINE_GENETIC_SOURCES = {
+    "eva", "gene2phenotype", "genomics_england", "orphanet",
+    "gwas_catalog", "ot_genetics_portal", "postgap",
+    "phewas_catalog", "uniprot_variants", "uniprot", "uniprot_literature",
+    "genomics_england_panelapp", "gene_burden",  # current OT API names
+}
+
 # GS score thresholds for sensitivity analysis
 GS_THRESHOLDS = [0.05, 0.10, 0.15, 0.20]       # GS-B sensitivity
 GS_A_THRESHOLDS = [0.1, 0.2, 0.4, 0.8]         # GS-A sensitivity
@@ -213,10 +222,9 @@ query AssocIndirect($targetId: String!, $diseaseId: String!) {
 
 def fetch_ot_fallback(ensembl_id: str, efo_id: str) -> tuple[float | None, list[str]]:
     """
-    Query recent OT API for associationByDatatypeIndirect genetic_association score.
-    Single round-trip: gets both datatypeScores and datasourceScores.
-    Returns (score_or_None, [datasource_ids]).
-    Note: OT Platform API uses 'datatypeScores'/'datasourceScores' (not 'datatypes'/'datasources').
+    Query recent OT API for germline-only genetic association evidence.
+    Filters datasourceScores to GERMLINE_GENETIC_SOURCES and returns the max.
+    Returns (max_germline_score_or_None, [germline_datasource_ids]).
     """
     resp = ot_graphql(OT_ASSOC_QUERY, {"targetId": ensembl_id, "diseaseId": efo_id})
     score = None
@@ -226,16 +234,15 @@ def fetch_ot_fallback(ensembl_id: str, efo_id: str) -> tuple[float | None, list[
         rows = resp["data"]["target"].get("associatedDiseases", {}).get("rows", [])
         for row in rows:
             if row["disease"]["id"] == efo_id:
-                # Extract genetic_association score from datatypeScores
-                for dt in row.get("datatypeScores", []):
-                    if dt["id"] == "genetic_association":
-                        score = dt["score"]
-                        break
-                # Extract nonzero datasource IDs from datasourceScores
-                datasources = [
-                    ds["id"] for ds in row.get("datasourceScores", [])
-                    if ds.get("score", 0) > 0
-                ]
+                # Filter to germline datasources only
+                germline_ds = {
+                    ds["id"]: ds["score"]
+                    for ds in row.get("datasourceScores", [])
+                    if ds.get("score", 0) > 0 and ds["id"] in GERMLINE_GENETIC_SOURCES
+                }
+                if germline_ds:
+                    score = max(germline_ds.values())
+                    datasources = list(germline_ds.keys())
                 break
 
     return score, datasources
@@ -433,26 +440,20 @@ def main():
             r = json.loads(line)
             t_id = r["target"]["id"]
             d_id = r["disease"]["id"]
-            datatypes = r["association_score"]["datatypes"]
-            ga = datatypes.get("genetic_association", 0)
-            if ga > 0:
+            # Use only germline datasource scores (exclude somatic evidence)
+            ds_scores = r["association_score"].get("datasources", {})
+            germline_ds = {
+                ds: sc for ds, sc in ds_scores.items()
+                if sc > 0 and ds in GERMLINE_GENETIC_SOURCES
+            }
+            if germline_ds:
                 key = (t_id, d_id)
-                ot_2020_scores[key] = ga
-                # Collect nonzero genetic datasources for this pair
-                ds_scores = r["association_score"].get("datasources", {})
-                genetic_ds = [
-                    ds for ds, score in ds_scores.items()
-                    if score > 0 and ds in {
-                        "eva", "gene2phenotype", "genomics_england", "orphanet",
-                        "gwas_catalog", "ot_genetics_portal", "postgap",
-                        "phewas_catalog", "uniprot_variants", "uniprot",
-                    }
-                ]
-                ot_2020_datasources[key] = genetic_ds
+                ot_2020_scores[key] = max(germline_ds.values())
+                ot_2020_datasources[key] = list(germline_ds.keys())
             if i > 0 and i % 500_000 == 0:
                 print(f"      ... {i:,} records processed, {len(ot_2020_scores):,} with GA > 0")
 
-    print(f"      Loaded {len(ot_2020_scores):,} target-disease pairs with genetic_association > 0")
+    print(f"      Loaded {len(ot_2020_scores):,} target-disease pairs with germline genetic_association > 0")
 
     # Apply Tier 1 scores
     scoreable_mask = df["is_scoreable"]
@@ -477,12 +478,14 @@ def main():
 
     print(f"      Tier 2: {len(fallback_needed)} unique pairs need API fallback...")
 
-    # Load cache
+    # Load cache — invalidate old entries without germline filtering
     cache: dict = {}
     if FALLBACK_CACHE_JSON.exists():
         with open(FALLBACK_CACHE_JSON) as f:
-            cache = json.load(f)
-        print(f"      Loaded {len(cache)} cached fallback pairs")
+            raw_cache = json.load(f)
+        cache = {k: v for k, v in raw_cache.items() if v.get("germline_filtered")}
+        n_invalidated = len(raw_cache) - len(cache)
+        print(f"      Loaded {len(cache)} cached fallback pairs ({n_invalidated} invalidated for germline filter)")
 
     tier2_hits = 0
     tier2_new = 0
@@ -494,7 +497,7 @@ def main():
         if cache_key not in cache:
             print(f"      API: {ensembl_id} × {efo_id}")
             score, datasources = fetch_ot_fallback(ensembl_id, efo_id)
-            cache[cache_key] = {"score": score, "datasources": datasources}
+            cache[cache_key] = {"score": score, "datasources": datasources, "germline_filtered": True}
             tier2_new += 1
             time.sleep(0.3)  # Gentle rate limiting
             # Write cache incrementally every 50 new calls so progress survives interruption
