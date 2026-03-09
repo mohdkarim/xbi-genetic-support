@@ -23,7 +23,10 @@ function initNav() {
 /* --- Metric Cards --- */
 function renderMetricCards() {
   const p = RESULTS.primary;
+  const b = RESULTS.benchmarks;
   const container = document.getElementById('metric-cards');
+
+  const fmtRet = (v) => v >= 0 ? `+${v.toFixed(1)}%` : `${v.toFixed(1)}%`;
 
   const cards = [
     {
@@ -33,16 +36,22 @@ function renderMetricCards() {
       cls: 'blue', positive: true
     },
     {
-      value: `+${p.gs_mean.toFixed(1)}%`,
-      label: 'GS Mean Return',
-      detail: `95% CI: [${p.gs_ci_lo.toFixed(1)}%, ${p.gs_ci_hi.toFixed(1)}%]`,
-      cls: 'blue', positive: true
+      value: fmtRet(p.gs_mean),
+      label: 'XBI-G Mean Return',
+      detail: `95% CI: [${fmtRet(p.gs_ci_lo)}, ${fmtRet(p.gs_ci_hi)}]<br>Median: ${fmtRet(p.gs_median)} &middot; n=${p.n_gs}`,
+      cls: 'blue', positive: p.gs_mean >= 0
     },
     {
-      value: `+${p.nongs_mean.toFixed(1)}%`,
-      label: 'Non-GS Mean Return',
-      detail: `95% CI: [${p.nongs_ci_lo.toFixed(1)}%, ${p.nongs_ci_hi.toFixed(1)}%]`,
-      cls: 'amber', positive: true
+      value: fmtRet(p.nongs_mean),
+      label: 'XBI-nonG Mean Return',
+      detail: `95% CI: [${fmtRet(p.nongs_ci_lo)}, ${fmtRet(p.nongs_ci_hi)}]<br>Median: ${fmtRet(p.nongs_median)} &middot; n=${p.n_nongs}`,
+      cls: 'amber', positive: p.nongs_mean >= 0
+    },
+    {
+      value: fmtRet(b.XBI_return_pct),
+      label: 'XBI ETF Return',
+      detail: `Single fund — not a sample mean<br>Universe median: ${fmtRet(b.all_universe_median_pct)}`,
+      cls: '', positive: b.XBI_return_pct >= 0
     },
     {
       value: '-19.6%',
