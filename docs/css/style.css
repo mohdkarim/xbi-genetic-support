@@ -289,7 +289,17 @@ section.section-alt { background: var(--bg-alt); }
 .pipeline-score {
   font-family: "JetBrains Mono", monospace; font-size: 0.78rem;
 }
-.pipeline-source { font-size: 0.72rem; color: var(--text-muted); }
+.pipeline-source { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+.pipeline-drug {
+  color: var(--text-secondary); font-weight: 500; font-size: 0.78rem;
+}
+.pipeline-drug::after { content: " \2014 "; color: var(--text-muted); font-weight: 400; }
+.source-tag {
+  display: inline-block; font-size: 0.62rem; font-weight: 600; padding: 1px 5px;
+  border-radius: 3px; vertical-align: middle; margin-left: 3px; letter-spacing: 0.02em;
+}
+.tag-mendelian { background: #dcfce7; color: #166534; }
+.tag-bq { background: #dbeafe; color: #1e40af; }
 
 /* === Methodology === */
 .methods-content {

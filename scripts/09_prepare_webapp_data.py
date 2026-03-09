@@ -168,6 +168,16 @@ def build_pipeline():
             key = (row["ticker"], row["ensembl_id"], row["disease_efo_id"])
             if key not in pairs or score > pairs[key]["score"]:
                 condition = row["conditions"].split("|")[0].strip() if row["conditions"] else row["disease_efo_id"]
+                # Validation label for OT API rows
+                bq_method = row.get("bq_validation_method", "")
+                validation = ""
+                if row["ot_score_source"] == "ot_recent_fallback":
+                    if bq_method == "tier2_mendelian":
+                        validation = "mendelian"
+                    elif bq_method == "bq_direct":
+                        validation = "bq_confirmed"
+                    elif bq_method == "mendelian_ancestor":
+                        validation = "mendelian_ancestor"
                 pairs[key] = {
                     "gene": row["gene_symbol"],
                     "ensembl_id": row["ensembl_id"],
@@ -175,6 +185,8 @@ def build_pipeline():
                     "efo_id": row["disease_efo_id"],
                     "score": round(score, 3),
                     "source": row["ot_score_source"],
+                    "drug": row.get("intervention_name", ""),
+                    "validation": validation,
                 }
 
     by_ticker = {}

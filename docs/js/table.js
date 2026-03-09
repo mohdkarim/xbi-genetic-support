@@ -79,19 +79,29 @@ function renderTableBody() {
 
   const hasPairs = (ticker) => typeof PIPELINE !== 'undefined' && PIPELINE[ticker] && PIPELINE[ticker].length > 0;
 
+  const fmtSource = (p) => {
+    if (p.source === 'ot_2020') return 'OT 20.02';
+    let label = 'OT API';
+    if (p.validation === 'mendelian') label += ' <span class="source-tag tag-mendelian">Mendelian</span>';
+    else if (p.validation === 'bq_confirmed') label += ' <span class="source-tag tag-bq">BQ</span>';
+    else if (p.validation === 'mendelian_ancestor') label += ' <span class="source-tag tag-mendelian">Ancestor</span>';
+    return label;
+  };
+
   const pairRows = (ticker) => {
     const pairs = PIPELINE[ticker] || [];
     return pairs.map(p => `
       <tr class="pipeline-row" style="display:none">
         <td></td>
         <td colspan="2" class="pipeline-cell">
+          ${p.drug ? `<span class="pipeline-drug">${p.drug}</span> ` : ''}
           <a href="https://platform.opentargets.org/target/${p.ensembl_id}" target="_blank" rel="noopener">${p.gene}</a>
           &rarr;
           <a href="https://platform.opentargets.org/disease/${p.efo_id}" target="_blank" rel="noopener">${p.disease}</a>
         </td>
         <td></td>
         <td class="pipeline-score">${p.score.toFixed(3)}</td>
-        <td class="pipeline-source">${p.source === 'ot_2020' ? 'OT 20.02' : 'OT API'}</td>
+        <td class="pipeline-source">${fmtSource(p)}</td>
         <td colspan="2"></td>
       </tr>
     `).join('');

@@ -3660,7 +3660,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -3668,7 +3670,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "ABT-122",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -3676,7 +3680,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "ABT-122",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -3684,7 +3690,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease (CD)",
       "efo_id": "EFO_0000384",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "ABT-494",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -3692,7 +3700,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis (RA)",
       "efo_id": "EFO_0000685",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "AXL",
@@ -3700,7 +3710,9 @@ const PIPELINE = {
       "disease": "Acute Myeloid Leukemia (AML)",
       "efo_id": "EFO_0000222",
       "score": 0.973,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Gilteritinib",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -3708,7 +3720,9 @@ const PIPELINE = {
       "disease": "Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.972,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ABBV-181",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -3716,7 +3730,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Duvelisib",
+      "validation": ""
     },
     {
       "gene": "PIK3CG",
@@ -3724,7 +3740,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Duvelisib",
+      "validation": ""
     },
     {
       "gene": "BTK",
@@ -3732,7 +3750,9 @@ const PIPELINE = {
       "disease": "Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.963,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ibrutinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -3740,7 +3760,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -3748,7 +3770,9 @@ const PIPELINE = {
       "disease": "Lymphoma",
       "efo_id": "EFO_0000574",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "duvelisib",
+      "validation": ""
     },
     {
       "gene": "PARP1",
@@ -3756,7 +3780,9 @@ const PIPELINE = {
       "disease": "Ovarian Cancer",
       "efo_id": "EFO_0001075",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Veliparib",
+      "validation": ""
     },
     {
       "gene": "TOP1",
@@ -3764,7 +3790,9 @@ const PIPELINE = {
       "disease": "Epithelial Ovarian Cancer",
       "efo_id": "EFO_0001075",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Topotecan",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -3772,7 +3800,9 @@ const PIPELINE = {
       "disease": "Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.952,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Venetoclax",
+      "validation": ""
     },
     {
       "gene": "IL4R",
@@ -3780,7 +3810,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.951,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Dupilumab",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -3788,7 +3820,9 @@ const PIPELINE = {
       "disease": "Hematologic Malignancies",
       "efo_id": "EFO_0000574",
       "score": 0.942,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Venetoclax",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -3796,7 +3830,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis (UC)",
       "efo_id": "EFO_0000729",
       "score": 0.942,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -3804,7 +3840,9 @@ const PIPELINE = {
       "disease": "Systemic Lupus Erythematosus (SLE)",
       "efo_id": "MONDO_0007915",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "JAK1",
@@ -3812,7 +3850,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -3820,7 +3860,9 @@ const PIPELINE = {
       "disease": "Systemic Lupus Erythematosus (SLE)",
       "efo_id": "MONDO_0007915",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -3828,7 +3870,9 @@ const PIPELINE = {
       "disease": "Systemic Lupus Erythematosus (SLE)",
       "efo_id": "MONDO_0007915",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -3836,7 +3880,9 @@ const PIPELINE = {
       "disease": "Acute Myeloid Leukemia (AML)",
       "efo_id": "EFO_0000222",
       "score": 0.931,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Venetoclax",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -3844,7 +3890,9 @@ const PIPELINE = {
       "disease": "Colorectal Cancer",
       "efo_id": "EFO_1001951",
       "score": 0.924,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ABBV-181",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -3852,7 +3900,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.922,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Venetoclax",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -3860,7 +3910,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis (RA)",
       "efo_id": "EFO_0000685",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "DRD2",
@@ -3868,7 +3920,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cariprazine",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "DRD3",
@@ -3876,7 +3930,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cariprazine",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -3884,7 +3940,9 @@ const PIPELINE = {
       "disease": "Systemic Lupus Erythematosus (SLE)",
       "efo_id": "MONDO_0007915",
       "score": 0.918,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "JAK3",
@@ -3892,7 +3950,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease (CD)",
       "efo_id": "EFO_0000384",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ABT-494",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -3900,7 +3960,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis (UC)",
       "efo_id": "EFO_0000729",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -3908,7 +3970,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis (UC)",
       "efo_id": "EFO_0000729",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "BCL2L1",
@@ -3916,7 +3980,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia (ALL)",
       "efo_id": "EFO_0000220",
       "score": 0.897,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Navitoclax",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -3924,7 +3990,9 @@ const PIPELINE = {
       "disease": "Psoriasis",
       "efo_id": "EFO_0000676",
       "score": 0.889,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Risankizumab",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -3932,7 +4000,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis (UC)",
       "efo_id": "EFO_0000729",
       "score": 0.881,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -3940,7 +4010,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.878,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -3948,7 +4020,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis (RA)",
       "efo_id": "EFO_0000685",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "TOP2A",
@@ -3956,7 +4030,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etoposide",
+      "validation": "mendelian"
     },
     {
       "gene": "TOP1",
@@ -3964,7 +4040,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Topotecan",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -3972,7 +4050,9 @@ const PIPELINE = {
       "disease": "Juvenile Idiopathic Arthritis (JIA)",
       "efo_id": "EFO_0002609",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -3980,7 +4060,9 @@ const PIPELINE = {
       "disease": "Spondyloarthritis",
       "efo_id": "EFO_0003778",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -3988,7 +4070,9 @@ const PIPELINE = {
       "disease": "Spondyloarthritis",
       "efo_id": "EFO_0003778",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "PARP1",
@@ -3996,7 +4080,9 @@ const PIPELINE = {
       "disease": "Non-Small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "veliparib",
+      "validation": "mendelian"
     },
     {
       "gene": "IL23A",
@@ -4004,7 +4090,9 @@ const PIPELINE = {
       "disease": "Asthma",
       "efo_id": "MONDO_0004979",
       "score": 0.785,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "risankizumab",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4012,7 +4100,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.781,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "adalimumab",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4020,7 +4110,9 @@ const PIPELINE = {
       "disease": "Psoriasis",
       "efo_id": "EFO_0000676",
       "score": 0.779,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "adalimumab",
+      "validation": ""
     },
     {
       "gene": "VDR",
@@ -4028,7 +4120,9 @@ const PIPELINE = {
       "disease": "Chronic Kidney Disease (CKD)",
       "efo_id": "EFO_0003884",
       "score": 0.775,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Paricalcitol",
+      "validation": ""
     },
     {
       "gene": "EDNRA",
@@ -4036,7 +4130,9 @@ const PIPELINE = {
       "disease": "Diabetes",
       "efo_id": "EFO_0000400",
       "score": 0.773,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Atrasentan",
+      "validation": ""
     },
     {
       "gene": "PTGS2",
@@ -4044,7 +4140,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.761,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Celecoxib",
+      "validation": ""
     },
     {
       "gene": "BCL2L2",
@@ -4052,7 +4150,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Navitoclax",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -4060,7 +4160,9 @@ const PIPELINE = {
       "disease": "Juvenile Idiopathic Arthritis (JIA)",
       "efo_id": "EFO_0002609",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4068,7 +4170,9 @@ const PIPELINE = {
       "disease": "Arthritis, Psoriatic",
       "efo_id": "EFO_0003778",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "risankizumab",
+      "validation": ""
     },
     {
       "gene": "DRD2",
@@ -4076,7 +4180,9 @@ const PIPELINE = {
       "disease": "Major Depressive Disorder",
       "efo_id": "MONDO_0002009",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cariprazine",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "DRD3",
@@ -4084,7 +4190,9 @@ const PIPELINE = {
       "disease": "Major Depressive Disorder",
       "efo_id": "MONDO_0002009",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cariprazine",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -4092,7 +4200,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -4100,7 +4210,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "BCL2L2",
@@ -4108,7 +4220,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia (ALL)",
       "efo_id": "EFO_0000220",
       "score": 0.746,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Navitoclax",
+      "validation": ""
     },
     {
       "gene": "VKORC1",
@@ -4116,7 +4230,9 @@ const PIPELINE = {
       "disease": "Psoriasis",
       "efo_id": "EFO_0000676",
       "score": 0.746,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Warfarin",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4124,7 +4240,9 @@ const PIPELINE = {
       "disease": "Axial Spondyloarthritis",
       "efo_id": "EFO_0000706",
       "score": 0.746,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Adalimumab",
+      "validation": ""
     },
     {
       "gene": "CD38",
@@ -4132,7 +4250,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.718,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Daratumumab",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4140,7 +4260,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis (PsA)",
       "efo_id": "EFO_0000685",
       "score": 0.712,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Risankizumab",
+      "validation": ""
     },
     {
       "gene": "GUCY2C",
@@ -4148,7 +4270,9 @@ const PIPELINE = {
       "disease": "Functional Constipation",
       "efo_id": "HP_0002019",
       "score": 0.699,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Linaclotide",
+      "validation": "mendelian"
     },
     {
       "gene": "BCL2",
@@ -4156,7 +4280,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Venetoclax",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "TYK2",
@@ -4164,7 +4290,9 @@ const PIPELINE = {
       "disease": "Ankylosing Spondylitis (AS)",
       "efo_id": "EFO_0003898",
       "score": 0.681,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4172,7 +4300,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.681,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Adalimumab",
+      "validation": ""
     },
     {
       "gene": "ESR1",
@@ -4180,7 +4310,9 @@ const PIPELINE = {
       "disease": "Endometriosis",
       "efo_id": "EFO_0001065",
       "score": 0.681,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Estradiol/Norethindrone Acetate",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -4188,7 +4320,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -4196,7 +4330,9 @@ const PIPELINE = {
       "disease": "Juvenile Idiopathic Arthritis (JIA)",
       "efo_id": "EFO_0002609",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -4204,7 +4340,9 @@ const PIPELINE = {
       "disease": "Juvenile Idiopathic Arthritis (JIA)",
       "efo_id": "EFO_0002609",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "TNF",
@@ -4212,7 +4350,9 @@ const PIPELINE = {
       "disease": "Hidradenitis Suppurativa",
       "efo_id": "EFO_1000710",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "adalimumab",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -4220,7 +4360,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis (RA)",
       "efo_id": "EFO_0000685",
       "score": 0.6,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -4228,7 +4370,9 @@ const PIPELINE = {
       "disease": "Ankylosing Spondylitis (AS)",
       "efo_id": "EFO_0003898",
       "score": 0.6,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "FLT3",
@@ -4236,7 +4380,9 @@ const PIPELINE = {
       "disease": "Acute Myeloid Leukemia (AML)",
       "efo_id": "EFO_0000222",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Gilteritinib",
+      "validation": ""
     },
     {
       "gene": "BCL2L1",
@@ -4244,7 +4390,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Navitoclax",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -4252,7 +4400,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CG",
@@ -4260,7 +4410,9 @@ const PIPELINE = {
       "disease": "Lymphoma",
       "efo_id": "EFO_0000574",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "duvelisib",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4268,7 +4420,9 @@ const PIPELINE = {
       "disease": "Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Risankizumab",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4276,7 +4430,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis (UC)",
       "efo_id": "EFO_0000729",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "risankizumab IV",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4284,7 +4440,9 @@ const PIPELINE = {
       "disease": "Plaque Psoriasis",
       "efo_id": "EFO_1001494",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Risankizumab",
+      "validation": ""
     },
     {
       "gene": "IL23A",
@@ -4292,7 +4450,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Risankizumab IV",
+      "validation": ""
     },
     {
       "gene": "DLL3",
@@ -4300,7 +4460,9 @@ const PIPELINE = {
       "disease": "Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.491,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "rovalpituzumab tesirine",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -4308,7 +4470,9 @@ const PIPELINE = {
       "disease": "Ankylosing Spondylitis (AS)",
       "efo_id": "EFO_0003898",
       "score": 0.473,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -4316,7 +4480,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.426,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -4324,7 +4490,9 @@ const PIPELINE = {
       "disease": "Head and Neck Cancer",
       "efo_id": "EFO_0006859",
       "score": 0.355,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ABBV-181",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -4332,7 +4500,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.317,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -4340,7 +4510,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -4348,7 +4520,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -4356,7 +4530,9 @@ const PIPELINE = {
       "disease": "Myeloproliferative Neoplasm",
       "efo_id": "EFO_0002428",
       "score": 0.257,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Navitoclax",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -4364,7 +4540,9 @@ const PIPELINE = {
       "disease": "Ankylosing Spondylitis (AS)",
       "efo_id": "EFO_0003898",
       "score": 0.222,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -4372,7 +4550,9 @@ const PIPELINE = {
       "disease": "Takayasu Arteritis (TAK)",
       "efo_id": "EFO_0006803",
       "score": 0.195,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "TYK2",
@@ -4380,7 +4560,9 @@ const PIPELINE = {
       "disease": "Takayasu Arteritis (TAK)",
       "efo_id": "EFO_0006803",
       "score": 0.195,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Upadacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "BCL2",
@@ -4388,7 +4570,9 @@ const PIPELINE = {
       "disease": "Myelodysplastic Syndromes (MDS)",
       "efo_id": "EFO_0000198",
       "score": 0.012,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "venetoclax",
+      "validation": "mendelian"
     }
   ],
   "ACAD": [
@@ -4398,7 +4582,9 @@ const PIPELINE = {
       "disease": "Parkinson's Disease",
       "efo_id": "MONDO_0005180",
       "score": 0.958,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pimavanserin",
+      "validation": ""
     },
     {
       "gene": "HTR2A",
@@ -4406,7 +4592,9 @@ const PIPELINE = {
       "disease": "Dementia-related Psychosis",
       "efo_id": "MONDO_0004975",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pimavanserin 34 mg",
+      "validation": "mendelian"
     },
     {
       "gene": "HTR2A",
@@ -4414,7 +4602,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pimavanserin",
+      "validation": ""
     },
     {
       "gene": "HTR2A",
@@ -4422,7 +4612,9 @@ const PIPELINE = {
       "disease": "Adjunctive Treatment of Major Depressive Disorder",
       "efo_id": "MONDO_0002009",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pimavanserin",
+      "validation": "bq_confirmed"
     }
   ],
   "ACHN": [
@@ -4432,7 +4624,9 @@ const PIPELINE = {
       "disease": "C3 Glomerulonephritis",
       "efo_id": "MONDO_0013892",
       "score": 0.886,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Danicopan",
+      "validation": "mendelian"
     }
   ],
   "AGIO": [
@@ -4442,7 +4636,9 @@ const PIPELINE = {
       "disease": "Anemia, Hemolytic",
       "efo_id": "MONDO_0002280",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "AG-348",
+      "validation": ""
     },
     {
       "gene": "PKLR",
@@ -4450,7 +4646,9 @@ const PIPELINE = {
       "disease": "Pyruvate Kinase Deficiency",
       "efo_id": "MONDO_0009950",
       "score": 0.991,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "AG-348",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "PKLR",
@@ -4458,7 +4656,9 @@ const PIPELINE = {
       "disease": "Thalassemia",
       "efo_id": "MONDO_0019402",
       "score": 0.948,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "AG-348",
+      "validation": ""
     }
   ],
   "AKBA": [
@@ -4468,7 +4668,9 @@ const PIPELINE = {
       "disease": "Anemia",
       "efo_id": "MONDO_0002280",
       "score": 0.958,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Darbepoetin alfa",
+      "validation": "mendelian_ancestor"
     },
     {
       "gene": "EGLN1",
@@ -4476,7 +4678,9 @@ const PIPELINE = {
       "disease": "Anemia Associated With Chronic Kidney Disease",
       "efo_id": "MONDO_0002280",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vadadustat",
+      "validation": "mendelian_ancestor"
     },
     {
       "gene": "EGLN3",
@@ -4484,7 +4688,9 @@ const PIPELINE = {
       "disease": "Anemia Associated With Chronic Kidney Disease",
       "efo_id": "MONDO_0002280",
       "score": 0.526,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vadadustat",
+      "validation": ""
     },
     {
       "gene": "EGLN2",
@@ -4492,7 +4698,9 @@ const PIPELINE = {
       "disease": "Anemia Associated With Chronic Kidney Disease",
       "efo_id": "MONDO_0002280",
       "score": 0.526,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vadadustat",
+      "validation": ""
     }
   ],
   "AKCA": [
@@ -4502,7 +4710,9 @@ const PIPELINE = {
       "disease": "Cardiovascular Disease",
       "efo_id": "EFO_0000319",
       "score": 0.257,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ISIS 681257",
+      "validation": ""
     },
     {
       "gene": "VKORC1",
@@ -4510,7 +4720,9 @@ const PIPELINE = {
       "disease": "Cardiovascular Diseases",
       "efo_id": "EFO_0000319",
       "score": 0.257,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Warfarin",
+      "validation": "bq_confirmed"
     }
   ],
   "ALKS": [
@@ -4520,7 +4732,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Aripiprazole Lauroxil",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "HTR2A",
@@ -4528,7 +4742,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Olanzapine",
+      "validation": ""
     }
   ],
   "ALNY": [
@@ -4538,7 +4754,9 @@ const PIPELINE = {
       "disease": "Transthyretin-mediated Amyloidosis (ATTR Amyloidosis)",
       "efo_id": "MONDO_0018634",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "ALN-TTRSC02",
+      "validation": ""
     },
     {
       "gene": "HAO1",
@@ -4546,7 +4764,9 @@ const PIPELINE = {
       "disease": "Primary Hyperoxaluria Type 1 (PH1)",
       "efo_id": "MONDO_0009823",
       "score": 0.987,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Lumasiran",
+      "validation": ""
     },
     {
       "gene": "HAO1",
@@ -4554,7 +4774,9 @@ const PIPELINE = {
       "disease": "AGT",
       "efo_id": "MONDO_0002474",
       "score": 0.926,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Lumasiran",
+      "validation": "mendelian"
     },
     {
       "gene": "SERPINA1",
@@ -4562,7 +4784,9 @@ const PIPELINE = {
       "disease": "ZZ Type Alpha-1 Antitrypsin Deficiency Liver Disease",
       "efo_id": "MONDO_0013791",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ALN-AAT02",
+      "validation": "mendelian"
     },
     {
       "gene": "ALAS1",
@@ -4570,7 +4794,9 @@ const PIPELINE = {
       "disease": "Acute Intermittent Porphyria",
       "efo_id": "MONDO_0008294",
       "score": 0.566,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "givosiran (ALN-AS1)",
+      "validation": "mendelian"
     }
   ],
   "ALXN": [
@@ -4580,7 +4806,9 @@ const PIPELINE = {
       "disease": "Atypical Hemolytic Uremic Syndrome (aHUS)",
       "efo_id": "MONDO_0016244",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ravulizumab",
+      "validation": "mendelian"
     },
     {
       "gene": "CFD",
@@ -4588,7 +4816,9 @@ const PIPELINE = {
       "disease": "C3 Glomerulonephritis",
       "efo_id": "MONDO_0013892",
       "score": 0.886,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Danicopan",
+      "validation": "mendelian"
     }
   ],
   "AMGN": [
@@ -4598,7 +4828,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etanercept",
+      "validation": ""
     },
     {
       "gene": "PCSK9",
@@ -4606,7 +4838,9 @@ const PIPELINE = {
       "disease": "Coronary Heart Disease (CHD)",
       "efo_id": "EFO_0001645",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Evolocumab",
+      "validation": ""
     },
     {
       "gene": "PCSK9",
@@ -4614,7 +4848,9 @@ const PIPELINE = {
       "disease": "Heterozygous Familial Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Evolocumab",
+      "validation": ""
     },
     {
       "gene": "NPC1L1",
@@ -4622,7 +4858,9 @@ const PIPELINE = {
       "disease": "Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 0.987,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ezetimibe",
+      "validation": ""
     },
     {
       "gene": "TOP2A",
@@ -4630,7 +4868,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "doxorubicin",
+      "validation": ""
     },
     {
       "gene": "TYMS",
@@ -4638,7 +4878,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "5-fluorouracil",
+      "validation": ""
     },
     {
       "gene": "MPL",
@@ -4646,7 +4888,9 @@ const PIPELINE = {
       "disease": "Chemotherapy-induced Thrombocytopenia",
       "efo_id": "HP_0001873",
       "score": 0.973,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Romiplostim",
+      "validation": ""
     },
     {
       "gene": "CSF3R",
@@ -4654,7 +4898,9 @@ const PIPELINE = {
       "disease": "Cytopenias",
       "efo_id": "MONDO_0002280",
       "score": 0.964,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgrastim",
+      "validation": ""
     },
     {
       "gene": "EPOR",
@@ -4662,7 +4908,9 @@ const PIPELINE = {
       "disease": "Anemia",
       "efo_id": "MONDO_0002280",
       "score": 0.958,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Epoetin alfa",
+      "validation": "mendelian_ancestor"
     },
     {
       "gene": "CASR",
@@ -4670,7 +4918,9 @@ const PIPELINE = {
       "disease": "End Stage Renal Disease",
       "efo_id": "EFO_0003884",
       "score": 0.954,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cinacalcet",
+      "validation": ""
     },
     {
       "gene": "TNFSF11",
@@ -4678,7 +4928,9 @@ const PIPELINE = {
       "disease": "Osteogenesis Imperfecta (OI)",
       "efo_id": "MONDO_0019019",
       "score": 0.948,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Denosumab",
+      "validation": ""
     },
     {
       "gene": "CSF3R",
@@ -4686,7 +4938,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "pegfilgrastim",
+      "validation": ""
     },
     {
       "gene": "PTGS2",
@@ -4694,7 +4948,9 @@ const PIPELINE = {
       "disease": "Gout",
       "efo_id": "EFO_0004274",
       "score": 0.94,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "acetaminophen",
+      "validation": ""
     },
     {
       "gene": "ATP4A",
@@ -4702,7 +4958,9 @@ const PIPELINE = {
       "disease": "Tumors",
       "efo_id": "MONDO_0004992",
       "score": 0.935,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "AMG 386",
+      "validation": ""
     },
     {
       "gene": "EGFR",
@@ -4710,7 +4968,9 @@ const PIPELINE = {
       "disease": "Colorectal Cancer",
       "efo_id": "EFO_1001951",
       "score": 0.935,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ABX-EGF",
+      "validation": ""
     },
     {
       "gene": "SOST",
@@ -4718,7 +4978,9 @@ const PIPELINE = {
       "disease": "Postmenopausal Osteoporosis",
       "efo_id": "EFO_0003854",
       "score": 0.889,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Romosozumab",
+      "validation": "mendelian"
     },
     {
       "gene": "CD19",
@@ -4726,7 +4988,9 @@ const PIPELINE = {
       "disease": "Leukemia, Acute Lymphoblastic",
       "efo_id": "EFO_0000220",
       "score": 0.873,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Blinatumomab",
+      "validation": ""
     },
     {
       "gene": "SRD5A1",
@@ -4734,7 +4998,9 @@ const PIPELINE = {
       "disease": "Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Abiraterone",
+      "validation": "mendelian"
     },
     {
       "gene": "TUBB1",
@@ -4742,7 +5008,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia (ALL)",
       "efo_id": "EFO_0000220",
       "score": 0.813,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vincristine",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4750,7 +5018,9 @@ const PIPELINE = {
       "disease": "Psoriasis",
       "efo_id": "EFO_0000676",
       "score": 0.779,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etanercept",
+      "validation": ""
     },
     {
       "gene": "CD3E",
@@ -4758,7 +5028,9 @@ const PIPELINE = {
       "disease": "Leukemia, Acute Lymphoblastic",
       "efo_id": "EFO_0000220",
       "score": 0.775,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Blinatumomab",
+      "validation": ""
     },
     {
       "gene": "CD38",
@@ -4766,7 +5038,9 @@ const PIPELINE = {
       "disease": "Refractory Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.718,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Daratumumab",
+      "validation": ""
     },
     {
       "gene": "CD3E",
@@ -4774,7 +5048,9 @@ const PIPELINE = {
       "disease": "Non-Hodgkin's Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.696,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "blinatumomab",
+      "validation": "mendelian"
     },
     {
       "gene": "EPOR",
@@ -4782,7 +5058,9 @@ const PIPELINE = {
       "disease": "Kidney Disease",
       "efo_id": "EFO_0003086",
       "score": 0.692,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Aranesp\u00ae",
+      "validation": "mendelian"
     },
     {
       "gene": "KRAS",
@@ -4790,7 +5068,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sotorasib",
+      "validation": "mendelian"
     },
     {
       "gene": "PDE4B",
@@ -4798,7 +5078,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Apremilast",
+      "validation": ""
     },
     {
       "gene": "CYP17A1",
@@ -4806,7 +5088,9 @@ const PIPELINE = {
       "disease": "Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Abiraterone",
+      "validation": ""
     },
     {
       "gene": "AR",
@@ -4814,7 +5098,9 @@ const PIPELINE = {
       "disease": "Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Abiraterone",
+      "validation": ""
     },
     {
       "gene": "TSLP",
@@ -4822,7 +5108,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Tezepelumab",
+      "validation": ""
     },
     {
       "gene": "CALCRL",
@@ -4830,7 +5118,9 @@ const PIPELINE = {
       "disease": "Migraine",
       "efo_id": "MONDO_0005277",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Erenumab",
+      "validation": "mendelian"
     },
     {
       "gene": "CD19",
@@ -4838,7 +5128,9 @@ const PIPELINE = {
       "disease": "Non-Hodgkin's Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "blinatumomab",
+      "validation": ""
     },
     {
       "gene": "CSF3R",
@@ -4846,7 +5138,9 @@ const PIPELINE = {
       "disease": "Non-Hodgkin's Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "filgrastim",
+      "validation": ""
     },
     {
       "gene": "PDE4B",
@@ -4854,7 +5148,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Apremilast",
+      "validation": ""
     },
     {
       "gene": "EGFR",
@@ -4862,7 +5158,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Afatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ERBB2",
@@ -4870,7 +5168,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Afatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "CDK4",
@@ -4878,7 +5178,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Palbociclib",
+      "validation": "mendelian"
     },
     {
       "gene": "MAP2K1",
@@ -4886,7 +5188,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trametinib",
+      "validation": "mendelian"
     },
     {
       "gene": "TNFSF11",
@@ -4894,7 +5198,9 @@ const PIPELINE = {
       "disease": "Osteogenesis Imperfecta",
       "efo_id": "MONDO_0009066",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Denosumab",
+      "validation": "mendelian"
     },
     {
       "gene": "TOP2A",
@@ -4902,7 +5208,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia (ALL)",
       "efo_id": "EFO_0000220",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Daunorubicin",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4910,7 +5218,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etanercept",
+      "validation": ""
     },
     {
       "gene": "EPOR",
@@ -4918,7 +5228,9 @@ const PIPELINE = {
       "disease": "Breast Neoplasms",
       "efo_id": "EFO_0000305",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "darbepoetin alfa",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -4926,7 +5238,9 @@ const PIPELINE = {
       "disease": "Plaque Psoriasis",
       "efo_id": "EFO_1001494",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etanercept",
+      "validation": ""
     },
     {
       "gene": "CALCRL",
@@ -4934,7 +5248,9 @@ const PIPELINE = {
       "disease": "Stable Angina",
       "efo_id": "EFO_0003888",
       "score": 0.474,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Erenumab",
+      "validation": "mendelian"
     },
     {
       "gene": "PDE4B",
@@ -4942,7 +5258,9 @@ const PIPELINE = {
       "disease": "Palmoplantaris Pustulosis",
       "efo_id": "EFO_0000676",
       "score": 0.431,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Apremilast",
+      "validation": ""
     },
     {
       "gene": "CD19",
@@ -4950,7 +5268,9 @@ const PIPELINE = {
       "disease": "Relapsed or Refractory Diffuse Large B Cell Lymphoma (DLBCL)",
       "efo_id": "EFO_0000403",
       "score": 0.346,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Blinatumomab",
+      "validation": ""
     },
     {
       "gene": "EPOR",
@@ -4958,7 +5278,9 @@ const PIPELINE = {
       "disease": "End Stage Renal Disease",
       "efo_id": "EFO_0003884",
       "score": 0.32,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Aranesp\u00ae",
+      "validation": ""
     }
   ],
   "ANAB": [
@@ -4968,7 +5290,9 @@ const PIPELINE = {
       "disease": "Chronic Rhinosinusitis",
       "efo_id": "MONDO_0004979",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etokimab",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "IL33",
@@ -4976,7 +5300,9 @@ const PIPELINE = {
       "disease": "Eosinophilic Asthma",
       "efo_id": "EFO_0000270",
       "score": 0.96,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etokimab",
+      "validation": ""
     },
     {
       "gene": "IL33",
@@ -4984,7 +5310,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etokimab",
+      "validation": "bq_confirmed"
     }
   ],
   "APLS": [
@@ -4994,7 +5322,9 @@ const PIPELINE = {
       "disease": "Cold Agglutinin Disease",
       "efo_id": "MONDO_0002280",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "APL-2",
+      "validation": ""
     },
     {
       "gene": "C3",
@@ -5002,7 +5332,9 @@ const PIPELINE = {
       "disease": "Neovascular Age-Related Macular Degeneration",
       "efo_id": "EFO_0004683",
       "score": 0.953,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Pegcetacoplan",
+      "validation": ""
     },
     {
       "gene": "C3",
@@ -5010,7 +5342,9 @@ const PIPELINE = {
       "disease": "Geographic Atrophy",
       "efo_id": "EFO_1001492",
       "score": 0.953,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Pegcetacoplan",
+      "validation": ""
     },
     {
       "gene": "C3",
@@ -5018,7 +5352,9 @@ const PIPELINE = {
       "disease": "C3 Glomerulonephritis",
       "efo_id": "MONDO_0013892",
       "score": 0.886,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "APL-2",
+      "validation": "mendelian"
     }
   ],
   "ARNA": [
@@ -5028,7 +5364,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.898,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etrasimod",
+      "validation": "mendelian"
     },
     {
       "gene": "S1PR5",
@@ -5036,7 +5374,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.681,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Etrasimod",
+      "validation": ""
     },
     {
       "gene": "S1PR1",
@@ -5044,7 +5384,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etrasimod",
+      "validation": "mendelian"
     },
     {
       "gene": "S1PR1",
@@ -5052,7 +5394,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etrasimod 2 mg",
+      "validation": ""
     },
     {
       "gene": "S1PR4",
@@ -5060,7 +5404,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.195,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etrasimod 1 mg",
+      "validation": ""
     }
   ],
   "ARQL": [
@@ -5070,7 +5416,9 @@ const PIPELINE = {
       "disease": "Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.979,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Fulvestrant",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "MET",
@@ -5078,7 +5426,9 @@ const PIPELINE = {
       "disease": "Gastric Cancer",
       "efo_id": "EFO_0000178",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ARQ 197",
+      "validation": "mendelian"
     }
   ],
   "BBIO": [
@@ -5088,7 +5438,9 @@ const PIPELINE = {
       "disease": "Amyloid Cardiomyopathy, Transthyretin-Related",
       "efo_id": "MONDO_0018634",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "AG10 oral tablet",
+      "validation": ""
     }
   ],
   "BCRX": [
@@ -5098,7 +5450,9 @@ const PIPELINE = {
       "disease": "Hereditary Angioedema",
       "efo_id": "MONDO_0019623",
       "score": 0.905,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "BCX7353",
+      "validation": ""
     },
     {
       "gene": "HMGCR",
@@ -5106,7 +5460,9 @@ const PIPELINE = {
       "disease": "Hereditary Angioedema",
       "efo_id": "MONDO_0019623",
       "score": 0.888,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rosuvastatin",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "ATP1A1",
@@ -5114,7 +5470,9 @@ const PIPELINE = {
       "disease": "Hereditary Angioedema",
       "efo_id": "MONDO_0019623",
       "score": 0.703,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Digoxin",
+      "validation": "mendelian"
     }
   ],
   "BIIB": [
@@ -5124,7 +5482,9 @@ const PIPELINE = {
       "disease": "Spinal Muscular Atrophy",
       "efo_id": "EFO_0008525",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Nusinersen",
+      "validation": ""
     },
     {
       "gene": "GRIA1",
@@ -5132,7 +5492,9 @@ const PIPELINE = {
       "disease": "Cognitive Impairment Associated With Schizophrenia (CIAS)",
       "efo_id": "EFO_0000692",
       "score": 0.944,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "PF-04958242",
+      "validation": ""
     },
     {
       "gene": "GRIA1",
@@ -5140,7 +5502,9 @@ const PIPELINE = {
       "disease": "Schizophrenia",
       "efo_id": "MONDO_0005090",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "PF-04958242",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "GABRA1",
@@ -5148,7 +5512,9 @@ const PIPELINE = {
       "disease": "Parkinson Disease",
       "efo_id": "MONDO_0005180",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "SAGE-217",
+      "validation": "mendelian"
     },
     {
       "gene": "ITGA4",
@@ -5156,7 +5522,9 @@ const PIPELINE = {
       "disease": "Acute Ischemic Stroke",
       "efo_id": "EFO_0000712",
       "score": 0.832,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "natalizumab",
+      "validation": "mendelian"
     },
     {
       "gene": "KEAP1",
@@ -5164,7 +5532,9 @@ const PIPELINE = {
       "disease": "Relapsing Forms of Multiple Sclerosis",
       "efo_id": "MONDO_0005301",
       "score": 0.789,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "dimethyl fumarate",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "GABRA1",
@@ -5172,7 +5542,9 @@ const PIPELINE = {
       "disease": "Major Depressive Disorder",
       "efo_id": "MONDO_0002009",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "SAGE-217",
+      "validation": ""
     },
     {
       "gene": "PPARG",
@@ -5180,7 +5552,9 @@ const PIPELINE = {
       "disease": "Pulmonary Hypertension",
       "efo_id": "MONDO_0005149",
       "score": 0.559,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Bardoxolone methyl",
+      "validation": "mendelian"
     },
     {
       "gene": "SCN9A",
@@ -5188,7 +5562,9 @@ const PIPELINE = {
       "disease": "Diabetes Mellitus",
       "efo_id": "EFO_0000400",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "BIIB074",
+      "validation": ""
     },
     {
       "gene": "GABRA1",
@@ -5196,7 +5572,9 @@ const PIPELINE = {
       "disease": "Insomnia",
       "efo_id": "EFO_0004698",
       "score": 0.182,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "SAGE-217",
+      "validation": "mendelian"
     }
   ],
   "BMRN": [
@@ -5206,7 +5584,9 @@ const PIPELINE = {
       "disease": "Hemophilia A",
       "efo_id": "MONDO_0010602",
       "score": 0.998,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "valoctocogene roxaparvovec",
+      "validation": "mendelian_ancestor"
     },
     {
       "gene": "PAH",
@@ -5214,7 +5594,9 @@ const PIPELINE = {
       "disease": "Phenylketonuria (PKU)",
       "efo_id": "MONDO_0009861",
       "score": 0.997,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pegvaliase",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "DMD",
@@ -5222,7 +5604,9 @@ const PIPELINE = {
       "disease": "Duchenne Muscular Dystrophy",
       "efo_id": "MONDO_0010679",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "BMN 044 IV 6 mg/kg",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "FGFR3",
@@ -5230,7 +5614,9 @@ const PIPELINE = {
       "disease": "Achondroplasia",
       "efo_id": "MONDO_0007037",
       "score": 0.934,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Active BMN 111: Subcutaneous injection of recommended dose of BMN 111 based on weight-band dosing once daily.",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "NPR2",
@@ -5238,7 +5624,9 @@ const PIPELINE = {
       "disease": "Achondroplasia",
       "efo_id": "MONDO_0007037",
       "score": 0.933,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "BMN 111",
+      "validation": ""
     }
   ],
   "BPMC": [
@@ -5248,7 +5636,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "avapritinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "PDGFRA",
@@ -5256,7 +5646,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "avapritinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "BRAF",
@@ -5264,7 +5656,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "RET",
@@ -5272,7 +5666,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -5280,7 +5676,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -5288,7 +5686,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "ABL1",
@@ -5296,7 +5696,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "RAF1",
@@ -5304,7 +5706,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "FGFR2",
@@ -5312,7 +5716,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "MAPK11",
@@ -5320,7 +5726,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "DDR2",
@@ -5328,7 +5736,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "TEK",
@@ -5336,7 +5746,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "EPHA2",
@@ -5344,7 +5756,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "NTRK1",
@@ -5352,7 +5766,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "FRK",
@@ -5360,7 +5776,9 @@ const PIPELINE = {
       "disease": "GIST",
       "efo_id": "MONDO_0011719",
       "score": 0.936,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "regorafenib",
+      "validation": ""
     },
     {
       "gene": "PDGFRA",
@@ -5368,7 +5786,9 @@ const PIPELINE = {
       "disease": "Aggressive Systemic Mastocytosis",
       "efo_id": "MONDO_0009263",
       "score": 0.846,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Avapritinib",
+      "validation": ""
     }
   ],
   "CHRS": [
@@ -5378,7 +5798,9 @@ const PIPELINE = {
       "disease": "Plaque Psoriasis",
       "efo_id": "EFO_1001494",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Adalimumab",
+      "validation": ""
     }
   ],
   "CLVS": [
@@ -5388,7 +5810,9 @@ const PIPELINE = {
       "disease": "Non-small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Rociletinib",
+      "validation": ""
     },
     {
       "gene": "MAP2K1",
@@ -5396,7 +5820,9 @@ const PIPELINE = {
       "disease": "Non-small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trametinib",
+      "validation": "mendelian"
     },
     {
       "gene": "MAP2K2",
@@ -5404,7 +5830,9 @@ const PIPELINE = {
       "disease": "Non-small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trametinib",
+      "validation": "mendelian"
     }
   ],
   "CPRX": [
@@ -5414,7 +5842,9 @@ const PIPELINE = {
       "disease": "Muscular Atrophy, Spinal",
       "efo_id": "EFO_0008525",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Amifampridine Phosphate",
+      "validation": "mendelian"
     }
   ],
   "CYTK": [
@@ -5424,7 +5854,9 @@ const PIPELINE = {
       "disease": "Heart Failure With Reduced Ejection Fraction",
       "efo_id": "EFO_0003144",
       "score": 0.986,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "25 mg Omecamtiv Mecarbil",
+      "validation": "mendelian_ancestor"
     }
   ],
   "DCPH": [
@@ -5434,7 +5866,9 @@ const PIPELINE = {
       "disease": "Breast Adenocarcinoma",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rebastinib",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -5442,7 +5876,9 @@ const PIPELINE = {
       "disease": "Advanced Cancers",
       "efo_id": "MONDO_0004992",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": ""
     },
     {
       "gene": "PDGFRA",
@@ -5450,7 +5886,9 @@ const PIPELINE = {
       "disease": "Advanced Cancers",
       "efo_id": "MONDO_0004992",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -5458,7 +5896,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "PDGFRA",
@@ -5466,7 +5906,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "RET",
@@ -5474,7 +5916,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -5482,7 +5926,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT1",
@@ -5490,7 +5936,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "PDGFRB",
@@ -5498,7 +5946,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT3",
@@ -5506,7 +5956,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT4",
@@ -5514,7 +5966,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "CSF1R",
@@ -5522,7 +5976,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.936,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "TEK",
@@ -5530,7 +5986,9 @@ const PIPELINE = {
       "disease": "Breast Adenocarcinoma",
       "efo_id": "EFO_0000305",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rebastinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ABL1",
@@ -5538,7 +5996,9 @@ const PIPELINE = {
       "disease": "Locally Advanced or Metastatic Solid Tumor",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rebastinib",
+      "validation": "mendelian"
     }
   ],
   "EPZM": [
@@ -5548,7 +6008,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.945,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tazemetostat",
+      "validation": ""
     },
     {
       "gene": "AR",
@@ -5556,7 +6018,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Enzalutamide",
+      "validation": ""
     },
     {
       "gene": "EZH2",
@@ -5564,7 +6028,9 @@ const PIPELINE = {
       "disease": "BAP1 Loss of Function",
       "efo_id": "EFO_0000588",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tazemetostat",
+      "validation": ""
     },
     {
       "gene": "EZH2",
@@ -5572,7 +6038,9 @@ const PIPELINE = {
       "disease": "INI1-negative Tumors",
       "efo_id": "EFO_0000616",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Tazemetostat",
+      "validation": ""
     }
   ],
   "ESPR": [
@@ -5582,7 +6050,9 @@ const PIPELINE = {
       "disease": "Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "evolocumab",
+      "validation": ""
     },
     {
       "gene": "HMGCR",
@@ -5590,7 +6060,9 @@ const PIPELINE = {
       "disease": "Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 0.987,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Atorvastatin 20mg",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "NPC1L1",
@@ -5598,7 +6070,9 @@ const PIPELINE = {
       "disease": "Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 0.987,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ezetimibe 10mg",
+      "validation": ""
     },
     {
       "gene": "ACLY",
@@ -5606,7 +6080,9 @@ const PIPELINE = {
       "disease": "Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 0.984,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "bempedoic acid 180mg",
+      "validation": ""
     },
     {
       "gene": "NPC1L1",
@@ -5614,7 +6090,9 @@ const PIPELINE = {
       "disease": "Hyperlipidemias",
       "efo_id": "MONDO_0021187",
       "score": 0.638,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ezetimibe",
+      "validation": ""
     },
     {
       "gene": "ACLY",
@@ -5622,7 +6100,9 @@ const PIPELINE = {
       "disease": "Atherosclerotic Cardiovascular Diseases",
       "efo_id": "EFO_0001645",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "ETC-1002",
+      "validation": ""
     },
     {
       "gene": "HMGCR",
@@ -5630,7 +6110,9 @@ const PIPELINE = {
       "disease": "Hyperlipidemia",
       "efo_id": "MONDO_0021187",
       "score": 0.601,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Atorvastatin",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "ACLY",
@@ -5638,7 +6120,9 @@ const PIPELINE = {
       "disease": "Hyperlipidemia",
       "efo_id": "MONDO_0021187",
       "score": 0.601,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ETC-1002",
+      "validation": ""
     },
     {
       "gene": "NPC1L1",
@@ -5646,7 +6130,9 @@ const PIPELINE = {
       "disease": "Atherosclerosis",
       "efo_id": "EFO_0003914",
       "score": 0.182,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ezetimibe",
+      "validation": ""
     },
     {
       "gene": "ACLY",
@@ -5654,7 +6140,9 @@ const PIPELINE = {
       "disease": "Atherosclerosis",
       "efo_id": "EFO_0003914",
       "score": 0.152,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Bempedoic acid",
+      "validation": ""
     }
   ],
   "EXEL": [
@@ -5664,7 +6152,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma",
       "efo_id": "EFO_0000681",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Cabozantinib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -5672,7 +6162,9 @@ const PIPELINE = {
       "disease": "Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.945,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "cabozantinib",
+      "validation": ""
     },
     {
       "gene": "MET",
@@ -5680,7 +6172,9 @@ const PIPELINE = {
       "disease": "Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.945,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "cabozantinib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -5688,7 +6182,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "MET",
@@ -5696,7 +6192,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cabozantinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "RAF1",
@@ -5704,7 +6202,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "PDGFRB",
@@ -5712,7 +6212,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -5720,7 +6222,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "FLT3",
@@ -5728,7 +6232,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "BRAF",
@@ -5736,7 +6242,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "RET",
@@ -5744,7 +6252,9 @@ const PIPELINE = {
       "disease": "Hepatocellular Carcinoma",
       "efo_id": "EFO_0000182",
       "score": 0.943,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sorafenib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -5752,7 +6262,9 @@ const PIPELINE = {
       "disease": "Differentiated Thyroid Cancer",
       "efo_id": "EFO_0002892",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cabozantinib",
+      "validation": "mendelian"
     },
     {
       "gene": "MET",
@@ -5760,7 +6272,9 @@ const PIPELINE = {
       "disease": "Differentiated Thyroid Cancer",
       "efo_id": "EFO_0002892",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cabozantinib",
+      "validation": "mendelian"
     },
     {
       "gene": "KDR",
@@ -5768,7 +6282,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma",
       "efo_id": "EFO_0000681",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cabozantinib",
+      "validation": ""
     }
   ],
   "GBT": [
@@ -5778,7 +6294,9 @@ const PIPELINE = {
       "disease": "Hypoxemia",
       "efo_id": "EFO_0000768",
       "score": 0.916,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "GBT440",
+      "validation": ""
     },
     {
       "gene": "HBB",
@@ -5786,7 +6304,9 @@ const PIPELINE = {
       "disease": "Sickle Cell Disease",
       "efo_id": "MONDO_0011382",
       "score": 0.846,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "GBT440",
+      "validation": "bq_confirmed"
     }
   ],
   "GILD": [
@@ -5796,7 +6316,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -5804,7 +6326,9 @@ const PIPELINE = {
       "disease": "Small Bowel Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -5812,7 +6336,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Adalimumab",
+      "validation": ""
     },
     {
       "gene": "TNF",
@@ -5820,7 +6346,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Adalimumab",
+      "validation": ""
     },
     {
       "gene": "MMP9",
@@ -5828,7 +6356,9 @@ const PIPELINE = {
       "disease": "Cystic Fibrosis",
       "efo_id": "MONDO_0009061",
       "score": 0.999,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Andecaliximab",
+      "validation": ""
     },
     {
       "gene": "ESR1",
@@ -5836,7 +6366,9 @@ const PIPELINE = {
       "disease": "Advanced Estrogen Receptor Positive HER2- Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.992,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Fulvestrant",
+      "validation": ""
     },
     {
       "gene": "SYK",
@@ -5844,7 +6376,9 @@ const PIPELINE = {
       "disease": "Acute Myeloid Leukemia",
       "efo_id": "EFO_0000222",
       "score": 0.984,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Entospletinib",
+      "validation": ""
     },
     {
       "gene": "ESR1",
@@ -5852,7 +6386,9 @@ const PIPELINE = {
       "disease": "Solid Tumors and Lymphomas",
       "efo_id": "MONDO_0004992",
       "score": 0.979,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Fulvestrant",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "EDNRA",
@@ -5860,7 +6396,9 @@ const PIPELINE = {
       "disease": "Herpes Simplex",
       "efo_id": "EFO_0000538",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cidofovir",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -5868,7 +6406,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Idelalisib",
+      "validation": ""
     },
     {
       "gene": "SYK",
@@ -5876,7 +6416,9 @@ const PIPELINE = {
       "disease": "Oncology",
       "efo_id": "MONDO_0004992",
       "score": 0.956,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Entospletinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -5884,7 +6426,9 @@ const PIPELINE = {
       "disease": "Lymphoid Malignancies",
       "efo_id": "EFO_0000574",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Idelalisib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -5892,7 +6436,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.942,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -5900,7 +6446,9 @@ const PIPELINE = {
       "disease": "Cutaneous Lupus Erythematosus",
       "efo_id": "MONDO_0007915",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "SCN5A",
@@ -5908,7 +6456,9 @@ const PIPELINE = {
       "disease": "Long QT Syndrome",
       "efo_id": "MONDO_0019171",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "GS-6615",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK1",
@@ -5916,7 +6466,9 @@ const PIPELINE = {
       "disease": "Fistulizing Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -5924,7 +6476,9 @@ const PIPELINE = {
       "disease": "Cutaneous Lupus Erythematosus",
       "efo_id": "MONDO_0007915",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -5932,7 +6486,9 @@ const PIPELINE = {
       "disease": "Cutaneous Lupus Erythematosus",
       "efo_id": "MONDO_0007915",
       "score": 0.932,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "SYK",
@@ -5940,7 +6496,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.928,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Entospletinib",
+      "validation": ""
     },
     {
       "gene": "BTK",
@@ -5948,7 +6506,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.928,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tirabrutinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -5956,7 +6516,9 @@ const PIPELINE = {
       "disease": "Myelofibrosis",
       "efo_id": "EFO_0002430",
       "score": 0.924,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -5964,7 +6526,9 @@ const PIPELINE = {
       "disease": "Myelofibrosis",
       "efo_id": "EFO_0002430",
       "score": 0.924,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "JAK3",
@@ -5972,7 +6536,9 @@ const PIPELINE = {
       "disease": "Myelofibrosis",
       "efo_id": "EFO_0002430",
       "score": 0.924,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -5980,7 +6546,9 @@ const PIPELINE = {
       "disease": "Myelofibrosis",
       "efo_id": "EFO_0002430",
       "score": 0.924,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -5988,7 +6556,9 @@ const PIPELINE = {
       "disease": "Myelofibrosis",
       "efo_id": "EFO_0002430",
       "score": 0.922,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Idelalisib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -5996,7 +6566,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 0.919,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -6004,7 +6576,9 @@ const PIPELINE = {
       "disease": "Cutaneous Lupus Erythematosus",
       "efo_id": "MONDO_0007915",
       "score": 0.918,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "JAK3",
@@ -6012,7 +6586,9 @@ const PIPELINE = {
       "disease": "Small Bowel Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6020,7 +6596,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -6028,7 +6606,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": "mendelian"
     },
     {
       "gene": "BTK",
@@ -6036,7 +6616,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 0.907,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tirabrutinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -6044,7 +6626,9 @@ const PIPELINE = {
       "disease": "Previously Untreated Pancreatic Ductal Adenocarcinoma",
       "efo_id": "EFO_0002618",
       "score": 0.903,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Idelalisib",
+      "validation": ""
     },
     {
       "gene": "CD47",
@@ -6052,7 +6636,9 @@ const PIPELINE = {
       "disease": "Hematological Malignancies",
       "efo_id": "EFO_0000574",
       "score": 0.902,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Magrolimab",
+      "validation": "mendelian"
     },
     {
       "gene": "PTGIR",
@@ -6060,7 +6646,9 @@ const PIPELINE = {
       "disease": "Diabetic Kidney Disease",
       "efo_id": "EFO_0000401",
       "score": 0.884,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "SEL",
+      "validation": "mendelian"
     },
     {
       "gene": "TYK2",
@@ -6068,7 +6656,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.881,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -6076,7 +6666,9 @@ const PIPELINE = {
       "disease": "Fistulizing Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.878,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "MMP9",
@@ -6084,7 +6676,9 @@ const PIPELINE = {
       "disease": "Gastric Adenocarcinoma",
       "efo_id": "EFO_0000178",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Andecaliximab",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -6092,7 +6686,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TLR7",
@@ -6100,7 +6696,9 @@ const PIPELINE = {
       "disease": "HIV-1 Infection",
       "efo_id": "EFO_0000180",
       "score": 0.841,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vesatolimod",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -6108,7 +6706,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -6116,7 +6716,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TUBB1",
@@ -6124,7 +6726,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia",
       "efo_id": "EFO_0000220",
       "score": 0.813,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Vincristine",
+      "validation": ""
     },
     {
       "gene": "CYP3A4",
@@ -6132,7 +6736,9 @@ const PIPELINE = {
       "disease": "HIV-1 Infection",
       "efo_id": "EFO_0000180",
       "score": 0.792,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "COBI",
+      "validation": "mendelian"
     },
     {
       "gene": "MMP9",
@@ -6140,7 +6746,9 @@ const PIPELINE = {
       "disease": "Crohn's Disease",
       "efo_id": "EFO_0000384",
       "score": 0.781,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Andecaliximab",
+      "validation": ""
     },
     {
       "gene": "SYK",
@@ -6148,7 +6756,9 @@ const PIPELINE = {
       "disease": "Acute Lymphoblastic Leukemia",
       "efo_id": "EFO_0000220",
       "score": 0.779,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Entospletinib",
+      "validation": ""
     },
     {
       "gene": "MMP9",
@@ -6156,7 +6766,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 0.775,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Andecaliximab",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6164,7 +6776,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -6172,7 +6786,9 @@ const PIPELINE = {
       "disease": "Psoriatic Arthritis",
       "efo_id": "EFO_0003778",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Filgotinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "SYK",
@@ -6180,7 +6796,9 @@ const PIPELINE = {
       "disease": "Non-Hodgkin Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.696,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Entospletinib",
+      "validation": ""
     },
     {
       "gene": "TOP2A",
@@ -6188,7 +6806,9 @@ const PIPELINE = {
       "disease": "Acute Myeloid Leukemia",
       "efo_id": "EFO_0000222",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Daunorubicin",
+      "validation": ""
     },
     {
       "gene": "CD47",
@@ -6196,7 +6816,9 @@ const PIPELINE = {
       "disease": "Non Hodgkin Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Magrolimab",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -6204,7 +6826,9 @@ const PIPELINE = {
       "disease": "Rheumatoid Arthritis",
       "efo_id": "EFO_0000685",
       "score": 0.6,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Filgotinib",
+      "validation": ""
     },
     {
       "gene": "XDH",
@@ -6212,7 +6836,9 @@ const PIPELINE = {
       "disease": "Non Hodgkin Lymphoma",
       "efo_id": "EFO_0005952",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Allopurinol",
+      "validation": "mendelian"
     },
     {
       "gene": "MMP9",
@@ -6220,7 +6846,9 @@ const PIPELINE = {
       "disease": "Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Andecaliximab",
+      "validation": ""
     },
     {
       "gene": "MAP3K5",
@@ -6228,7 +6856,9 @@ const PIPELINE = {
       "disease": "Diabetic Kidney Disease",
       "efo_id": "EFO_0000401",
       "score": 0.353,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Selonsertib",
+      "validation": "mendelian"
     },
     {
       "gene": "NR1H4",
@@ -6236,7 +6866,9 @@ const PIPELINE = {
       "disease": "Compensated Cirrhosis",
       "efo_id": "EFO_0001422",
       "score": 0.298,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Cilofexor",
+      "validation": "mendelian_ancestor"
     },
     {
       "gene": "SCN5A",
@@ -6244,7 +6876,9 @@ const PIPELINE = {
       "disease": "LQT2 Syndrome",
       "efo_id": "EFO_0004276",
       "score": 0.195,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Eleclazine",
+      "validation": "mendelian"
     },
     {
       "gene": "SCN5A",
@@ -6252,7 +6886,9 @@ const PIPELINE = {
       "disease": "Ischemic Heart Disease",
       "efo_id": "EFO_0003914",
       "score": 0.006,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "GS-6615",
+      "validation": ""
     }
   ],
   "GTHX": [
@@ -6262,7 +6898,9 @@ const PIPELINE = {
       "disease": "Carcinoma, Non-Small-Cell Lung",
       "efo_id": "EFO_0003060",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Osimertinib",
+      "validation": ""
     },
     {
       "gene": "ESR1",
@@ -6270,7 +6908,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.992,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Fulvestrant",
+      "validation": ""
     },
     {
       "gene": "CDK4",
@@ -6278,7 +6918,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trilaciclib",
+      "validation": ""
     },
     {
       "gene": "CDK6",
@@ -6286,7 +6928,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trilaciclib",
+      "validation": ""
     },
     {
       "gene": "TOP2A",
@@ -6294,7 +6938,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etoposide",
+      "validation": "mendelian"
     },
     {
       "gene": "TOP1",
@@ -6302,7 +6948,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Topotecan",
+      "validation": "mendelian"
     },
     {
       "gene": "CDK4",
@@ -6310,7 +6958,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trilaciclib",
+      "validation": "mendelian"
     },
     {
       "gene": "CDK6",
@@ -6318,7 +6968,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Trilaciclib",
+      "validation": "mendelian"
     }
   ],
   "ICPT": [
@@ -6328,7 +6980,9 @@ const PIPELINE = {
       "disease": "Liver Cirrhosis, Biliary",
       "efo_id": "EFO_0001422",
       "score": 0.298,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Obeticholic Acid (OCA)",
+      "validation": "mendelian_ancestor"
     }
   ],
   "IMGN": [
@@ -6338,7 +6992,9 @@ const PIPELINE = {
       "disease": "Epithelial Ovarian Cancer",
       "efo_id": "EFO_0001075",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Topotecan",
+      "validation": ""
     }
   ],
   "INCY": [
@@ -6348,7 +7004,9 @@ const PIPELINE = {
       "disease": "Lung Cancer",
       "efo_id": "EFO_0001071",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Osimertinib",
+      "validation": ""
     },
     {
       "gene": "FGFR2",
@@ -6356,7 +7014,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -6364,7 +7024,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "ABL1",
@@ -6372,7 +7034,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "FGFR3",
@@ -6380,7 +7044,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.98,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "RAF1",
@@ -6388,7 +7054,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -6396,7 +7064,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "PDGFRA",
@@ -6404,7 +7074,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -6412,7 +7084,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "NTRK1",
@@ -6420,7 +7094,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -6428,7 +7104,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6436,7 +7114,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "itacitinib",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -6444,7 +7124,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -6452,7 +7134,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Retifanlimab",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -6460,7 +7144,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "FGFR2",
@@ -6468,7 +7154,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.96,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -6476,7 +7164,9 @@ const PIPELINE = {
       "disease": "Lymphoma",
       "efo_id": "EFO_0000574",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Parsaclisib",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -6484,7 +7174,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -6492,7 +7184,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "FGFR3",
@@ -6500,7 +7194,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.949,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6508,7 +7204,9 @@ const PIPELINE = {
       "disease": "Lymphoma",
       "efo_id": "EFO_0000574",
       "score": 0.947,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "itacitinib",
+      "validation": ""
     },
     {
       "gene": "BTK",
@@ -6516,7 +7214,9 @@ const PIPELINE = {
       "disease": "Lymphoma",
       "efo_id": "EFO_0000574",
       "score": 0.947,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "ibrutinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -6524,7 +7224,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB050465",
+      "validation": ""
     },
     {
       "gene": "MAPK11",
@@ -6532,7 +7234,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "DDR2",
@@ -6540,7 +7244,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -6548,7 +7254,9 @@ const PIPELINE = {
       "disease": "Leukemia",
       "efo_id": "EFO_0000565",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "FRK",
@@ -6556,7 +7264,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.937,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "EPHA2",
@@ -6564,7 +7274,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.937,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "ABL1",
@@ -6572,7 +7284,9 @@ const PIPELINE = {
       "disease": "Accelerated Phase Chronic Myeloid Leukemia",
       "efo_id": "EFO_0000220",
       "score": 0.93,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ponatinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6580,7 +7294,9 @@ const PIPELINE = {
       "disease": "Moderate to Severe Ulcerative Colitis",
       "efo_id": "EFO_0000729",
       "score": 0.913,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Itacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ARG1",
@@ -6588,7 +7304,9 @@ const PIPELINE = {
       "disease": "Bladder Cancer",
       "efo_id": "MONDO_0004986",
       "score": 0.905,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB001158",
+      "validation": ""
     },
     {
       "gene": "TYMS",
@@ -6596,7 +7314,9 @@ const PIPELINE = {
       "disease": "Head and Neck Cancer",
       "efo_id": "EFO_0006859",
       "score": 0.89,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "5-Fluorouracil",
+      "validation": ""
     },
     {
       "gene": "RET",
@@ -6604,7 +7324,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.867,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "TEK",
@@ -6612,7 +7334,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": "mendelian"
     },
     {
       "gene": "KDR",
@@ -6620,7 +7344,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT1",
@@ -6628,7 +7354,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "PDGFRB",
@@ -6636,7 +7364,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -6644,7 +7374,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6652,7 +7384,9 @@ const PIPELINE = {
       "disease": "Lung Cancer",
       "efo_id": "EFO_0001071",
       "score": 0.862,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Itacitinib",
+      "validation": ""
     },
     {
       "gene": "FLT3",
@@ -6660,7 +7394,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.856,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "PDGFRA",
@@ -6668,7 +7404,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.856,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "CSF1R",
@@ -6676,7 +7414,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.841,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "FLT4",
@@ -6684,7 +7424,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.841,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -6692,7 +7434,9 @@ const PIPELINE = {
       "disease": "Metastatic Nonsquamous Non-Small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Retifanlimab",
+      "validation": "mendelian"
     },
     {
       "gene": "AR",
@@ -6700,7 +7444,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.794,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Abiraterone",
+      "validation": "mendelian"
     },
     {
       "gene": "TOP2A",
@@ -6708,7 +7454,9 @@ const PIPELINE = {
       "disease": "Leukemia",
       "efo_id": "EFO_0000565",
       "score": 0.775,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Doxorubicin",
+      "validation": ""
     },
     {
       "gene": "TOP2A",
@@ -6716,7 +7464,9 @@ const PIPELINE = {
       "disease": "Non-small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.774,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Etoposide",
+      "validation": "mendelian"
     },
     {
       "gene": "IDO1",
@@ -6724,7 +7474,9 @@ const PIPELINE = {
       "disease": "Lung Cancer",
       "efo_id": "EFO_0001071",
       "score": 0.762,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Epacadostat",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK1",
@@ -6732,7 +7484,9 @@ const PIPELINE = {
       "disease": "Recurrent Adult Hodgkin's Lymphoma",
       "efo_id": "EFO_0000183",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "itacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "FGFR2",
@@ -6740,7 +7494,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.714,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "FGFR3",
@@ -6748,7 +7504,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.714,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -6756,7 +7514,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.714,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": ""
     },
     {
       "gene": "PARP1",
@@ -6764,7 +7524,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.713,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rucaparib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6772,7 +7534,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Itacitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ARG1",
@@ -6780,7 +7544,9 @@ const PIPELINE = {
       "disease": "Relapsed or Refractory Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB001158",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -6788,7 +7554,9 @@ const PIPELINE = {
       "disease": "Advanced or Metastatic Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK1",
@@ -6796,7 +7564,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -6804,7 +7574,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -6812,7 +7584,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "TYK2",
@@ -6820,7 +7594,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "PDGFRB",
@@ -6828,7 +7604,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Imatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK2",
@@ -6836,7 +7614,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.661,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK1",
@@ -6844,7 +7624,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Itacitinib",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -6852,7 +7634,9 @@ const PIPELINE = {
       "disease": "Leukemia",
       "efo_id": "EFO_0000565",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -6860,7 +7644,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.648,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB050465",
+      "validation": "mendelian"
     },
     {
       "gene": "SRD5A1",
@@ -6868,7 +7654,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.643,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Abiraterone",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK1",
@@ -6876,7 +7664,9 @@ const PIPELINE = {
       "disease": "Vitiligo",
       "efo_id": "EFO_0004208",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -6884,7 +7674,9 @@ const PIPELINE = {
       "disease": "Vitiligo",
       "efo_id": "EFO_0004208",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -6892,7 +7684,9 @@ const PIPELINE = {
       "disease": "Vitiligo",
       "efo_id": "EFO_0004208",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -6900,7 +7694,9 @@ const PIPELINE = {
       "disease": "Vitiligo",
       "efo_id": "EFO_0004208",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "TYK2",
@@ -6908,7 +7704,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.604,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "BTK",
@@ -6916,7 +7714,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ibrutinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ABL1",
@@ -6924,7 +7724,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Imatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "KIT",
@@ -6932,7 +7734,9 @@ const PIPELINE = {
       "disease": "Graft-versus-host Disease (GVHD)",
       "efo_id": "MONDO_0013730",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Imatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ARG1",
@@ -6940,7 +7744,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.54,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB001158",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -6948,7 +7754,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.52,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "CYP17A1",
@@ -6956,7 +7764,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.516,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Abiraterone",
+      "validation": "mendelian"
     },
     {
       "gene": "PIK3CD",
@@ -6964,7 +7774,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Parsaclisib",
+      "validation": ""
     },
     {
       "gene": "BRAF",
@@ -6972,7 +7784,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -6980,7 +7794,9 @@ const PIPELINE = {
       "disease": "MPN (Myeloproliferative Neoplasms)",
       "efo_id": "EFO_0002428",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "JAK3",
@@ -6988,7 +7804,9 @@ const PIPELINE = {
       "disease": "Leukemia",
       "efo_id": "EFO_0000565",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "RET",
@@ -6996,7 +7814,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.49,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Regorafenib",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -7004,7 +7824,9 @@ const PIPELINE = {
       "disease": "Leukemia",
       "efo_id": "EFO_0000565",
       "score": 0.49,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     },
     {
       "gene": "IDO1",
@@ -7012,7 +7834,9 @@ const PIPELINE = {
       "disease": "Solid Tumors",
       "efo_id": "EFO_0004282",
       "score": 0.486,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Epacadostat",
+      "validation": "mendelian"
     },
     {
       "gene": "IDO1",
@@ -7020,7 +7844,9 @@ const PIPELINE = {
       "disease": "Advanced Malignancies",
       "efo_id": "MONDO_0004992",
       "score": 0.471,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Epacadostat",
+      "validation": ""
     },
     {
       "gene": "LOXL2",
@@ -7028,7 +7854,9 @@ const PIPELINE = {
       "disease": "Solid Tumors and Hematologic Malignancy",
       "efo_id": "MONDO_0004992",
       "score": 0.471,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB059872",
+      "validation": ""
     },
     {
       "gene": "JAK2",
@@ -7036,7 +7864,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.426,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "JAK1",
@@ -7044,7 +7874,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.317,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "IDO1",
@@ -7052,7 +7884,9 @@ const PIPELINE = {
       "disease": "Renal Cell Carcinoma (RCC)",
       "efo_id": "EFO_0000681",
       "score": 0.304,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Epacadostat",
+      "validation": "mendelian"
     },
     {
       "gene": "ARG1",
@@ -7060,7 +7894,9 @@ const PIPELINE = {
       "disease": "Biliary Tract Cancer (BTC)",
       "efo_id": "EFO_0005221",
       "score": 0.284,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "INCB001158",
+      "validation": "mendelian"
     },
     {
       "gene": "JAK3",
@@ -7068,7 +7904,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "TYK2",
@@ -7076,7 +7914,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ruxolitinib cream",
+      "validation": ""
     },
     {
       "gene": "TYMS",
@@ -7084,7 +7924,9 @@ const PIPELINE = {
       "disease": "Biliary Tract Cancer (BTC)",
       "efo_id": "EFO_0005221",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "5-Fluorouracil",
+      "validation": "mendelian"
     },
     {
       "gene": "FGFR2",
@@ -7092,7 +7934,9 @@ const PIPELINE = {
       "disease": "Cholangiocarcinoma",
       "efo_id": "EFO_0005221",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "FGFR3",
@@ -7100,7 +7944,9 @@ const PIPELINE = {
       "disease": "Cholangiocarcinoma",
       "efo_id": "EFO_0005221",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "FGFR1",
@@ -7108,7 +7954,9 @@ const PIPELINE = {
       "disease": "Cholangiocarcinoma",
       "efo_id": "EFO_0005221",
       "score": 0.279,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pemigatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "TYK2",
@@ -7116,7 +7964,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.002,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Ruxolitinib",
+      "validation": ""
     }
   ],
   "IONS": [
@@ -7126,7 +7976,9 @@ const PIPELINE = {
       "disease": "Transthyretin-Mediated Amyloid Cardiomyopathy (ATTR CM)",
       "efo_id": "MONDO_0018634",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Eplontersen",
+      "validation": ""
     },
     {
       "gene": "APOC3",
@@ -7134,7 +7986,9 @@ const PIPELINE = {
       "disease": "Hypertriglyceridemia",
       "efo_id": "EFO_0004211",
       "score": 0.712,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Volanesorsen",
+      "validation": ""
     },
     {
       "gene": "APOC3",
@@ -7142,7 +7996,9 @@ const PIPELINE = {
       "disease": "Abnormalities, Cardiovascular",
       "efo_id": "EFO_0000319",
       "score": 0.257,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Volanesorsen",
+      "validation": ""
     }
   ],
   "IRWD": [
@@ -7152,7 +8008,9 @@ const PIPELINE = {
       "disease": "Chronic Kidney Disease (CKD)",
       "efo_id": "EFO_0003884",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "colchicine",
+      "validation": "mendelian"
     }
   ],
   "KDMN": [
@@ -7162,7 +8020,9 @@ const PIPELINE = {
       "disease": "ADPKD",
       "efo_id": "EFO_0008620",
       "score": 0.991,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tesevatinib",
+      "validation": ""
     },
     {
       "gene": "EGFR",
@@ -7170,7 +8030,9 @@ const PIPELINE = {
       "disease": "Brain Tumor",
       "efo_id": "EFO_0000519",
       "score": 0.983,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Tesevatinib",
+      "validation": ""
     },
     {
       "gene": "ROCK1",
@@ -7178,7 +8040,9 @@ const PIPELINE = {
       "disease": "Autoimmune Diseases",
       "efo_id": "EFO_0000540",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Belumosudil",
+      "validation": "mendelian"
     },
     {
       "gene": "MET",
@@ -7186,7 +8050,9 @@ const PIPELINE = {
       "disease": "ADPKD",
       "efo_id": "EFO_0008620",
       "score": 0.642,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tesevatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "ROCK2",
@@ -7194,7 +8060,9 @@ const PIPELINE = {
       "disease": "Autoimmune Diseases",
       "efo_id": "EFO_0000540",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Belumosudil",
+      "validation": ""
     },
     {
       "gene": "ROCK2",
@@ -7202,7 +8070,9 @@ const PIPELINE = {
       "disease": "Idiopathic Pulmonary Fibrosis",
       "efo_id": "EFO_0000768",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Belumosudil",
+      "validation": "mendelian"
     },
     {
       "gene": "ATP4A",
@@ -7210,7 +8080,9 @@ const PIPELINE = {
       "disease": "Autoimmune Diseases",
       "efo_id": "EFO_0000540",
       "score": 0.5,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Omeprazole",
+      "validation": ""
     },
     {
       "gene": "ROCK1",
@@ -7218,7 +8090,9 @@ const PIPELINE = {
       "disease": "Idiopathic Pulmonary Fibrosis",
       "efo_id": "EFO_0000768",
       "score": 0.182,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Belumosudil",
+      "validation": "mendelian"
     }
   ],
   "KPTI": [
@@ -7228,7 +8102,9 @@ const PIPELINE = {
       "disease": "Endometrial Cancer",
       "efo_id": "MONDO_0011962",
       "score": 0.983,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Selinexor",
+      "validation": ""
     },
     {
       "gene": "XPO1",
@@ -7236,7 +8112,9 @@ const PIPELINE = {
       "disease": "Myelodysplastic Syndrome",
       "efo_id": "EFO_0000198",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Selinexor",
+      "validation": ""
     },
     {
       "gene": "TUBB1",
@@ -7244,7 +8122,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.897,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Belantamab Mafodotin",
+      "validation": "mendelian"
     },
     {
       "gene": "CD38",
@@ -7252,7 +8132,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.718,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Daratumumab",
+      "validation": ""
     },
     {
       "gene": "XPO1",
@@ -7260,7 +8142,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.675,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Selinexor",
+      "validation": ""
     },
     {
       "gene": "TNFRSF17",
@@ -7268,7 +8152,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Belantamab Mafodotin",
+      "validation": ""
     },
     {
       "gene": "SLAMF7",
@@ -7276,7 +8162,9 @@ const PIPELINE = {
       "disease": "Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Elotuzumab",
+      "validation": ""
     }
   ],
   "KURA": [
@@ -7286,7 +8174,9 @@ const PIPELINE = {
       "disease": "Myelodysplastic Syndromes",
       "efo_id": "EFO_0000198",
       "score": 0.76,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tipifarnib",
+      "validation": "mendelian"
     },
     {
       "gene": "FNTB",
@@ -7294,7 +8184,9 @@ const PIPELINE = {
       "disease": "HRAS Mutant Tumor",
       "efo_id": "EFO_0002892",
       "score": 0.182,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Tipifarnib",
+      "validation": "mendelian"
     }
   ],
   "MDCO": [
@@ -7304,7 +8196,9 @@ const PIPELINE = {
       "disease": "Elevated Cholesterol",
       "efo_id": "EFO_0004911",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Inclisiran",
+      "validation": ""
     },
     {
       "gene": "VKORC1",
@@ -7312,7 +8206,9 @@ const PIPELINE = {
       "disease": "Acute Bacterial Skin and Skin Structure Infection",
       "efo_id": "EFO_0000618",
       "score": 0.732,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Warfarin",
+      "validation": ""
     },
     {
       "gene": "PCSK9",
@@ -7320,7 +8216,9 @@ const PIPELINE = {
       "disease": "ASCVD",
       "efo_id": "EFO_0003914",
       "score": 0.7,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Inclisiran Sodium",
+      "validation": ""
     }
   ],
   "MGNX": [
@@ -7330,7 +8228,9 @@ const PIPELINE = {
       "disease": "HER-2 Positive Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Margetuximab",
+      "validation": ""
     },
     {
       "gene": "ERBB2",
@@ -7338,7 +8238,9 @@ const PIPELINE = {
       "disease": "Gastric Cancer",
       "efo_id": "EFO_0000178",
       "score": 0.7,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "margetuximab",
+      "validation": ""
     },
     {
       "gene": "ERBB2",
@@ -7346,7 +8248,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "margetuximab",
+      "validation": "mendelian"
     },
     {
       "gene": "PDCD1",
@@ -7354,7 +8258,9 @@ const PIPELINE = {
       "disease": "Head and Neck Cancer",
       "efo_id": "EFO_0006859",
       "score": 0.355,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "retifanlimab",
+      "validation": ""
     },
     {
       "gene": "ERBB2",
@@ -7362,7 +8268,9 @@ const PIPELINE = {
       "disease": "Esophageal Cancer",
       "efo_id": "EFO_0002916",
       "score": 0.012,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Margetuximab 15 mg",
+      "validation": "mendelian"
     }
   ],
   "MRTX": [
@@ -7372,7 +8280,9 @@ const PIPELINE = {
       "disease": "Advanced Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.979,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Afatinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "ERBB2",
@@ -7380,7 +8290,9 @@ const PIPELINE = {
       "disease": "Advanced Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.979,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Afatinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "ERBB4",
@@ -7388,7 +8300,9 @@ const PIPELINE = {
       "disease": "Advanced Cancer",
       "efo_id": "MONDO_0004992",
       "score": 0.972,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Afatinib",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "MET",
@@ -7396,7 +8310,9 @@ const PIPELINE = {
       "disease": "Non-Small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "MGCD265",
+      "validation": "mendelian"
     },
     {
       "gene": "KDR",
@@ -7404,7 +8320,9 @@ const PIPELINE = {
       "disease": "Carcinoma, Non-Small-Cell Lung",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sitravatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "MET",
@@ -7412,7 +8330,9 @@ const PIPELINE = {
       "disease": "Clear Cell Renal Cell Carcinoma",
       "efo_id": "EFO_0000349",
       "score": 0.796,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sitravatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "KDR",
@@ -7420,7 +8340,9 @@ const PIPELINE = {
       "disease": "Clear Cell Renal Cell Carcinoma",
       "efo_id": "EFO_0000349",
       "score": 0.779,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sitravatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "AXL",
@@ -7428,7 +8350,9 @@ const PIPELINE = {
       "disease": "Clear Cell Renal Cell Carcinoma",
       "efo_id": "EFO_0000349",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sitravatinib",
+      "validation": "mendelian"
     },
     {
       "gene": "AXL",
@@ -7436,7 +8360,9 @@ const PIPELINE = {
       "disease": "Carcinoma, Non-Small-Cell Lung",
       "efo_id": "EFO_0003060",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Sitravatinib",
+      "validation": ""
     }
   ],
   "MYGN": [
@@ -7446,7 +8372,9 @@ const PIPELINE = {
       "disease": "Ovarian Neoplasms",
       "efo_id": "EFO_0001075",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Niraparib",
+      "validation": ""
     },
     {
       "gene": "PARP2",
@@ -7454,7 +8382,9 @@ const PIPELINE = {
       "disease": "Ovarian Neoplasms",
       "efo_id": "EFO_0001075",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Niraparib",
+      "validation": ""
     },
     {
       "gene": "PARP1",
@@ -7462,7 +8392,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.945,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "olaparib",
+      "validation": ""
     },
     {
       "gene": "SRD5A1",
@@ -7470,7 +8402,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.865,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "abiraterone acetate",
+      "validation": "mendelian"
     },
     {
       "gene": "CYP17A1",
@@ -7478,7 +8412,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "abiraterone acetate",
+      "validation": ""
     },
     {
       "gene": "AR",
@@ -7486,7 +8422,9 @@ const PIPELINE = {
       "disease": "Metastatic Castration-resistant Prostate Cancer",
       "efo_id": "EFO_0001663",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "abiraterone acetate",
+      "validation": ""
     }
   ],
   "NBIX": [
@@ -7496,7 +8434,9 @@ const PIPELINE = {
       "disease": "Tardive Dyskinesia",
       "efo_id": "EFO_0004280",
       "score": 0.7,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "NBI-98854",
+      "validation": ""
     }
   ],
   "OPK": [
@@ -7506,7 +8446,9 @@ const PIPELINE = {
       "disease": "Hemophilia A",
       "efo_id": "MONDO_0010602",
       "score": 0.998,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "MOD-5014",
+      "validation": "mendelian_ancestor"
     }
   ],
   "PBYI": [
@@ -7516,7 +8458,9 @@ const PIPELINE = {
       "disease": "Early Stage HER2+ Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Neratinib",
+      "validation": ""
     },
     {
       "gene": "ERBB2",
@@ -7524,7 +8468,9 @@ const PIPELINE = {
       "disease": "Early Stage HER2+ Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Neratinib",
+      "validation": ""
     },
     {
       "gene": "ERBB4",
@@ -7532,7 +8478,9 @@ const PIPELINE = {
       "disease": "Early Stage HER2+ Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.65,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Neratinib",
+      "validation": ""
     }
   ],
   "PGNX": [
@@ -7542,7 +8490,9 @@ const PIPELINE = {
       "disease": "Cancer of the Prostate",
       "efo_id": "EFO_0000625",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Enzalutamide",
+      "validation": ""
     }
   ],
   "PTCT": [
@@ -7552,7 +8502,9 @@ const PIPELINE = {
       "disease": "Duchenne Muscular Dystrophy",
       "efo_id": "MONDO_0010679",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ataluren",
+      "validation": "bq_confirmed"
     }
   ],
   "RARE": [
@@ -7562,7 +8514,9 @@ const PIPELINE = {
       "disease": "MPS VII",
       "efo_id": "MONDO_0009661",
       "score": 0.981,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "UX003",
+      "validation": "bq_confirmed"
     }
   ],
   "RARX": [
@@ -7572,7 +8526,9 @@ const PIPELINE = {
       "disease": "Advanced Cancers",
       "efo_id": "MONDO_0004992",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": ""
     },
     {
       "gene": "PDGFRA",
@@ -7580,7 +8536,9 @@ const PIPELINE = {
       "disease": "Advanced Cancers",
       "efo_id": "MONDO_0004992",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": ""
     },
     {
       "gene": "KIT",
@@ -7588,7 +8546,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "PDGFRA",
@@ -7596,7 +8556,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "DCC-2618",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "RET",
@@ -7604,7 +8566,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.962,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "TLR7",
@@ -7612,7 +8576,9 @@ const PIPELINE = {
       "disease": "Melanoma",
       "efo_id": "EFO_0000756",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "IMO-2125",
+      "validation": ""
     },
     {
       "gene": "KDR",
@@ -7620,7 +8586,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT1",
@@ -7628,7 +8596,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "PDGFRB",
@@ -7636,7 +8606,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "FLT3",
@@ -7644,7 +8616,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.953,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "DMD",
@@ -7652,7 +8626,9 @@ const PIPELINE = {
       "disease": "Duchenne Muscular Dystrophy (DMD)",
       "efo_id": "MONDO_0010679",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Idebenone 150 mg film-coated tablets",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "TNFSF13B",
@@ -7660,7 +8636,9 @@ const PIPELINE = {
       "disease": "Systemic Lupus Erythematosus",
       "efo_id": "MONDO_0007915",
       "score": 0.947,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Blisibimod",
+      "validation": ""
     },
     {
       "gene": "FLT4",
@@ -7668,7 +8646,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.939,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "CSF1R",
@@ -7676,7 +8656,9 @@ const PIPELINE = {
       "disease": "Gastrointestinal Stromal Tumors",
       "efo_id": "MONDO_0011719",
       "score": 0.936,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": ""
     },
     {
       "gene": "ATP4A",
@@ -7684,7 +8666,9 @@ const PIPELINE = {
       "disease": "Pain",
       "efo_id": "HP_0012531",
       "score": 0.669,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Bupivacaine",
+      "validation": "mendelian"
     },
     {
       "gene": "ABL1",
@@ -7692,7 +8676,9 @@ const PIPELINE = {
       "disease": "Locally Advanced or Metastatic Solid Tumor",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rebastinib",
+      "validation": "mendelian"
     },
     {
       "gene": "TNFSF13B",
@@ -7700,7 +8686,9 @@ const PIPELINE = {
       "disease": "Idiopathic Thrombocytopenic Purpura",
       "efo_id": "EFO_0007160",
       "score": 0.426,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Blisibimod",
+      "validation": "mendelian"
     }
   ],
   "REGN": [
@@ -7710,7 +8698,9 @@ const PIPELINE = {
       "disease": "Heterozygous Familial Hypercholesterolemia",
       "efo_id": "EFO_0004911",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Alirocumab",
+      "validation": ""
     },
     {
       "gene": "IL4R",
@@ -7718,7 +8708,9 @@ const PIPELINE = {
       "disease": "Asthma, Allergic",
       "efo_id": "MONDO_0004979",
       "score": 0.978,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Dupilumab",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "IL33",
@@ -7726,7 +8718,9 @@ const PIPELINE = {
       "disease": "Asthma",
       "efo_id": "MONDO_0004979",
       "score": 0.977,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN3500",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "PDCD1",
@@ -7734,7 +8728,9 @@ const PIPELINE = {
       "disease": "Advanced Malignancies",
       "efo_id": "MONDO_0004992",
       "score": 0.972,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN2810",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -7742,7 +8738,9 @@ const PIPELINE = {
       "disease": "Melanoma",
       "efo_id": "EFO_0000756",
       "score": 0.955,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN2810",
+      "validation": ""
     },
     {
       "gene": "IL4R",
@@ -7750,7 +8748,9 @@ const PIPELINE = {
       "disease": "Dermatitis, Atopic",
       "efo_id": "EFO_0000274",
       "score": 0.951,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Dupilumab",
+      "validation": ""
     },
     {
       "gene": "IL33",
@@ -7758,7 +8758,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN3500",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "ATP4A",
@@ -7766,7 +8768,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.949,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Omeprazole",
+      "validation": ""
     },
     {
       "gene": "IL1B",
@@ -7774,7 +8778,9 @@ const PIPELINE = {
       "disease": "Anemia",
       "efo_id": "MONDO_0002280",
       "score": 0.948,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Rilonacept",
+      "validation": ""
     },
     {
       "gene": "NGF",
@@ -7782,7 +8788,9 @@ const PIPELINE = {
       "disease": "Osteoarthritis",
       "efo_id": "MONDO_0005178",
       "score": 0.827,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN475",
+      "validation": ""
     },
     {
       "gene": "PDCD1",
@@ -7790,7 +8798,9 @@ const PIPELINE = {
       "disease": "Non-small Cell Lung Cancer",
       "efo_id": "EFO_0003060",
       "score": 0.806,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "REGN2810",
+      "validation": "mendelian"
     },
     {
       "gene": "VEGFA",
@@ -7798,7 +8808,9 @@ const PIPELINE = {
       "disease": "Neovascular Age-Related Macular Degeneration",
       "efo_id": "EFO_0004683",
       "score": 0.625,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Intravitreal Aflibercept Injection (IAI)",
+      "validation": ""
     },
     {
       "gene": "VKORC1",
@@ -7806,7 +8818,9 @@ const PIPELINE = {
       "disease": "Atopic Dermatitis",
       "efo_id": "EFO_0000274",
       "score": 0.426,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Warfarin",
+      "validation": "mendelian"
     },
     {
       "gene": "PTGS2",
@@ -7814,7 +8828,9 @@ const PIPELINE = {
       "disease": "Osteoarthritis, Hip",
       "efo_id": "EFO_1000786",
       "score": 0.214,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Celecoxib",
+      "validation": ""
     },
     {
       "gene": "PTGS1",
@@ -7822,7 +8838,9 @@ const PIPELINE = {
       "disease": "Osteoarthritis, Hip",
       "efo_id": "EFO_1000786",
       "score": 0.214,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Naproxen",
+      "validation": ""
     },
     {
       "gene": "IL4R",
@@ -7830,7 +8848,9 @@ const PIPELINE = {
       "disease": "Allergic Rhinitis",
       "efo_id": "EFO_0005854",
       "score": 0.002,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Dupilumab",
+      "validation": ""
     }
   ],
   "RYTM": [
@@ -7840,7 +8860,9 @@ const PIPELINE = {
       "disease": "Genetic Obesity",
       "efo_id": "EFO_0001073",
       "score": 1.0,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Setmelanotide",
+      "validation": ""
     },
     {
       "gene": "MC4R",
@@ -7848,7 +8870,9 @@ const PIPELINE = {
       "disease": "Prader-Willi Syndrome",
       "efo_id": "MONDO_0008300",
       "score": 0.698,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Setmelanotide",
+      "validation": "mendelian"
     },
     {
       "gene": "MC4R",
@@ -7856,7 +8880,9 @@ const PIPELINE = {
       "disease": "Hypertriglyceridemia",
       "efo_id": "EFO_0004211",
       "score": 0.608,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Setmelanotide",
+      "validation": "mendelian"
     }
   ],
   "SGEN": [
@@ -7866,7 +8892,9 @@ const PIPELINE = {
       "disease": "Bladder Cancer",
       "efo_id": "MONDO_0004986",
       "score": 0.925,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Niraparib",
+      "validation": ""
     },
     {
       "gene": "PARP2",
@@ -7874,7 +8902,9 @@ const PIPELINE = {
       "disease": "Bladder Cancer",
       "efo_id": "MONDO_0004986",
       "score": 0.891,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Niraparib",
+      "validation": ""
     },
     {
       "gene": "FGFR1",
@@ -7882,7 +8912,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.684,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": "mendelian"
     },
     {
       "gene": "CDK4",
@@ -7890,7 +8922,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Palbociclib",
+      "validation": "mendelian"
     },
     {
       "gene": "ABL1",
@@ -7898,7 +8932,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Regorafenib",
+      "validation": "mendelian"
     },
     {
       "gene": "KIT",
@@ -7906,7 +8942,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "KDR",
@@ -7914,7 +8952,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": "mendelian"
     },
     {
       "gene": "FLT1",
@@ -7922,7 +8962,9 @@ const PIPELINE = {
       "disease": "Advanced Solid Tumors",
       "efo_id": "EFO_0000335",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Sunitinib",
+      "validation": "mendelian"
     }
   ],
   "SGMO": [
@@ -7932,7 +8974,9 @@ const PIPELINE = {
       "disease": "Sickle Cell Disease",
       "efo_id": "MONDO_0011382",
       "score": 0.846,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Plerixafor",
+      "validation": "bq_confirmed"
     }
   ],
   "SPPI": [
@@ -7942,7 +8986,9 @@ const PIPELINE = {
       "disease": "Breast Cancer",
       "efo_id": "EFO_0000305",
       "score": 0.942,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Pegfilgrastim",
+      "validation": ""
     }
   ],
   "SRPT": [
@@ -7952,7 +8998,9 @@ const PIPELINE = {
       "disease": "Duchenne Muscular Dystrophy",
       "efo_id": "MONDO_0010679",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "SRP-4045",
+      "validation": "bq_confirmed"
     }
   ],
   "TGTX": [
@@ -7962,7 +9010,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.97,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Umbralisib",
+      "validation": ""
     },
     {
       "gene": "PIK3CD",
@@ -7970,7 +9020,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.967,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Umbralisib",
+      "validation": ""
     },
     {
       "gene": "BTK",
@@ -7978,7 +9030,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.928,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ibrutinib",
+      "validation": ""
     },
     {
       "gene": "BCL2",
@@ -7986,7 +9040,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.922,
-      "source": "ot_2020"
+      "source": "ot_2020",
+      "drug": "Venetoclax",
+      "validation": ""
     },
     {
       "gene": "MS4A1",
@@ -7994,7 +9050,9 @@ const PIPELINE = {
       "disease": "Multiple Sclerosis",
       "efo_id": "MONDO_0005301",
       "score": 0.813,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ublituximab",
+      "validation": ""
     },
     {
       "gene": "MS4A1",
@@ -8002,7 +9060,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.769,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Ublituximab",
+      "validation": ""
     },
     {
       "gene": "CSNK1E",
@@ -8010,7 +9070,9 @@ const PIPELINE = {
       "disease": "Chronic Lymphocytic Leukemia",
       "efo_id": "EFO_0000095",
       "score": 0.678,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Umbralisib",
+      "validation": ""
     },
     {
       "gene": "ABL1",
@@ -8018,7 +9080,9 @@ const PIPELINE = {
       "disease": "Diffuse Large B-Cell Lymphoma",
       "efo_id": "EFO_0000403",
       "score": 0.346,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Umbralisib",
+      "validation": ""
     }
   ],
   "UTHR": [
@@ -8028,7 +9092,9 @@ const PIPELINE = {
       "disease": "Pulmonary Arterial Hypertension",
       "efo_id": "EFO_0001361",
       "score": 0.963,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Oral Treprostinil",
+      "validation": "mendelian"
     },
     {
       "gene": "TOP1",
@@ -8036,7 +9102,9 @@ const PIPELINE = {
       "disease": "Small Cell Lung Cancer",
       "efo_id": "EFO_0000702",
       "score": 0.857,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Topotecan",
+      "validation": "mendelian"
     },
     {
       "gene": "PTGIR",
@@ -8044,7 +9112,9 @@ const PIPELINE = {
       "disease": "Chronic Obstructive Pulmonary Disease",
       "efo_id": "EFO_0000341",
       "score": 0.012,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Inhaled Treprostinil",
+      "validation": "mendelian"
     }
   ],
   "VNDA": [
@@ -8054,7 +9124,9 @@ const PIPELINE = {
       "disease": "Autism Spectrum Disorder",
       "efo_id": "EFO_0003756",
       "score": 0.795,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "tasimelteon",
+      "validation": ""
     }
   ],
   "VRTX": [
@@ -8064,7 +9136,9 @@ const PIPELINE = {
       "disease": "Cystic Fibrosis",
       "efo_id": "MONDO_0009061",
       "score": 0.999,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "IVA",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "HBB",
@@ -8072,7 +9146,9 @@ const PIPELINE = {
       "disease": "Hematological Diseases",
       "efo_id": "MONDO_0011382",
       "score": 0.846,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "CTX001",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "CFTR",
@@ -8080,7 +9156,9 @@ const PIPELINE = {
       "disease": "Advanced Lung Disease",
       "efo_id": "EFO_0001071",
       "score": 0.819,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "Lumacaftor",
+      "validation": "mendelian"
     }
   ],
   "BLUE": [
@@ -8090,7 +9168,9 @@ const PIPELINE = {
       "disease": "Sickle Cell Disease",
       "efo_id": "MONDO_0011382",
       "score": 0.846,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "betibeglogene autotemcel (LentiGlobin BB305)",
+      "validation": "bq_confirmed"
     },
     {
       "gene": "TNFRSF17",
@@ -8098,7 +9178,9 @@ const PIPELINE = {
       "disease": "Relapsed/Refractory Multiple Myeloma",
       "efo_id": "EFO_0001378",
       "score": 0.547,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "bb21217",
+      "validation": ""
     }
   ],
   "FGEN": [
@@ -8108,7 +9190,9 @@ const PIPELINE = {
       "disease": "Duchenne Muscular Dystrophy (DMD)",
       "efo_id": "MONDO_0010679",
       "score": 0.95,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "pamrevlumab (FG-3019)",
+      "validation": "bq_confirmed"
     }
   ],
   "FIXX": [
@@ -8118,7 +9202,9 @@ const PIPELINE = {
       "disease": "Phenylketonuria (PKU)",
       "efo_id": "MONDO_0009861",
       "score": 0.997,
-      "source": "ot_recent_fallback"
+      "source": "ot_recent_fallback",
+      "drug": "HMI-102",
+      "validation": "bq_confirmed"
     }
   ]
 };
