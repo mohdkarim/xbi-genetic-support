@@ -60,18 +60,44 @@ function renderTableBody() {
     return `<span class="badge ${cls[outcome] || ''}">${outcome}</span>`;
   };
 
-  tbody.innerHTML = filteredCompanies.map(c => `
-    <tr>
-      <td class="ticker">${c.ticker}</td>
-      <td>${c.company}</td>
-      <td>${fmt(c.return_pct)}</td>
-      <td>${c.is_gs_a ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
-      <td>${fmtScore(c.best_score)}</td>
-      <td>${c.n_gs}/${c.n_scoreable}</td>
-      <td>${badge(c.outcome)}</td>
-      <td>${c.is_oncology ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
-    </tr>
-  `).join('');
+  const hasPairs = (ticker) => PIPELINE[ticker] && PIPELINE[ticker].length > 0;
+
+  const pairRows = (ticker) => {
+    const pairs = PIPELINE[ticker] || [];
+    return pairs.map(p => `
+      <tr class="pipeline-row" style="display:none">
+        <td></td>
+        <td colspan="2" class="pipeline-cell">
+          <a href="https://platform.opentargets.org/target/${p.ensembl_id}" target="_blank" rel="noopener">${p.gene}</a>
+          &rarr;
+          <a href="https://platform.opentargets.org/disease/${p.efo_id}" target="_blank" rel="noopener">${p.disease}</a>
+        </td>
+        <td></td>
+        <td class="pipeline-score">${p.score.toFixed(3)}</td>
+        <td class="pipeline-source">${p.source === 'ot_2020' ? 'OT 20.02' : 'OT API'}</td>
+        <td colspan="2"></td>
+      </tr>
+    `).join('');
+  };
+
+  tbody.innerHTML = filteredCompanies.map(c => {
+    const expandable = hasPairs(c.ticker);
+    const expandCls = expandable ? ' expandable' : '';
+    const chevron = expandable ? '<span class="expand-icon">&#9654;</span>' : '';
+    return `
+      <tr class="company-row${expandCls}" data-ticker="${c.ticker}">
+        <td class="ticker">${chevron}${c.ticker}</td>
+        <td>${c.company}</td>
+        <td>${fmt(c.return_pct)}</td>
+        <td>${c.is_gs_a ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
+        <td>${fmtScore(c.best_score)}</td>
+        <td>${c.n_gs}/${c.n_scoreable}</td>
+        <td>${badge(c.outcome)}</td>
+        <td>${c.is_oncology ? '<span class="check">&#10003;</span>' : '<span class="dash">—</span>'}</td>
+      </tr>
+      ${expandable ? pairRows(c.ticker) : ''}
+    `;
+  }).join('');
 
   document.getElementById('filter-count').textContent =
     `Showing ${filteredCompanies.length} of ${COMPANIES.length}`;
@@ -103,9 +129,29 @@ function initFilters() {
   document.getElementById('filter-search').addEventListener('input', renderTableBody);
 }
 
+function initExpandToggle() {
+  document.getElementById('company-tbody').addEventListener('click', (e) => {
+    const row = e.target.closest('tr.expandable');
+    if (!row) return;
+    const ticker = row.dataset.ticker;
+    const isOpen = row.classList.contains('expanded');
+
+    // Toggle expanded state
+    row.classList.toggle('expanded');
+
+    // Show/hide pipeline rows immediately following this company row
+    let sibling = row.nextElementSibling;
+    while (sibling && sibling.classList.contains('pipeline-row')) {
+      sibling.style.display = isOpen ? 'none' : '';
+      sibling = sibling.nextElementSibling;
+    }
+  });
+}
+
 function initCompanyTable() {
   initSortHeaders();
   initFilters();
+  initExpandToggle();
 
   // Set initial sort arrow
   const returnTh = document.querySelector('.company-table th[data-sort="return_pct"]');

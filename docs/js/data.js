@@ -2130,3 +2130,5104 @@ const QUARTERLY = [
     "xbi_dd": -10.86
   }
 ];
+
+const PIPELINE = {
+  "ABBV": [
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Crohn's Disease (CD)",
+      "efo_id": "EFO_0000384",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Rheumatoid Arthritis (RA)",
+      "efo_id": "EFO_0000685",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Ulcerative Colitis (UC)",
+      "efo_id": "EFO_0000729",
+      "score": 0.964,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Ulcerative Colitis (UC)",
+      "efo_id": "EFO_0000729",
+      "score": 0.963,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CG",
+      "ensembl_id": "ENSG00000105851",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.952,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AXL",
+      "ensembl_id": "ENSG00000167601",
+      "disease": "Acute Myeloid Leukemia (AML)",
+      "efo_id": "EFO_0000222",
+      "score": 0.943,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Hematologic Malignancies",
+      "efo_id": "EFO_0000574",
+      "score": 0.942,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Crohn's Disease (CD)",
+      "efo_id": "EFO_0000384",
+      "score": 0.942,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Crohn's Disease (CD)",
+      "efo_id": "EFO_0000384",
+      "score": 0.942,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Ulcerative Colitis (UC)",
+      "efo_id": "EFO_0000729",
+      "score": 0.942,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ATP4A",
+      "ensembl_id": "ENSG00000105675",
+      "disease": "Psoriasis",
+      "efo_id": "EFO_0000676",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Rheumatoid Arthritis (RA)",
+      "efo_id": "EFO_0000685",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Asthma",
+      "efo_id": "MONDO_0004979",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Rheumatoid Arthritis (RA)",
+      "efo_id": "EFO_0000685",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL4R",
+      "ensembl_id": "ENSG00000077238",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PGR",
+      "ensembl_id": "ENSG00000082175",
+      "disease": "Endometriosis",
+      "efo_id": "EFO_0001065",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.924,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GNRHR",
+      "ensembl_id": "ENSG00000109163",
+      "disease": "Endometriosis",
+      "efo_id": "EFO_0001065",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.922,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Arthritis, Psoriatic",
+      "efo_id": "EFO_0003778",
+      "score": 0.922,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Systemic Lupus Erythematosus (SLE)",
+      "efo_id": "MONDO_0007915",
+      "score": 0.917,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.916,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Systemic Lupus Erythematosus (SLE)",
+      "efo_id": "MONDO_0007915",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Systemic Lupus Erythematosus (SLE)",
+      "efo_id": "MONDO_0007915",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD2",
+      "ensembl_id": "ENSG00000149295",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Systemic Lupus Erythematosus (SLE)",
+      "efo_id": "MONDO_0007915",
+      "score": 0.914,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.901,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD3",
+      "ensembl_id": "ENSG00000151577",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.901,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Spondyloarthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.901,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Spondyloarthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.896,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Acute Myeloid Leukemia (AML)",
+      "efo_id": "EFO_0000222",
+      "score": 0.894,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Psoriasis",
+      "efo_id": "EFO_0000676",
+      "score": 0.889,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.888,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EDNRA",
+      "ensembl_id": "ENSG00000151617",
+      "disease": "Diabetes",
+      "efo_id": "EFO_0000400",
+      "score": 0.887,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD2",
+      "ensembl_id": "ENSG00000149295",
+      "disease": "Major Depressive Disorder",
+      "efo_id": "MONDO_0002009",
+      "score": 0.886,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD3",
+      "ensembl_id": "ENSG00000151577",
+      "disease": "Major Depressive Disorder",
+      "efo_id": "MONDO_0002009",
+      "score": 0.883,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Ulcerative Colitis (UC)",
+      "efo_id": "EFO_0000729",
+      "score": 0.881,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.878,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.877,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Colorectal Cancer",
+      "efo_id": "EFO_1001951",
+      "score": 0.862,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Ankylosing Spondylitis (AS)",
+      "efo_id": "EFO_0003898",
+      "score": 0.86,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Ovarian Cancer",
+      "efo_id": "EFO_0001075",
+      "score": 0.858,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP1",
+      "ensembl_id": "ENSG00000198900",
+      "disease": "Epithelial Ovarian Cancer",
+      "efo_id": "EFO_0001075",
+      "score": 0.854,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Lymphoma",
+      "efo_id": "EFO_0000574",
+      "score": 0.852,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "VDR",
+      "ensembl_id": "ENSG00000111424",
+      "disease": "Chronic Kidney Disease (CKD)",
+      "efo_id": "EFO_0003884",
+      "score": 0.848,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD2",
+      "ensembl_id": "ENSG00000149295",
+      "disease": "Bipolar I Disorder",
+      "efo_id": "EFO_0009963",
+      "score": 0.839,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD38",
+      "ensembl_id": "ENSG00000004468",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.821,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Non-small Cell Lung Cancer Stage III",
+      "efo_id": "EFO_0003060",
+      "score": 0.818,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.813,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.812,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Ankylosing Spondylitis (AS)",
+      "efo_id": "EFO_0003898",
+      "score": 0.809,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.808,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD3",
+      "ensembl_id": "ENSG00000151577",
+      "disease": "Bipolar I Disorder",
+      "efo_id": "EFO_0009963",
+      "score": 0.804,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Juvenile Idiopathic Arthritis (JIA)",
+      "efo_id": "EFO_0002609",
+      "score": 0.797,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.797,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.781,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "BCL2L1",
+      "ensembl_id": "ENSG00000171552",
+      "disease": "Acute Lymphoblastic Leukemia (ALL)",
+      "efo_id": "EFO_0000220",
+      "score": 0.779,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Psoriasis",
+      "efo_id": "EFO_0000676",
+      "score": 0.779,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Takayasu Arteritis (TAK)",
+      "efo_id": "EFO_0006803",
+      "score": 0.774,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2L2",
+      "ensembl_id": "ENSG00000129473",
+      "disease": "Acute Lymphoblastic Leukemia (ALL)",
+      "efo_id": "EFO_0000220",
+      "score": 0.746,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "VKORC1",
+      "ensembl_id": "ENSG00000167397",
+      "disease": "Psoriasis",
+      "efo_id": "EFO_0000676",
+      "score": 0.746,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Axial Spondyloarthritis",
+      "efo_id": "EFO_0000706",
+      "score": 0.746,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Head and Neck Cancer",
+      "efo_id": "EFO_0006859",
+      "score": 0.743,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Juvenile Idiopathic Arthritis (JIA)",
+      "efo_id": "EFO_0002609",
+      "score": 0.736,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IMPDH2",
+      "ensembl_id": "ENSG00000178035",
+      "disease": "Chronic Hepatitis C Infection",
+      "efo_id": "EFO_0004220",
+      "score": 0.733,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Juvenile Idiopathic Arthritis (JIA)",
+      "efo_id": "EFO_0002609",
+      "score": 0.73,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Juvenile Idiopathic Arthritis (JIA)",
+      "efo_id": "EFO_0002609",
+      "score": 0.717,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP1",
+      "ensembl_id": "ENSG00000198900",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.714,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Psoriatic Arthritis (PsA)",
+      "efo_id": "EFO_0000685",
+      "score": 0.712,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Takayasu Arteritis (TAK)",
+      "efo_id": "EFO_0006803",
+      "score": 0.7,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2L2",
+      "ensembl_id": "ENSG00000129473",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.695,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Ankylosing Spondylitis (AS)",
+      "efo_id": "EFO_0003898",
+      "score": 0.681,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.681,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ESR1",
+      "ensembl_id": "ENSG00000091831",
+      "disease": "Endometriosis",
+      "efo_id": "EFO_0001065",
+      "score": 0.681,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PTGS2",
+      "ensembl_id": "ENSG00000073756",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.662,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Takayasu Arteritis (TAK)",
+      "efo_id": "EFO_0006803",
+      "score": 0.661,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DLL3",
+      "ensembl_id": "ENSG00000090932",
+      "disease": "Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.658,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Takayasu Arteritis (TAK)",
+      "efo_id": "EFO_0006803",
+      "score": 0.658,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.65,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "GUCY2C",
+      "ensembl_id": "ENSG00000070019",
+      "disease": "Functional Constipation",
+      "efo_id": "HP_0002019",
+      "score": 0.642,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT3",
+      "ensembl_id": "ENSG00000122025",
+      "disease": "Acute Myeloid Leukemia (AML)",
+      "efo_id": "EFO_0000222",
+      "score": 0.625,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Rheumatoid Arthritis (RA)",
+      "efo_id": "EFO_0000685",
+      "score": 0.6,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Ankylosing Spondylitis (AS)",
+      "efo_id": "EFO_0003898",
+      "score": 0.6,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Hidradenitis Suppurativa",
+      "efo_id": "EFO_1000710",
+      "score": 0.587,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR3C1",
+      "ensembl_id": "ENSG00000113580",
+      "disease": "Takayasu Arteritis (TAK)",
+      "efo_id": "EFO_0006803",
+      "score": 0.569,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DLL3",
+      "ensembl_id": "ENSG00000090932",
+      "disease": "Glioblastoma",
+      "efo_id": "EFO_0000519",
+      "score": 0.542,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Myelodysplastic Syndromes (MDS)",
+      "efo_id": "EFO_0000198",
+      "score": 0.533,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Acute Lymphoblastic Leukemia (ALL)",
+      "efo_id": "EFO_0000220",
+      "score": 0.525,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2L1",
+      "ensembl_id": "ENSG00000171552",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PIK3CG",
+      "ensembl_id": "ENSG00000105851",
+      "disease": "Lymphoma",
+      "efo_id": "EFO_0000574",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Ulcerative Colitis (UC)",
+      "efo_id": "EFO_0000729",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL23A",
+      "ensembl_id": "ENSG00000110944",
+      "disease": "Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Myeloproliferative Neoplasm",
+      "efo_id": "EFO_0002428",
+      "score": 0.401,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL17A",
+      "ensembl_id": "ENSG00000112115",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.042,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ACAD": [
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Agitation and Aggression in Alzheimer's Disease",
+      "efo_id": "MONDO_0004975",
+      "score": 0.95,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Parkinson's Disease",
+      "efo_id": "MONDO_0005180",
+      "score": 0.945,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.905,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Adjunctive Treatment of Major Depressive Disorder",
+      "efo_id": "MONDO_0002009",
+      "score": 0.881,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ACHN": [
+    {
+      "gene": "CFD",
+      "ensembl_id": "ENSG00000197766",
+      "disease": "C3 Glomerulonephritis",
+      "efo_id": "MONDO_0013892",
+      "score": 0.755,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "AGIO": [
+    {
+      "gene": "PKLR",
+      "ensembl_id": "ENSG00000143627",
+      "disease": "Anemia, Hemolytic",
+      "efo_id": "MONDO_0002280",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PKLR",
+      "ensembl_id": "ENSG00000143627",
+      "disease": "Pyruvate Kinase Deficiency",
+      "efo_id": "MONDO_0009950",
+      "score": 0.98,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PKLR",
+      "ensembl_id": "ENSG00000143627",
+      "disease": "Thalassemia",
+      "efo_id": "MONDO_0019402",
+      "score": 0.939,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "AKBA": [
+    {
+      "gene": "EPOR",
+      "ensembl_id": "ENSG00000187266",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.902,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EGLN1",
+      "ensembl_id": "ENSG00000135766",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.892,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EGLN2",
+      "ensembl_id": "ENSG00000269858",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.59,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EGLN3",
+      "ensembl_id": "ENSG00000129521",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.476,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "AKCA": [
+    {
+      "gene": "APOC3",
+      "ensembl_id": "ENSG00000110245",
+      "disease": "Cardiovascular Disease",
+      "efo_id": "EFO_0000319",
+      "score": 0.835,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "VKORC1",
+      "ensembl_id": "ENSG00000167397",
+      "disease": "Cardiovascular Diseases",
+      "efo_id": "EFO_0000319",
+      "score": 0.83,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ALKS": [
+    {
+      "gene": "DRD2",
+      "ensembl_id": "ENSG00000149295",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.905,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DRD2",
+      "ensembl_id": "ENSG00000149295",
+      "disease": "Bipolar I Disorder",
+      "efo_id": "EFO_0009963",
+      "score": 0.839,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HTR2A",
+      "ensembl_id": "ENSG00000102468",
+      "disease": "Bipolar I Disorder",
+      "efo_id": "EFO_0009963",
+      "score": 0.823,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ALNY": [
+    {
+      "gene": "TTR",
+      "ensembl_id": "ENSG00000118271",
+      "disease": "Transthyretin-mediated Amyloidosis (ATTR Amyloidosis)",
+      "efo_id": "MONDO_0018634",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "HAO1",
+      "ensembl_id": "ENSG00000101323",
+      "disease": "Primary Hyperoxaluria Type 1 (PH1)",
+      "efo_id": "MONDO_0009823",
+      "score": 0.949,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HAO1",
+      "ensembl_id": "ENSG00000101323",
+      "disease": "AGT",
+      "efo_id": "MONDO_0002474",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ALAS1",
+      "ensembl_id": "ENSG00000023330",
+      "disease": "Acute Intermittent Porphyria",
+      "efo_id": "MONDO_0008294",
+      "score": 0.566,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ALXN": [
+    {
+      "gene": "C5",
+      "ensembl_id": "ENSG00000106804",
+      "disease": "Atypical Hemolytic Uremic Syndrome (aHUS)",
+      "efo_id": "MONDO_0016244",
+      "score": 0.899,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "C5",
+      "ensembl_id": "ENSG00000106804",
+      "disease": "Generalized Myasthenia Gravis",
+      "efo_id": "EFO_0004991",
+      "score": 0.797,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CFD",
+      "ensembl_id": "ENSG00000197766",
+      "disease": "C3 Glomerulonephritis",
+      "efo_id": "MONDO_0013892",
+      "score": 0.755,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "AMGN": [
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Coronary Heart Disease (CHD)",
+      "efo_id": "EFO_0001645",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Heterozygous Familial Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "NPC1L1",
+      "ensembl_id": "ENSG00000015520",
+      "disease": "Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 0.969,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.968,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYMS",
+      "ensembl_id": "ENSG00000176890",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.964,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MPL",
+      "ensembl_id": "ENSG00000117400",
+      "disease": "Chemotherapy-induced Thrombocytopenia",
+      "efo_id": "HP_0001873",
+      "score": 0.941,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFSF11",
+      "ensembl_id": "ENSG00000120659",
+      "disease": "Osteogenesis Imperfecta (OI)",
+      "efo_id": "MONDO_0019019",
+      "score": 0.94,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGS2",
+      "ensembl_id": "ENSG00000073756",
+      "disease": "Gout",
+      "efo_id": "EFO_0004274",
+      "score": 0.94,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SRD5A1",
+      "ensembl_id": "ENSG00000145545",
+      "disease": "Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CASR",
+      "ensembl_id": "ENSG00000036828",
+      "disease": "Chronic Kidney Disease",
+      "efo_id": "EFO_0003884",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ATP4A",
+      "ensembl_id": "ENSG00000105675",
+      "disease": "Tumors",
+      "efo_id": "MONDO_0004992",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSF3R",
+      "ensembl_id": "ENSG00000119535",
+      "disease": "Cytopenias",
+      "efo_id": "MONDO_0002280",
+      "score": 0.912,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Colorectal Cancer",
+      "efo_id": "EFO_1001951",
+      "score": 0.912,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EPOR",
+      "ensembl_id": "ENSG00000187266",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.902,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SOST",
+      "ensembl_id": "ENSG00000167941",
+      "disease": "Postmenopausal Osteoporosis",
+      "efo_id": "EFO_0003854",
+      "score": 0.889,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSF3R",
+      "ensembl_id": "ENSG00000119535",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.882,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGS1",
+      "ensembl_id": "ENSG00000095303",
+      "disease": "Gout",
+      "efo_id": "EFO_0004274",
+      "score": 0.879,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.868,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CALCRL",
+      "ensembl_id": "ENSG00000064989",
+      "disease": "Migraine Headache",
+      "efo_id": "MONDO_0005277",
+      "score": 0.859,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD38",
+      "ensembl_id": "ENSG00000004468",
+      "disease": "Refractory Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD3E",
+      "ensembl_id": "ENSG00000198851",
+      "disease": "Non-Hodgkin's Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.826,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD19",
+      "ensembl_id": "ENSG00000177455",
+      "disease": "Leukemia, Acute Lymphoblastic",
+      "efo_id": "EFO_0000220",
+      "score": 0.822,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EPOR",
+      "ensembl_id": "ENSG00000187266",
+      "disease": "Kidney Disease",
+      "efo_id": "EFO_0003086",
+      "score": 0.822,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.818,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Palmoplantaris Pustulosis",
+      "efo_id": "EFO_0000676",
+      "score": 0.792,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Psoriasis",
+      "efo_id": "EFO_0000676",
+      "score": 0.779,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "CD19",
+      "ensembl_id": "ENSG00000177455",
+      "disease": "Non-Hodgkin's Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.77,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD3E",
+      "ensembl_id": "ENSG00000198851",
+      "disease": "Acute Lymphoblastic Leukemia",
+      "efo_id": "EFO_0000220",
+      "score": 0.757,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AR",
+      "ensembl_id": "ENSG00000169083",
+      "disease": "Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.747,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "CSF3R",
+      "ensembl_id": "ENSG00000119535",
+      "disease": "Non-Hodgkin's Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.723,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CALCRL",
+      "ensembl_id": "ENSG00000064989",
+      "disease": "Stable Angina",
+      "efo_id": "EFO_0003888",
+      "score": 0.714,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KRAS",
+      "ensembl_id": "ENSG00000133703",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EPOR",
+      "ensembl_id": "ENSG00000187266",
+      "disease": "End Stage Renal Disease",
+      "efo_id": "EFO_0003884",
+      "score": 0.654,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.65,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "CYP17A1",
+      "ensembl_id": "ENSG00000148795",
+      "disease": "Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.625,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TSLP",
+      "ensembl_id": "ENSG00000145777",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.625,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "Diabetes, Hyperlipidemia, Mixed Dyslipidemia",
+      "efo_id": "EFO_0000662",
+      "score": 0.593,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CDK4",
+      "ensembl_id": "ENSG00000135446",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MAP2K1",
+      "ensembl_id": "ENSG00000169032",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFSF11",
+      "ensembl_id": "ENSG00000120659",
+      "disease": "Osteogenesis Imperfecta",
+      "efo_id": "MONDO_0009066",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL17RA",
+      "ensembl_id": "ENSG00000177663",
+      "disease": "Axial Spondyloarthritis",
+      "efo_id": "EFO_0000706",
+      "score": 0.532,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD3E",
+      "ensembl_id": "ENSG00000198851",
+      "disease": "High-risk Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.523,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD19",
+      "ensembl_id": "ENSG00000177455",
+      "disease": "Relapsed or Refractory Diffuse Large B Cell Lymphoma (DLBCL)",
+      "efo_id": "EFO_0000403",
+      "score": 0.521,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TUBB1",
+      "ensembl_id": "ENSG00000101162",
+      "disease": "Acute Lymphoblastic Leukemia (ALL)",
+      "efo_id": "EFO_0000220",
+      "score": 0.517,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Acute Lymphoblastic Leukemia (ALL)",
+      "efo_id": "EFO_0000220",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "EPOR",
+      "ensembl_id": "ENSG00000187266",
+      "disease": "Breast Neoplasms",
+      "efo_id": "EFO_0000305",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Diabetes, Hyperlipidemia, Mixed Dyslipidemia",
+      "efo_id": "EFO_0000662",
+      "score": 0.195,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFSF11",
+      "ensembl_id": "ENSG00000120659",
+      "disease": "Giant Cell Tumor of Bone",
+      "efo_id": "EFO_0001068",
+      "score": 0.116,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ANAB": [
+    {
+      "gene": "IL33",
+      "ensembl_id": "ENSG00000137033",
+      "disease": "Eosinophilic Asthma",
+      "efo_id": "EFO_0000270",
+      "score": 0.962,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL33",
+      "ensembl_id": "ENSG00000137033",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL33",
+      "ensembl_id": "ENSG00000137033",
+      "disease": "Chronic Rhinosinusitis",
+      "efo_id": "MONDO_0004979",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "APLS": [
+    {
+      "gene": "C3",
+      "ensembl_id": "ENSG00000125730",
+      "disease": "Cold Agglutinin Disease",
+      "efo_id": "MONDO_0002280",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "C3",
+      "ensembl_id": "ENSG00000125730",
+      "disease": "Neovascular Age-Related Macular Degeneration",
+      "efo_id": "EFO_0004683",
+      "score": 0.953,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "C3",
+      "ensembl_id": "ENSG00000125730",
+      "disease": "Geographic Atrophy",
+      "efo_id": "EFO_1001492",
+      "score": 0.953,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "C3",
+      "ensembl_id": "ENSG00000125730",
+      "disease": "C3 Glomerulonephritis",
+      "efo_id": "MONDO_0013892",
+      "score": 0.755,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ARNA": [
+    {
+      "gene": "S1PR1",
+      "ensembl_id": "ENSG00000170989",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.956,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "S1PR4",
+      "ensembl_id": "ENSG00000125910",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.954,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "S1PR5",
+      "ensembl_id": "ENSG00000180739",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.906,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "S1PR1",
+      "ensembl_id": "ENSG00000170989",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.803,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "S1PR4",
+      "ensembl_id": "ENSG00000125910",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.735,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "S1PR5",
+      "ensembl_id": "ENSG00000180739",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.681,
+      "source": "ot_2020"
+    }
+  ],
+  "ARQL": [
+    {
+      "gene": "ESR1",
+      "ensembl_id": "ENSG00000091831",
+      "disease": "Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Gastric Cancer",
+      "efo_id": "EFO_0000178",
+      "score": 0.841,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ARWR": [
+    {
+      "gene": "PTGS1",
+      "ensembl_id": "ENSG00000095303",
+      "disease": "Hepatitis B",
+      "efo_id": "EFO_0004197",
+      "score": 0.535,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGS2",
+      "ensembl_id": "ENSG00000073756",
+      "disease": "Hepatitis B",
+      "efo_id": "EFO_0004197",
+      "score": 0.528,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "BBIO": [
+    {
+      "gene": "TTR",
+      "ensembl_id": "ENSG00000118271",
+      "disease": "Amyloid Cardiomyopathy, Transthyretin-Related",
+      "efo_id": "MONDO_0018634",
+      "score": 1.0,
+      "source": "ot_2020"
+    }
+  ],
+  "BCRX": [
+    {
+      "gene": "KLKB1",
+      "ensembl_id": "ENSG00000164344",
+      "disease": "Hereditary Angioedema",
+      "efo_id": "MONDO_0019623",
+      "score": 0.876,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "Hereditary Angioedema",
+      "efo_id": "MONDO_0019623",
+      "score": 0.862,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ATP1A1",
+      "ensembl_id": "ENSG00000163399",
+      "disease": "Hereditary Angioedema",
+      "efo_id": "MONDO_0019623",
+      "score": 0.703,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "BIIB": [
+    {
+      "gene": "SMN2",
+      "ensembl_id": "ENSG00000205571",
+      "disease": "Spinal Muscular Atrophy",
+      "efo_id": "EFO_0008525",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "GRIA1",
+      "ensembl_id": "ENSG00000155511",
+      "disease": "Cognitive Impairment Associated With Schizophrenia (CIAS)",
+      "efo_id": "EFO_0000692",
+      "score": 0.944,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "GABRA1",
+      "ensembl_id": "ENSG00000022355",
+      "disease": "Parkinson Disease",
+      "efo_id": "MONDO_0005180",
+      "score": 0.916,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KEAP1",
+      "ensembl_id": "ENSG00000079999",
+      "disease": "Multiple Sclerosis",
+      "efo_id": "MONDO_0005301",
+      "score": 0.911,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GABRA1",
+      "ensembl_id": "ENSG00000022355",
+      "disease": "Major Depressive Disorder",
+      "efo_id": "MONDO_0002009",
+      "score": 0.886,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GRIA1",
+      "ensembl_id": "ENSG00000155511",
+      "disease": "Schizophrenia",
+      "efo_id": "MONDO_0005090",
+      "score": 0.87,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ITGA4",
+      "ensembl_id": "ENSG00000115232",
+      "disease": "Acute Ischemic Stroke",
+      "efo_id": "EFO_0000712",
+      "score": 0.861,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GABRA1",
+      "ensembl_id": "ENSG00000022355",
+      "disease": "Insomnia",
+      "efo_id": "EFO_0004698",
+      "score": 0.789,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PPARG",
+      "ensembl_id": "ENSG00000132170",
+      "disease": "Pulmonary Hypertension",
+      "efo_id": "MONDO_0005149",
+      "score": 0.559,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GABRA1",
+      "ensembl_id": "ENSG00000022355",
+      "disease": "Essential Tremor",
+      "efo_id": "EFO_0001068",
+      "score": 0.54,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SCN9A",
+      "ensembl_id": "ENSG00000169432",
+      "disease": "Diabetes Mellitus",
+      "efo_id": "EFO_0000400",
+      "score": 0.5,
+      "source": "ot_2020"
+    }
+  ],
+  "BMRN": [
+    {
+      "gene": "PAH",
+      "ensembl_id": "ENSG00000171759",
+      "disease": "Phenylketonuria (PKU)",
+      "efo_id": "MONDO_0009861",
+      "score": 0.992,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "F9",
+      "ensembl_id": "ENSG00000101981",
+      "disease": "Hemophilia A",
+      "efo_id": "MONDO_0010602",
+      "score": 0.99,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DMD",
+      "ensembl_id": "ENSG00000198947",
+      "disease": "Duchenne Muscular Dystrophy",
+      "efo_id": "MONDO_0010679",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR3",
+      "ensembl_id": "ENSG00000068078",
+      "disease": "Achondroplasia",
+      "efo_id": "MONDO_0007037",
+      "score": 0.895,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NPR2",
+      "ensembl_id": "ENSG00000159899",
+      "disease": "Achondroplasia",
+      "efo_id": "MONDO_0007037",
+      "score": 0.894,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "BPMC": [
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BRAF",
+      "ensembl_id": "ENSG00000157764",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.927,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RAF1",
+      "ensembl_id": "ENSG00000132155",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.927,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR2",
+      "ensembl_id": "ENSG00000066468",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.927,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MAPK11",
+      "ensembl_id": "ENSG00000185386",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DDR2",
+      "ensembl_id": "ENSG00000162733",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TEK",
+      "ensembl_id": "ENSG00000120156",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EPHA2",
+      "ensembl_id": "ENSG00000142627",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NTRK1",
+      "ensembl_id": "ENSG00000198400",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FRK",
+      "ensembl_id": "ENSG00000111816",
+      "disease": "GIST",
+      "efo_id": "MONDO_0011719",
+      "score": 0.909,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Aggressive Systemic Mastocytosis",
+      "efo_id": "MONDO_0009263",
+      "score": 0.775,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "CHRS": [
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.5,
+      "source": "ot_2020"
+    }
+  ],
+  "CLVS": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "MAP2K1",
+      "ensembl_id": "ENSG00000169032",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.826,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MAP2K2",
+      "ensembl_id": "ENSG00000126934",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.777,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "CPRX": [
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Muscular Atrophy, Spinal",
+      "efo_id": "EFO_0008525",
+      "score": 0.455,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDE4B",
+      "ensembl_id": "ENSG00000184588",
+      "disease": "Myasthenia Gravis, Generalized",
+      "efo_id": "EFO_0004991",
+      "score": 0.441,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "CYTK": [
+    {
+      "gene": "MYH7",
+      "ensembl_id": "ENSG00000092054",
+      "disease": "Heart Failure",
+      "efo_id": "EFO_0003144",
+      "score": 0.943,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "DCPH": [
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Breast Adenocarcinoma",
+      "efo_id": "EFO_0000305",
+      "score": 0.966,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Advanced Cancers",
+      "efo_id": "MONDO_0004992",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Advanced Cancers",
+      "efo_id": "MONDO_0004992",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT1",
+      "ensembl_id": "ENSG00000102755",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRB",
+      "ensembl_id": "ENSG00000113721",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT3",
+      "ensembl_id": "ENSG00000122025",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT4",
+      "ensembl_id": "ENSG00000037280",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSF1R",
+      "ensembl_id": "ENSG00000182578",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.909,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TEK",
+      "ensembl_id": "ENSG00000120156",
+      "disease": "Breast Adenocarcinoma",
+      "efo_id": "EFO_0000305",
+      "score": 0.905,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Locally Advanced or Metastatic Solid Tumor",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ENTA": [
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Primary Biliary Cholangitis",
+      "efo_id": "EFO_1001486",
+      "score": 0.772,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "NASH - Nonalcoholic Steatohepatitis",
+      "efo_id": "EFO_1001249",
+      "score": 0.749,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "NASH",
+      "efo_id": "EFO_1001249",
+      "score": 0.749,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "EPZM": [
+    {
+      "gene": "EZH2",
+      "ensembl_id": "ENSG00000106462",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EZH2",
+      "ensembl_id": "ENSG00000106462",
+      "disease": "Follicular Lymphoma",
+      "efo_id": "MONDO_0018906",
+      "score": 0.748,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AR",
+      "ensembl_id": "ENSG00000169083",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.747,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "EZH2",
+      "ensembl_id": "ENSG00000106462",
+      "disease": "INI1-negative Tumors",
+      "efo_id": "EFO_0000616",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "EZH2",
+      "ensembl_id": "ENSG00000106462",
+      "disease": "BAP1 Loss of Function",
+      "efo_id": "EFO_0000588",
+      "score": 0.154,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ESPR": [
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 0.969,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NPC1L1",
+      "ensembl_id": "ENSG00000015520",
+      "disease": "Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 0.969,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ACLY",
+      "ensembl_id": "ENSG00000131473",
+      "disease": "Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 0.965,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NPC1L1",
+      "ensembl_id": "ENSG00000015520",
+      "disease": "Hyperlipidemias",
+      "efo_id": "MONDO_0021187",
+      "score": 0.884,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "Hyperlipidemia",
+      "efo_id": "MONDO_0021187",
+      "score": 0.874,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ACLY",
+      "ensembl_id": "ENSG00000131473",
+      "disease": "Hyperlipidemia",
+      "efo_id": "MONDO_0021187",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NPC1L1",
+      "ensembl_id": "ENSG00000015520",
+      "disease": "Atherosclerosis",
+      "efo_id": "EFO_0003914",
+      "score": 0.775,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ACLY",
+      "ensembl_id": "ENSG00000131473",
+      "disease": "Atherosclerosis",
+      "efo_id": "EFO_0003914",
+      "score": 0.729,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ACLY",
+      "ensembl_id": "ENSG00000131473",
+      "disease": "Atherosclerotic Cardiovascular Diseases",
+      "efo_id": "EFO_0001645",
+      "score": 0.625,
+      "source": "ot_2020"
+    }
+  ],
+  "EXEL": [
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Renal Cell Carcinoma",
+      "efo_id": "EFO_0000681",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RAF1",
+      "ensembl_id": "ENSG00000132155",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.932,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.932,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BRAF",
+      "ensembl_id": "ENSG00000157764",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRB",
+      "ensembl_id": "ENSG00000113721",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT3",
+      "ensembl_id": "ENSG00000122025",
+      "disease": "Hepatocellular Carcinoma",
+      "efo_id": "EFO_0000182",
+      "score": 0.928,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Renal Cell Carcinoma",
+      "efo_id": "EFO_0000681",
+      "score": 0.846,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Differentiated Thyroid Cancer",
+      "efo_id": "EFO_0002892",
+      "score": 0.722,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Differentiated Thyroid Cancer",
+      "efo_id": "EFO_0002892",
+      "score": 0.702,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "GBT": [
+    {
+      "gene": "HBB",
+      "ensembl_id": "ENSG00000244734",
+      "disease": "Hypoxemia",
+      "efo_id": "EFO_0000768",
+      "score": 0.886,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HBB",
+      "ensembl_id": "ENSG00000244734",
+      "disease": "Sickle Cell Disease",
+      "efo_id": "MONDO_0011382",
+      "score": 0.608,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "GILD": [
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Small Bowel Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TNF",
+      "ensembl_id": "ENSG00000232810",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ESR1",
+      "ensembl_id": "ENSG00000091831",
+      "disease": "Advanced Estrogen Receptor Positive HER2- Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.992,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "MMP9",
+      "ensembl_id": "ENSG00000100985",
+      "disease": "Cystic Fibrosis",
+      "efo_id": "MONDO_0009061",
+      "score": 0.988,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.964,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.963,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SYK",
+      "ensembl_id": "ENSG00000165025",
+      "disease": "Acute Myeloid Leukemia",
+      "efo_id": "EFO_0000222",
+      "score": 0.95,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Small Bowel Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.942,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Small Bowel Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.942,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.942,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "EDNRA",
+      "ensembl_id": "ENSG00000151617",
+      "disease": "Herpes Simplex",
+      "efo_id": "EFO_0000538",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ESR1",
+      "ensembl_id": "ENSG00000091831",
+      "disease": "Solid Tumors and Lymphomas",
+      "efo_id": "MONDO_0004992",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.924,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.921,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SYK",
+      "ensembl_id": "ENSG00000165025",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.92,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Cutaneous Lupus Erythematosus",
+      "efo_id": "MONDO_0007915",
+      "score": 0.917,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Cutaneous Lupus Erythematosus",
+      "efo_id": "MONDO_0007915",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Cutaneous Lupus Erythematosus",
+      "efo_id": "MONDO_0007915",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Cutaneous Lupus Erythematosus",
+      "efo_id": "MONDO_0007915",
+      "score": 0.914,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SYK",
+      "ensembl_id": "ENSG00000165025",
+      "disease": "Oncology",
+      "efo_id": "MONDO_0004992",
+      "score": 0.909,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Myelofibrosis",
+      "efo_id": "EFO_0002430",
+      "score": 0.904,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Myelofibrosis",
+      "efo_id": "EFO_0002430",
+      "score": 0.904,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Myelofibrosis",
+      "efo_id": "EFO_0002430",
+      "score": 0.904,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Myelofibrosis",
+      "efo_id": "EFO_0002430",
+      "score": 0.902,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.901,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.896,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Psoriatic Arthritis",
+      "efo_id": "EFO_0003778",
+      "score": 0.888,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Previously Untreated Pancreatic Ductal Adenocarcinoma",
+      "efo_id": "EFO_0002618",
+      "score": 0.885,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Primary Sclerosing Cholangitis",
+      "efo_id": "EFO_0004268",
+      "score": 0.885,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.881,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Fistulizing Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.878,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Sjogren's Syndrome",
+      "efo_id": "EFO_0000699",
+      "score": 0.875,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Sjogren's Syndrome",
+      "efo_id": "EFO_0000699",
+      "score": 0.87,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Sjogren's Syndrome",
+      "efo_id": "EFO_0000699",
+      "score": 0.867,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Sjogren's Syndrome",
+      "efo_id": "EFO_0000699",
+      "score": 0.867,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Sjogren's Syndrome",
+      "efo_id": "EFO_0000699",
+      "score": 0.866,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Lymphoid Malignancies",
+      "efo_id": "EFO_0000574",
+      "score": 0.852,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SCN5A",
+      "ensembl_id": "ENSG00000183873",
+      "disease": "Long QT Syndrome",
+      "efo_id": "MONDO_0019171",
+      "score": 0.839,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Myelofibrosis",
+      "efo_id": "EFO_0002430",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Compensated Cirrhosis",
+      "efo_id": "EFO_0001422",
+      "score": 0.818,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Diabetic Kidney Disease",
+      "efo_id": "EFO_0000401",
+      "score": 0.818,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CYP3A4",
+      "ensembl_id": "ENSG00000160868",
+      "disease": "HIV-1 Infection",
+      "efo_id": "EFO_0000180",
+      "score": 0.792,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD47",
+      "ensembl_id": "ENSG00000196776",
+      "disease": "Ovarian Cancer",
+      "efo_id": "EFO_0001075",
+      "score": 0.789,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD47",
+      "ensembl_id": "ENSG00000196776",
+      "disease": "Hematological Malignancies",
+      "efo_id": "EFO_0000574",
+      "score": 0.785,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD47",
+      "ensembl_id": "ENSG00000196776",
+      "disease": "Non Hodgkin Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.784,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SYK",
+      "ensembl_id": "ENSG00000165025",
+      "disease": "Non-Hodgkin Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.782,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MMP9",
+      "ensembl_id": "ENSG00000100985",
+      "disease": "Crohn's Disease",
+      "efo_id": "EFO_0000384",
+      "score": 0.781,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "SYK",
+      "ensembl_id": "ENSG00000165025",
+      "disease": "Acute Lymphoblastic Leukemia",
+      "efo_id": "EFO_0000220",
+      "score": 0.779,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Nonalcoholic Fatty Liver Disease (NAFLD)",
+      "efo_id": "EFO_0003095",
+      "score": 0.778,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MMP9",
+      "ensembl_id": "ENSG00000100985",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.775,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TLR7",
+      "ensembl_id": "ENSG00000196664",
+      "disease": "HIV-1 Infection",
+      "efo_id": "EFO_0000180",
+      "score": 0.773,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Primary Biliary Cholangitis",
+      "efo_id": "EFO_1001486",
+      "score": 0.772,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Nonalcoholic Steatohepatitis",
+      "efo_id": "EFO_1001249",
+      "score": 0.749,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MMP9",
+      "ensembl_id": "ENSG00000100985",
+      "disease": "Gastric Adenocarcinoma",
+      "efo_id": "EFO_0000178",
+      "score": 0.74,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TUBB1",
+      "ensembl_id": "ENSG00000101162",
+      "disease": "Non-Hodgkin Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.69,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYMS",
+      "ensembl_id": "ENSG00000176890",
+      "disease": "Gastric Adenocarcinoma",
+      "efo_id": "EFO_0000178",
+      "score": 0.655,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Acute Myeloid Leukemia",
+      "efo_id": "EFO_0000222",
+      "score": 0.65,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "XDH",
+      "ensembl_id": "ENSG00000158125",
+      "disease": "Non Hodgkin Lymphoma",
+      "efo_id": "EFO_0005952",
+      "score": 0.627,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Rheumatoid Arthritis",
+      "efo_id": "EFO_0000685",
+      "score": 0.6,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TLR7",
+      "ensembl_id": "ENSG00000196664",
+      "disease": "Chronic Hepatitis B",
+      "efo_id": "EFO_0004197",
+      "score": 0.586,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TUBB1",
+      "ensembl_id": "ENSG00000101162",
+      "disease": "Acute Lymphoblastic Leukemia",
+      "efo_id": "EFO_0000220",
+      "score": 0.517,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MAP3K5",
+      "ensembl_id": "ENSG00000197442",
+      "disease": "Diabetic Kidney Disease",
+      "efo_id": "EFO_0000401",
+      "score": 0.513,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MMP9",
+      "ensembl_id": "ENSG00000100985",
+      "disease": "Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.426,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Noninfectious Uveitis",
+      "efo_id": "EFO_1001231",
+      "score": 0.407,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Noninfectious Uveitis",
+      "efo_id": "EFO_1001231",
+      "score": 0.407,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Noninfectious Uveitis",
+      "efo_id": "EFO_1001231",
+      "score": 0.318,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Noninfectious Uveitis",
+      "efo_id": "EFO_1001231",
+      "score": 0.318,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.273,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SCN5A",
+      "ensembl_id": "ENSG00000183873",
+      "disease": "LQT2 Syndrome",
+      "efo_id": "EFO_0004276",
+      "score": 0.195,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD47",
+      "ensembl_id": "ENSG00000196776",
+      "disease": "Colorectal Cancer",
+      "efo_id": "EFO_1001951",
+      "score": 0.145,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Follicular Lymphoma",
+      "efo_id": "MONDO_0018906",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SCN5A",
+      "ensembl_id": "ENSG00000183873",
+      "disease": "Ischemic Heart Disease",
+      "efo_id": "EFO_0003914",
+      "score": 0.006,
+      "source": "ot_2020"
+    }
+  ],
+  "GTHX": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Carcinoma, Non-Small-Cell Lung",
+      "efo_id": "EFO_0003060",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ESR1",
+      "ensembl_id": "ENSG00000091831",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.992,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "CDK6",
+      "ensembl_id": "ENSG00000105810",
+      "disease": "Advanced Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.968,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CDK4",
+      "ensembl_id": "ENSG00000135446",
+      "disease": "Advanced Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.952,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CDK4",
+      "ensembl_id": "ENSG00000135446",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CDK6",
+      "ensembl_id": "ENSG00000105810",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP1",
+      "ensembl_id": "ENSG00000198900",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.714,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "ICPT": [
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Primary Sclerosing Cholangitis (PSC)",
+      "efo_id": "EFO_0004268",
+      "score": 0.885,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Liver Cirrhosis, Biliary",
+      "efo_id": "EFO_0001422",
+      "score": 0.818,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HMGCR",
+      "ensembl_id": "ENSG00000113161",
+      "disease": "Nonalcoholic Steatohepatitis",
+      "efo_id": "EFO_1001249",
+      "score": 0.749,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NR1H4",
+      "ensembl_id": "ENSG00000012504",
+      "disease": "Nonalcoholic Steatohepatitis",
+      "efo_id": "EFO_1001249",
+      "score": 0.749,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "IMGN": [
+    {
+      "gene": "TOP1",
+      "ensembl_id": "ENSG00000198900",
+      "disease": "Epithelial Ovarian Cancer",
+      "efo_id": "EFO_0001075",
+      "score": 0.854,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "INCY": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Lung Cancer",
+      "efo_id": "EFO_0001071",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "FGFR2",
+      "ensembl_id": "ENSG00000066468",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.966,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Moderate to Severe Ulcerative Colitis",
+      "efo_id": "EFO_0000729",
+      "score": 0.964,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RAF1",
+      "ensembl_id": "ENSG00000132155",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.963,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.963,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR3",
+      "ensembl_id": "ENSG00000068078",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.962,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.96,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.959,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.948,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.948,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NTRK1",
+      "ensembl_id": "ENSG00000198400",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.948,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.948,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.946,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.939,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Vitiligo",
+      "efo_id": "EFO_0004208",
+      "score": 0.937,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "EPHA2",
+      "ensembl_id": "ENSG00000142627",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DDR2",
+      "ensembl_id": "ENSG00000162733",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FRK",
+      "ensembl_id": "ENSG00000111816",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.932,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Leukemia",
+      "efo_id": "EFO_0000565",
+      "score": 0.919,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.917,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MAPK11",
+      "ensembl_id": "ENSG00000185386",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.914,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Non-segmental Vitiligo",
+      "efo_id": "EFO_0004208",
+      "score": 0.912,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Non-segmental Vitiligo",
+      "efo_id": "EFO_0004208",
+      "score": 0.91,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TEK",
+      "ensembl_id": "ENSG00000120156",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.905,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Accelerated Phase Chronic Myeloid Leukemia",
+      "efo_id": "EFO_0000220",
+      "score": 0.902,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Recurrent Adult Hodgkin's Lymphoma",
+      "efo_id": "EFO_0000183",
+      "score": 0.9,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ARG1",
+      "ensembl_id": "ENSG00000118520",
+      "disease": "Bladder Cancer",
+      "efo_id": "MONDO_0004986",
+      "score": 0.884,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR2",
+      "ensembl_id": "ENSG00000066468",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.881,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.877,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.877,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR3",
+      "ensembl_id": "ENSG00000068078",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.872,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Lymphoma",
+      "efo_id": "EFO_0000574",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Lymphoma",
+      "efo_id": "EFO_0000574",
+      "score": 0.852,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Hematologic Malignancies",
+      "efo_id": "EFO_0000574",
+      "score": 0.851,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.846,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.841,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSF1R",
+      "ensembl_id": "ENSG00000182578",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.838,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRB",
+      "ensembl_id": "ENSG00000113721",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.836,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.836,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT1",
+      "ensembl_id": "ENSG00000102755",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.827,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.821,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.813,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT4",
+      "ensembl_id": "ENSG00000037280",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.813,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.812,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Lung Cancer",
+      "efo_id": "EFO_0001071",
+      "score": 0.811,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ARG1",
+      "ensembl_id": "ENSG00000118520",
+      "disease": "Relapsed or Refractory Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.804,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.803,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT3",
+      "ensembl_id": "ENSG00000122025",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.798,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.797,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Vitiligo",
+      "efo_id": "EFO_0004208",
+      "score": 0.781,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP2A",
+      "ensembl_id": "ENSG00000131747",
+      "disease": "Leukemia",
+      "efo_id": "EFO_0000565",
+      "score": 0.775,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.774,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IDO1",
+      "ensembl_id": "ENSG00000131203",
+      "disease": "Advanced Malignancies",
+      "efo_id": "MONDO_0004992",
+      "score": 0.772,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "LOXL2",
+      "ensembl_id": "ENSG00000134013",
+      "disease": "Advanced Malignancies",
+      "efo_id": "MONDO_0004992",
+      "score": 0.763,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IDO1",
+      "ensembl_id": "ENSG00000131203",
+      "disease": "Head and Neck Cancer",
+      "efo_id": "EFO_0006859",
+      "score": 0.763,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IDO1",
+      "ensembl_id": "ENSG00000131203",
+      "disease": "Lung Cancer",
+      "efo_id": "EFO_0001071",
+      "score": 0.759,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR2",
+      "ensembl_id": "ENSG00000066468",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.73,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.728,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR3",
+      "ensembl_id": "ENSG00000068078",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.725,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.723,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.72,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AR",
+      "ensembl_id": "ENSG00000169083",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.718,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "Advanced or Metastatic Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRB",
+      "ensembl_id": "ENSG00000113721",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.679,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.676,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.674,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CYP17A1",
+      "ensembl_id": "ENSG00000148795",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.656,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.65,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK1",
+      "ensembl_id": "ENSG00000162434",
+      "disease": "Leukemia",
+      "efo_id": "EFO_0000565",
+      "score": 0.65,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.637,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYMS",
+      "ensembl_id": "ENSG00000176890",
+      "disease": "Head and Neck Cancer",
+      "efo_id": "EFO_0006859",
+      "score": 0.625,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SRD5A1",
+      "ensembl_id": "ENSG00000145545",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.554,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Graft-versus-host Disease (GVHD)",
+      "efo_id": "MONDO_0013730",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "BRAF",
+      "ensembl_id": "ENSG00000157764",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "MPN (Myeloproliferative Neoplasms)",
+      "efo_id": "EFO_0002428",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK3",
+      "ensembl_id": "ENSG00000105639",
+      "disease": "Leukemia",
+      "efo_id": "EFO_0000565",
+      "score": 0.5,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.49,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "JAK2",
+      "ensembl_id": "ENSG00000096968",
+      "disease": "Leukemia",
+      "efo_id": "EFO_0000565",
+      "score": 0.49,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IDO1",
+      "ensembl_id": "ENSG00000131203",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.468,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ARG1",
+      "ensembl_id": "ENSG00000118520",
+      "disease": "Solid Tumors",
+      "efo_id": "EFO_0004282",
+      "score": 0.464,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ARG1",
+      "ensembl_id": "ENSG00000118520",
+      "disease": "Biliary Tract Cancer (BTC)",
+      "efo_id": "EFO_0005221",
+      "score": 0.284,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYMS",
+      "ensembl_id": "ENSG00000176890",
+      "disease": "Biliary Tract Cancer (BTC)",
+      "efo_id": "EFO_0005221",
+      "score": 0.279,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR2",
+      "ensembl_id": "ENSG00000066468",
+      "disease": "Cholangiocarcinoma",
+      "efo_id": "EFO_0005221",
+      "score": 0.279,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR3",
+      "ensembl_id": "ENSG00000068078",
+      "disease": "Cholangiocarcinoma",
+      "efo_id": "EFO_0005221",
+      "score": 0.279,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "Cholangiocarcinoma",
+      "efo_id": "EFO_0005221",
+      "score": 0.279,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Refractory Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.273,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IDO1",
+      "ensembl_id": "ENSG00000131203",
+      "disease": "Renal Cell Carcinoma (RCC)",
+      "efo_id": "EFO_0000681",
+      "score": 0.125,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TYK2",
+      "ensembl_id": "ENSG00000105397",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.002,
+      "source": "ot_2020"
+    }
+  ],
+  "IONS": [
+    {
+      "gene": "TTR",
+      "ensembl_id": "ENSG00000118271",
+      "disease": "Transthyretin-Mediated Amyloid Cardiomyopathy (ATTR CM)",
+      "efo_id": "MONDO_0018634",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "APOC3",
+      "ensembl_id": "ENSG00000110245",
+      "disease": "Abnormalities, Cardiovascular",
+      "efo_id": "EFO_0000319",
+      "score": 0.835,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "APOC3",
+      "ensembl_id": "ENSG00000110245",
+      "disease": "Hypertriglyceridemia",
+      "efo_id": "EFO_0004211",
+      "score": 0.712,
+      "source": "ot_2020"
+    }
+  ],
+  "IRWD": [
+    {
+      "gene": "TUBA1B",
+      "ensembl_id": "ENSG00000123416",
+      "disease": "Chronic Kidney Disease (CKD)",
+      "efo_id": "EFO_0003884",
+      "score": 0.756,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "GUCY2C",
+      "ensembl_id": "ENSG00000070019",
+      "disease": "Irritable Bowel Syndrome Characterized by Constipation",
+      "efo_id": "EFO_0000555",
+      "score": 0.61,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "KDMN": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Brain Tumor",
+      "efo_id": "EFO_0000519",
+      "score": 0.983,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "ADPKD",
+      "efo_id": "EFO_0008620",
+      "score": 0.98,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK1",
+      "ensembl_id": "ENSG00000067900",
+      "disease": "Autoimmune Diseases",
+      "efo_id": "EFO_0000540",
+      "score": 0.889,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK2",
+      "ensembl_id": "ENSG00000134318",
+      "disease": "Chronic Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.879,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK1",
+      "ensembl_id": "ENSG00000067900",
+      "disease": "Chronic Plaque Psoriasis",
+      "efo_id": "EFO_1001494",
+      "score": 0.849,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Brain Tumor",
+      "efo_id": "EFO_0000519",
+      "score": 0.835,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK2",
+      "ensembl_id": "ENSG00000134318",
+      "disease": "Idiopathic Pulmonary Fibrosis",
+      "efo_id": "EFO_0000768",
+      "score": 0.825,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK1",
+      "ensembl_id": "ENSG00000067900",
+      "disease": "Idiopathic Pulmonary Fibrosis",
+      "efo_id": "EFO_0000768",
+      "score": 0.691,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "ADPKD",
+      "efo_id": "EFO_0008620",
+      "score": 0.642,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ROCK2",
+      "ensembl_id": "ENSG00000134318",
+      "disease": "Autoimmune Diseases",
+      "efo_id": "EFO_0000540",
+      "score": 0.625,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ATP4A",
+      "ensembl_id": "ENSG00000105675",
+      "disease": "Autoimmune Diseases",
+      "efo_id": "EFO_0000540",
+      "score": 0.5,
+      "source": "ot_2020"
+    }
+  ],
+  "KPTI": [
+    {
+      "gene": "XPO1",
+      "ensembl_id": "ENSG00000082898",
+      "disease": "Myelodysplastic Syndrome",
+      "efo_id": "EFO_0000198",
+      "score": 0.928,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "XPO1",
+      "ensembl_id": "ENSG00000082898",
+      "disease": "Endometrial Cancer",
+      "efo_id": "MONDO_0011962",
+      "score": 0.921,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TUBB1",
+      "ensembl_id": "ENSG00000101162",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.875,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CD38",
+      "ensembl_id": "ENSG00000004468",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFRSF17",
+      "ensembl_id": "ENSG00000048462",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.82,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "SLAMF7",
+      "ensembl_id": "ENSG00000026751",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.81,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "XPO1",
+      "ensembl_id": "ENSG00000082898",
+      "disease": "Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.795,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "KURA": [
+    {
+      "gene": "FNTB",
+      "ensembl_id": "ENSG00000257365",
+      "disease": "HRAS Mutant Tumor",
+      "efo_id": "EFO_0002892",
+      "score": 0.182,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "MDCO": [
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Elevated Cholesterol",
+      "efo_id": "EFO_0004911",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "VKORC1",
+      "ensembl_id": "ENSG00000167397",
+      "disease": "Acute Bacterial Skin and Skin Structure Infection",
+      "efo_id": "EFO_0000618",
+      "score": 0.74,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "ASCVD",
+      "efo_id": "EFO_0003914",
+      "score": 0.701,
+      "source": "ot_2020"
+    }
+  ],
+  "MDGL": [
+    {
+      "gene": "THRB",
+      "ensembl_id": "ENSG00000151090",
+      "disease": "Non-alcoholic Steatohepatitis",
+      "efo_id": "EFO_1001249",
+      "score": 0.388,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "MGNX": [
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "HER-2 Positive Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.953,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Gastric Cancer",
+      "efo_id": "EFO_0000178",
+      "score": 0.752,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Head and Neck Cancer",
+      "efo_id": "EFO_0006859",
+      "score": 0.743,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "LAG3",
+      "ensembl_id": "ENSG00000089692",
+      "disease": "Gastric Cancer",
+      "efo_id": "EFO_0000178",
+      "score": 0.74,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Gastric Cancer",
+      "efo_id": "EFO_0000178",
+      "score": 0.7,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Esophageal Cancer",
+      "efo_id": "EFO_0002916",
+      "score": 0.634,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "MRTX": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Advanced Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.936,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Advanced Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.932,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB4",
+      "ensembl_id": "ENSG00000178568",
+      "disease": "Advanced Cancer",
+      "efo_id": "MONDO_0004992",
+      "score": 0.925,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Clear Cell Renal Cell Carcinoma",
+      "efo_id": "EFO_0000349",
+      "score": 0.857,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Clear Cell Renal Cell Carcinoma",
+      "efo_id": "EFO_0000349",
+      "score": 0.852,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AXL",
+      "ensembl_id": "ENSG00000167601",
+      "disease": "Clear Cell Renal Cell Carcinoma",
+      "efo_id": "EFO_0000349",
+      "score": 0.842,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Carcinoma, Non-Small-Cell Lung",
+      "efo_id": "EFO_0003060",
+      "score": 0.836,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MET",
+      "ensembl_id": "ENSG00000105976",
+      "disease": "Non-Small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.835,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AXL",
+      "ensembl_id": "ENSG00000167601",
+      "disease": "Carcinoma, Non-Small-Cell Lung",
+      "efo_id": "EFO_0003060",
+      "score": 0.625,
+      "source": "ot_2020"
+    }
+  ],
+  "MYGN": [
+    {
+      "gene": "SRD5A1",
+      "ensembl_id": "ENSG00000145545",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.935,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Ovarian Neoplasms",
+      "efo_id": "EFO_0001075",
+      "score": 0.858,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP2",
+      "ensembl_id": "ENSG00000129484",
+      "disease": "Ovarian Cancer",
+      "efo_id": "EFO_0001075",
+      "score": 0.856,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "AR",
+      "ensembl_id": "ENSG00000169083",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.747,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "CYP17A1",
+      "ensembl_id": "ENSG00000148795",
+      "disease": "Metastatic Castration-resistant Prostate Cancer",
+      "efo_id": "EFO_0001663",
+      "score": 0.625,
+      "source": "ot_2020"
+    }
+  ],
+  "NBIX": [
+    {
+      "gene": "SLC18A2",
+      "ensembl_id": "ENSG00000165646",
+      "disease": "Tardive Dyskinesia (TD)",
+      "efo_id": "EFO_0004280",
+      "score": 0.853,
+      "source": "ot_2020"
+    }
+  ],
+  "OPK": [
+    {
+      "gene": "F9",
+      "ensembl_id": "ENSG00000101981",
+      "disease": "Hemophilia A",
+      "efo_id": "MONDO_0010602",
+      "score": 0.99,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "PBYI": [
+    {
+      "gene": "EGFR",
+      "ensembl_id": "ENSG00000146648",
+      "disease": "Early Stage HER2+ Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.953,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB2",
+      "ensembl_id": "ENSG00000141736",
+      "disease": "Early Stage HER2+ Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.953,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ERBB4",
+      "ensembl_id": "ENSG00000178568",
+      "disease": "Early Stage HER2+ Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.65,
+      "source": "ot_2020"
+    }
+  ],
+  "PGNX": [
+    {
+      "gene": "AR",
+      "ensembl_id": "ENSG00000169083",
+      "disease": "Cancer of the Prostate",
+      "efo_id": "EFO_0000625",
+      "score": 0.828,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "PTCT": [
+    {
+      "gene": "DMD",
+      "ensembl_id": "ENSG00000198947",
+      "disease": "Duchenne Muscular Dystrophy",
+      "efo_id": "MONDO_0010679",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "RARE": [
+    {
+      "gene": "GALNS",
+      "ensembl_id": "ENSG00000141012",
+      "disease": "MPS VII",
+      "efo_id": "MONDO_0009661",
+      "score": 0.975,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "RARX": [
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "RET",
+      "ensembl_id": "ENSG00000165731",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.934,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Advanced Cancers",
+      "efo_id": "MONDO_0004992",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRA",
+      "ensembl_id": "ENSG00000134853",
+      "disease": "Advanced Cancers",
+      "efo_id": "MONDO_0004992",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT1",
+      "ensembl_id": "ENSG00000102755",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDGFRB",
+      "ensembl_id": "ENSG00000113721",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT3",
+      "ensembl_id": "ENSG00000122025",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.929,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TLR7",
+      "ensembl_id": "ENSG00000196664",
+      "disease": "Melanoma",
+      "efo_id": "EFO_0000756",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "DMD",
+      "ensembl_id": "ENSG00000198947",
+      "disease": "Duchenne Muscular Dystrophy",
+      "efo_id": "MONDO_0010679",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT4",
+      "ensembl_id": "ENSG00000037280",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFSF13B",
+      "ensembl_id": "ENSG00000102524",
+      "disease": "Systemic Lupus Erythematosus",
+      "efo_id": "MONDO_0007915",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSF1R",
+      "ensembl_id": "ENSG00000182578",
+      "disease": "Gastrointestinal Stromal Tumors",
+      "efo_id": "MONDO_0011719",
+      "score": 0.909,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ATP4A",
+      "ensembl_id": "ENSG00000105675",
+      "disease": "Pain",
+      "efo_id": "HP_0012531",
+      "score": 0.837,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Locally Advanced or Metastatic Solid Tumor",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TNFSF13B",
+      "ensembl_id": "ENSG00000102524",
+      "disease": "Idiopathic Thrombocytopenic Purpura",
+      "efo_id": "EFO_0007160",
+      "score": 0.426,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "REGN": [
+    {
+      "gene": "PCSK9",
+      "ensembl_id": "ENSG00000169174",
+      "disease": "Heterozygous Familial Hypercholesterolemia",
+      "efo_id": "EFO_0004911",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "NGF",
+      "ensembl_id": "ENSG00000134259",
+      "disease": "Osteoarthritis, Hip",
+      "efo_id": "EFO_1000786",
+      "score": 0.962,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL4R",
+      "ensembl_id": "ENSG00000077238",
+      "disease": "Asthma, Allergic",
+      "efo_id": "MONDO_0004979",
+      "score": 0.932,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL33",
+      "ensembl_id": "ENSG00000137033",
+      "disease": "Asthma, Allergic",
+      "efo_id": "MONDO_0004979",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL33",
+      "ensembl_id": "ENSG00000137033",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.931,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL4R",
+      "ensembl_id": "ENSG00000077238",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.93,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ATP4A",
+      "ensembl_id": "ENSG00000105675",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Advanced Malignancies",
+      "efo_id": "MONDO_0004992",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Melanoma",
+      "efo_id": "EFO_0000756",
+      "score": 0.923,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NGF",
+      "ensembl_id": "ENSG00000134259",
+      "disease": "Osteoarthritis of the Knee or Hip",
+      "efo_id": "EFO_0003931",
+      "score": 0.915,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL1B",
+      "ensembl_id": "ENSG00000125538",
+      "disease": "Anemia",
+      "efo_id": "MONDO_0002280",
+      "score": 0.896,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "NGF",
+      "ensembl_id": "ENSG00000134259",
+      "disease": "Osteoarthritis",
+      "efo_id": "MONDO_0005178",
+      "score": 0.851,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGS2",
+      "ensembl_id": "ENSG00000073756",
+      "disease": "Osteoarthritis, Hip",
+      "efo_id": "EFO_1000786",
+      "score": 0.812,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGS1",
+      "ensembl_id": "ENSG00000095303",
+      "disease": "Osteoarthritis, Hip",
+      "efo_id": "EFO_1000786",
+      "score": 0.776,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PDCD1",
+      "ensembl_id": "ENSG00000188389",
+      "disease": "Non-small Cell Lung Cancer",
+      "efo_id": "EFO_0003060",
+      "score": 0.774,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "IL4R",
+      "ensembl_id": "ENSG00000077238",
+      "disease": "Eosinophilic Esophagitis",
+      "efo_id": "EFO_0004232",
+      "score": 0.73,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "VKORC1",
+      "ensembl_id": "ENSG00000167397",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.691,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "VEGFA",
+      "ensembl_id": "ENSG00000112715",
+      "disease": "Neovascular Age-Related Macular Degeneration",
+      "efo_id": "EFO_0004683",
+      "score": 0.625,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "IL4R",
+      "ensembl_id": "ENSG00000077238",
+      "disease": "Allergic Rhinitis",
+      "efo_id": "EFO_0005854",
+      "score": 0.002,
+      "source": "ot_2020"
+    }
+  ],
+  "RYTM": [
+    {
+      "gene": "MC4R",
+      "ensembl_id": "ENSG00000166603",
+      "disease": "Genetic Obesity",
+      "efo_id": "EFO_0001073",
+      "score": 1.0,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "MC4R",
+      "ensembl_id": "ENSG00000166603",
+      "disease": "Hypertriglyceridemia",
+      "efo_id": "EFO_0004211",
+      "score": 0.741,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MC4R",
+      "ensembl_id": "ENSG00000166603",
+      "disease": "Prader-Willi Syndrome",
+      "efo_id": "MONDO_0008300",
+      "score": 0.698,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "SGEN": [
+    {
+      "gene": "PARP1",
+      "ensembl_id": "ENSG00000143799",
+      "disease": "Bladder Cancer",
+      "efo_id": "MONDO_0004986",
+      "score": 0.847,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PARP2",
+      "ensembl_id": "ENSG00000129484",
+      "disease": "Bladder Cancer",
+      "efo_id": "MONDO_0004986",
+      "score": 0.702,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FGFR1",
+      "ensembl_id": "ENSG00000077782",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.684,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CDK4",
+      "ensembl_id": "ENSG00000135446",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KIT",
+      "ensembl_id": "ENSG00000157404",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "KDR",
+      "ensembl_id": "ENSG00000128052",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "FLT1",
+      "ensembl_id": "ENSG00000102755",
+      "disease": "Advanced Solid Tumors",
+      "efo_id": "EFO_0000335",
+      "score": 0.547,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "SGMO": [
+    {
+      "gene": "HBB",
+      "ensembl_id": "ENSG00000244734",
+      "disease": "Sickle Cell Disease",
+      "efo_id": "MONDO_0011382",
+      "score": 0.608,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "SPPI": [
+    {
+      "gene": "CSF3R",
+      "ensembl_id": "ENSG00000119535",
+      "disease": "Breast Cancer",
+      "efo_id": "EFO_0000305",
+      "score": 0.882,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "SRPT": [
+    {
+      "gene": "DMD",
+      "ensembl_id": "ENSG00000198947",
+      "disease": "Duchenne Muscular Dystrophy",
+      "efo_id": "MONDO_0010679",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "TGTX": [
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.953,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.933,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "BCL2",
+      "ensembl_id": "ENSG00000171791",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.922,
+      "source": "ot_2020"
+    },
+    {
+      "gene": "BTK",
+      "ensembl_id": "ENSG00000010671",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.921,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MS4A1",
+      "ensembl_id": "ENSG00000156738",
+      "disease": "Multiple Sclerosis",
+      "efo_id": "MONDO_0005301",
+      "score": 0.876,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MS4A1",
+      "ensembl_id": "ENSG00000156738",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.863,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSNK1E",
+      "ensembl_id": "ENSG00000213923",
+      "disease": "Chronic Lymphocytic Leukemia",
+      "efo_id": "EFO_0000095",
+      "score": 0.748,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.59,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MS4A1",
+      "ensembl_id": "ENSG00000156738",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.523,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Follicular Lymphoma",
+      "efo_id": "MONDO_0018906",
+      "score": 0.466,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSNK1E",
+      "ensembl_id": "ENSG00000213923",
+      "disease": "Follicular Lymphoma",
+      "efo_id": "MONDO_0018906",
+      "score": 0.428,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.273,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Marginal Zone Lymphoma",
+      "efo_id": "EFO_1000630",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSNK1E",
+      "ensembl_id": "ENSG00000213923",
+      "disease": "Marginal Zone Lymphoma",
+      "efo_id": "EFO_1000630",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "ABL1",
+      "ensembl_id": "ENSG00000097007",
+      "disease": "Marginal Zone Lymphoma",
+      "efo_id": "EFO_1000630",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PIK3CD",
+      "ensembl_id": "ENSG00000171608",
+      "disease": "Follicular Lymphoma",
+      "efo_id": "MONDO_0018906",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CSNK1E",
+      "ensembl_id": "ENSG00000213923",
+      "disease": "Diffuse Large B-Cell Lymphoma",
+      "efo_id": "EFO_0000403",
+      "score": 0.035,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "UTHR": [
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Pulmonary Arterial Hypertension",
+      "efo_id": "EFO_0001361",
+      "score": 0.963,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Heart Failure With Preserved Ejection Fraction",
+      "efo_id": "EFO_0003144",
+      "score": 0.895,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Chronic Obstructive Pulmonary Disease",
+      "efo_id": "EFO_0000341",
+      "score": 0.727,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TOP1",
+      "ensembl_id": "ENSG00000198900",
+      "disease": "Small Cell Lung Cancer",
+      "efo_id": "EFO_0000702",
+      "score": 0.714,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "PTGIR",
+      "ensembl_id": "ENSG00000160013",
+      "disease": "Pulmonary Fibrosis",
+      "efo_id": "EFO_0009448",
+      "score": 0.128,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "VNDA": [
+    {
+      "gene": "TACR1",
+      "ensembl_id": "ENSG00000115353",
+      "disease": "Atopic Dermatitis",
+      "efo_id": "EFO_0000274",
+      "score": 0.914,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "MTNR1A",
+      "ensembl_id": "ENSG00000168412",
+      "disease": "Autism Spectrum Disorder",
+      "efo_id": "EFO_0003756",
+      "score": 0.762,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "TACR1",
+      "ensembl_id": "ENSG00000115353",
+      "disease": "Diabetic Gastroparesis",
+      "efo_id": "EFO_1000948",
+      "score": 0.412,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "VRTX": [
+    {
+      "gene": "CFTR",
+      "ensembl_id": "ENSG00000001626",
+      "disease": "Cystic Fibrosis",
+      "efo_id": "MONDO_0009061",
+      "score": 0.979,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "CFTR",
+      "ensembl_id": "ENSG00000001626",
+      "disease": "Advanced Lung Disease",
+      "efo_id": "EFO_0001071",
+      "score": 0.899,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HBB",
+      "ensembl_id": "ENSG00000244734",
+      "disease": "Hematological Diseases",
+      "efo_id": "MONDO_0011382",
+      "score": 0.608,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "BLUE": [
+    {
+      "gene": "TNFRSF17",
+      "ensembl_id": "ENSG00000048462",
+      "disease": "Relapsed/Refractory Multiple Myeloma",
+      "efo_id": "EFO_0001378",
+      "score": 0.82,
+      "source": "ot_recent_fallback"
+    },
+    {
+      "gene": "HBB",
+      "ensembl_id": "ENSG00000244734",
+      "disease": "Sickle Cell Disease",
+      "efo_id": "MONDO_0011382",
+      "score": 0.608,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "FGEN": [
+    {
+      "gene": "DMD",
+      "ensembl_id": "ENSG00000198947",
+      "disease": "Duchenne Muscular Dystrophy (DMD)",
+      "efo_id": "MONDO_0010679",
+      "score": 0.926,
+      "source": "ot_recent_fallback"
+    }
+  ],
+  "FIXX": [
+    {
+      "gene": "PAH",
+      "ensembl_id": "ENSG00000171759",
+      "disease": "Phenylketonuria (PKU)",
+      "efo_id": "MONDO_0009861",
+      "score": 0.992,
+      "source": "ot_recent_fallback"
+    }
+  ]
+};

@@ -32,7 +32,7 @@ function renderMetricCards() {
     {
       value: `+${p.alpha_vs_xbi}pp`,
       label: 'Alpha vs XBI',
-      detail: `GS outperformance over XBI ETF benchmark`,
+      detail: `GS* outperformance over XBI ETF benchmark`,
       cls: 'blue', positive: true
     },
     {
@@ -67,7 +67,7 @@ function renderMetricCards() {
       <div class="label">${c.label}</div>
       <div class="detail">${c.detail}</div>
     </div>
-  `).join('');
+  `).join('') + `<p class="metric-footnote">*GS (genetically-supported): &ge;50% of a company's scoreable gene–disease pairs have an Open Targets genetic association score &gt; 0.10</p>`;
 }
 
 /* --- Results Table --- */

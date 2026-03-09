@@ -23,6 +23,7 @@
         <li><a href="#companies">Companies</a></li>
         <li><a href="#sensitivity">Sensitivity</a></li>
         <li><a href="#methods">Methods</a></li>
+        <li><a href="https://github.com/mohdkarim/xbi-genetic-support" target="_blank" class="nav-code">Code</a></li>
       </ul>
     </div>
   </nav>
@@ -35,6 +36,7 @@
           <h1>Genetic Alpha</h1>
           <p>Do biotech companies with genetically-supported drug pipelines outperform?<br>
           An analysis of 126 XBI ETF holdings from January 2020 to February 2026.</p>
+          <p class="disclaimer-hero">This is an academic research exercise, not investment advice. Past performance does not predict future results.</p>
         </div>
 
         <div class="metric-cards" id="metric-cards">
@@ -50,7 +52,7 @@
     </section>
 
     <!-- Section 2: Performance -->
-    <section id="performance" style="background: white;">
+    <section id="performance" class="section-alt">
       <div class="container">
         <h2 class="section-title">Portfolio Performance</h2>
         <p class="section-subtitle">Equal-weight portfolios of genetically-supported vs non-supported companies, benchmarked against XBI ETF and S&P 500.</p>
@@ -103,12 +105,12 @@
               <tr>
                 <th data-sort="ticker">Ticker <span class="sort-arrow"></span></th>
                 <th data-sort="company">Company <span class="sort-arrow"></span></th>
-                <th data-sort="return_pct">Return <span class="sort-arrow"></span></th>
-                <th data-sort="is_gs_a">GS <span class="sort-arrow"></span></th>
-                <th data-sort="best_score">Best Score <span class="sort-arrow"></span></th>
-                <th data-sort="n_gs">Programs <span class="sort-arrow"></span></th>
-                <th data-sort="outcome">Outcome <span class="sort-arrow"></span></th>
-                <th data-sort="is_oncology">Oncology <span class="sort-arrow"></span></th>
+                <th data-sort="return_pct">Return <span class="th-tip" data-tip="Total stock return from Jan 2, 2020 to Feb 21, 2026. Includes delisting/acquisition payouts.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="is_gs_a">GS <span class="th-tip" data-tip="Genetically-supported: ≥50% of scoreable gene–disease pairs have an Open Targets genetic association score > 0.10.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="best_score">Best Score <span class="th-tip" data-tip="Highest Open Targets genetic association score across all the company's gene–disease pairs (0–1 scale).">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="n_gs">Programs <span class="th-tip" data-tip="Number of genetically-supported gene–disease pairs / total scoreable pairs for this company.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="outcome">Outcome <span class="th-tip" data-tip="Company status as of Feb 2026: active (still trading), acquired (buyout), or bankrupt (delisted at $0).">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="is_oncology">Oncology <span class="th-tip" data-tip="Whether the company's primary therapeutic focus is oncology.">?</span> <span class="sort-arrow"></span></th>
               </tr>
             </thead>
             <tbody id="company-tbody">
@@ -126,7 +128,7 @@
     </section>
 
     <!-- Section 4: Sensitivity -->
-    <section id="sensitivity" style="background: white;">
+    <section id="sensitivity" class="section-alt">
       <div class="container">
         <h2 class="section-title">Sensitivity Analysis</h2>
         <p class="section-subtitle">Testing robustness of the genetic alpha signal across different definitions and evidence standards.</p>

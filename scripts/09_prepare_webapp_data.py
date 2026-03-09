@@ -11,6 +11,7 @@ from pathlib import Path
 BASE = Path(__file__).parent.parent
 RESULTS_PATH = BASE / "final" / "portfolio_results.json"
 QUARTERLY_PATH = BASE / "final" / "quarterly_returns.tsv"
+PIPELINE_PATH = BASE / "processed" / "scored_pipeline.tsv"
 OUT_PATH = BASE / "docs" / "js" / "data.js"
 
 
@@ -137,12 +138,60 @@ def build_companies(raw):
     return companies
 
 
-def write_js(results, companies, quarterly):
+def build_pipeline():
+    """Extract deduplicated scoreable gene-disease pairs per company from scored_pipeline.tsv.
+
+    Returns dict mapping ticker -> list of {gene, ensembl_id, disease, efo_id, score, source}.
+    Deduplicates on (ticker, ensembl_id, disease_efo_id), keeping highest score.
+    """
+    pairs = {}  # (ticker, ensembl_id, efo_id) -> row dict
+    with open(PIPELINE_PATH) as f:
+        reader = csv.DictReader(f, delimiter='\t')
+        for row in reader:
+            if row["is_scoreable"] != "True":
+                continue
+            score_str = row["genetic_association_score"]
+            if not score_str or score_str == "":
+                continue
+            try:
+                score = float(score_str)
+            except ValueError:
+                continue
+            if score <= 0:
+                continue
+
+            key = (row["ticker"], row["ensembl_id"], row["disease_efo_id"])
+            if key not in pairs or score > pairs[key]["score"]:
+                # Use first condition label (before pipe) as display name
+                condition = row["conditions"].split("|")[0].strip() if row["conditions"] else row["disease_efo_id"]
+                pairs[key] = {
+                    "gene": row["gene_symbol"],
+                    "ensembl_id": row["ensembl_id"],
+                    "disease": condition,
+                    "efo_id": row["disease_efo_id"],
+                    "score": round(score, 3),
+                    "source": row["ot_score_source"],
+                }
+
+    # Group by ticker
+    by_ticker = {}
+    for (ticker, _, _), pair in pairs.items():
+        by_ticker.setdefault(ticker, []).append(pair)
+
+    # Sort each company's pairs by score descending
+    for ticker in by_ticker:
+        by_ticker[ticker].sort(key=lambda p: -p["score"])
+
+    return by_ticker
+
+
+def write_js(results, companies, quarterly, pipeline):
     """Write all data as JS constants to docs/js/data.js."""
     parts = []
     parts.append(f"const RESULTS = {json.dumps(results, indent=2)};")
     parts.append(f"const COMPANIES = {json.dumps(companies, indent=2)};")
     parts.append(f"const QUARTERLY = {json.dumps(quarterly, indent=2)};")
+    parts.append(f"const PIPELINE = {json.dumps(pipeline, indent=2)};")
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     OUT_PATH.write_text("\n\n".join(parts) + "\n")
@@ -165,7 +214,11 @@ def main():
     companies = build_companies(raw)
     print(f"Companies for webapp: {len(companies)}")
 
-    write_js(results, companies, quarterly)
+    pipeline = build_pipeline()
+    total_pairs = sum(len(v) for v in pipeline.values())
+    print(f"Pipeline pairs: {total_pairs} across {len(pipeline)} companies")
+
+    write_js(results, companies, quarterly, pipeline)
     print(f"Wrote {OUT_PATH} ({OUT_PATH.stat().st_size:,} bytes)")
 
 
