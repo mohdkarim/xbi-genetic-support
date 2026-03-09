@@ -10,6 +10,7 @@ const COLORS = {
   gsLight: 'rgba(26, 86, 219, 0.1)',
   nongsLight: 'rgba(217, 119, 6, 0.1)',
   xbiLight: 'rgba(107, 114, 128, 0.1)',
+  sp500Light: 'rgba(13, 148, 136, 0.1)',
 };
 
 const CHART_CONFIG = {
@@ -121,6 +122,12 @@ function renderDrawdownChart() {
       line: { color: COLORS.xbi, width: 2, dash: 'dash' }, fillcolor: COLORS.xbiLight,
       hovertemplate: 'XBI: %{y:.1f}%<extra></extra>',
     },
+    {
+      x: dates, y: data.map(q => q.sp500_dd),
+      name: 'S&P 500', fill: 'tozeroy',
+      line: { color: COLORS.sp500, width: 2, dash: 'dash' }, fillcolor: COLORS.sp500Light,
+      hovertemplate: 'S&P 500: %{y:.1f}%<extra></extra>',
+    },
   ];
 
   const annotations = [];
@@ -128,6 +135,7 @@ function renderDrawdownChart() {
     { key: 'gs_dd', name: 'GS', color: COLORS.gs },
     { key: 'nongs_dd', name: 'Non-GS', color: COLORS.nongs },
     { key: 'xbi_dd', name: 'XBI', color: COLORS.xbi },
+    { key: 'sp500_dd', name: 'S&P 500', color: COLORS.sp500 },
   ];
   portfolios.forEach(p => {
     let minVal = 0, minIdx = 0;
@@ -240,6 +248,7 @@ function initScatterDropdown() {
 function renderMendelianChart() {
   const p = RESULTS.primary;
   const m = RESULTS.mendelian;
+  const xbiReturn = RESULTS.benchmarks.XBI_return_pct;
 
   const traces = [
     {
@@ -282,6 +291,11 @@ function renderMendelianChart() {
     yaxis: { gridcolor: '#f1f5f9', ticksuffix: '%', title: 'Mean Return' },
     xaxis: { gridcolor: '#f1f5f9' },
     legend: { orientation: 'h', y: -0.15, x: 0.5, xanchor: 'center' },
+    shapes: [{
+      type: 'line', x0: -0.5, x1: 1.5,
+      y0: xbiReturn, y1: xbiReturn,
+      line: { color: COLORS.xbi, width: 2, dash: 'dash' },
+    }],
     annotations: [
       { x: 'All GS', y: Math.max(p.gs_ci_hi, p.nongs_ci_hi) + 15,
         text: `Alpha: +${p.alpha_vs_nongs}pp`, showarrow: false,
@@ -289,6 +303,9 @@ function renderMendelianChart() {
       { x: 'Mendelian Only', y: Math.max(m.gs_ci_hi, m.nongs_ci_hi) + 15,
         text: `Alpha: +${m.alpha}pp`, showarrow: false,
         font: { color: COLORS.gs, size: 12, weight: 700 } },
+      { x: 1.5, y: xbiReturn, xanchor: 'left', xshift: 4,
+        text: `XBI: +${xbiReturn.toFixed(1)}%`, showarrow: false,
+        font: { color: COLORS.xbi, size: 10, weight: 600 } },
     ],
   };
 
@@ -298,6 +315,7 @@ function renderMendelianChart() {
 /* --- Score Threshold Sensitivity Chart --- */
 function renderThresholdChart() {
   const data = RESULTS.sensitivity;
+  const xbiReturn = RESULTS.benchmarks.XBI_return_pct;
 
   const traces = [
     {
@@ -328,19 +346,34 @@ function renderThresholdChart() {
     },
   ];
 
+  const alphaAnnotations = data.map(d => ({
+    x: '>' + d.label,
+    y: Math.max(d.gs_ci_hi || d.gs_mean, d.nongs_mean) + 15,
+    text: `${d.alpha >= 0 ? '+' : ''}${d.alpha.toFixed(1)}pp`,
+    showarrow: false,
+    font: { color: d.alpha >= 0 ? COLORS.gs : '#dc2626', size: 11, weight: 700 },
+  }));
+
+  // XBI label on the right side of the line
+  alphaAnnotations.push({
+    x: '>' + data[data.length - 1].label, y: xbiReturn,
+    xanchor: 'left', xshift: 8,
+    text: `XBI: +${xbiReturn.toFixed(1)}%`, showarrow: false,
+    font: { color: COLORS.xbi, size: 10, weight: 600 },
+  });
+
   const layout = {
     ...CHART_LAYOUT_BASE,
     barmode: 'group',
     yaxis: { gridcolor: '#f1f5f9', ticksuffix: '%', title: 'Mean Return' },
     xaxis: { gridcolor: '#f1f5f9', title: 'Lead Program Score Threshold' },
     legend: { orientation: 'h', y: -0.2, x: 0.5, xanchor: 'center' },
-    annotations: data.map(d => ({
-      x: '>' + d.label,
-      y: Math.max(d.gs_ci_hi || d.gs_mean, d.nongs_mean) + 15,
-      text: `${d.alpha >= 0 ? '+' : ''}${d.alpha.toFixed(1)}pp`,
-      showarrow: false,
-      font: { color: d.alpha >= 0 ? COLORS.gs : '#dc2626', size: 11, weight: 700 },
-    })),
+    shapes: [{
+      type: 'line', x0: -0.5, x1: data.length - 0.5,
+      y0: xbiReturn, y1: xbiReturn,
+      line: { color: COLORS.xbi, width: 2, dash: 'dash' },
+    }],
+    annotations: alphaAnnotations,
   };
 
   Plotly.newPlot('threshold-chart', traces, layout, CHART_CONFIG);

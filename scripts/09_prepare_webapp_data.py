@@ -53,7 +53,7 @@ def load_quarterly():
 def compute_drawdowns(quarterly):
     """Compute drawdown from peak for each portfolio at each quarter, for all thresholds."""
     for thresh, rows in quarterly.items():
-        portfolios = ["gs", "nongs", "xbi"]
+        portfolios = ["gs", "nongs", "xbi", "sp500"]
         running_max = {p: 0 for p in portfolios}
         for row in rows:
             for p in portfolios:
