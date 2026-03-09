@@ -123,6 +123,31 @@ function renderResultsTable() {
   `;
 }
 
+/* --- Tooltips --- */
+function initTooltips() {
+  let popup = null;
+  document.addEventListener('mouseover', (e) => {
+    const tip = e.target.closest('.th-tip');
+    if (!tip) return;
+    const text = tip.getAttribute('data-tip');
+    if (!text) return;
+    popup = document.createElement('div');
+    popup.className = 'tooltip-popup';
+    popup.textContent = text;
+    document.body.appendChild(popup);
+    const rect = tip.getBoundingClientRect();
+    popup.style.top = (rect.bottom + 6) + 'px';
+    popup.style.left = (rect.left + rect.width / 2 - 110) + 'px';
+  });
+  document.addEventListener('mouseout', (e) => {
+    const tip = e.target.closest('.th-tip');
+    if (tip && popup) {
+      popup.remove();
+      popup = null;
+    }
+  });
+}
+
 /* --- Init --- */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
@@ -130,4 +155,5 @@ document.addEventListener('DOMContentLoaded', () => {
   renderResultsTable();
   renderAllCharts();
   initCompanyTable();
+  initTooltips();
 });

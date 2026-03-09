@@ -60,7 +60,7 @@ function renderTableBody() {
     return `<span class="badge ${cls[outcome] || ''}">${outcome}</span>`;
   };
 
-  const hasPairs = (ticker) => PIPELINE[ticker] && PIPELINE[ticker].length > 0;
+  const hasPairs = (ticker) => typeof PIPELINE !== 'undefined' && PIPELINE[ticker] && PIPELINE[ticker].length > 0;
 
   const pairRows = (ticker) => {
     const pairs = PIPELINE[ticker] || [];
