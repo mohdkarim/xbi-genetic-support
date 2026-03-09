@@ -81,11 +81,11 @@ function renderTableBody() {
 
   const fmtSource = (p) => {
     if (p.source === 'ot_2020') return 'OT 20.02';
-    let label = 'OT API';
-    if (p.validation === 'mendelian') label += ' <span class="source-tag tag-mendelian">Mendelian</span>';
-    else if (p.validation === 'bq_confirmed') label += ' <span class="source-tag tag-bq">BQ</span>';
-    else if (p.validation === 'mendelian_ancestor') label += ' <span class="source-tag tag-mendelian">Ancestor</span>';
-    return label;
+    if (p.validation === 'mendelian' || p.validation === 'mendelian_ancestor')
+      return 'OT API <span class="source-tag tag-mendelian">Mendelian</span>';
+    if (p.validation === 'bq_confirmed' && p.evidence_date)
+      return `OT API <span class="source-tag tag-bq">${p.evidence_date}</span>`;
+    return 'OT API';
   };
 
   const pairRows = (ticker) => {

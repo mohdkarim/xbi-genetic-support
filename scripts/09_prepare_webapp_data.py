@@ -178,6 +178,10 @@ def build_pipeline():
                         validation = "bq_confirmed"
                     elif bq_method == "mendelian_ancestor":
                         validation = "mendelian_ancestor"
+                # Evidence date for BQ-confirmed and ancestor rows
+                evidence_date = ""
+                if bq_method in ("bq_direct", "mendelian_ancestor"):
+                    evidence_date = row.get("bq_earliest_date", "")
                 pairs[key] = {
                     "gene": row["gene_symbol"],
                     "ensembl_id": row["ensembl_id"],
@@ -187,6 +191,7 @@ def build_pipeline():
                     "source": row["ot_score_source"],
                     "drug": row.get("intervention_name", ""),
                     "validation": validation,
+                    "evidence_date": evidence_date,
                 }
 
     by_ticker = {}
