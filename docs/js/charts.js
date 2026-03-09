@@ -283,6 +283,14 @@ function renderMendelianChart() {
       textposition: 'outside',
       hovertemplate: '%{x}: %{y:.1f}% (n=%{text})<extra>Non-GS</extra>',
     },
+    {
+      x: ['All GS', 'Mendelian Only'],
+      y: [xbiReturn, xbiReturn],
+      name: 'XBI ETF',
+      type: 'bar',
+      marker: { color: COLORS.xbi },
+      hovertemplate: 'XBI ETF: %{y:.1f}%<extra></extra>',
+    },
   ];
 
   const layout = {
@@ -291,11 +299,6 @@ function renderMendelianChart() {
     yaxis: { gridcolor: '#f1f5f9', ticksuffix: '%', title: 'Mean Return' },
     xaxis: { gridcolor: '#f1f5f9' },
     legend: { orientation: 'h', y: -0.15, x: 0.5, xanchor: 'center' },
-    shapes: [{
-      type: 'line', x0: -0.5, x1: 1.5,
-      y0: xbiReturn, y1: xbiReturn,
-      line: { color: COLORS.xbi, width: 2, dash: 'dash' },
-    }],
     annotations: [
       { x: 'All GS', y: Math.max(p.gs_ci_hi, p.nongs_ci_hi) + 15,
         text: `Alpha: +${p.alpha_vs_nongs}pp`, showarrow: false,
@@ -303,9 +306,6 @@ function renderMendelianChart() {
       { x: 'Mendelian Only', y: Math.max(m.gs_ci_hi, m.nongs_ci_hi) + 15,
         text: `Alpha: +${m.alpha}pp`, showarrow: false,
         font: { color: COLORS.gs, size: 12, weight: 700 } },
-      { x: 1.5, y: xbiReturn, xanchor: 'left', xshift: 4,
-        text: `XBI: +${xbiReturn.toFixed(1)}%`, showarrow: false,
-        font: { color: COLORS.xbi, size: 10, weight: 600 } },
     ],
   };
 
@@ -344,23 +344,15 @@ function renderThresholdChart() {
       textposition: 'outside',
       hovertemplate: '%{x}: %{y:.1f}% (n=%{text})<extra>Non-GS</extra>',
     },
+    {
+      x: data.map(d => '>' + d.label),
+      y: data.map(() => xbiReturn),
+      name: 'XBI ETF',
+      type: 'bar',
+      marker: { color: COLORS.xbi },
+      hovertemplate: 'XBI ETF: %{y:.1f}%<extra></extra>',
+    },
   ];
-
-  const alphaAnnotations = data.map(d => ({
-    x: '>' + d.label,
-    y: Math.max(d.gs_ci_hi || d.gs_mean, d.nongs_mean) + 15,
-    text: `${d.alpha >= 0 ? '+' : ''}${d.alpha.toFixed(1)}pp`,
-    showarrow: false,
-    font: { color: d.alpha >= 0 ? COLORS.gs : '#dc2626', size: 11, weight: 700 },
-  }));
-
-  // XBI label on the right side of the line
-  alphaAnnotations.push({
-    x: '>' + data[data.length - 1].label, y: xbiReturn,
-    xanchor: 'left', xshift: 8,
-    text: `XBI: +${xbiReturn.toFixed(1)}%`, showarrow: false,
-    font: { color: COLORS.xbi, size: 10, weight: 600 },
-  });
 
   const layout = {
     ...CHART_LAYOUT_BASE,
@@ -368,12 +360,13 @@ function renderThresholdChart() {
     yaxis: { gridcolor: '#f1f5f9', ticksuffix: '%', title: 'Mean Return' },
     xaxis: { gridcolor: '#f1f5f9', title: 'Lead Program Score Threshold' },
     legend: { orientation: 'h', y: -0.2, x: 0.5, xanchor: 'center' },
-    shapes: [{
-      type: 'line', x0: -0.5, x1: data.length - 0.5,
-      y0: xbiReturn, y1: xbiReturn,
-      line: { color: COLORS.xbi, width: 2, dash: 'dash' },
-    }],
-    annotations: alphaAnnotations,
+    annotations: data.map(d => ({
+      x: '>' + d.label,
+      y: Math.max(d.gs_ci_hi || d.gs_mean, d.nongs_mean) + 15,
+      text: `${d.alpha >= 0 ? '+' : ''}${d.alpha.toFixed(1)}pp`,
+      showarrow: false,
+      font: { color: d.alpha >= 0 ? COLORS.gs : '#dc2626', size: 11, weight: 700 },
+    })),
   };
 
   Plotly.newPlot('threshold-chart', traces, layout, CHART_CONFIG);
