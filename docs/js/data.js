@@ -18,85 +18,85 @@ const RESULTS = {
     "all_universe_median_pct": -5.4
   },
   "primary": {
-    "n_gs": 58,
-    "n_nongs": 68,
-    "gs_mean": 51.66,
-    "nongs_mean": 40.66,
-    "gs_median": 1.1,
-    "nongs_median": -21.3,
-    "gs_ci_lo": 13.6,
-    "gs_ci_hi": 91.97,
-    "nongs_ci_lo": 2.06,
-    "nongs_ci_hi": 85.44,
-    "gs_dollar": 1516.59,
-    "nongs_dollar": 1406.58,
-    "alpha_vs_nongs": 11.0,
-    "alpha_vs_xbi": 18.84
+    "n_gs": 56,
+    "n_nongs": 70,
+    "gs_mean": 55.47,
+    "nongs_mean": 37.93,
+    "gs_median": 1.75,
+    "nongs_median": -31.34,
+    "gs_ci_lo": 17.78,
+    "gs_ci_hi": 95.34,
+    "nongs_ci_lo": -0.44,
+    "nongs_ci_hi": 82.75,
+    "gs_dollar": 1554.66,
+    "nongs_dollar": 1379.27,
+    "alpha_vs_nongs": 17.54,
+    "alpha_vs_xbi": 22.65
   },
   "mendelian": {
-    "n_gs": 35,
-    "n_nongs": 91,
-    "gs_mean": 62.02,
-    "nongs_mean": 39.45,
-    "gs_median": 17.86,
-    "nongs_median": -16.7,
-    "gs_ci_lo": 16.26,
-    "gs_ci_hi": 113.24,
-    "nongs_ci_lo": 5.95,
-    "nongs_ci_hi": 75.28,
-    "alpha": 22.57
+    "n_gs": 32,
+    "n_nongs": 94,
+    "gs_mean": 67.73,
+    "nongs_mean": 38.23,
+    "gs_median": 18.31,
+    "nongs_median": -18.08,
+    "gs_ci_lo": 17.68,
+    "gs_ci_hi": 124.0,
+    "nongs_ci_lo": 6.1,
+    "nongs_ci_hi": 73.25,
+    "alpha": 29.5
   },
   "sensitivity": [
     {
       "label": "0.10",
-      "n_gs": 58,
-      "n_nongs": 68,
-      "gs_mean": 51.66,
-      "nongs_mean": 40.66,
-      "alpha": 11.0,
-      "gs_ci_lo": 13.6,
-      "gs_ci_hi": 91.97
+      "n_gs": 56,
+      "n_nongs": 70,
+      "gs_mean": 55.47,
+      "nongs_mean": 37.93,
+      "alpha": 17.54,
+      "gs_ci_lo": 17.78,
+      "gs_ci_hi": 95.34
     },
     {
       "label": "0.50",
-      "n_gs": 54,
-      "n_nongs": 72,
-      "gs_mean": 56.85,
-      "nongs_mean": 37.37,
-      "alpha": 19.48,
-      "gs_ci_lo": 18.3,
-      "gs_ci_hi": 99.06
+      "n_gs": 52,
+      "n_nongs": 74,
+      "gs_mean": 61.15,
+      "nongs_mean": 34.88,
+      "alpha": 26.27,
+      "gs_ci_lo": 19.29,
+      "gs_ci_hi": 105.09
     },
     {
       "label": "0.80",
-      "n_gs": 43,
-      "n_nongs": 83,
-      "gs_mean": 61.03,
-      "nongs_mean": 37.79,
-      "alpha": 23.24,
-      "gs_ci_lo": 19.02,
-      "gs_ci_hi": 107.72
+      "n_gs": 42,
+      "n_nongs": 84,
+      "gs_mean": 64.99,
+      "nongs_mean": 36.09,
+      "alpha": 28.9,
+      "gs_ci_lo": 22.58,
+      "gs_ci_hi": 110.79
     },
     {
       "label": "0.95",
       "n_gs": 24,
       "n_nongs": 102,
-      "gs_mean": 115.76,
-      "nongs_mean": 29.24,
-      "alpha": 86.52,
-      "gs_ci_lo": 53.97,
-      "gs_ci_hi": 179.64
+      "gs_mean": 102.15,
+      "nongs_mean": 32.45,
+      "alpha": 69.7,
+      "gs_ci_lo": 46.47,
+      "gs_ci_hi": 160.85
     }
   ],
   "subgroup": {
     "oncology_gs_mean_pct": 17.01,
     "oncology_nongs_mean_pct": 33.71,
-    "nonog_gs_mean_pct": 62.68,
-    "nonog_nongs_mean_pct": 43.35,
+    "nonog_gs_mean_pct": 68.29,
+    "nonog_nongs_mean_pct": 39.5,
     "n_oncology_gs": 14,
     "n_oncology_nongs": 19,
-    "n_nonog_gs": 44,
-    "n_nonog_nongs": 49
+    "n_nonog_gs": 42,
+    "n_nonog_nongs": 51
   }
 };
 
@@ -137,7 +137,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "ACHN",
@@ -156,7 +156,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "ADVM",
@@ -384,7 +384,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "AMAG",
@@ -488,9 +488,9 @@ const COMPANIES = [
     "outcome": "acquired",
     "is_gs": true,
     "mendelian_only": true,
-    "lead_score": 0.898218,
+    "lead_score": 0.680556,
     "lead_phase": "PHASE3",
-    "lead_gene": "S1PR4",
+    "lead_gene": "S1PR5",
     "lead_conditions": "Ulcerative Colitis",
     "best_score": 0.898218,
     "n_scoreable": 5,
@@ -498,7 +498,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "ARQL",
@@ -517,7 +517,7 @@ const COMPANIES = [
     "is_oncology": true,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "ARWR",
@@ -764,7 +764,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "CYTK",
@@ -1079,7 +1079,7 @@ const COMPANIES = [
     "mendelian_only": true,
     "lead_score": 1.0,
     "lead_phase": "PHASE3",
-    "lead_gene": "TNF",
+    "lead_gene": "TYK2",
     "lead_conditions": "Rheumatoid Arthritis",
     "best_score": 1.0,
     "n_scoreable": 58,
@@ -1117,7 +1117,7 @@ const COMPANIES = [
     "mendelian_only": true,
     "lead_score": 0.856705,
     "lead_phase": "PHASE2",
-    "lead_gene": "TOP2A",
+    "lead_gene": "CDK4",
     "lead_conditions": "Small Cell Lung Cancer",
     "best_score": 1.0,
     "n_scoreable": 8,
@@ -1125,7 +1125,7 @@ const COMPANIES = [
     "is_oncology": true,
     "score_source": "ot_2020",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "HALO",
@@ -1210,17 +1210,17 @@ const COMPANIES = [
     "outcome": "active",
     "is_gs": true,
     "mendelian_only": true,
-    "lead_score": 0.841301,
+    "lead_score": 0.805643,
     "lead_phase": "PHASE3",
-    "lead_gene": "CSF1R",
-    "lead_conditions": "Renal Cell Carcinoma (RCC)",
+    "lead_gene": "PDCD1",
+    "lead_conditions": "Metastatic Nonsquamous Non-Small Cell Lung Cancer | Metastatic Squamous Non-Small Cell Lung Cancer",
     "best_score": 1.0,
     "n_scoreable": 97,
     "n_gs": 96,
     "is_oncology": true,
     "score_source": "ot_2020",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "INSM",
@@ -1284,19 +1284,19 @@ const COMPANIES = [
     "company": "Ironwood Pharmaceuticals Inc",
     "return_pct": -70.14,
     "outcome": "active",
-    "is_gs": true,
-    "mendelian_only": true,
-    "lead_score": 0.607931,
-    "lead_phase": "PHASE4",
-    "lead_gene": "TUBA1B",
-    "lead_conditions": "Chronic Kidney Disease (CKD) | Gout",
+    "is_gs": false,
+    "mendelian_only": false,
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.607931,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
-    "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "KDMN",
@@ -1353,7 +1353,7 @@ const COMPANIES = [
     "is_oncology": true,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "KRTX",
@@ -1398,19 +1398,19 @@ const COMPANIES = [
     "company": "Kura Oncology Inc",
     "return_pct": -39.74,
     "outcome": "active",
-    "is_gs": true,
-    "mendelian_only": true,
-    "lead_score": 0.759913,
-    "lead_phase": "PHASE2",
-    "lead_gene": "FNTB",
-    "lead_conditions": "Myelodysplastic Syndromes",
+    "is_gs": false,
+    "mendelian_only": false,
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.759913,
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
-    "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "LGND",
@@ -1543,7 +1543,7 @@ const COMPANIES = [
     "is_oncology": true,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "MYGN",
@@ -1552,9 +1552,9 @@ const COMPANIES = [
     "outcome": "active",
     "is_gs": true,
     "mendelian_only": true,
-    "lead_score": 0.865457,
+    "lead_score": 0.625,
     "lead_phase": "PHASE3",
-    "lead_gene": "SRD5A1",
+    "lead_gene": "CYP17A1",
     "lead_conditions": "Metastatic Castration-resistant Prostate Cancer",
     "best_score": 0.953196,
     "n_scoreable": 6,
@@ -1562,7 +1562,7 @@ const COMPANIES = [
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "NBIX",
@@ -1760,18 +1760,18 @@ const COMPANIES = [
     "return_pct": 113.3,
     "outcome": "acquired",
     "is_gs": true,
-    "mendelian_only": true,
-    "lead_score": 0.668724,
-    "lead_phase": "PHASE4",
-    "lead_gene": "ATP4A",
-    "lead_conditions": "Pain",
+    "mendelian_only": false,
+    "lead_score": 0.961687,
+    "lead_phase": "PHASE3",
+    "lead_gene": "KIT",
+    "lead_conditions": "Gastrointestinal Stromal Tumors",
     "best_score": 0.977107,
     "n_scoreable": 17,
     "n_gs": 17,
     "is_oncology": true,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "RCKT",
@@ -1885,7 +1885,7 @@ const COMPANIES = [
     "is_oncology": true,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "SGMO",
@@ -2008,17 +2008,17 @@ const COMPANIES = [
     "outcome": "active",
     "is_gs": true,
     "mendelian_only": true,
-    "lead_score": 0.962992,
-    "lead_phase": "PHASE3",
-    "lead_gene": "PTGIR",
-    "lead_conditions": "Pulmonary Hypertension Associated With Sickle Cell Disease",
+    "lead_score": 0.856705,
+    "lead_phase": "PHASE2/PHASE3",
+    "lead_gene": "TOP1",
+    "lead_conditions": "Small Cell Lung Cancer",
     "best_score": 0.962992,
     "n_scoreable": 3,
     "n_gs": 2,
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
     "confirmed_pre_2020": true,
-    "validation_method": "tier2_mendelian"
+    "validation_method": "bq_ancestor"
   },
   {
     "ticker": "VCEL",
@@ -2512,19 +2512,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 923.41,
-      "nongs": 894.05,
+      "gs": 930.15,
+      "nongs": 889.5,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -7.66,
-      "nongs_dd": -10.6,
+      "gs_dd": -6.99,
+      "nongs_dd": -11.05,
       "xbi_dd": -18.21,
       "sp500_dd": -20.67
     },
     {
       "date": "2020-06-30",
-      "gs": 1208.1,
-      "nongs": 1090.6,
+      "gs": 1216.62,
+      "nongs": 1087.14,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -2534,19 +2534,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1127.81,
-      "nongs": 1150.18,
+      "gs": 1117.01,
+      "nongs": 1158.18,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -6.65,
+      "gs_dd": -8.19,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39,
       "sp500_dd": 0.0
     },
     {
       "date": "2020-12-31",
-      "gs": 1305.86,
-      "nongs": 1561.01,
+      "gs": 1295.62,
+      "nongs": 1561.91,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -2556,232 +2556,232 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1277.33,
-      "nongs": 1562.19,
+      "gs": 1271.94,
+      "nongs": 1558.37,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -2.18,
-      "nongs_dd": 0.0,
+      "gs_dd": -1.83,
+      "nongs_dd": -0.23,
       "xbi_dd": -3.62,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-06-30",
-      "gs": 1289.42,
-      "nongs": 1780.59,
+      "gs": 1291.62,
+      "nongs": 1764.8,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -1.26,
+      "gs_dd": -0.31,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-09-30",
-      "gs": 1222.1,
-      "nongs": 1791.39,
+      "gs": 1224.33,
+      "nongs": 1773.33,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -6.41,
+      "gs_dd": -5.5,
       "nongs_dd": 0.0,
       "xbi_dd": -10.68,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-12-31",
-      "gs": 1230.14,
-      "nongs": 1576.67,
+      "gs": 1240.57,
+      "nongs": 1558.43,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -5.8,
-      "nongs_dd": -11.99,
+      "gs_dd": -4.25,
+      "nongs_dd": -12.12,
       "xbi_dd": -20.45,
       "sp500_dd": 0.0
     },
     {
       "date": "2022-03-31",
-      "gs": 1190.03,
-      "nongs": 1287.97,
+      "gs": 1195.14,
+      "nongs": 1281.08,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -8.87,
-      "nongs_dd": -28.1,
+      "gs_dd": -7.76,
+      "nongs_dd": -27.76,
       "xbi_dd": -36.14,
       "sp500_dd": -4.95
     },
     {
       "date": "2022-06-30",
-      "gs": 1096.75,
-      "nongs": 1125.7,
+      "gs": 1097.08,
+      "nongs": 1124.61,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -16.01,
-      "nongs_dd": -37.16,
+      "gs_dd": -15.32,
+      "nongs_dd": -36.58,
       "xbi_dd": -47.23,
       "sp500_dd": -20.58
     },
     {
       "date": "2022-09-30",
-      "gs": 1196.43,
-      "nongs": 1115.06,
+      "gs": 1207.84,
+      "nongs": 1108.26,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -8.38,
-      "nongs_dd": -37.75,
+      "gs_dd": -6.78,
+      "nongs_dd": -37.5,
       "xbi_dd": -43.64,
       "sp500_dd": -24.77
     },
     {
       "date": "2022-12-31",
-      "gs": 1246.35,
-      "nongs": 1217.2,
+      "gs": 1258.39,
+      "nongs": 1208.4,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -4.56,
-      "nongs_dd": -32.05,
+      "gs_dd": -2.87,
+      "nongs_dd": -31.86,
       "xbi_dd": -41.03,
       "sp500_dd": -19.44
     },
     {
       "date": "2023-03-31",
-      "gs": 1191.44,
-      "nongs": 1154.53,
+      "gs": 1204.27,
+      "nongs": 1145.33,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -8.76,
-      "nongs_dd": -35.55,
+      "gs_dd": -7.05,
+      "nongs_dd": -35.41,
       "xbi_dd": -45.85,
       "sp500_dd": -13.78
     },
     {
       "date": "2023-06-30",
-      "gs": 1144.97,
-      "nongs": 1172.7,
+      "gs": 1158.08,
+      "nongs": 1161.43,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -12.32,
-      "nongs_dd": -34.54,
+      "gs_dd": -10.62,
+      "nongs_dd": -34.51,
       "xbi_dd": -40.88,
       "sp500_dd": -6.63
     },
     {
       "date": "2023-09-30",
-      "gs": 1063.97,
-      "nongs": 1067.59,
+      "gs": 1077.4,
+      "nongs": 1056.74,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -18.52,
-      "nongs_dd": -40.4,
+      "gs_dd": -16.84,
+      "nongs_dd": -40.41,
       "xbi_dd": -48.12,
       "sp500_dd": -10.03
     },
     {
       "date": "2023-12-31",
-      "gs": 1338.84,
-      "nongs": 1114.96,
+      "gs": 1352.96,
+      "nongs": 1110.06,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -37.76,
+      "nongs_dd": -37.4,
       "xbi_dd": -36.54,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-03-31",
-      "gs": 1304.94,
-      "nongs": 1378.03,
+      "gs": 1312.68,
+      "nongs": 1369.74,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": -2.53,
-      "nongs_dd": -23.07,
+      "gs_dd": -2.98,
+      "nongs_dd": -22.76,
       "xbi_dd": -32.56,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-06-30",
-      "gs": 1259.09,
-      "nongs": 1326.42,
-      "xbi": 982.95,
+      "gs": 1269.09,
+      "nongs": 1316.5,
+      "xbi": 982.96,
       "sp500": 1676.1,
-      "gs_dd": -5.96,
-      "nongs_dd": -25.96,
+      "gs_dd": -6.2,
+      "nongs_dd": -25.76,
       "xbi_dd": -34.03,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-09-30",
-      "gs": 1329.7,
-      "nongs": 1320.41,
+      "gs": 1346.79,
+      "nongs": 1307.0,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": -0.68,
-      "nongs_dd": -26.29,
+      "gs_dd": -0.46,
+      "nongs_dd": -26.3,
       "xbi_dd": -29.69,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-12-31",
-      "gs": 1267.21,
-      "nongs": 1248.28,
+      "gs": 1295.42,
+      "nongs": 1226.25,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -5.35,
-      "nongs_dd": -30.32,
+      "gs_dd": -4.25,
+      "nongs_dd": -30.85,
       "xbi_dd": -35.91,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-03-31",
-      "gs": 1283.78,
-      "nongs": 1170.48,
+      "gs": 1319.26,
+      "nongs": 1145.34,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -4.11,
-      "nongs_dd": -34.66,
+      "gs_dd": -2.49,
+      "nongs_dd": -35.41,
       "xbi_dd": -42.28,
       "sp500_dd": -4.59
     },
     {
       "date": "2025-06-30",
-      "gs": 1263.41,
-      "nongs": 1158.78,
+      "gs": 1300.23,
+      "nongs": 1132.32,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -5.63,
-      "nongs_dd": -35.31,
+      "gs_dd": -3.9,
+      "nongs_dd": -36.15,
       "xbi_dd": -40.97,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-09-30",
-      "gs": 1412.93,
-      "nongs": 1264.34,
+      "gs": 1450.37,
+      "nongs": 1238.63,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -29.42,
+      "nongs_dd": -30.15,
       "xbi_dd": -28.66,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-12-31",
-      "gs": 1509.2,
-      "nongs": 1423.02,
+      "gs": 1545.35,
+      "nongs": 1396.56,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -20.56,
+      "nongs_dd": -21.25,
       "xbi_dd": -12.9,
       "sp500_dd": 0.0
     },
     {
       "date": "2026-02-21",
-      "gs": 1516.59,
-      "nongs": 1380.56,
+      "gs": 1554.66,
+      "nongs": 1353.99,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -22.93,
+      "nongs_dd": -23.65,
       "xbi_dd": -10.86,
       "sp500_dd": 0.0
     }
@@ -2800,19 +2800,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 919.86,
-      "nongs": 898.34,
+      "gs": 926.98,
+      "nongs": 893.92,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -8.01,
-      "nongs_dd": -10.17,
+      "gs_dd": -7.3,
+      "nongs_dd": -10.61,
       "xbi_dd": -18.21,
       "sp500_dd": -20.67
     },
     {
       "date": "2020-06-30",
-      "gs": 1223.98,
-      "nongs": 1085.21,
+      "gs": 1233.77,
+      "nongs": 1082.09,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -2822,19 +2822,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1137.26,
-      "nongs": 1141.85,
+      "gs": 1125.99,
+      "nongs": 1149.65,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -7.09,
+      "gs_dd": -8.74,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39,
       "sp500_dd": 0.0
     },
     {
       "date": "2020-12-31",
-      "gs": 1329.82,
-      "nongs": 1528.87,
+      "gs": 1319.72,
+      "nongs": 1530.59,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -2844,232 +2844,232 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1301.98,
-      "nongs": 1527.88,
+      "gs": 1297.12,
+      "nongs": 1525.19,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -2.09,
-      "nongs_dd": -0.06,
+      "gs_dd": -1.71,
+      "nongs_dd": -0.35,
       "xbi_dd": -3.62,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-06-30",
-      "gs": 1315.75,
-      "nongs": 1733.56,
+      "gs": 1319.13,
+      "nongs": 1719.89,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -1.06,
+      "gs_dd": -0.04,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-09-30",
-      "gs": 1241.17,
-      "nongs": 1745.45,
+      "gs": 1244.32,
+      "nongs": 1729.61,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -6.67,
+      "gs_dd": -5.71,
       "nongs_dd": 0.0,
       "xbi_dd": -10.68,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-12-31",
-      "gs": 1249.93,
-      "nongs": 1542.58,
+      "gs": 1261.91,
+      "nongs": 1526.24,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -6.01,
-      "nongs_dd": -11.62,
+      "gs_dd": -4.38,
+      "nongs_dd": -11.76,
       "xbi_dd": -20.45,
       "sp500_dd": 0.0
     },
     {
       "date": "2022-03-31",
-      "gs": 1209.92,
-      "nongs": 1267.6,
+      "gs": 1216.19,
+      "nongs": 1261.64,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -9.02,
-      "nongs_dd": -27.38,
+      "gs_dd": -7.84,
+      "nongs_dd": -27.06,
       "xbi_dd": -36.14,
       "sp500_dd": -4.95
     },
     {
       "date": "2022-06-30",
-      "gs": 1115.47,
-      "nongs": 1110.05,
+      "gs": 1116.54,
+      "nongs": 1109.45,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -16.12,
-      "nongs_dd": -36.4,
+      "gs_dd": -15.4,
+      "nongs_dd": -35.86,
       "xbi_dd": -47.23,
       "sp500_dd": -20.58
     },
     {
       "date": "2022-09-30",
-      "gs": 1200.66,
-      "nongs": 1116.41,
+      "gs": 1213.1,
+      "nongs": 1109.95,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -9.71,
-      "nongs_dd": -36.04,
+      "gs_dd": -8.08,
+      "nongs_dd": -35.83,
       "xbi_dd": -43.64,
       "sp500_dd": -24.77
     },
     {
       "date": "2022-12-31",
-      "gs": 1255.98,
-      "nongs": 1211.59,
+      "gs": 1269.32,
+      "nongs": 1203.42,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -5.55,
-      "nongs_dd": -30.59,
+      "gs_dd": -3.82,
+      "nongs_dd": -30.42,
       "xbi_dd": -41.03,
       "sp500_dd": -19.44
     },
     {
       "date": "2023-03-31",
-      "gs": 1198.09,
-      "nongs": 1151.59,
+      "gs": 1212.16,
+      "nongs": 1142.96,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -9.91,
-      "nongs_dd": -34.02,
+      "gs_dd": -8.15,
+      "nongs_dd": -33.92,
       "xbi_dd": -45.85,
       "sp500_dd": -13.78
     },
     {
       "date": "2023-06-30",
-      "gs": 1166.73,
-      "nongs": 1154.85,
+      "gs": 1181.68,
+      "nongs": 1144.66,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -12.26,
-      "nongs_dd": -33.84,
+      "gs_dd": -10.46,
+      "nongs_dd": -33.82,
       "xbi_dd": -40.88,
       "sp500_dd": -6.63
     },
     {
       "date": "2023-09-30",
-      "gs": 1080.26,
-      "nongs": 1055.17,
+      "gs": 1095.35,
+      "nongs": 1045.24,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -18.77,
-      "nongs_dd": -39.55,
+      "gs_dd": -17.0,
+      "nongs_dd": -39.57,
       "xbi_dd": -48.12,
       "sp500_dd": -10.03
     },
     {
       "date": "2023-12-31",
-      "gs": 1375.91,
-      "nongs": 1099.6,
+      "gs": 1392.54,
+      "nongs": 1095.38,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -37.0,
+      "nongs_dd": -36.67,
       "xbi_dd": -36.54,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-03-31",
-      "gs": 1340.44,
-      "nongs": 1347.34,
+      "gs": 1350.15,
+      "nongs": 1340.33,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": -2.58,
-      "nongs_dd": -22.81,
+      "gs_dd": -3.04,
+      "nongs_dd": -22.51,
       "xbi_dd": -32.56,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-06-30",
-      "gs": 1291.87,
-      "nongs": 1298.1,
-      "xbi": 982.95,
+      "gs": 1303.9,
+      "nongs": 1289.48,
+      "xbi": 982.96,
       "sp500": 1676.1,
-      "gs_dd": -6.11,
-      "nongs_dd": -25.63,
+      "gs_dd": -6.37,
+      "nongs_dd": -25.45,
       "xbi_dd": -34.03,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-09-30",
-      "gs": 1368.41,
-      "nongs": 1291.9,
+      "gs": 1388.3,
+      "nongs": 1279.99,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": -0.55,
-      "nongs_dd": -25.98,
+      "gs_dd": -0.3,
+      "nongs_dd": -26.0,
       "xbi_dd": -29.69,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-12-31",
-      "gs": 1300.94,
-      "nongs": 1224.03,
+      "gs": 1332.62,
+      "nongs": 1203.84,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -5.45,
-      "nongs_dd": -29.87,
+      "gs_dd": -4.3,
+      "nongs_dd": -30.4,
       "xbi_dd": -35.91,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-03-31",
-      "gs": 1319.32,
-      "nongs": 1150.12,
+      "gs": 1358.89,
+      "nongs": 1126.89,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -4.11,
-      "nongs_dd": -34.11,
+      "gs_dd": -2.42,
+      "nongs_dd": -34.85,
       "xbi_dd": -42.28,
       "sp500_dd": -4.59
     },
     {
       "date": "2025-06-30",
-      "gs": 1297.52,
-      "nongs": 1139.01,
+      "gs": 1338.48,
+      "nongs": 1114.52,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -5.7,
-      "nongs_dd": -34.74,
+      "gs_dd": -3.88,
+      "nongs_dd": -35.56,
       "xbi_dd": -40.97,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-09-30",
-      "gs": 1457.2,
-      "nongs": 1239.4,
+      "gs": 1499.22,
+      "nongs": 1215.75,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -28.99,
+      "nongs_dd": -29.71,
       "xbi_dd": -28.66,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-12-31",
-      "gs": 1560.82,
-      "nongs": 1389.09,
+      "gs": 1601.73,
+      "nongs": 1364.99,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -20.42,
+      "nongs_dd": -21.08,
       "xbi_dd": -12.9,
       "sp500_dd": 0.0
     },
     {
       "date": "2026-02-21",
-      "gs": 1568.54,
-      "nongs": 1349.15,
+      "gs": 1611.54,
+      "nongs": 1324.87,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -22.7,
+      "nongs_dd": -23.4,
       "xbi_dd": -10.86,
       "sp500_dd": 0.0
     }
@@ -3088,19 +3088,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 935.68,
-      "nongs": 893.0,
+      "gs": 945.5,
+      "nongs": 888.6,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -6.43,
-      "nongs_dd": -10.7,
+      "gs_dd": -5.45,
+      "nongs_dd": -11.14,
       "xbi_dd": -18.21,
       "sp500_dd": -20.67
     },
     {
       "date": "2020-06-30",
-      "gs": 1211.16,
-      "nongs": 1110.25,
+      "gs": 1257.1,
+      "nongs": 1088.48,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -3110,8 +3110,8 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1107.47,
-      "nongs": 1156.68,
+      "gs": 1149.46,
+      "nongs": 1135.1,
       "xbi": 1178.0,
       "sp500": 1032.28,
       "gs_dd": -8.56,
@@ -3121,8 +3121,8 @@ const QUARTERLY = {
     },
     {
       "date": "2020-12-31",
-      "gs": 1351.39,
-      "nongs": 1491.32,
+      "gs": 1393.33,
+      "nongs": 1468.68,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -3132,232 +3132,232 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1294.48,
-      "nongs": 1501.82,
+      "gs": 1325.77,
+      "nongs": 1483.71,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -4.21,
+      "gs_dd": -4.85,
       "nongs_dd": 0.0,
       "xbi_dd": -3.62,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-06-30",
-      "gs": 1323.67,
-      "nongs": 1674.08,
+      "gs": 1355.54,
+      "nongs": 1653.97,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -2.05,
+      "gs_dd": -2.71,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-09-30",
-      "gs": 1263.48,
-      "nongs": 1667.06,
+      "gs": 1292.43,
+      "nongs": 1647.78,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -6.51,
-      "nongs_dd": -0.42,
+      "gs_dd": -7.24,
+      "nongs_dd": -0.37,
       "xbi_dd": -10.68,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-12-31",
-      "gs": 1305.58,
-      "nongs": 1474.96,
+      "gs": 1339.61,
+      "nongs": 1455.93,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -3.39,
-      "nongs_dd": -11.89,
+      "gs_dd": -3.86,
+      "nongs_dd": -11.97,
       "xbi_dd": -20.45,
       "sp500_dd": 0.0
     },
     {
       "date": "2022-03-31",
-      "gs": 1257.58,
-      "nongs": 1235.27,
+      "gs": 1270.56,
+      "nongs": 1229.04,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -6.94,
-      "nongs_dd": -26.21,
+      "gs_dd": -8.81,
+      "nongs_dd": -25.69,
       "xbi_dd": -36.14,
       "sp500_dd": -4.95
     },
     {
       "date": "2022-06-30",
-      "gs": 1156.77,
-      "nongs": 1089.37,
+      "gs": 1173.47,
+      "nongs": 1081.83,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -14.4,
-      "nongs_dd": -34.93,
+      "gs_dd": -15.78,
+      "nongs_dd": -34.59,
       "xbi_dd": -47.23,
       "sp500_dd": -20.58
     },
     {
       "date": "2022-09-30",
-      "gs": 1230.88,
-      "nongs": 1111.92,
+      "gs": 1248.55,
+      "nongs": 1104.5,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -8.92,
-      "nongs_dd": -33.58,
+      "gs_dd": -10.39,
+      "nongs_dd": -33.22,
       "xbi_dd": -43.64,
       "sp500_dd": -24.77
     },
     {
       "date": "2022-12-31",
-      "gs": 1247.68,
-      "nongs": 1221.78,
+      "gs": 1269.73,
+      "nongs": 1211.06,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -7.67,
-      "nongs_dd": -27.02,
+      "gs_dd": -8.87,
+      "nongs_dd": -26.78,
       "xbi_dd": -41.03,
       "sp500_dd": -19.44
     },
     {
       "date": "2023-03-31",
-      "gs": 1198.76,
-      "nongs": 1157.41,
+      "gs": 1212.05,
+      "nongs": 1151.26,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -11.29,
-      "nongs_dd": -30.86,
+      "gs_dd": -13.01,
+      "nongs_dd": -30.39,
       "xbi_dd": -45.85,
       "sp500_dd": -13.78
     },
     {
       "date": "2023-06-30",
-      "gs": 1184.99,
-      "nongs": 1146.96,
+      "gs": 1198.01,
+      "nongs": 1140.9,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -12.31,
-      "nongs_dd": -31.49,
+      "gs_dd": -14.02,
+      "nongs_dd": -31.02,
       "xbi_dd": -40.88,
       "sp500_dd": -6.63
     },
     {
       "date": "2023-09-30",
-      "gs": 1093.81,
-      "nongs": 1051.47,
+      "gs": 1110.86,
+      "nongs": 1043.45,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -19.06,
-      "nongs_dd": -37.19,
+      "gs_dd": -20.27,
+      "nongs_dd": -36.91,
       "xbi_dd": -48.12,
       "sp500_dd": -10.03
     },
     {
       "date": "2023-12-31",
-      "gs": 1375.68,
-      "nongs": 1136.33,
+      "gs": 1396.75,
+      "nongs": 1128.65,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -32.12,
+      "nongs_dd": -31.76,
       "xbi_dd": -36.54,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-03-31",
-      "gs": 1318.31,
-      "nongs": 1357.89,
+      "gs": 1336.12,
+      "nongs": 1348.51,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": -4.17,
-      "nongs_dd": -18.89,
+      "gs_dd": -4.34,
+      "nongs_dd": -18.47,
       "xbi_dd": -32.56,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-06-30",
-      "gs": 1292.32,
-      "nongs": 1297.04,
-      "xbi": 982.95,
+      "gs": 1306.77,
+      "nongs": 1289.76,
+      "xbi": 982.96,
       "sp500": 1676.1,
-      "gs_dd": -6.06,
-      "nongs_dd": -22.52,
+      "gs_dd": -6.44,
+      "nongs_dd": -22.02,
       "xbi_dd": -34.03,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-09-30",
-      "gs": 1379.37,
-      "nongs": 1296.35,
+      "gs": 1393.35,
+      "nongs": 1290.36,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": 0.0,
-      "nongs_dd": -22.56,
+      "gs_dd": -0.24,
+      "nongs_dd": -21.98,
       "xbi_dd": -29.69,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-12-31",
-      "gs": 1303.1,
-      "nongs": 1233.1,
+      "gs": 1327.16,
+      "nongs": 1221.9,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -5.53,
-      "nongs_dd": -26.34,
+      "gs_dd": -4.98,
+      "nongs_dd": -26.12,
       "xbi_dd": -35.91,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-03-31",
-      "gs": 1325.66,
-      "nongs": 1169.26,
+      "gs": 1354.48,
+      "nongs": 1156.71,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -3.89,
-      "nongs_dd": -30.16,
+      "gs_dd": -3.03,
+      "nongs_dd": -30.06,
       "xbi_dd": -42.28,
       "sp500_dd": -4.59
     },
     {
       "date": "2025-06-30",
-      "gs": 1313.36,
-      "nongs": 1151.81,
+      "gs": 1344.98,
+      "nongs": 1137.93,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -4.79,
+      "gs_dd": -3.71,
       "nongs_dd": -31.2,
       "xbi_dd": -40.97,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-09-30",
-      "gs": 1508.95,
-      "nongs": 1241.45,
+      "gs": 1543.56,
+      "nongs": 1227.33,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -25.84,
+      "nongs_dd": -25.79,
       "xbi_dd": -28.66,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-12-31",
-      "gs": 1605.3,
-      "nongs": 1388.81,
+      "gs": 1643.15,
+      "nongs": 1372.46,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -17.04,
+      "nongs_dd": -17.02,
       "xbi_dd": -12.9,
       "sp500_dd": 0.0
     },
     {
       "date": "2026-02-21",
-      "gs": 1610.27,
-      "nongs": 1356.61,
+      "gs": 1649.85,
+      "nongs": 1339.84,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -18.96,
+      "nongs_dd": -18.99,
       "xbi_dd": -10.86,
       "sp500_dd": 0.0
     }
@@ -3376,19 +3376,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 971.58,
-      "nongs": 892.5,
+      "gs": 968.18,
+      "nongs": 893.3,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -2.84,
-      "nongs_dd": -10.75,
+      "gs_dd": -3.18,
+      "nongs_dd": -10.67,
       "xbi_dd": -18.21,
       "sp500_dd": -20.67
     },
     {
       "date": "2020-06-30",
-      "gs": 1323.9,
-      "nongs": 1102.52,
+      "gs": 1355.26,
+      "nongs": 1095.14,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -3398,19 +3398,19 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1160.63,
-      "nongs": 1135.0,
+      "gs": 1201.5,
+      "nongs": 1125.39,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -12.33,
+      "gs_dd": -11.35,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39,
       "sp500_dd": 0.0
     },
     {
       "date": "2020-12-31",
-      "gs": 1346.83,
-      "nongs": 1466.32,
+      "gs": 1363.55,
+      "nongs": 1462.39,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -3420,232 +3420,232 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1314.99,
-      "nongs": 1458.38,
+      "gs": 1324.35,
+      "nongs": 1456.17,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -2.36,
-      "nongs_dd": -0.54,
+      "gs_dd": -2.87,
+      "nongs_dd": -0.43,
       "xbi_dd": -3.62,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-06-30",
-      "gs": 1335.87,
-      "nongs": 1605.94,
+      "gs": 1339.46,
+      "nongs": 1605.09,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -0.81,
+      "gs_dd": -1.77,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-09-30",
-      "gs": 1306.3,
-      "nongs": 1581.81,
+      "gs": 1307.44,
+      "nongs": 1581.54,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -3.01,
-      "nongs_dd": -1.5,
+      "gs_dd": -4.11,
+      "nongs_dd": -1.47,
       "xbi_dd": -10.68,
       "sp500_dd": 0.0
     },
     {
       "date": "2021-12-31",
-      "gs": 1457.75,
-      "nongs": 1407.6,
+      "gs": 1443.92,
+      "nongs": 1410.86,
       "xbi": 1185.34,
       "sp500": 1462.98,
       "gs_dd": 0.0,
-      "nongs_dd": -12.35,
+      "nongs_dd": -12.1,
       "xbi_dd": -20.45,
       "sp500_dd": 0.0
     },
     {
       "date": "2022-03-31",
-      "gs": 1347.79,
-      "nongs": 1218.2,
+      "gs": 1351.39,
+      "nongs": 1217.35,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -7.54,
-      "nongs_dd": -24.14,
+      "gs_dd": -6.41,
+      "nongs_dd": -24.16,
       "xbi_dd": -36.14,
       "sp500_dd": -4.95
     },
     {
       "date": "2022-06-30",
-      "gs": 1287.02,
-      "nongs": 1071.28,
+      "gs": 1263.89,
+      "nongs": 1076.72,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -11.71,
-      "nongs_dd": -33.29,
+      "gs_dd": -12.47,
+      "nongs_dd": -32.92,
       "xbi_dd": -47.23,
       "sp500_dd": -20.58
     },
     {
       "date": "2022-09-30",
-      "gs": 1376.73,
-      "nongs": 1099.76,
+      "gs": 1366.08,
+      "nongs": 1102.27,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -5.56,
-      "nongs_dd": -31.52,
+      "gs_dd": -5.39,
+      "nongs_dd": -31.33,
       "xbi_dd": -43.64,
       "sp500_dd": -24.77
     },
     {
       "date": "2022-12-31",
-      "gs": 1406.74,
-      "nongs": 1189.17,
+      "gs": 1363.44,
+      "nongs": 1199.36,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -3.5,
-      "nongs_dd": -25.95,
+      "gs_dd": -5.57,
+      "nongs_dd": -25.28,
       "xbi_dd": -41.03,
       "sp500_dd": -19.44
     },
     {
       "date": "2023-03-31",
-      "gs": 1320.58,
-      "nongs": 1136.45,
+      "gs": 1303.0,
+      "nongs": 1140.59,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -9.41,
-      "nongs_dd": -29.23,
+      "gs_dd": -9.76,
+      "nongs_dd": -28.94,
       "xbi_dd": -45.85,
       "sp500_dd": -13.78
     },
     {
       "date": "2023-06-30",
-      "gs": 1304.04,
-      "nongs": 1126.03,
+      "gs": 1287.99,
+      "nongs": 1129.81,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -10.54,
-      "nongs_dd": -29.88,
+      "gs_dd": -10.8,
+      "nongs_dd": -29.61,
       "xbi_dd": -40.88,
       "sp500_dd": -6.63
     },
     {
       "date": "2023-09-30",
-      "gs": 1245.98,
-      "nongs": 1023.55,
+      "gs": 1227.5,
+      "nongs": 1027.9,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -14.53,
-      "nongs_dd": -36.26,
+      "gs_dd": -14.99,
+      "nongs_dd": -35.96,
       "xbi_dd": -48.12,
       "sp500_dd": -10.03
     },
     {
       "date": "2023-12-31",
-      "gs": 1718.83,
-      "nongs": 1100.17,
+      "gs": 1703.19,
+      "nongs": 1103.86,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -31.49,
+      "nongs_dd": -31.23,
       "xbi_dd": -36.54,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-03-31",
-      "gs": 1652.48,
-      "nongs": 1271.89,
+      "gs": 1632.17,
+      "nongs": 1276.67,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": -3.86,
-      "nongs_dd": -20.8,
+      "gs_dd": -4.17,
+      "nongs_dd": -20.46,
       "xbi_dd": -32.56,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-06-30",
-      "gs": 1650.22,
-      "nongs": 1211.95,
-      "xbi": 982.95,
+      "gs": 1587.68,
+      "nongs": 1226.66,
+      "xbi": 982.96,
       "sp500": 1676.1,
-      "gs_dd": -3.99,
-      "nongs_dd": -24.53,
+      "gs_dd": -6.78,
+      "nongs_dd": -23.58,
       "xbi_dd": -34.03,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-09-30",
-      "gs": 1756.04,
-      "nongs": 1223.19,
+      "gs": 1674.59,
+      "nongs": 1242.36,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": 0.0,
-      "nongs_dd": -23.83,
+      "gs_dd": -1.68,
+      "nongs_dd": -22.6,
       "xbi_dd": -29.69,
       "sp500_dd": 0.0
     },
     {
       "date": "2024-12-31",
-      "gs": 1603.16,
-      "nongs": 1175.54,
+      "gs": 1524.32,
+      "nongs": 1194.09,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -8.71,
-      "nongs_dd": -26.8,
+      "gs_dd": -10.5,
+      "nongs_dd": -25.61,
       "xbi_dd": -35.91,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-03-31",
-      "gs": 1629.17,
-      "nongs": 1126.98,
+      "gs": 1571.52,
+      "nongs": 1140.54,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -7.22,
-      "nongs_dd": -29.82,
+      "gs_dd": -7.73,
+      "nongs_dd": -28.94,
       "xbi_dd": -42.28,
       "sp500_dd": -4.59
     },
     {
       "date": "2025-06-30",
-      "gs": 1625.91,
-      "nongs": 1108.36,
+      "gs": 1578.2,
+      "nongs": 1119.59,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -7.41,
-      "nongs_dd": -30.98,
+      "gs_dd": -7.34,
+      "nongs_dd": -30.25,
       "xbi_dd": -40.97,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-09-30",
-      "gs": 1966.16,
-      "nongs": 1183.7,
+      "gs": 1855.78,
+      "nongs": 1209.67,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -26.29,
+      "nongs_dd": -24.64,
       "xbi_dd": -28.66,
       "sp500_dd": 0.0
     },
     {
       "date": "2025-12-31",
-      "gs": 2141.99,
-      "nongs": 1302.86,
+      "gs": 1999.27,
+      "nongs": 1336.44,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -18.87,
+      "nongs_dd": -16.74,
       "xbi_dd": -12.9,
       "sp500_dd": 0.0
     },
     {
       "date": "2026-02-21",
-      "gs": 2157.6,
-      "nongs": 1275.08,
+      "gs": 2021.45,
+      "nongs": 1307.11,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -20.6,
+      "nongs_dd": -18.56,
       "xbi_dd": -10.86,
       "sp500_dd": 0.0
     }
@@ -3992,7 +3992,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4003,7 +4003,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4069,7 +4069,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Etoposide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4080,7 +4080,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4124,7 +4124,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "veliparib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4333,7 +4333,7 @@ const PIPELINE = {
       "score": 0.699,
       "source": "ot_recent_fallback",
       "drug": "Linaclotide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4421,7 +4421,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "adalimumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4641,7 +4641,7 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4652,7 +4652,7 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4663,7 +4663,7 @@ const PIPELINE = {
       "score": 0.012,
       "source": "ot_recent_fallback",
       "drug": "venetoclax",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -4687,7 +4687,7 @@ const PIPELINE = {
       "score": 0.919,
       "source": "ot_recent_fallback",
       "drug": "Pimavanserin 34 mg",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4722,7 +4722,7 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "Danicopan",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -4886,7 +4886,7 @@ const PIPELINE = {
       "score": 0.926,
       "source": "ot_recent_fallback",
       "drug": "Lumasiran",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4897,7 +4897,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "ALN-AAT02",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4908,7 +4908,7 @@ const PIPELINE = {
       "score": 0.566,
       "source": "ot_recent_fallback",
       "drug": "givosiran (ALN-AS1)",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -4921,7 +4921,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Ravulizumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -4932,7 +4932,7 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "Danicopan",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -5110,7 +5110,7 @@ const PIPELINE = {
       "score": 0.889,
       "source": "ot_recent_fallback",
       "drug": "Romosozumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5132,7 +5132,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5187,7 +5187,7 @@ const PIPELINE = {
       "score": 0.696,
       "source": "ot_recent_fallback",
       "drug": "blinatumomab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5198,7 +5198,7 @@ const PIPELINE = {
       "score": 0.692,
       "source": "ot_recent_fallback",
       "drug": "Aranesp\u00ae",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5209,7 +5209,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Sotorasib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5264,7 +5264,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Erenumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5308,7 +5308,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Afatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5319,7 +5319,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Afatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5330,7 +5330,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Palbociclib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5341,7 +5341,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5352,7 +5352,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Denosumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5407,7 +5407,7 @@ const PIPELINE = {
       "score": 0.474,
       "source": "ot_recent_fallback",
       "drug": "Erenumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5521,7 +5521,7 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "APL-2",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -5534,7 +5534,7 @@ const PIPELINE = {
       "score": 0.898,
       "source": "ot_recent_fallback",
       "drug": "Etrasimod",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5556,7 +5556,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Etrasimod",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5602,7 +5602,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "ARQ 197",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -5650,7 +5650,7 @@ const PIPELINE = {
       "score": 0.703,
       "source": "ot_recent_fallback",
       "drug": "Digoxin",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -5696,7 +5696,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "SAGE-217",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5707,7 +5707,7 @@ const PIPELINE = {
       "score": 0.832,
       "source": "ot_recent_fallback",
       "drug": "natalizumab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5740,7 +5740,7 @@ const PIPELINE = {
       "score": 0.559,
       "source": "ot_recent_fallback",
       "drug": "Bardoxolone methyl",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -5762,7 +5762,7 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "SAGE-217",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -6034,7 +6034,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6045,7 +6045,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -6058,7 +6058,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Amifampridine Phosphate",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -6216,7 +6216,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6227,7 +6227,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -6519,7 +6519,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Cabozantinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6530,7 +6530,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Cabozantinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6732,8 +6732,8 @@ const PIPELINE = {
       "score": 0.932,
       "source": "ot_recent_fallback",
       "drug": "GS-6615",
-      "validation": "mendelian",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1998-02-01"
     },
     {
       "gene": "JAK1",
@@ -6886,7 +6886,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6897,7 +6897,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6930,7 +6930,7 @@ const PIPELINE = {
       "score": 0.902,
       "source": "ot_recent_fallback",
       "drug": "Magrolimab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6941,7 +6941,7 @@ const PIPELINE = {
       "score": 0.884,
       "source": "ot_recent_fallback",
       "drug": "SEL",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6974,7 +6974,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Andecaliximab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -6996,7 +6996,7 @@ const PIPELINE = {
       "score": 0.841,
       "source": "ot_recent_fallback",
       "drug": "Vesatolimod",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7040,7 +7040,7 @@ const PIPELINE = {
       "score": 0.792,
       "source": "ot_recent_fallback",
       "drug": "COBI",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7128,7 +7128,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Magrolimab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7150,7 +7150,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Allopurinol",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7172,7 +7172,7 @@ const PIPELINE = {
       "score": 0.353,
       "source": "ot_recent_fallback",
       "drug": "Selonsertib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7194,7 +7194,7 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Eleclazine",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7262,7 +7262,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Etoposide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7273,7 +7273,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7284,7 +7284,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Trilaciclib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7295,7 +7295,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Trilaciclib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -7653,7 +7653,7 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Itacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7697,7 +7697,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7785,7 +7785,7 @@ const PIPELINE = {
       "score": 0.841,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7807,7 +7807,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Retifanlimab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7818,7 +7818,7 @@ const PIPELINE = {
       "score": 0.794,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7840,7 +7840,7 @@ const PIPELINE = {
       "score": 0.774,
       "source": "ot_recent_fallback",
       "drug": "Etoposide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7851,7 +7851,7 @@ const PIPELINE = {
       "score": 0.762,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7862,7 +7862,7 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "itacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7917,7 +7917,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Itacitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7939,7 +7939,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7950,7 +7950,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7961,7 +7961,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7972,7 +7972,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7983,7 +7983,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -7994,7 +7994,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Imatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8005,7 +8005,7 @@ const PIPELINE = {
       "score": 0.661,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8038,7 +8038,7 @@ const PIPELINE = {
       "score": 0.648,
       "source": "ot_recent_fallback",
       "drug": "INCB050465",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8049,7 +8049,7 @@ const PIPELINE = {
       "score": 0.643,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8104,7 +8104,7 @@ const PIPELINE = {
       "score": 0.604,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8115,7 +8115,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Ibrutinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8126,7 +8126,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Imatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8137,7 +8137,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Imatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8148,7 +8148,7 @@ const PIPELINE = {
       "score": 0.54,
       "source": "ot_recent_fallback",
       "drug": "INCB001158",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8159,7 +8159,7 @@ const PIPELINE = {
       "score": 0.52,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8170,7 +8170,7 @@ const PIPELINE = {
       "score": 0.516,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8247,7 +8247,7 @@ const PIPELINE = {
       "score": 0.486,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8302,7 +8302,7 @@ const PIPELINE = {
       "score": 0.304,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8313,7 +8313,7 @@ const PIPELINE = {
       "score": 0.284,
       "source": "ot_recent_fallback",
       "drug": "INCB001158",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8346,7 +8346,7 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "5-Fluorouracil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8357,7 +8357,7 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8368,7 +8368,7 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8379,7 +8379,7 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8438,7 +8438,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "colchicine",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -8473,7 +8473,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Belumosudil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8484,7 +8484,7 @@ const PIPELINE = {
       "score": 0.642,
       "source": "ot_recent_fallback",
       "drug": "Tesevatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8506,7 +8506,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Belumosudil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8528,7 +8528,7 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "Belumosudil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -8563,7 +8563,7 @@ const PIPELINE = {
       "score": 0.897,
       "source": "ot_recent_fallback",
       "drug": "Belantamab Mafodotin",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8620,7 +8620,7 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "Tipifarnib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8631,7 +8631,7 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "Tipifarnib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -8701,7 +8701,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "margetuximab",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8723,7 +8723,7 @@ const PIPELINE = {
       "score": 0.012,
       "source": "ot_recent_fallback",
       "drug": "Margetuximab 15 mg",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -8769,7 +8769,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "MGCD265",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8780,7 +8780,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8791,7 +8791,7 @@ const PIPELINE = {
       "score": 0.796,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8802,7 +8802,7 @@ const PIPELINE = {
       "score": 0.779,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8813,7 +8813,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -8870,7 +8870,7 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "abiraterone acetate",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9159,7 +9159,7 @@ const PIPELINE = {
       "score": 0.669,
       "source": "ot_recent_fallback",
       "drug": "Bupivacaine",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9170,7 +9170,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9181,7 +9181,7 @@ const PIPELINE = {
       "score": 0.426,
       "source": "ot_recent_fallback",
       "drug": "Blisibimod",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -9304,7 +9304,7 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "REGN2810",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9326,7 +9326,7 @@ const PIPELINE = {
       "score": 0.426,
       "source": "ot_recent_fallback",
       "drug": "Warfarin",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9383,7 +9383,7 @@ const PIPELINE = {
       "score": 0.698,
       "source": "ot_recent_fallback",
       "drug": "Setmelanotide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9394,7 +9394,7 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Setmelanotide",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -9429,7 +9429,7 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9440,7 +9440,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Palbociclib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9451,7 +9451,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9462,7 +9462,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9473,7 +9473,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9484,7 +9484,7 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -9626,7 +9626,7 @@ const PIPELINE = {
       "score": 0.963,
       "source": "ot_recent_fallback",
       "drug": "Oral Treprostinil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9637,7 +9637,7 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     },
     {
@@ -9648,7 +9648,7 @@ const PIPELINE = {
       "score": 0.012,
       "source": "ot_recent_fallback",
       "drug": "Inhaled Treprostinil",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
@@ -9696,7 +9696,7 @@ const PIPELINE = {
       "score": 0.819,
       "source": "ot_recent_fallback",
       "drug": "Lumacaftor",
-      "validation": "mendelian",
+      "validation": "",
       "evidence_date": ""
     }
   ],
