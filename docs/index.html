@@ -179,19 +179,20 @@
           <h3>Genetic Support Classification</h3>
           <p>A company is classified as <strong>genetically-supported (GS)</strong> if its most advanced scoreable clinical program has an Open Targets genetic association score greater than 0.10. The "lead program" is the gene–disease pair at the highest clinical phase; ties are broken by genetic association score. This approach uses a single, unambiguous score per company and is independent of pipeline completeness.</p>
 
-          <h3>Open Targets Scoring</h3>
-          <p>Genetic association scores were obtained using a two-tier approach to minimize look-ahead bias:</p>
+          <h3>Open Targets Scoring &amp; Evidence Validation</h3>
+          <p>Genetic association scores were obtained using a two-tier approach, with BigQuery validation to confirm that evidence existed before the study start date:</p>
           <ul>
-            <li><strong>Tier 1:</strong> Open Targets release 20.02 (February 2020) — the most recent data available at the study start date, ensuring zero look-ahead bias.</li>
-            <li><strong>Tier 2:</strong> Current Open Targets Platform API — used only when gene–disease pairs were absent from the 20.02 release. Results flagged with evidence dating metadata.</li>
+            <li><strong>Tier 1:</strong> Open Targets release 20.02 (February 2020) — the most recent data available at the study start date, ensuring zero look-ahead bias. Automatically confirmed as pre-2020.</li>
+            <li><strong>Tier 2:</strong> Current Open Targets Platform API — used only when gene–disease pairs were absent from the 20.02 release. Each Tier 2 score is validated against Open Targets BigQuery evidence tables to verify the earliest evidence date predates January 2, 2020.</li>
           </ul>
+          <p>Tier 2 pairs are confirmed as pre-2020 via one of three methods: (1) Mendelian-only datasources, which are time-invariant; (2) direct BigQuery evidence dating with disease ontology expansion; or (3) Mendelian shared-ancestor matching, where a target has pre-2020 Mendelian evidence for a disease sharing a common ontology ancestor with the pipeline indication. Only confirmed pre-2020 pairs are eligible for lead program selection and GS classification.</p>
           <p>A conservative <strong>Mendelian-only</strong> sub-analysis restricts to companies where genetic evidence comes exclusively from Mendelian disease sources (ClinGen, Genomics England, OMIM), which are time-invariant and carry zero look-ahead risk.</p>
 
           <h3>Data Sources</h3>
           <ul>
             <li><strong>Holdings:</strong> XBI ETF N-PORT filing (December 31, 2019)</li>
             <li><strong>Pipeline:</strong> ClinicalTrials.gov + ChEMBL drug-target annotations</li>
-            <li><strong>Genetic data:</strong> Open Targets Platform (release 20.02 + current API)</li>
+            <li><strong>Genetic data:</strong> Open Targets Platform (release 20.02 + current API + BigQuery evidence tables for date validation)</li>
             <li><strong>Stock returns:</strong> Yahoo Finance, with manual research for delisted, acquired, and bankrupt companies</li>
           </ul>
 
@@ -201,7 +202,7 @@
           <h3>Limitations</h3>
           <ul>
             <li>Equal-weight portfolios do not reflect actual XBI ETF weighting (modified equal-weight with quarterly rebalancing).</li>
-            <li>Tier 2 OT API scores may incorporate data not available in January 2020, introducing potential look-ahead bias for non-Mendelian sources.</li>
+            <li>Tier 2 OT API scores are validated against BigQuery evidence dates, but 4 companies with untraceable evidence were reclassified as non-GS to avoid look-ahead bias.</li>
             <li>Classification depends on a single lead program per company; individual drug outcomes may vary.</li>
             <li>No transaction costs, slippage, or rebalancing are modeled.</li>
           </ul>

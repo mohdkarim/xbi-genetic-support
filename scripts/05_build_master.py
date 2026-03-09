@@ -68,9 +68,11 @@ print("\n[2/5] Extracting company-level metadata...")
 # Columns that are already company-level (same value on every row for a ticker)
 company_cols = [
     "n_scoreable_pairs", "n_gs_pairs", "best_genetic_assoc_score",
+    "n_confirmed_pairs", "n_confirmed_gs_pairs", "best_confirmed_score",
     "lead_phase", "lead_phase_rank", "lead_score",
     "lead_gene", "lead_ensembl_id", "lead_efo_id", "lead_conditions",
     "lead_ot_source", "lead_evidence_predates_2020", "lead_datasources",
+    "lead_confirmed_pre_2020", "lead_validation_method",
     "is_gs", "is_gs_at_0_1", "is_gs_at_0_5", "is_gs_at_0_8", "is_gs_at_0_95",
     "mendelian_only_gs",
 ]
@@ -267,6 +269,11 @@ for _, best in best_df.iterrows():
     lead_cond   = best.get("lead_conditions", "")
     lead_ot_src = best.get("lead_ot_source", "")
     lead_ev_pred = best.get("lead_evidence_predates_2020", "")
+    lead_conf   = best.get("lead_confirmed_pre_2020", False)
+    lead_val_m  = best.get("lead_validation_method", "")
+    n_conf      = best.get("n_confirmed_pairs")
+    n_conf_gs   = best.get("n_confirmed_gs_pairs")
+    best_conf   = best.get("best_confirmed_score")
 
     is_gs       = best.get("is_gs", False)
     is_gs_010   = best.get("is_gs_at_0_1", False)
@@ -308,6 +315,9 @@ for _, best in best_df.iterrows():
         "n_scoreable_pairs":        int(n_sc)   if pd.notna(n_sc)   else 0,
         "n_gs_pairs":               int(n_gs)   if pd.notna(n_gs)   else 0,
         "best_genetic_assoc_score": round(float(best_score), 6) if pd.notna(best_score) else None,
+        "n_confirmed_pairs":        int(n_conf) if pd.notna(n_conf) else 0,
+        "n_confirmed_gs_pairs":     int(n_conf_gs) if pd.notna(n_conf_gs) else 0,
+        "best_confirmed_score":     round(float(best_conf), 6) if pd.notna(best_conf) else None,
         "lead_phase":               str(lead_phase) if pd.notna(lead_phase) else "",
         "lead_score":               round(float(lead_score), 6) if pd.notna(lead_score) else None,
         "lead_gene":                str(lead_gene_sym) if pd.notna(lead_gene_sym) else "",
@@ -315,6 +325,8 @@ for _, best in best_df.iterrows():
         "lead_conditions":          str(lead_cond)[:120] if pd.notna(lead_cond) else "",
         "lead_ot_source":           str(lead_ot_src) if pd.notna(lead_ot_src) else "",
         "lead_evidence_predates":   str(lead_ev_pred) if pd.notna(lead_ev_pred) else "",
+        "lead_confirmed_pre_2020":  bool(lead_conf) if pd.notna(lead_conf) else False,
+        "lead_validation_method":   str(lead_val_m) if pd.notna(lead_val_m) else "",
         "best_pair_ga_score":       round(float(ga_score), 6) if pd.notna(ga_score) else None,
         "ot_score_source_best":     str(ot_src) if pd.notna(ot_src) else "",
         "ot_score_sources_all":     ot_sources,

@@ -10,7 +10,10 @@ Steps:
   5. Stepwise OT scoring (germline sources only — excludes somatic evidence):
        Tier 1: OT 20.02 NDJSON (primary, zero look-ahead bias)
        Tier 2: Recent OT API fallback + datasource check for time-invariance
-  6. Company-level GS classification (GS-A and GS-B, 4 thresholds, Mendelian-only sensitivity)
+  5b. BigQuery evidence date validation for Tier 2 pairs:
+       - Direct BQ evidence lookup with disease ontology expansion
+       - Mendelian shared-ancestor recovery for at-risk companies
+  6. Company-level GS classification from confirmed pre-2020 pairs only
   7. Output scored_pipeline.tsv + validation summary
 
 Inputs:
@@ -175,6 +178,51 @@ GERMLINE_GENETIC_SOURCES = {
 GS_PRIMARY_THRESHOLD = 0.10  # Main threshold
 GS_SCORE_THRESHOLDS = [0.10, 0.50, 0.80, 0.95]  # Sensitivity on lead-program score
 
+# ── BigQuery evidence date validation ────────────────────────────────────
+BQ_VALIDATION_CACHE  = BASE / ".tmp" / "bq_validation_cache.json"
+BQ_ONTOLOGY_CACHE    = BASE / ".tmp" / "disease_ontology_cache.json"
+BQ_DATASET           = "open-targets-prod.platform"
+CUTOFF_DATE          = "2020-01-02"
+
+# All 8 genetic association evidence tables in BQ
+BQ_GENETIC_TABLES = [
+    "evidence_eva",
+    "evidence_clingen",
+    "evidence_gene2phenotype",
+    "evidence_gene_burden",
+    "evidence_genomics_england",
+    "evidence_gwas_credible_sets",
+    "evidence_orphanet",
+    "evidence_uniprot_variants",
+]
+
+# Mendelian-only subset (for shared-ancestor recovery)
+BQ_MENDELIAN_TABLES = [
+    "evidence_eva",
+    "evidence_clingen",
+    "evidence_gene2phenotype",
+    "evidence_genomics_england",
+    "evidence_orphanet",
+    "evidence_uniprot_variants",
+]
+
+# Overly broad disease ancestors to exclude from shared-ancestor matching
+BROAD_ANCESTORS = {
+    "EFO_0000651",    # phenotype
+    "MONDO_0000001",  # disease
+    "HP_0000118",     # phenotypic abnormality
+    "OTAR_0000018",   # clinical phenotype
+    "EFO_0000408",    # disease
+    "OTAR_0000017",   # phenotype
+    "EFO_0010285",    # phenotype (alt)
+    "EFO_0000616",    # neoplasm
+    "MONDO_0005070",  # neoplasm
+    "MONDO_0700096",  # human disease
+    "MONDO_0042489",  # disease susceptibility
+    "EFO_0000508",    # genetic disorder
+    "MONDO_0003847",  # Mendelian disease
+}
+
 # Phase ranking for lead-program selection (higher = more advanced)
 PHASE_RANK = {
     "PHASE4":        7,
@@ -255,6 +303,122 @@ def fetch_ot_fallback(ensembl_id: str, efo_id: str) -> tuple[float | None, list[
                 break
 
     return score, datasources
+
+
+# ─── BQ evidence date validation helpers ──────────────────────────────────────
+
+def init_bq_client():
+    """Initialise BigQuery client using service account credentials."""
+    from google.cloud import bigquery
+    creds_path = BASE / "credentials.json"
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(creds_path)
+    return bigquery.Client(project="feedback-bio")
+
+
+def fetch_disease_descendants(efo_id: str) -> list[str]:
+    """Fetch all descendant disease IDs (+ self) via OT GraphQL."""
+    query = """
+    query($efoId: String!) {
+      disease(efoId: $efoId) { descendants }
+    }
+    """
+    resp = ot_graphql(query, {"efoId": efo_id})
+    ids = [efo_id]
+    if resp and resp.get("data", {}).get("disease"):
+        ids.extend(resp["data"]["disease"].get("descendants", []))
+    return ids
+
+
+def fetch_disease_ancestors(efo_id: str) -> list[str]:
+    """Fetch ancestor disease IDs via OT GraphQL."""
+    query = """
+    query($efoId: String!) {
+      disease(efoId: $efoId) { ancestors }
+    }
+    """
+    resp = ot_graphql(query, {"efoId": efo_id})
+    ids = []
+    if resp and resp.get("data", {}).get("disease"):
+        ids.extend(resp["data"]["disease"].get("ancestors", []))
+    return ids
+
+
+def bq_earliest_evidence(
+    client,
+    target_id: str,
+    disease_ids: list[str],
+    tables: list[str] | None = None,
+) -> tuple[str | None, list[str]]:
+    """
+    Query BQ for earliest genetic evidence date for a target across disease IDs.
+    Returns (earliest_date_str, [datasource_names]).
+    """
+    if tables is None:
+        tables = BQ_GENETIC_TABLES
+    if not disease_ids:
+        return None, []
+
+    disease_ids_str = ", ".join(f"'{d}'" for d in disease_ids)
+
+    union_parts = []
+    for table in tables:
+        ds_name = table.replace("evidence_", "")
+        union_parts.append(
+            f"SELECT CAST(evidenceDate AS STRING) AS dt, '{ds_name}' AS ds "
+            f"FROM `{BQ_DATASET}.{table}` "
+            f"WHERE targetId = '{target_id}' "
+            f"AND diseaseId IN ({disease_ids_str}) "
+            f"AND evidenceDate IS NOT NULL"
+        )
+
+    sql = (
+        "WITH all_ev AS (\n  " + "\n  UNION ALL\n  ".join(union_parts) + "\n)\n"
+        "SELECT MIN(dt) AS earliest, ARRAY_AGG(DISTINCT ds) AS datasources FROM all_ev"
+    )
+
+    rows = list(client.query(sql).result())
+    if rows and rows[0].earliest:
+        return rows[0].earliest, list(rows[0].datasources or [])
+    return None, []
+
+
+def bq_mendelian_ancestor_check(
+    client,
+    target_id: str,
+    disease_efo_id: str,
+    ontology_cache: dict,
+) -> tuple[bool, str | None]:
+    """
+    Check if target has pre-2020 Mendelian evidence for a disease sharing
+    an ancestor with disease_efo_id.  Returns (confirmed, earliest_date).
+    """
+    # Get ancestors of the pipeline disease
+    if disease_efo_id not in ontology_cache:
+        ancs = fetch_disease_ancestors(disease_efo_id)
+        ontology_cache[disease_efo_id] = {"ancestors": ancs}
+        time.sleep(0.2)
+
+    ancestors = ontology_cache[disease_efo_id].get("ancestors", [])
+    meaningful = [a for a in ancestors if a not in BROAD_ANCESTORS]
+
+    # Collect related diseases from each meaningful ancestor's descendants
+    related_diseases: set[str] = set()
+    for anc in meaningful:
+        if anc not in ontology_cache:
+            descs = fetch_disease_descendants(anc)
+            ontology_cache[anc] = {"descendants": descs}
+            time.sleep(0.2)
+        related_diseases.update(ontology_cache[anc].get("descendants", []))
+
+    if not related_diseases:
+        return False, None
+
+    earliest, _ = bq_earliest_evidence(
+        client, target_id, list(related_diseases), tables=BQ_MENDELIAN_TABLES
+    )
+    if earliest and earliest < CUTOFF_DATE:
+        return True, earliest
+    return False, None
 
 
 # ─── Main ────────────────────────────────────────────────────────────────────
@@ -549,22 +713,220 @@ def main():
 
     print(f"      Tier 2 hits: {tier2_hits:,} unique pairs scored from recent OT API")
 
-    # ── STEP 6: Company-level GS classification ─────────────────────────────
-    # Lead-program definition: GS = best genetic_association_score of the
-    # company's most advanced scoreable program is > threshold.
-    # "Most advanced" = highest phase rank, tiebreak by OT score.
-    print("\n[7/7] Computing company-level GS classification...")
+    # ── STEP 5b: BigQuery evidence date validation ───────────────────────────
+    print("\n[6b/8] BigQuery evidence date validation...")
 
-    # Convert genetic_association_score to float
+    # Initialise confirmed_pre_2020 column
+    df["confirmed_pre_2020"] = None
+    df["bq_validation_method"] = None
+    df["bq_earliest_date"] = None
+
+    # Tier 1 → automatically confirmed
+    tier1_mask = scoreable_mask & (df["ot_score_source"] == "ot_2020")
+    df.loc[tier1_mask, "confirmed_pre_2020"] = True
+    df.loc[tier1_mask, "bq_validation_method"] = "tier1_ot2020"
+
+    # Tier 2 Mendelian-only → automatically confirmed
+    tier2_mend_mask = (
+        scoreable_mask
+        & (df["ot_score_source"] == "ot_recent_fallback")
+        & (df["evidence_predates_2020"].astype(str) == "True")
+    )
+    df.loc[tier2_mend_mask, "confirmed_pre_2020"] = True
+    df.loc[tier2_mend_mask, "bq_validation_method"] = "tier2_mendelian"
+
+    # Tier 2 uncertain → need BQ validation
+    tier2_uncertain_pairs = df[
+        scoreable_mask
+        & (df["ot_score_source"] == "ot_recent_fallback")
+        & (df["evidence_predates_2020"].astype(str) != "True")
+    ][["ensembl_id", "disease_efo_id"]].drop_duplicates()
+
+    print(f"      Tier 1 confirmed:     {tier1_mask.sum():,} rows")
+    print(f"      Tier 2 Mendelian:     {tier2_mend_mask.sum():,} rows")
+    print(f"      Tier 2 need BQ check: {len(tier2_uncertain_pairs)} unique pairs")
+
+    # Load BQ validation cache
+    bq_cache: dict = {}
+    if BQ_VALIDATION_CACHE.exists():
+        with open(BQ_VALIDATION_CACHE) as f:
+            bq_cache = json.load(f)
+        print(f"      Loaded {len(bq_cache)} cached BQ validations")
+    else:
+        # Seed from existing analysis file if available
+        seed_path = BASE / ".tmp" / "tier2_bq_full_ontology.tsv"
+        if seed_path.exists():
+            print(f"      Seeding BQ cache from {seed_path.name}...")
+            seed_df = pd.read_csv(seed_path, sep="\t")
+            for _, srow in seed_df.iterrows():
+                sk = f"{srow['ensembl_id']}_{srow['disease_efo_id']}"
+                bq_pre = srow.get("bq_pre_2020")
+                bq_earliest = srow.get("bq_earliest")
+                if pd.notna(bq_pre) and str(bq_pre) in ("True", "1.0", "1"):
+                    bq_cache[sk] = {"confirmed": True, "method": "bq_direct",
+                                    "earliest_date": str(bq_earliest) if pd.notna(bq_earliest) else None,
+                                    "datasources": str(srow.get("bq_datasources", "")).split(",") if pd.notna(srow.get("bq_datasources")) else []}
+                elif pd.notna(bq_earliest):
+                    bq_cache[sk] = {"confirmed": False, "method": "bq_post_2020",
+                                    "earliest_date": str(bq_earliest),
+                                    "datasources": str(srow.get("bq_datasources", "")).split(",") if pd.notna(srow.get("bq_datasources")) else []}
+                elif str(srow.get("current_predates")) == "True":
+                    pass  # Already handled by tier2_mendelian above
+                else:
+                    bq_cache[sk] = {"confirmed": False, "method": "no_bq_evidence",
+                                    "earliest_date": None, "datasources": []}
+            print(f"      Seeded {len(bq_cache)} entries")
+
+    # Load ontology cache
+    ontology_cache: dict = {}
+    if BQ_ONTOLOGY_CACHE.exists():
+        with open(BQ_ONTOLOGY_CACHE) as f:
+            ontology_cache = json.load(f)
+
+    bq_client = None
+    bq_new = 0
+
+    for _, pair_row in tier2_uncertain_pairs.iterrows():
+        eid = pair_row["ensembl_id"]
+        did = pair_row["disease_efo_id"]
+        ck = f"{eid}_{did}"
+
+        if ck not in bq_cache:
+            if bq_client is None:
+                bq_client = init_bq_client()
+
+            # Direct BQ lookup with disease descendants
+            desc_ids = fetch_disease_descendants(did)
+            time.sleep(0.2)
+            earliest, datasources = bq_earliest_evidence(bq_client, eid, desc_ids)
+
+            if earliest and earliest < CUTOFF_DATE:
+                bq_cache[ck] = {"confirmed": True, "method": "bq_direct",
+                                "earliest_date": earliest, "datasources": datasources}
+            elif earliest:
+                bq_cache[ck] = {"confirmed": False, "method": "bq_post_2020",
+                                "earliest_date": earliest, "datasources": datasources}
+            else:
+                bq_cache[ck] = {"confirmed": False, "method": "no_bq_evidence",
+                                "earliest_date": None, "datasources": []}
+
+            bq_new += 1
+            if bq_new % 20 == 0:
+                BQ_VALIDATION_CACHE.parent.mkdir(parents=True, exist_ok=True)
+                with open(BQ_VALIDATION_CACHE, "w") as f:
+                    json.dump(bq_cache, f, indent=2)
+                print(f"      [BQ cache checkpoint: {bq_new} new]")
+
+        result = bq_cache[ck]
+        mask_pair = (
+            scoreable_mask
+            & (df["ensembl_id"] == eid)
+            & (df["disease_efo_id"] == did)
+            & (df["ot_score_source"] == "ot_recent_fallback")
+        )
+        df.loc[mask_pair, "confirmed_pre_2020"] = result["confirmed"]
+        df.loc[mask_pair, "bq_validation_method"] = result["method"]
+        df.loc[mask_pair, "bq_earliest_date"] = result.get("earliest_date")
+
+    # ── Mendelian shared-ancestor recovery (pass 2) ─────────────────────
+    # Only check pairs belonging to companies that would otherwise lose GS
+    print("      Mendelian shared-ancestor recovery...")
     df["genetic_association_score"] = pd.to_numeric(df["genetic_association_score"], errors="coerce")
 
-    # Per-company aggregates from scoreable rows
-    scoreable_df = df[df["is_scoreable"] == True].copy()
+    # Tentative lead selection from confirmed pairs to find companies at risk
+    confirmed_df = df[
+        (df["is_scoreable"] == True)
+        & (df["confirmed_pre_2020"] == True)
+        & (df["genetic_association_score"] > GS_PRIMARY_THRESHOLD)
+    ].copy()
+    tickers_with_confirmed = set(confirmed_df["ticker"].unique())
 
-    # Deduplicate by (ticker, ensembl_id, disease_efo_id) — unique pairs
+    all_gs_tickers = set(
+        df[
+            (df["is_scoreable"] == True)
+            & (df["genetic_association_score"].notna())
+            & (df["genetic_association_score"] > GS_PRIMARY_THRESHOLD)
+        ]["ticker"].unique()
+    )
+    at_risk_tickers = all_gs_tickers - tickers_with_confirmed
+
+    # For at-risk companies, check their unconfirmed pairs for ancestor matches
+    unconfirmed_pairs = df[
+        (df["is_scoreable"] == True)
+        & (df["confirmed_pre_2020"] == False)
+        & (df["genetic_association_score"] > GS_PRIMARY_THRESHOLD)
+        & (df["ticker"].isin(at_risk_tickers))
+    ][["ticker", "ensembl_id", "disease_efo_id"]].drop_duplicates()
+
+    ancestor_recovered = 0
+    for _, pair_row in unconfirmed_pairs.iterrows():
+        eid = pair_row["ensembl_id"]
+        did = pair_row["disease_efo_id"]
+        ck = f"{eid}_{did}"
+
+        # Skip if already confirmed via ancestor in a previous run
+        if bq_cache.get(ck, {}).get("method") == "mendelian_ancestor":
+            continue
+
+        if bq_client is None:
+            bq_client = init_bq_client()
+
+        confirmed, earliest = bq_mendelian_ancestor_check(
+            bq_client, eid, did, ontology_cache
+        )
+        if confirmed:
+            bq_cache[ck] = {"confirmed": True, "method": "mendelian_ancestor",
+                            "earliest_date": earliest, "datasources": ["mendelian_ancestor"]}
+            # Update dataframe
+            mask_pair = (
+                scoreable_mask
+                & (df["ensembl_id"] == eid)
+                & (df["disease_efo_id"] == did)
+            )
+            df.loc[mask_pair, "confirmed_pre_2020"] = True
+            df.loc[mask_pair, "bq_validation_method"] = "mendelian_ancestor"
+            df.loc[mask_pair, "bq_earliest_date"] = earliest
+            ancestor_recovered += 1
+            bq_new += 1
+
+    # Unscored pairs → not confirmed
+    no_score_mask = scoreable_mask & df["genetic_association_score"].isna()
+    df.loc[no_score_mask, "confirmed_pre_2020"] = False
+    df.loc[no_score_mask, "bq_validation_method"] = "unscored"
+
+    # Save caches
+    if bq_new > 0:
+        BQ_VALIDATION_CACHE.parent.mkdir(parents=True, exist_ok=True)
+        with open(BQ_VALIDATION_CACHE, "w") as f:
+            json.dump(bq_cache, f, indent=2)
+        with open(BQ_ONTOLOGY_CACHE, "w") as f:
+            json.dump(ontology_cache, f, indent=2)
+        print(f"      Saved {bq_new} new BQ validations")
+
+    # Summary
+    confirmed_rows = (df.loc[scoreable_mask, "confirmed_pre_2020"] == True).sum()
+    unconfirmed_rows = (df.loc[scoreable_mask, "confirmed_pre_2020"] == False).sum()
+    print(f"      Confirmed pre-2020: {confirmed_rows:,} rows")
+    print(f"      Not confirmed:      {unconfirmed_rows:,} rows")
+    print(f"      Ancestor recovered: {ancestor_recovered} pairs")
+
+    print(f"\n      Validation method breakdown (scored rows):")
+    for method, cnt in df.loc[
+        scoreable_mask & df["ot_score_source"].notna(), "bq_validation_method"
+    ].value_counts(dropna=False).items():
+        print(f"        {str(method):<25} {cnt:>6}")
+
+    # ── STEP 6: Company-level GS classification ─────────────────────────────
+    # Lead program selected from CONFIRMED pre-2020 pairs only.
+    # "Most advanced" = highest phase rank, tiebreak by OT score.
+    print("\n[7/8] Computing company-level GS classification (confirmed pairs only)...")
+
+    # genetic_association_score already converted to float in Step 5b
+
+    # Per-company aggregates from ALL scoreable rows (for transparency)
+    scoreable_df = df[df["is_scoreable"] == True].copy()
     unique_pairs = scoreable_df.drop_duplicates(subset=["ticker", "ensembl_id", "disease_efo_id"])
 
-    # Basic company-level stats (counts)
     company_stats = (
         unique_pairs.groupby("ticker")
         .agg(
@@ -575,27 +937,55 @@ def main():
         .reset_index()
     )
 
-    # ── Lead-program selection ──────────────────────────────────────────────
-    # For each company: most advanced scoreable pair (highest phase, tiebreak by score)
-    scoreable_df["phase_rank"] = scoreable_df["phase"].map(PHASE_RANK).fillna(0)
+    # Confirmed-pair stats
+    confirmed_pairs = unique_pairs[unique_pairs["confirmed_pre_2020"] == True]
+    if len(confirmed_pairs) > 0:
+        confirmed_stats = (
+            confirmed_pairs.groupby("ticker")
+            .agg(
+                n_confirmed_pairs=("genetic_association_score", "count"),
+                n_confirmed_gs_pairs=("genetic_association_score", lambda x: (x > GS_PRIMARY_THRESHOLD).sum()),
+                best_confirmed_score=("genetic_association_score", "max"),
+            )
+            .reset_index()
+        )
+        company_stats = company_stats.merge(confirmed_stats, on="ticker", how="left")
+    else:
+        company_stats["n_confirmed_pairs"] = 0
+        company_stats["n_confirmed_gs_pairs"] = 0
+        company_stats["best_confirmed_score"] = None
 
-    # Deduplicate pairs, keeping the highest-phase instance of each pair
+    # ── Lead-program selection from CONFIRMED pairs only ────────────────────
+    confirmed_scoreable = df[
+        (df["is_scoreable"] == True) & (df["confirmed_pre_2020"] == True)
+    ].copy()
+    confirmed_scoreable["phase_rank"] = confirmed_scoreable["phase"].map(PHASE_RANK).fillna(0)
+
+    # Deduplicate pairs, keeping the highest-phase instance
     lead_candidates = (
-        scoreable_df
+        confirmed_scoreable
         .sort_values(["ticker", "phase_rank", "genetic_association_score"], ascending=[True, False, False])
         .drop_duplicates(subset=["ticker", "ensembl_id", "disease_efo_id"], keep="first")
     )
 
-    # Now pick the lead program per company: highest phase_rank, tiebreak by score
-    lead_programs = (
-        lead_candidates
-        .sort_values(["ticker", "phase_rank", "genetic_association_score"], ascending=[True, False, False])
-        .groupby("ticker", sort=False)
-        .first()
-        .reset_index()
-    )[["ticker", "phase", "phase_rank", "genetic_association_score",
-       "gene_symbol", "ensembl_id", "disease_efo_id", "conditions",
-       "ot_score_source", "evidence_predates_2020", "genetic_datasources"]]
+    # Pick the lead program per company: highest phase_rank, tiebreak by score
+    if len(lead_candidates) > 0:
+        lead_programs = (
+            lead_candidates
+            .sort_values(["ticker", "phase_rank", "genetic_association_score"], ascending=[True, False, False])
+            .groupby("ticker", sort=False)
+            .first()
+            .reset_index()
+        )[["ticker", "phase", "phase_rank", "genetic_association_score",
+           "gene_symbol", "ensembl_id", "disease_efo_id", "conditions",
+           "ot_score_source", "evidence_predates_2020", "genetic_datasources",
+           "confirmed_pre_2020", "bq_validation_method"]]
+    else:
+        lead_programs = pd.DataFrame(columns=[
+            "ticker", "phase", "phase_rank", "genetic_association_score",
+            "gene_symbol", "ensembl_id", "disease_efo_id", "conditions",
+            "ot_score_source", "evidence_predates_2020", "genetic_datasources",
+            "confirmed_pre_2020", "bq_validation_method"])
 
     lead_programs = lead_programs.rename(columns={
         "phase": "lead_phase",
@@ -608,11 +998,13 @@ def main():
         "ot_score_source": "lead_ot_source",
         "evidence_predates_2020": "lead_evidence_predates_2020",
         "genetic_datasources": "lead_datasources",
+        "confirmed_pre_2020": "lead_confirmed_pre_2020",
+        "bq_validation_method": "lead_validation_method",
     })
 
     company_stats = company_stats.merge(lead_programs, on="ticker", how="left")
 
-    # GS classification: lead program score > threshold
+    # GS classification: confirmed lead program score > threshold
     for thresh in GS_SCORE_THRESHOLDS:
         col = f"is_gs_at_{str(thresh).replace('.', '_')}"
         company_stats[col] = (
@@ -623,7 +1015,7 @@ def main():
     # Primary GS flag at 0.10
     company_stats["is_gs"] = company_stats["is_gs_at_0_1"]
 
-    # Mendelian-only GS: lead program score > 0.10 AND evidence predates 2020
+    # Mendelian-only GS: lead program score > 0.10 AND evidence predates 2020 (Mendelian sources)
     company_stats["mendelian_only_gs"] = (
         company_stats["is_gs"]
         & (company_stats["lead_evidence_predates_2020"].astype(str) == "True")
@@ -648,7 +1040,7 @@ def main():
 
     # ── Output ───────────────────────────────────────────────────────────────
     print(f"\n{'=' * 70}")
-    print(f"Writing output to {OUTPUT_TSV.name}...")
+    print(f"[8/8] Writing output to {OUTPUT_TSV.name}...")
     df.to_csv(OUTPUT_TSV, sep="\t", index=False)
     print(f"Output: {len(df):,} rows, {df['ticker'].nunique()} tickers")
 
@@ -676,13 +1068,19 @@ def main():
     for val, cnt in scored_nonnull["evidence_predates_2020"].value_counts(dropna=False).items():
         print(f"  {str(val):<30} {cnt:>6,}")
 
+    print(f"\nBQ validation breakdown (scored rows):")
+    for method, cnt in df.loc[
+        scored_mask & df["ot_score_source"].notna(), "bq_validation_method"
+    ].value_counts(dropna=False).items():
+        print(f"  {str(method):<30} {cnt:>6,}")
+
     gs_summary = company_stats[company_stats["n_scoreable_pairs"].notna()].copy()
     n_gs = gs_summary["is_gs"].sum()
     n_mono = gs_summary["mendelian_only_gs"].sum()
     n_total = df["ticker"].nunique()
 
-    print(f"\nGS classification — lead program (unique tickers: {n_total}):")
-    print(f"  GS (lead program score > 0.10):    {n_gs:>3} tickers")
+    print(f"\nGS classification — confirmed lead program (unique tickers: {n_total}):")
+    print(f"  GS (confirmed lead score > 0.10):  {n_gs:>3} tickers")
     print(f"  Mendelian-only GS:                  {n_mono:>3} tickers")
 
     print(f"\nSensitivity across score thresholds (lead program):")
@@ -728,6 +1126,7 @@ def main():
     print(f"\n{'=' * 70}")
     print(f"Done. Output: {OUTPUT_TSV}")
     print(f"Fallback cache: {FALLBACK_CACHE_JSON}")
+    print(f"BQ validation cache: {BQ_VALIDATION_CACHE}")
 
 
 if __name__ == "__main__":

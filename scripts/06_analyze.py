@@ -323,14 +323,20 @@ print(nongs_companies.tail(5).to_string(index=False))
 results["gs_companies"] = gs_companies.to_dict(orient="records")
 results["nongs_companies"] = nongs_companies.to_dict(orient="records")
 
-results["all_companies"] = master[[
+# Include new BQ validation columns if they exist
+all_co_cols = [
     "ticker","company","company_type","return_total_pct","outcome",
     "is_gs","mendelian_only_gs",
     "lead_score","lead_phase","lead_gene","lead_conditions","lead_ot_source","lead_evidence_predates",
+    "lead_confirmed_pre_2020","lead_validation_method",
     "best_genetic_assoc_score","n_scoreable_pairs","n_gs_pairs",
+    "n_confirmed_pairs","n_confirmed_gs_pairs","best_confirmed_score",
     "target_gene","indication","ot_score_source_best","evidence_predates_2020",
     "is_oncology_primary","has_combination_rows","return_source","return_estimated",
-]].to_dict(orient="records")
+]
+# Only include columns that actually exist in master
+all_co_cols = [c for c in all_co_cols if c in master.columns]
+results["all_companies"] = master[all_co_cols].to_dict(orient="records")
 
 # ── Write JSON ───────────────────────────────────────────────────────────────
 with open(RESULTS_JSON, "w") as f:

@@ -142,6 +142,8 @@ def build_companies(raw):
             "n_gs": c["n_gs_pairs"],
             "is_oncology": c["is_oncology_primary"],
             "score_source": c["ot_score_source_best"],
+            "confirmed_pre_2020": c.get("lead_confirmed_pre_2020", False),
+            "validation_method": c.get("lead_validation_method", ""),
         })
     return companies
 

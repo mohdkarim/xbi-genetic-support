@@ -18,85 +18,85 @@ const RESULTS = {
     "all_universe_median_pct": -5.4
   },
   "primary": {
-    "n_gs": 62,
-    "n_nongs": 64,
-    "gs_mean": 56.66,
-    "nongs_mean": 35.13,
+    "n_gs": 58,
+    "n_nongs": 68,
+    "gs_mean": 51.66,
+    "nongs_mean": 40.66,
     "gs_median": 1.1,
     "nongs_median": -21.3,
-    "gs_ci_lo": 16.81,
-    "gs_ci_hi": 103.4,
-    "nongs_ci_lo": -1.75,
-    "nongs_ci_hi": 76.23,
-    "gs_dollar": 1566.59,
-    "nongs_dollar": 1351.27,
-    "alpha_vs_nongs": 21.53,
-    "alpha_vs_xbi": 23.84
+    "gs_ci_lo": 13.6,
+    "gs_ci_hi": 91.97,
+    "nongs_ci_lo": 2.06,
+    "nongs_ci_hi": 85.44,
+    "gs_dollar": 1516.59,
+    "nongs_dollar": 1406.58,
+    "alpha_vs_nongs": 11.0,
+    "alpha_vs_xbi": 18.84
   },
   "mendelian": {
-    "n_gs": 24,
-    "n_nongs": 102,
-    "gs_mean": 81.96,
-    "nongs_mean": 37.2,
-    "gs_median": 27.66,
-    "nongs_median": -17.84,
-    "gs_ci_lo": 22.65,
-    "gs_ci_hi": 152.95,
-    "nongs_ci_lo": 6.64,
-    "nongs_ci_hi": 70.05,
-    "alpha": 44.77
+    "n_gs": 35,
+    "n_nongs": 91,
+    "gs_mean": 62.02,
+    "nongs_mean": 39.45,
+    "gs_median": 17.86,
+    "nongs_median": -16.7,
+    "gs_ci_lo": 16.26,
+    "gs_ci_hi": 113.24,
+    "nongs_ci_lo": 5.95,
+    "nongs_ci_hi": 75.28,
+    "alpha": 22.57
   },
   "sensitivity": [
     {
       "label": "0.10",
-      "n_gs": 62,
-      "n_nongs": 64,
-      "gs_mean": 56.66,
-      "nongs_mean": 35.13,
-      "alpha": 21.53,
-      "gs_ci_lo": 16.81,
-      "gs_ci_hi": 103.4
+      "n_gs": 58,
+      "n_nongs": 68,
+      "gs_mean": 51.66,
+      "nongs_mean": 40.66,
+      "alpha": 11.0,
+      "gs_ci_lo": 13.6,
+      "gs_ci_hi": 91.97
     },
     {
       "label": "0.50",
-      "n_gs": 59,
-      "n_nongs": 67,
-      "gs_mean": 62.58,
-      "nongs_mean": 30.88,
-      "alpha": 31.7,
-      "gs_ci_lo": 21.3,
-      "gs_ci_hi": 107.88
+      "n_gs": 54,
+      "n_nongs": 72,
+      "gs_mean": 56.85,
+      "nongs_mean": 37.37,
+      "alpha": 19.48,
+      "gs_ci_lo": 18.3,
+      "gs_ci_hi": 99.06
     },
     {
       "label": "0.80",
-      "n_gs": 47,
-      "n_nongs": 79,
-      "gs_mean": 68.06,
-      "nongs_mean": 32.43,
-      "alpha": 35.63,
-      "gs_ci_lo": 21.51,
-      "gs_ci_hi": 117.67
+      "n_gs": 43,
+      "n_nongs": 83,
+      "gs_mean": 61.03,
+      "nongs_mean": 37.79,
+      "alpha": 23.24,
+      "gs_ci_lo": 19.02,
+      "gs_ci_hi": 107.72
     },
     {
       "label": "0.95",
-      "n_gs": 30,
-      "n_nongs": 96,
-      "gs_mean": 102.35,
-      "nongs_mean": 28.03,
-      "alpha": 74.32,
-      "gs_ci_lo": 34.75,
-      "gs_ci_hi": 173.42
+      "n_gs": 24,
+      "n_nongs": 102,
+      "gs_mean": 115.76,
+      "nongs_mean": 29.24,
+      "alpha": 86.52,
+      "gs_ci_lo": 53.97,
+      "gs_ci_hi": 179.64
     }
   ],
   "subgroup": {
-    "oncology_gs_mean_pct": 48.18,
-    "oncology_nongs_mean_pct": 3.72,
-    "nonog_gs_mean_pct": 59.86,
-    "nonog_nongs_mean_pct": 45.6,
-    "n_oncology_gs": 17,
-    "n_oncology_nongs": 16,
-    "n_nonog_gs": 45,
-    "n_nonog_nongs": 48
+    "oncology_gs_mean_pct": 17.01,
+    "oncology_nongs_mean_pct": 33.71,
+    "nonog_gs_mean_pct": 62.68,
+    "nonog_nongs_mean_pct": 43.35,
+    "n_oncology_gs": 14,
+    "n_oncology_nongs": 19,
+    "n_nonog_gs": 44,
+    "n_nonog_nongs": 49
   }
 };
 
@@ -116,7 +116,9 @@ const COMPANIES = [
     "n_scoreable": 92,
     "n_gs": 91,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "ACAD",
@@ -133,7 +135,9 @@ const COMPANIES = [
     "n_scoreable": 4,
     "n_gs": 4,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "ACHN",
@@ -150,7 +154,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "ADVM",
@@ -167,7 +173,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "AGEN",
@@ -184,7 +192,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "AGIO",
@@ -201,7 +211,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "AIMT",
@@ -218,7 +230,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "AKBA",
@@ -235,7 +249,9 @@ const COMPANIES = [
     "n_scoreable": 4,
     "n_gs": 4,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "AKCA",
@@ -245,14 +261,16 @@ const COMPANIES = [
     "is_gs": true,
     "mendelian_only": false,
     "lead_score": 0.25732,
-    "lead_phase": "PHASE3",
-    "lead_gene": "APOC3",
-    "lead_conditions": "Familial Chylomicronemia Syndrome | Hyperlipoproteinemia Type 1 | Lipoprotein Lipase Deficiency",
+    "lead_phase": "PHASE1",
+    "lead_gene": "VKORC1",
+    "lead_conditions": "Cardiovascular Diseases | Elevated Lipoprotein(a)",
     "best_score": 0.25732,
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "ALEC",
@@ -269,7 +287,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ALKS",
@@ -286,7 +306,9 @@ const COMPANIES = [
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "ALLK",
@@ -296,14 +318,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE2",
-    "lead_gene": "SIGLEC8",
-    "lead_conditions": "Eosinophilic Gastritis | Eosinophilic Gastroenteritis",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ALLO",
@@ -320,7 +344,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ALNY",
@@ -337,7 +363,9 @@ const COMPANIES = [
     "n_scoreable": 5,
     "n_gs": 5,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "ALXN",
@@ -354,7 +382,9 @@ const COMPANIES = [
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "AMAG",
@@ -371,7 +401,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "AMGN",
@@ -388,7 +420,9 @@ const COMPANIES = [
     "n_scoreable": 46,
     "n_gs": 46,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "ANAB",
@@ -405,7 +439,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "ANIK",
@@ -422,7 +458,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "APLS",
@@ -439,7 +477,9 @@ const COMPANIES = [
     "n_scoreable": 4,
     "n_gs": 4,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "ARNA",
@@ -456,7 +496,9 @@ const COMPANIES = [
     "n_scoreable": 5,
     "n_gs": 5,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "ARQL",
@@ -473,7 +515,9 @@ const COMPANIES = [
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "ARWR",
@@ -483,14 +527,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE1",
-    "lead_gene": "PTGS1",
-    "lead_conditions": "Hepatitis B",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ATNX",
@@ -507,7 +553,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ATRA",
@@ -524,7 +572,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "AVRO",
@@ -541,7 +591,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "BBIO",
@@ -558,7 +610,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "BCRX",
@@ -567,15 +621,17 @@ const COMPANIES = [
     "outcome": "active",
     "is_gs": true,
     "mendelian_only": false,
-    "lead_score": 0.904716,
-    "lead_phase": "PHASE2/PHASE3",
-    "lead_gene": "KLKB1",
-    "lead_conditions": "HAE | Hereditary Angioedema | Prophylaxis",
+    "lead_score": 0.888136,
+    "lead_phase": "PHASE1",
+    "lead_gene": "HMGCR",
+    "lead_conditions": "Hereditary Angioedema",
     "best_score": 0.904716,
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "BHVN",
@@ -592,7 +648,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "BIIB",
@@ -609,7 +667,9 @@ const COMPANIES = [
     "n_scoreable": 10,
     "n_gs": 10,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "BMRN",
@@ -626,7 +686,9 @@ const COMPANIES = [
     "n_scoreable": 5,
     "n_gs": 5,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "BPMC",
@@ -643,7 +705,9 @@ const COMPANIES = [
     "n_scoreable": 16,
     "n_gs": 16,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "CHRS",
@@ -660,7 +724,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "CLVS",
@@ -677,7 +743,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": true,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "CPRX",
@@ -687,14 +755,16 @@ const COMPANIES = [
     "is_gs": true,
     "mendelian_only": true,
     "lead_score": 0.607931,
-    "lead_phase": "PHASE3",
+    "lead_phase": "PHASE2",
     "lead_gene": "PDE4B",
-    "lead_conditions": "Lambert-Eaton Myasthenic Syndrome",
+    "lead_conditions": "Muscular Atrophy, Spinal",
     "best_score": 0.607931,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "CYTK",
@@ -711,7 +781,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "DCPH",
@@ -728,7 +800,9 @@ const COMPANIES = [
     "n_scoreable": 14,
     "n_gs": 14,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "DNLI",
@@ -745,7 +819,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "DRNA",
@@ -762,7 +838,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "DVAX",
@@ -779,7 +857,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "EBS",
@@ -796,7 +876,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "EDIT",
@@ -813,7 +895,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "EGRX",
@@ -830,7 +914,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ENTA",
@@ -840,14 +926,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE2",
-    "lead_gene": "NR1H4",
-    "lead_conditions": "Primary Biliary Cholangitis",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "EPZM",
@@ -855,16 +943,18 @@ const COMPANIES = [
     "return_pct": 105.2,
     "outcome": "acquired",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.607931,
-    "lead_phase": "PHASE3",
+    "mendelian_only": true,
+    "lead_score": 0.5,
+    "lead_phase": "PHASE2",
     "lead_gene": "EZH2",
-    "lead_conditions": "Follicular Lymphoma | Refractory Follicular Lymphoma | Relapsed/Refractory Follicular Lymphoma",
+    "lead_conditions": "Any Solid Tumor With an EZH2 GOF Mutation | Atypical Teratoid Rhabdoid Tumors (ATRT) | Epithelioid Sarcoma | INI1-negati",
     "best_score": 0.944664,
     "n_scoreable": 4,
     "n_gs": 4,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "ESPR",
@@ -872,16 +962,18 @@ const COMPANIES = [
     "return_pct": -94.33,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.638327,
+    "mendelian_only": true,
+    "lead_score": 0.625,
     "lead_phase": "PHASE3",
-    "lead_gene": "NPC1L1",
-    "lead_conditions": "Hyperlipidemias",
+    "lead_gene": "ACLY",
+    "lead_conditions": "Atherosclerotic Cardiovascular Diseases | Hypercholesterolemia",
     "best_score": 1.0,
     "n_scoreable": 10,
     "n_gs": 10,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "EXEL",
@@ -898,7 +990,9 @@ const COMPANIES = [
     "n_scoreable": 14,
     "n_gs": 14,
     "is_oncology": true,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "FATE",
@@ -915,7 +1009,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "FLXN",
@@ -932,7 +1028,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "FOLD",
@@ -942,14 +1040,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE3",
-    "lead_gene": "P2RY12",
-    "lead_conditions": "Fabry Disease",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "GBT",
@@ -958,15 +1058,17 @@ const COMPANIES = [
     "outcome": "acquired",
     "is_gs": true,
     "mendelian_only": false,
-    "lead_score": 0.916384,
+    "lead_score": 0.846459,
     "lead_phase": "PHASE2",
     "lead_gene": "HBB",
-    "lead_conditions": "Hypoxemia | Idiopathic Pulmonary Fibrosis",
+    "lead_conditions": "Sickle Cell Disease",
     "best_score": 0.916384,
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "GILD",
@@ -974,16 +1076,18 @@ const COMPANIES = [
     "return_pct": 192.65,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.954995,
-    "lead_phase": "PHASE4",
-    "lead_gene": "PIK3CD",
-    "lead_conditions": "Lymphoid Malignancies",
+    "mendelian_only": true,
+    "lead_score": 1.0,
+    "lead_phase": "PHASE3",
+    "lead_gene": "TNF",
+    "lead_conditions": "Rheumatoid Arthritis",
     "best_score": 1.0,
     "n_scoreable": 58,
     "n_gs": 57,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "GOSS",
@@ -1000,7 +1104,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "GTHX",
@@ -1008,16 +1114,18 @@ const COMPANIES = [
     "return_pct": -75.2,
     "outcome": "acquired",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.981276,
+    "mendelian_only": true,
+    "lead_score": 0.856705,
     "lead_phase": "PHASE2",
-    "lead_gene": "CDK4",
-    "lead_conditions": "Breast Cancer | Breast Neoplasm | Triple-Negative Breast Cancer | Triple-Negative Breast Neoplasms",
+    "lead_gene": "TOP2A",
+    "lead_conditions": "Small Cell Lung Cancer",
     "best_score": 1.0,
     "n_scoreable": 8,
     "n_gs": 8,
     "is_oncology": true,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "HALO",
@@ -1034,7 +1142,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "HRTX",
@@ -1044,14 +1154,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE3",
-    "lead_gene": "ATP4A",
-    "lead_conditions": "Postoperative Pain",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ICPT",
@@ -1068,24 +1180,28 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "IMGN",
     "company": "ImmunoGen Inc",
     "return_pct": 651.4,
     "outcome": "acquired",
-    "is_gs": true,
+    "is_gs": false,
     "mendelian_only": false,
-    "lead_score": 0.953196,
-    "lead_phase": "PHASE3",
-    "lead_gene": "TOP1",
-    "lead_conditions": "Epithelial Ovarian Cancer | Fallopian Tube Cancer | Ovarian Cancer | Primary Peritoneal Carcinoma",
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.953196,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "INCY",
@@ -1093,16 +1209,18 @@ const COMPANIES = [
     "return_pct": 17.86,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.889774,
+    "mendelian_only": true,
+    "lead_score": 0.841301,
     "lead_phase": "PHASE3",
-    "lead_gene": "TYMS",
-    "lead_conditions": "Head and Neck Cancer",
+    "lead_gene": "CSF1R",
+    "lead_conditions": "Renal Cell Carcinoma (RCC)",
     "best_score": 1.0,
     "n_scoreable": 97,
     "n_gs": 96,
     "is_oncology": true,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "INSM",
@@ -1119,7 +1237,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "IONS",
@@ -1136,7 +1256,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "IOVA",
@@ -1153,7 +1275,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "IRWD",
@@ -1170,7 +1294,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "KDMN",
@@ -1178,16 +1304,18 @@ const COMPANIES = [
     "return_pct": 171.4,
     "outcome": "acquired",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.990562,
+    "mendelian_only": true,
+    "lead_score": 0.983426,
     "lead_phase": "PHASE2",
     "lead_gene": "EGFR",
-    "lead_conditions": "ADPKD | Autosomal Dominant Polycystic Kidney",
+    "lead_conditions": "Brain Tumor | Glioblastoma | Recurrent Glioblastoma",
     "best_score": 0.990562,
     "n_scoreable": 8,
     "n_gs": 8,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "KOD",
@@ -1197,14 +1325,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE2/PHASE3",
-    "lead_gene": "VEGFA",
-    "lead_conditions": "Wet Macular Degeneration",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "KPTI",
@@ -1212,16 +1342,18 @@ const COMPANIES = [
     "return_pct": -96.56,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.982855,
-    "lead_phase": "PHASE3",
-    "lead_gene": "XPO1",
-    "lead_conditions": "Endometrial Cancer",
+    "mendelian_only": true,
+    "lead_score": 0.896514,
+    "lead_phase": "PHASE1/PHASE2",
+    "lead_gene": "TUBB1",
+    "lead_conditions": "Multiple Myeloma",
     "best_score": 0.982855,
     "n_scoreable": 7,
     "n_gs": 7,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "KRTX",
@@ -1238,7 +1370,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "KRYS",
@@ -1255,7 +1389,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "KURA",
@@ -1272,7 +1408,9 @@ const COMPANIES = [
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "LGND",
@@ -1289,7 +1427,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "MDCO",
@@ -1306,7 +1446,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "MDGL",
@@ -1316,14 +1458,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE3",
-    "lead_gene": "THRB",
-    "lead_conditions": "NASH - Nonalcoholic Steatohepatitis",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "MGNX",
@@ -1331,16 +1475,18 @@ const COMPANIES = [
     "return_pct": -84.23,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.981276,
-    "lead_phase": "PHASE3",
+    "mendelian_only": true,
+    "lead_score": 0.7,
+    "lead_phase": "PHASE2/PHASE3",
     "lead_gene": "ERBB2",
-    "lead_conditions": "HER-2 Positive Breast Cancer | Metastatic Neoplasm",
+    "lead_conditions": "Gastric Cancer | Gastroesophageal Junction Cancer | HER2-positive Gastric Cancer",
     "best_score": 0.981276,
     "n_scoreable": 5,
     "n_gs": 4,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "MNTA",
@@ -1357,7 +1503,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "MRNA",
@@ -1374,7 +1522,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "MRTX",
@@ -1391,7 +1541,9 @@ const COMPANIES = [
     "n_scoreable": 9,
     "n_gs": 9,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "MYGN",
@@ -1399,16 +1551,18 @@ const COMPANIES = [
     "return_pct": -84.31,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.953196,
+    "mendelian_only": true,
+    "lead_score": 0.865457,
     "lead_phase": "PHASE3",
-    "lead_gene": "PARP1",
-    "lead_conditions": "Ovarian Neoplasms",
+    "lead_gene": "SRD5A1",
+    "lead_conditions": "Metastatic Castration-resistant Prostate Cancer",
     "best_score": 0.953196,
     "n_scoreable": 6,
     "n_gs": 6,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "NBIX",
@@ -1425,7 +1579,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "NXTC",
@@ -1442,7 +1598,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "OPK",
@@ -1459,7 +1617,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "mendelian_ancestor"
   },
   {
     "ticker": "PBYI",
@@ -1467,33 +1627,37 @@ const COMPANIES = [
     "return_pct": -18.98,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.981276,
+    "mendelian_only": true,
+    "lead_score": 0.65,
     "lead_phase": "PHASE2",
-    "lead_gene": "EGFR",
+    "lead_gene": "ERBB4",
     "lead_conditions": "Early Stage HER2+ Breast Cancer",
     "best_score": 0.981276,
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "PGNX",
     "company": "Progenics Pharmaceuticals Inc",
     "return_pct": 3.6,
     "outcome": "acquired",
-    "is_gs": true,
+    "is_gs": false,
     "mendelian_only": false,
-    "lead_score": 0.827461,
-    "lead_phase": "PHASE2",
-    "lead_gene": "AR",
-    "lead_conditions": "Cancer of the Prostate | Castration-resistant Prostate Cancer | Metastatic Prostate Cancer | Progressive mCRPC | Prostat",
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.827461,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "PRNB",
@@ -1510,7 +1674,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "PRTA",
@@ -1527,7 +1693,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "PTCT",
@@ -1537,14 +1705,16 @@ const COMPANIES = [
     "is_gs": true,
     "mendelian_only": false,
     "lead_score": 0.949607,
-    "lead_phase": "PHASE3",
-    "lead_gene": "NR3C1",
+    "lead_phase": "PHASE2",
+    "lead_gene": "DMD",
     "lead_conditions": "Duchenne Muscular Dystrophy",
     "best_score": 0.949607,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "PTLA",
@@ -1554,14 +1724,16 @@ const COMPANIES = [
     "is_gs": false,
     "mendelian_only": false,
     "lead_score": null,
-    "lead_phase": "PHASE1",
-    "lead_gene": "F10",
-    "lead_conditions": "Hepatic Impairment",
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": null,
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "RARE",
@@ -1578,7 +1750,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "RARX",
@@ -1595,7 +1769,9 @@ const COMPANIES = [
     "n_scoreable": 17,
     "n_gs": 17,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "RCKT",
@@ -1612,7 +1788,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "RDUS",
@@ -1629,7 +1807,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "REGN",
@@ -1646,7 +1826,9 @@ const COMPANIES = [
     "n_scoreable": 16,
     "n_gs": 15,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "RYTM",
@@ -1663,7 +1845,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_2020"
+    "score_source": "ot_2020",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "SAGE",
@@ -1680,7 +1864,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "SGEN",
@@ -1697,7 +1883,9 @@ const COMPANIES = [
     "n_scoreable": 8,
     "n_gs": 8,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "SGMO",
@@ -1714,24 +1902,28 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "SPPI",
     "company": "Spectrum Pharmaceuticals Inc",
     "return_pct": -74.0,
     "outcome": "acquired",
-    "is_gs": true,
+    "is_gs": false,
     "mendelian_only": false,
-    "lead_score": 0.941624,
-    "lead_phase": "PHASE3",
-    "lead_gene": "CSF3R",
-    "lead_conditions": "Breast Cancer | Neutropenia",
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.941624,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "SRPT",
@@ -1748,7 +1940,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "STML",
@@ -1765,7 +1959,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "TGTX",
@@ -1773,16 +1969,18 @@ const COMPANIES = [
     "return_pct": 170.17,
     "outcome": "active",
     "is_gs": true,
-    "mendelian_only": false,
-    "lead_score": 0.928274,
-    "lead_phase": "PHASE3",
-    "lead_gene": "BTK",
-    "lead_conditions": "Chronic Lymphocytic Leukemia",
+    "mendelian_only": true,
+    "lead_score": 0.922222,
+    "lead_phase": "PHASE2/PHASE3",
+    "lead_gene": "BCL2",
+    "lead_conditions": "Chronic Lymphocytic Leukemia | Small Lymphocytic Lymphoma",
     "best_score": 0.970363,
     "n_scoreable": 8,
     "n_gs": 8,
     "is_oncology": true,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier1_ot2020"
   },
   {
     "ticker": "TPTX",
@@ -1799,7 +1997,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "UTHR",
@@ -1816,7 +2016,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "tier2_mendelian"
   },
   {
     "ticker": "VCEL",
@@ -1833,7 +2035,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "VKTX",
@@ -1850,24 +2054,28 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "VNDA",
     "company": "Vanda Pharmaceuticals Inc",
     "return_pct": -64.4,
     "outcome": "active",
-    "is_gs": true,
+    "is_gs": false,
     "mendelian_only": false,
-    "lead_score": 0.794844,
-    "lead_phase": "PHASE3",
-    "lead_gene": "MTNR1A",
-    "lead_conditions": "Jet Lag Type Insomnia",
+    "lead_score": null,
+    "lead_phase": null,
+    "lead_gene": null,
+    "lead_conditions": null,
     "best_score": 0.794844,
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "VRTX",
@@ -1884,7 +2092,9 @@ const COMPANIES = [
     "n_scoreable": 3,
     "n_gs": 3,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "VYGR",
@@ -1901,7 +2111,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "XLRN",
@@ -1918,7 +2130,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "XNCR",
@@ -1935,7 +2149,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "XON",
@@ -1952,7 +2168,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "YMAB",
@@ -1969,7 +2187,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ZIOP",
@@ -1986,7 +2206,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "BLUE",
@@ -1995,15 +2217,17 @@ const COMPANIES = [
     "outcome": "bankrupt",
     "is_gs": true,
     "mendelian_only": false,
-    "lead_score": 0.547138,
-    "lead_phase": "PHASE2",
-    "lead_gene": "TNFRSF17",
-    "lead_conditions": "Relapsed/Refractory Multiple Myeloma",
+    "lead_score": 0.846459,
+    "lead_phase": "PHASE1/PHASE2",
+    "lead_gene": "HBB",
+    "lead_conditions": "Sickle Cell Disease",
     "best_score": 0.846459,
     "n_scoreable": 2,
     "n_gs": 2,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "BOLD",
@@ -2020,7 +2244,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "CCXI",
@@ -2037,7 +2263,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "FGEN",
@@ -2054,7 +2282,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "FIXX",
@@ -2071,7 +2301,9 @@ const COMPANIES = [
     "n_scoreable": 1,
     "n_gs": 1,
     "is_oncology": false,
-    "score_source": "ot_recent_fallback"
+    "score_source": "ot_recent_fallback",
+    "confirmed_pre_2020": true,
+    "validation_method": "bq_direct"
   },
   {
     "ticker": "IMMU",
@@ -2088,7 +2320,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": true,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "NTLA",
@@ -2105,7 +2339,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "RGNX",
@@ -2122,7 +2358,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "RTRX",
@@ -2139,7 +2377,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "CDNA",
@@ -2156,7 +2396,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "EXAS",
@@ -2173,7 +2415,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "NTRA",
@@ -2190,7 +2434,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "NVTA",
@@ -2207,7 +2453,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "TWST",
@@ -2224,7 +2472,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "VCYT",
@@ -2241,7 +2491,9 @@ const COMPANIES = [
     "n_scoreable": 0,
     "n_gs": 0,
     "is_oncology": false,
-    "score_source": null
+    "score_source": null,
+    "confirmed_pre_2020": false,
+    "validation_method": null
   }
 ];
 
@@ -2259,18 +2511,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 922.55,
-      "nongs": 893.05,
+      "gs": 923.41,
+      "nongs": 894.05,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -7.75,
-      "nongs_dd": -10.7,
+      "gs_dd": -7.66,
+      "nongs_dd": -10.6,
       "xbi_dd": -18.21
     },
     {
       "date": "2020-06-30",
-      "gs": 1190.53,
-      "nongs": 1100.27,
+      "gs": 1208.1,
+      "nongs": 1090.6,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -2279,18 +2531,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1113.65,
-      "nongs": 1165.3,
+      "gs": 1127.81,
+      "nongs": 1150.18,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -6.46,
+      "gs_dd": -6.65,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39
     },
     {
       "date": "2020-12-31",
-      "gs": 1283.68,
-      "nongs": 1598.45,
+      "gs": 1305.86,
+      "nongs": 1561.01,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -2299,212 +2551,212 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1258.86,
-      "nongs": 1597.88,
+      "gs": 1277.33,
+      "nongs": 1562.19,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -1.93,
-      "nongs_dd": -0.04,
+      "gs_dd": -2.18,
+      "nongs_dd": 0.0,
       "xbi_dd": -3.62
     },
     {
       "date": "2021-06-30",
-      "gs": 1276.64,
-      "nongs": 1823.67,
+      "gs": 1289.42,
+      "nongs": 1780.59,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -0.55,
+      "gs_dd": -1.26,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8
     },
     {
       "date": "2021-09-30",
-      "gs": 1209.31,
-      "nongs": 1839.36,
+      "gs": 1222.1,
+      "nongs": 1791.39,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -5.79,
+      "gs_dd": -6.41,
       "nongs_dd": 0.0,
       "xbi_dd": -10.68
     },
     {
       "date": "2021-12-31",
-      "gs": 1215.39,
-      "nongs": 1612.62,
+      "gs": 1230.14,
+      "nongs": 1576.67,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -5.32,
-      "nongs_dd": -12.33,
+      "gs_dd": -5.8,
+      "nongs_dd": -11.99,
       "xbi_dd": -20.45
     },
     {
       "date": "2022-03-31",
-      "gs": 1173.49,
-      "nongs": 1310.1,
+      "gs": 1190.03,
+      "nongs": 1287.97,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -8.58,
-      "nongs_dd": -28.77,
+      "gs_dd": -8.87,
+      "nongs_dd": -28.1,
       "xbi_dd": -36.14
     },
     {
       "date": "2022-06-30",
-      "gs": 1085.82,
-      "nongs": 1138.09,
+      "gs": 1096.75,
+      "nongs": 1125.7,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -15.41,
-      "nongs_dd": -38.13,
+      "gs_dd": -16.01,
+      "nongs_dd": -37.16,
       "xbi_dd": -47.23
     },
     {
       "date": "2022-09-30",
-      "gs": 1166.12,
-      "nongs": 1139.34,
+      "gs": 1196.43,
+      "nongs": 1115.06,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -9.16,
-      "nongs_dd": -38.06,
+      "gs_dd": -8.38,
+      "nongs_dd": -37.75,
       "xbi_dd": -43.64
     },
     {
       "date": "2022-12-31",
-      "gs": 1210.34,
-      "nongs": 1250.26,
+      "gs": 1246.35,
+      "nongs": 1217.2,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -5.71,
-      "nongs_dd": -32.03,
+      "gs_dd": -4.56,
+      "nongs_dd": -32.05,
       "xbi_dd": -41.03
     },
     {
       "date": "2023-03-31",
-      "gs": 1158.37,
-      "nongs": 1184.26,
+      "gs": 1191.44,
+      "nongs": 1154.53,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -9.76,
-      "nongs_dd": -35.62,
+      "gs_dd": -8.76,
+      "nongs_dd": -35.55,
       "xbi_dd": -45.85
     },
     {
       "date": "2023-06-30",
-      "gs": 1114.7,
-      "nongs": 1203.76,
+      "gs": 1144.97,
+      "nongs": 1172.7,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -13.16,
-      "nongs_dd": -34.56,
+      "gs_dd": -12.32,
+      "nongs_dd": -34.54,
       "xbi_dd": -40.88
     },
     {
       "date": "2023-09-30",
-      "gs": 1036.66,
-      "nongs": 1094.26,
+      "gs": 1063.97,
+      "nongs": 1067.59,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -19.24,
-      "nongs_dd": -40.51,
+      "gs_dd": -18.52,
+      "nongs_dd": -40.4,
       "xbi_dd": -48.12
     },
     {
       "date": "2023-12-31",
-      "gs": 1293.7,
-      "nongs": 1144.69,
+      "gs": 1338.84,
+      "nongs": 1114.96,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -37.77,
+      "nongs_dd": -37.76,
       "xbi_dd": -36.54
     },
     {
       "date": "2024-03-31",
-      "gs": 1366.94,
-      "nongs": 1322.53,
+      "gs": 1304.94,
+      "nongs": 1378.03,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": 0.0,
-      "nongs_dd": -28.1,
+      "gs_dd": -2.53,
+      "nongs_dd": -23.07,
       "xbi_dd": -32.56
     },
     {
       "date": "2024-06-30",
-      "gs": 1325.59,
-      "nongs": 1266.21,
-      "xbi": 982.96,
+      "gs": 1259.09,
+      "nongs": 1326.42,
+      "xbi": 982.95,
       "sp500": 1676.1,
-      "gs_dd": -3.03,
-      "nongs_dd": -31.16,
+      "gs_dd": -5.96,
+      "nongs_dd": -25.96,
       "xbi_dd": -34.03
     },
     {
       "date": "2024-09-30",
-      "gs": 1390.69,
-      "nongs": 1260.75,
+      "gs": 1329.7,
+      "nongs": 1320.41,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": 0.0,
-      "nongs_dd": -31.46,
+      "gs_dd": -0.68,
+      "nongs_dd": -26.29,
       "xbi_dd": -29.69
     },
     {
       "date": "2024-12-31",
-      "gs": 1332.32,
-      "nongs": 1184.01,
+      "gs": 1267.21,
+      "nongs": 1248.28,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -4.2,
-      "nongs_dd": -35.63,
+      "gs_dd": -5.35,
+      "nongs_dd": -30.32,
       "xbi_dd": -35.91
     },
     {
       "date": "2025-03-31",
-      "gs": 1347.63,
-      "nongs": 1101.54,
+      "gs": 1283.78,
+      "nongs": 1170.48,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -3.1,
-      "nongs_dd": -40.11,
+      "gs_dd": -4.11,
+      "nongs_dd": -34.66,
       "xbi_dd": -42.28
     },
     {
       "date": "2025-06-30",
-      "gs": 1328.71,
-      "nongs": 1088.99,
+      "gs": 1263.41,
+      "nongs": 1158.78,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -4.46,
-      "nongs_dd": -40.8,
+      "gs_dd": -5.63,
+      "nongs_dd": -35.31,
       "xbi_dd": -40.97
     },
     {
       "date": "2025-09-30",
-      "gs": 1468.85,
-      "nongs": 1200.89,
+      "gs": 1412.93,
+      "nongs": 1264.34,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -34.71,
+      "nongs_dd": -29.42,
       "xbi_dd": -28.66
     },
     {
       "date": "2025-12-31",
-      "gs": 1562.72,
-      "nongs": 1365.78,
+      "gs": 1509.2,
+      "nongs": 1423.02,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -25.75,
+      "nongs_dd": -20.56,
       "xbi_dd": -12.9
     },
     {
       "date": "2026-02-21",
-      "gs": 1566.59,
-      "nongs": 1323.62,
+      "gs": 1516.59,
+      "nongs": 1380.56,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -28.04,
+      "nongs_dd": -22.93,
       "xbi_dd": -10.86
     }
   ],
@@ -2521,18 +2773,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 920.56,
-      "nongs": 896.13,
+      "gs": 919.86,
+      "nongs": 898.34,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -7.94,
-      "nongs_dd": -10.39,
+      "gs_dd": -8.01,
+      "nongs_dd": -10.17,
       "xbi_dd": -18.21
     },
     {
       "date": "2020-06-30",
-      "gs": 1200.65,
-      "nongs": 1095.41,
+      "gs": 1223.98,
+      "nongs": 1085.21,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -2541,18 +2793,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1119.41,
-      "nongs": 1157.92,
+      "gs": 1137.26,
+      "nongs": 1141.85,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -6.77,
+      "gs_dd": -7.09,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39
     },
     {
       "date": "2020-12-31",
-      "gs": 1299.3,
-      "nongs": 1570.6,
+      "gs": 1329.82,
+      "nongs": 1528.87,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -2561,212 +2813,212 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1275.78,
-      "nongs": 1567.81,
+      "gs": 1301.98,
+      "nongs": 1527.88,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -1.81,
-      "nongs_dd": -0.18,
+      "gs_dd": -2.09,
+      "nongs_dd": -0.06,
       "xbi_dd": -3.62
     },
     {
       "date": "2021-06-30",
-      "gs": 1295.19,
-      "nongs": 1782.84,
+      "gs": 1315.75,
+      "nongs": 1733.56,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -0.32,
+      "gs_dd": -1.06,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8
     },
     {
       "date": "2021-09-30",
-      "gs": 1222.35,
-      "nongs": 1799.66,
+      "gs": 1241.17,
+      "nongs": 1745.45,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -5.92,
+      "gs_dd": -6.67,
       "nongs_dd": 0.0,
       "xbi_dd": -10.68
     },
     {
       "date": "2021-12-31",
-      "gs": 1228.84,
-      "nongs": 1582.98,
+      "gs": 1249.93,
+      "nongs": 1542.58,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -5.42,
-      "nongs_dd": -12.04,
+      "gs_dd": -6.01,
+      "nongs_dd": -11.62,
       "xbi_dd": -20.45
     },
     {
       "date": "2022-03-31",
-      "gs": 1187.64,
-      "nongs": 1291.53,
+      "gs": 1209.92,
+      "nongs": 1267.6,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -8.59,
-      "nongs_dd": -28.23,
+      "gs_dd": -9.02,
+      "nongs_dd": -27.38,
       "xbi_dd": -36.14
     },
     {
       "date": "2022-06-30",
-      "gs": 1100.76,
-      "nongs": 1122.6,
+      "gs": 1115.47,
+      "nongs": 1110.05,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -15.28,
-      "nongs_dd": -37.62,
+      "gs_dd": -16.12,
+      "nongs_dd": -36.4,
       "xbi_dd": -47.23
     },
     {
       "date": "2022-09-30",
-      "gs": 1182.95,
-      "nongs": 1125.72,
+      "gs": 1200.66,
+      "nongs": 1116.41,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -8.95,
-      "nongs_dd": -37.45,
+      "gs_dd": -9.71,
+      "nongs_dd": -36.04,
       "xbi_dd": -43.64
     },
     {
       "date": "2022-12-31",
-      "gs": 1230.98,
-      "nongs": 1230.3,
+      "gs": 1255.98,
+      "nongs": 1211.59,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -5.26,
-      "nongs_dd": -31.64,
+      "gs_dd": -5.55,
+      "nongs_dd": -30.59,
       "xbi_dd": -41.03
     },
     {
       "date": "2023-03-31",
-      "gs": 1177.37,
-      "nongs": 1166.37,
+      "gs": 1198.09,
+      "nongs": 1151.59,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -9.38,
-      "nongs_dd": -35.19,
+      "gs_dd": -9.91,
+      "nongs_dd": -34.02,
       "xbi_dd": -45.85
     },
     {
       "date": "2023-06-30",
-      "gs": 1148.45,
-      "nongs": 1170.05,
+      "gs": 1166.73,
+      "nongs": 1154.85,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -11.61,
-      "nongs_dd": -34.98,
+      "gs_dd": -12.26,
+      "nongs_dd": -33.84,
       "xbi_dd": -40.88
     },
     {
       "date": "2023-09-30",
-      "gs": 1066.93,
-      "nongs": 1065.03,
+      "gs": 1080.26,
+      "nongs": 1055.17,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -17.88,
-      "nongs_dd": -40.82,
+      "gs_dd": -18.77,
+      "nongs_dd": -39.55,
       "xbi_dd": -48.12
     },
     {
       "date": "2023-12-31",
-      "gs": 1337.42,
-      "nongs": 1112.87,
+      "gs": 1375.91,
+      "nongs": 1099.6,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -38.16,
+      "nongs_dd": -37.0,
       "xbi_dd": -36.54
     },
     {
       "date": "2024-03-31",
-      "gs": 1415.25,
-      "nongs": 1281.97,
+      "gs": 1340.44,
+      "nongs": 1347.34,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": 0.0,
-      "nongs_dd": -28.77,
+      "gs_dd": -2.58,
+      "nongs_dd": -22.81,
       "xbi_dd": -32.56
     },
     {
       "date": "2024-06-30",
-      "gs": 1372.41,
-      "nongs": 1227.64,
-      "xbi": 982.96,
+      "gs": 1291.87,
+      "nongs": 1298.1,
+      "xbi": 982.95,
       "sp500": 1676.1,
-      "gs_dd": -3.03,
-      "nongs_dd": -31.78,
+      "gs_dd": -6.11,
+      "nongs_dd": -25.63,
       "xbi_dd": -34.03
     },
     {
       "date": "2024-09-30",
-      "gs": 1441.46,
-      "nongs": 1221.86,
+      "gs": 1368.41,
+      "nongs": 1291.9,
       "xbi": 1047.68,
       "sp500": 1768.8,
-      "gs_dd": 0.0,
-      "nongs_dd": -32.11,
+      "gs_dd": -0.55,
+      "nongs_dd": -25.98,
       "xbi_dd": -29.69
     },
     {
       "date": "2024-12-31",
-      "gs": 1379.81,
-      "nongs": 1148.84,
+      "gs": 1300.94,
+      "nongs": 1224.03,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -4.28,
-      "nongs_dd": -36.16,
+      "gs_dd": -5.45,
+      "nongs_dd": -29.87,
       "xbi_dd": -35.91
     },
     {
       "date": "2025-03-31",
-      "gs": 1396.42,
-      "nongs": 1069.6,
+      "gs": 1319.32,
+      "nongs": 1150.12,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -3.12,
-      "nongs_dd": -40.57,
+      "gs_dd": -4.11,
+      "nongs_dd": -34.11,
       "xbi_dd": -42.28
     },
     {
       "date": "2025-06-30",
-      "gs": 1376.61,
-      "nongs": 1057.54,
+      "gs": 1297.52,
+      "nongs": 1139.01,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -4.5,
-      "nongs_dd": -41.24,
+      "gs_dd": -5.7,
+      "nongs_dd": -34.74,
       "xbi_dd": -40.97
     },
     {
       "date": "2025-09-30",
-      "gs": 1523.03,
-      "nongs": 1165.17,
+      "gs": 1457.2,
+      "nongs": 1239.4,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -35.26,
+      "nongs_dd": -28.99,
       "xbi_dd": -28.66
     },
     {
       "date": "2025-12-31",
-      "gs": 1621.89,
-      "nongs": 1322.5,
+      "gs": 1560.82,
+      "nongs": 1389.09,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -26.51,
+      "nongs_dd": -20.42,
       "xbi_dd": -12.9
     },
     {
       "date": "2026-02-21",
-      "gs": 1625.75,
-      "nongs": 1282.4,
+      "gs": 1568.54,
+      "nongs": 1349.15,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -28.74,
+      "nongs_dd": -22.7,
       "xbi_dd": -10.86
     }
   ],
@@ -2783,18 +3035,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 931.39,
-      "nongs": 893.39,
+      "gs": 935.68,
+      "nongs": 893.0,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -6.86,
-      "nongs_dd": -10.66,
+      "gs_dd": -6.43,
+      "nongs_dd": -10.7,
       "xbi_dd": -18.21
     },
     {
       "date": "2020-06-30",
-      "gs": 1232.83,
-      "nongs": 1092.25,
+      "gs": 1211.16,
+      "nongs": 1110.25,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -2803,18 +3055,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1131.72,
-      "nongs": 1144.74,
+      "gs": 1107.47,
+      "nongs": 1156.68,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -8.2,
+      "gs_dd": -8.56,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39
     },
     {
       "date": "2020-12-31",
-      "gs": 1350.71,
-      "nongs": 1498.8,
+      "gs": 1351.39,
+      "nongs": 1491.32,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -2823,212 +3075,212 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1315.03,
-      "nongs": 1500.1,
+      "gs": 1294.48,
+      "nongs": 1501.82,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": -2.64,
+      "gs_dd": -4.21,
       "nongs_dd": 0.0,
       "xbi_dd": -3.62
     },
     {
       "date": "2021-06-30",
-      "gs": 1330.52,
-      "nongs": 1687.75,
+      "gs": 1323.67,
+      "nongs": 1674.08,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -1.49,
+      "gs_dd": -2.05,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8
     },
     {
       "date": "2021-09-30",
-      "gs": 1258.29,
-      "nongs": 1690.58,
+      "gs": 1263.48,
+      "nongs": 1667.06,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -6.84,
-      "nongs_dd": 0.0,
+      "gs_dd": -6.51,
+      "nongs_dd": -0.42,
       "xbi_dd": -10.68
     },
     {
       "date": "2021-12-31",
-      "gs": 1277.14,
-      "nongs": 1500.46,
+      "gs": 1305.58,
+      "nongs": 1474.96,
       "xbi": 1185.34,
       "sp500": 1462.98,
-      "gs_dd": -5.45,
-      "nongs_dd": -11.25,
+      "gs_dd": -3.39,
+      "nongs_dd": -11.89,
       "xbi_dd": -20.45
     },
     {
       "date": "2022-03-31",
-      "gs": 1218.53,
-      "nongs": 1257.37,
+      "gs": 1257.58,
+      "nongs": 1235.27,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -9.79,
-      "nongs_dd": -25.62,
+      "gs_dd": -6.94,
+      "nongs_dd": -26.21,
       "xbi_dd": -36.14
     },
     {
       "date": "2022-06-30",
-      "gs": 1114.66,
-      "nongs": 1111.02,
+      "gs": 1156.77,
+      "nongs": 1089.37,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -17.48,
-      "nongs_dd": -34.28,
+      "gs_dd": -14.4,
+      "nongs_dd": -34.93,
       "xbi_dd": -47.23
     },
     {
       "date": "2022-09-30",
-      "gs": 1166.51,
-      "nongs": 1144.2,
+      "gs": 1230.88,
+      "nongs": 1111.92,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -13.64,
-      "nongs_dd": -32.32,
+      "gs_dd": -8.92,
+      "nongs_dd": -33.58,
       "xbi_dd": -43.64
     },
     {
       "date": "2022-12-31",
-      "gs": 1192.99,
-      "nongs": 1253.0,
+      "gs": 1247.68,
+      "nongs": 1221.78,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -11.68,
-      "nongs_dd": -25.88,
+      "gs_dd": -7.67,
+      "nongs_dd": -27.02,
       "xbi_dd": -41.03
     },
     {
       "date": "2023-03-31",
-      "gs": 1146.26,
-      "nongs": 1186.55,
+      "gs": 1198.76,
+      "nongs": 1157.41,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -15.14,
-      "nongs_dd": -29.81,
+      "gs_dd": -11.29,
+      "nongs_dd": -30.86,
       "xbi_dd": -45.85
     },
     {
       "date": "2023-06-30",
-      "gs": 1131.19,
-      "nongs": 1177.04,
+      "gs": 1184.99,
+      "nongs": 1146.96,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -16.25,
-      "nongs_dd": -30.38,
+      "gs_dd": -12.31,
+      "nongs_dd": -31.49,
       "xbi_dd": -40.88
     },
     {
       "date": "2023-09-30",
-      "gs": 1044.13,
-      "nongs": 1078.88,
+      "gs": 1093.81,
+      "nongs": 1051.47,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -22.7,
-      "nongs_dd": -36.18,
+      "gs_dd": -19.06,
+      "nongs_dd": -37.19,
       "xbi_dd": -48.12
     },
     {
       "date": "2023-12-31",
-      "gs": 1316.09,
-      "nongs": 1159.67,
+      "gs": 1375.68,
+      "nongs": 1136.33,
       "xbi": 945.52,
       "sp500": 1464.1,
-      "gs_dd": -2.56,
-      "nongs_dd": -31.4,
+      "gs_dd": 0.0,
+      "nongs_dd": -32.12,
       "xbi_dd": -36.54
     },
     {
       "date": "2024-03-31",
-      "gs": 1414.72,
-      "nongs": 1302.54,
+      "gs": 1318.31,
+      "nongs": 1357.89,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": 0.0,
-      "nongs_dd": -22.95,
+      "gs_dd": -4.17,
+      "nongs_dd": -18.89,
       "xbi_dd": -32.56
     },
     {
       "date": "2024-06-30",
-      "gs": 1385.76,
-      "nongs": 1241.69,
-      "xbi": 982.96,
+      "gs": 1292.32,
+      "nongs": 1297.04,
+      "xbi": 982.95,
       "sp500": 1676.1,
-      "gs_dd": -2.05,
-      "nongs_dd": -26.55,
+      "gs_dd": -6.06,
+      "nongs_dd": -22.52,
       "xbi_dd": -34.03
     },
     {
       "date": "2024-09-30",
-      "gs": 1461.72,
-      "nongs": 1243.16,
+      "gs": 1379.37,
+      "nongs": 1296.35,
       "xbi": 1047.68,
       "sp500": 1768.8,
       "gs_dd": 0.0,
-      "nongs_dd": -26.47,
+      "nongs_dd": -22.56,
       "xbi_dd": -29.69
     },
     {
       "date": "2024-12-31",
-      "gs": 1393.12,
-      "nongs": 1176.0,
+      "gs": 1303.1,
+      "nongs": 1233.1,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -4.69,
-      "nongs_dd": -30.44,
+      "gs_dd": -5.53,
+      "nongs_dd": -26.34,
       "xbi_dd": -35.91
     },
     {
       "date": "2025-03-31",
-      "gs": 1409.62,
-      "nongs": 1111.39,
+      "gs": 1325.66,
+      "nongs": 1169.26,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -3.56,
-      "nongs_dd": -34.26,
+      "gs_dd": -3.89,
+      "nongs_dd": -30.16,
       "xbi_dd": -42.28
     },
     {
       "date": "2025-06-30",
-      "gs": 1399.44,
-      "nongs": 1092.42,
+      "gs": 1313.36,
+      "nongs": 1151.81,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -4.26,
-      "nongs_dd": -35.38,
+      "gs_dd": -4.79,
+      "nongs_dd": -31.2,
       "xbi_dd": -40.97
     },
     {
       "date": "2025-09-30",
-      "gs": 1584.05,
-      "nongs": 1183.23,
+      "gs": 1508.95,
+      "nongs": 1241.45,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -30.01,
+      "nongs_dd": -25.84,
       "xbi_dd": -28.66
     },
     {
       "date": "2025-12-31",
-      "gs": 1673.68,
-      "nongs": 1337.16,
+      "gs": 1605.3,
+      "nongs": 1388.81,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -20.91,
+      "nongs_dd": -17.04,
       "xbi_dd": -12.9
     },
     {
       "date": "2026-02-21",
-      "gs": 1680.63,
-      "nongs": 1301.91,
+      "gs": 1610.27,
+      "nongs": 1356.61,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -22.99,
+      "nongs_dd": -18.96,
       "xbi_dd": -10.86
     }
   ],
@@ -3045,18 +3297,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-03-31",
-      "gs": 946.95,
-      "nongs": 895.26,
+      "gs": 971.58,
+      "nongs": 892.5,
       "xbi": 817.91,
       "sp500": 793.34,
-      "gs_dd": -5.3,
-      "nongs_dd": -10.47,
+      "gs_dd": -2.84,
+      "nongs_dd": -10.75,
       "xbi_dd": -18.21
     },
     {
       "date": "2020-06-30",
-      "gs": 1300.91,
-      "nongs": 1095.87,
+      "gs": 1323.9,
+      "nongs": 1102.52,
       "xbi": 1182.59,
       "sp500": 951.64,
       "gs_dd": 0.0,
@@ -3065,18 +3317,18 @@ const QUARTERLY = {
     },
     {
       "date": "2020-09-30",
-      "gs": 1154.85,
-      "nongs": 1135.21,
+      "gs": 1160.63,
+      "nongs": 1135.0,
       "xbi": 1178.0,
       "sp500": 1032.28,
-      "gs_dd": -11.23,
+      "gs_dd": -12.33,
       "nongs_dd": 0.0,
       "xbi_dd": -0.39
     },
     {
       "date": "2020-12-31",
-      "gs": 1307.04,
-      "nongs": 1486.22,
+      "gs": 1346.83,
+      "nongs": 1466.32,
       "xbi": 1490.05,
       "sp500": 1152.93,
       "gs_dd": 0.0,
@@ -3085,212 +3337,212 @@ const QUARTERLY = {
     },
     {
       "date": "2021-03-31",
-      "gs": 1311.42,
-      "nongs": 1468.45,
+      "gs": 1314.99,
+      "nongs": 1458.38,
       "xbi": 1436.15,
       "sp500": 1219.48,
-      "gs_dd": 0.0,
-      "nongs_dd": -1.2,
+      "gs_dd": -2.36,
+      "nongs_dd": -0.54,
       "xbi_dd": -3.62
     },
     {
       "date": "2021-06-30",
-      "gs": 1310.36,
-      "nongs": 1630.79,
+      "gs": 1335.87,
+      "nongs": 1605.94,
       "xbi": 1433.5,
       "sp500": 1319.12,
-      "gs_dd": -0.08,
+      "gs_dd": -0.81,
       "nongs_dd": 0.0,
       "xbi_dd": -3.8
     },
     {
       "date": "2021-09-30",
-      "gs": 1253.89,
-      "nongs": 1615.41,
+      "gs": 1306.3,
+      "nongs": 1581.81,
       "xbi": 1330.91,
       "sp500": 1322.2,
-      "gs_dd": -4.39,
-      "nongs_dd": -0.94,
+      "gs_dd": -3.01,
+      "nongs_dd": -1.5,
       "xbi_dd": -10.68
     },
     {
       "date": "2021-12-31",
-      "gs": 1339.6,
-      "nongs": 1441.39,
+      "gs": 1457.75,
+      "nongs": 1407.6,
       "xbi": 1185.34,
       "sp500": 1462.98,
       "gs_dd": 0.0,
-      "nongs_dd": -11.61,
+      "nongs_dd": -12.35,
       "xbi_dd": -20.45
     },
     {
       "date": "2022-03-31",
-      "gs": 1227.36,
-      "nongs": 1247.73,
+      "gs": 1347.79,
+      "nongs": 1218.2,
       "xbi": 951.58,
       "sp500": 1390.61,
-      "gs_dd": -8.38,
-      "nongs_dd": -23.49,
+      "gs_dd": -7.54,
+      "nongs_dd": -24.14,
       "xbi_dd": -36.14
     },
     {
       "date": "2022-06-30",
-      "gs": 1146.85,
-      "nongs": 1101.6,
+      "gs": 1287.02,
+      "nongs": 1071.28,
       "xbi": 786.31,
       "sp500": 1161.93,
-      "gs_dd": -14.39,
-      "nongs_dd": -32.45,
+      "gs_dd": -11.71,
+      "nongs_dd": -33.29,
       "xbi_dd": -47.23
     },
     {
       "date": "2022-09-30",
-      "gs": 1221.1,
-      "nongs": 1131.09,
+      "gs": 1376.73,
+      "nongs": 1099.76,
       "xbi": 839.78,
       "sp500": 1100.61,
-      "gs_dd": -8.85,
-      "nongs_dd": -30.64,
+      "gs_dd": -5.56,
+      "nongs_dd": -31.52,
       "xbi_dd": -43.64
     },
     {
       "date": "2022-12-31",
-      "gs": 1253.27,
-      "nongs": 1223.54,
+      "gs": 1406.74,
+      "nongs": 1189.17,
       "xbi": 878.74,
       "sp500": 1178.54,
-      "gs_dd": -6.44,
-      "nongs_dd": -24.97,
+      "gs_dd": -3.5,
+      "nongs_dd": -25.95,
       "xbi_dd": -41.03
     },
     {
       "date": "2023-03-31",
-      "gs": 1192.75,
-      "nongs": 1164.89,
+      "gs": 1320.58,
+      "nongs": 1136.45,
       "xbi": 806.85,
       "sp500": 1261.36,
-      "gs_dd": -10.96,
-      "nongs_dd": -28.57,
+      "gs_dd": -9.41,
+      "nongs_dd": -29.23,
       "xbi_dd": -45.85
     },
     {
       "date": "2023-06-30",
-      "gs": 1171.84,
-      "nongs": 1156.22,
+      "gs": 1304.04,
+      "nongs": 1126.03,
       "xbi": 880.88,
       "sp500": 1366.05,
-      "gs_dd": -12.52,
-      "nongs_dd": -29.1,
+      "gs_dd": -10.54,
+      "nongs_dd": -29.88,
       "xbi_dd": -40.88
     },
     {
       "date": "2023-09-30",
-      "gs": 1110.2,
-      "nongs": 1052.08,
+      "gs": 1245.98,
+      "nongs": 1023.55,
       "xbi": 773.1,
       "sp500": 1316.22,
-      "gs_dd": -17.12,
-      "nongs_dd": -35.49,
+      "gs_dd": -14.53,
+      "nongs_dd": -36.26,
       "xbi_dd": -48.12
     },
     {
       "date": "2023-12-31",
-      "gs": 1513.47,
-      "nongs": 1125.68,
+      "gs": 1718.83,
+      "nongs": 1100.17,
       "xbi": 945.52,
       "sp500": 1464.1,
       "gs_dd": 0.0,
-      "nongs_dd": -30.97,
+      "nongs_dd": -31.49,
       "xbi_dd": -36.54
     },
     {
       "date": "2024-03-31",
-      "gs": 1700.93,
-      "nongs": 1232.96,
+      "gs": 1652.48,
+      "nongs": 1271.89,
       "xbi": 1004.82,
       "sp500": 1612.83,
-      "gs_dd": 0.0,
-      "nongs_dd": -24.39,
+      "gs_dd": -3.86,
+      "nongs_dd": -20.8,
       "xbi_dd": -32.56
     },
     {
       "date": "2024-06-30",
-      "gs": 1636.3,
-      "nongs": 1188.91,
-      "xbi": 982.96,
+      "gs": 1650.22,
+      "nongs": 1211.95,
+      "xbi": 982.95,
       "sp500": 1676.1,
-      "gs_dd": -3.8,
-      "nongs_dd": -27.1,
+      "gs_dd": -3.99,
+      "nongs_dd": -24.53,
       "xbi_dd": -34.03
     },
     {
       "date": "2024-09-30",
-      "gs": 1718.68,
-      "nongs": 1201.56,
+      "gs": 1756.04,
+      "nongs": 1223.19,
       "xbi": 1047.68,
       "sp500": 1768.8,
       "gs_dd": 0.0,
-      "nongs_dd": -26.32,
+      "nongs_dd": -23.83,
       "xbi_dd": -29.69
     },
     {
       "date": "2024-12-31",
-      "gs": 1581.28,
-      "nongs": 1155.65,
+      "gs": 1603.16,
+      "nongs": 1175.54,
       "xbi": 955.03,
       "sp500": 1805.37,
-      "gs_dd": -7.99,
-      "nongs_dd": -29.14,
+      "gs_dd": -8.71,
+      "nongs_dd": -26.8,
       "xbi_dd": -35.91
     },
     {
       "date": "2025-03-31",
-      "gs": 1588.95,
-      "nongs": 1108.16,
+      "gs": 1629.17,
+      "nongs": 1126.98,
       "xbi": 860.06,
       "sp500": 1722.56,
-      "gs_dd": -7.55,
-      "nongs_dd": -32.05,
+      "gs_dd": -7.22,
+      "nongs_dd": -29.82,
       "xbi_dd": -42.28
     },
     {
       "date": "2025-06-30",
-      "gs": 1583.75,
-      "nongs": 1089.19,
+      "gs": 1625.91,
+      "nongs": 1108.36,
       "xbi": 879.55,
       "sp500": 1904.62,
-      "gs_dd": -7.85,
-      "nongs_dd": -33.21,
+      "gs_dd": -7.41,
+      "nongs_dd": -30.98,
       "xbi_dd": -40.97
     },
     {
       "date": "2025-09-30",
-      "gs": 1867.44,
-      "nongs": 1165.65,
+      "gs": 1966.16,
+      "nongs": 1183.7,
       "xbi": 1063.01,
       "sp500": 2053.03,
       "gs_dd": 0.0,
-      "nongs_dd": -28.52,
+      "nongs_dd": -26.29,
       "xbi_dd": -28.66
     },
     {
       "date": "2025-12-31",
-      "gs": 2009.2,
-      "nongs": 1291.91,
+      "gs": 2141.99,
+      "nongs": 1302.86,
       "xbi": 1297.82,
       "sp500": 2101.23,
       "gs_dd": 0.0,
-      "nongs_dd": -20.78,
+      "nongs_dd": -18.87,
       "xbi_dd": -12.9
     },
     {
       "date": "2026-02-21",
-      "gs": 2023.46,
-      "nongs": 1261.84,
+      "gs": 2157.6,
+      "nongs": 1275.08,
       "xbi": 1328.16,
       "sp500": 2120.88,
       "gs_dd": 0.0,
-      "nongs_dd": -22.62,
+      "nongs_dd": -20.6,
       "xbi_dd": -10.86
     }
   ]
