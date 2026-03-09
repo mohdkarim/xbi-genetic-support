@@ -81,9 +81,9 @@ function renderTableBody() {
 
   const fmtSource = (p) => {
     if (p.source === 'ot_2020') return 'OT 20.02';
-    if (p.validation === 'mendelian' || p.validation === 'mendelian_ancestor')
+    if (p.validation === 'mendelian_ancestor')
       return 'OT API <span class="source-tag tag-mendelian">Mendelian</span>';
-    if (p.validation === 'bq_confirmed' && p.evidence_date)
+    if ((p.validation === 'bq_confirmed' || p.validation === 'bq_post_2020') && p.evidence_date)
       return `OT API <span class="source-tag tag-bq">${p.evidence_date}</span>`;
     return 'OT API';
   };

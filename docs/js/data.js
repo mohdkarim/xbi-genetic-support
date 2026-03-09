@@ -3816,8 +3816,8 @@ const PIPELINE = {
       "score": 0.952,
       "source": "ot_recent_fallback",
       "drug": "Venetoclax",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-01-04"
     },
     {
       "gene": "IL4R",
@@ -3827,8 +3827,8 @@ const PIPELINE = {
       "score": 0.951,
       "source": "ot_recent_fallback",
       "drug": "Dupilumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-11-04"
     },
     {
       "gene": "BCL2",
@@ -3937,8 +3937,8 @@ const PIPELINE = {
       "score": 0.919,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "DRD2",
@@ -3992,8 +3992,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-12-23"
     },
     {
       "gene": "JAK3",
@@ -4003,8 +4003,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1995-09-01"
     },
     {
       "gene": "BCL2L1",
@@ -4080,8 +4080,8 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2012-08-05"
     },
     {
       "gene": "JAK2",
@@ -4124,8 +4124,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "veliparib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2018-11-14"
     },
     {
       "gene": "IL23A",
@@ -4256,8 +4256,8 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "TYK2",
@@ -4333,8 +4333,8 @@ const PIPELINE = {
       "score": 0.699,
       "source": "ot_recent_fallback",
       "drug": "Linaclotide",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1985-08-01"
     },
     {
       "gene": "BCL2",
@@ -4542,8 +4542,8 @@ const PIPELINE = {
       "score": 0.491,
       "source": "ot_recent_fallback",
       "drug": "rovalpituzumab tesirine",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "JAK1",
@@ -4553,8 +4553,8 @@ const PIPELINE = {
       "score": 0.473,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "JAK2",
@@ -4608,8 +4608,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "BCL2",
@@ -4641,8 +4641,8 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2025-08-06"
     },
     {
       "gene": "TYK2",
@@ -4652,8 +4652,8 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Upadacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2025-04-07"
     },
     {
       "gene": "BCL2",
@@ -4663,8 +4663,8 @@ const PIPELINE = {
       "score": 0.012,
       "source": "ot_recent_fallback",
       "drug": "venetoclax",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2013-06-16"
     }
   ],
   "ACAD": [
@@ -4687,8 +4687,8 @@ const PIPELINE = {
       "score": 0.919,
       "source": "ot_recent_fallback",
       "drug": "Pimavanserin 34 mg",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1998-06-01"
     },
     {
       "gene": "HTR2A",
@@ -4722,8 +4722,8 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "Danicopan",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1984-12-01"
     }
   ],
   "AGIO": [
@@ -4816,8 +4816,8 @@ const PIPELINE = {
       "score": 0.257,
       "source": "ot_recent_fallback",
       "drug": "ISIS 681257",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "VKORC1",
@@ -4886,8 +4886,8 @@ const PIPELINE = {
       "score": 0.926,
       "source": "ot_recent_fallback",
       "drug": "Lumasiran",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2014-07-27"
     },
     {
       "gene": "SERPINA1",
@@ -4897,8 +4897,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "ALN-AAT02",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1978-01-01"
     },
     {
       "gene": "ALAS1",
@@ -4908,8 +4908,8 @@ const PIPELINE = {
       "score": 0.566,
       "source": "ot_recent_fallback",
       "drug": "givosiran (ALN-AS1)",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-12-26"
     }
   ],
   "ALXN": [
@@ -4921,8 +4921,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Ravulizumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1995-05-01"
     },
     {
       "gene": "CFD",
@@ -4932,8 +4932,8 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "Danicopan",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1984-12-01"
     }
   ],
   "AMGN": [
@@ -4978,8 +4978,8 @@ const PIPELINE = {
       "score": 0.987,
       "source": "ot_recent_fallback",
       "drug": "Ezetimibe",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-12-06"
     },
     {
       "gene": "TOP2A",
@@ -5011,8 +5011,8 @@ const PIPELINE = {
       "score": 0.973,
       "source": "ot_recent_fallback",
       "drug": "Romiplostim",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "CSF3R",
@@ -5055,8 +5055,8 @@ const PIPELINE = {
       "score": 0.948,
       "source": "ot_recent_fallback",
       "drug": "Denosumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-04-08"
     },
     {
       "gene": "CSF3R",
@@ -5110,8 +5110,8 @@ const PIPELINE = {
       "score": 0.889,
       "source": "ot_recent_fallback",
       "drug": "Romosozumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-02-01"
     },
     {
       "gene": "CD19",
@@ -5132,8 +5132,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "TUBB1",
@@ -5187,8 +5187,8 @@ const PIPELINE = {
       "score": 0.696,
       "source": "ot_recent_fallback",
       "drug": "blinatumomab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1991-07-01"
     },
     {
       "gene": "EPOR",
@@ -5209,8 +5209,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Sotorasib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1984-08-01"
     },
     {
       "gene": "PDE4B",
@@ -5264,8 +5264,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Erenumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2006-04-01"
     },
     {
       "gene": "CD19",
@@ -5297,8 +5297,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Apremilast",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "EGFR",
@@ -5308,8 +5308,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Afatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2001-06-21"
     },
     {
       "gene": "ERBB2",
@@ -5319,8 +5319,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Afatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2004-09-01"
     },
     {
       "gene": "CDK4",
@@ -5330,8 +5330,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Palbociclib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1969-12-01"
     },
     {
       "gene": "MAP2K1",
@@ -5341,8 +5341,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-02-01"
     },
     {
       "gene": "TNFSF11",
@@ -5352,8 +5352,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Denosumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2007-07-15"
     },
     {
       "gene": "TOP2A",
@@ -5407,8 +5407,8 @@ const PIPELINE = {
       "score": 0.474,
       "source": "ot_recent_fallback",
       "drug": "Erenumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2022-05-19"
     },
     {
       "gene": "PDE4B",
@@ -5418,8 +5418,8 @@ const PIPELINE = {
       "score": 0.431,
       "source": "ot_recent_fallback",
       "drug": "Apremilast",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "CD19",
@@ -5521,8 +5521,8 @@ const PIPELINE = {
       "score": 0.886,
       "source": "ot_recent_fallback",
       "drug": "APL-2",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1972-12-01"
     }
   ],
   "ARNA": [
@@ -5534,8 +5534,8 @@ const PIPELINE = {
       "score": 0.898,
       "source": "ot_recent_fallback",
       "drug": "Etrasimod",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "S1PR5",
@@ -5556,8 +5556,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Etrasimod",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2014-02-10"
     },
     {
       "gene": "S1PR1",
@@ -5602,8 +5602,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "ARQ 197",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1997-05-01"
     }
   ],
   "BBIO": [
@@ -5628,8 +5628,8 @@ const PIPELINE = {
       "score": 0.905,
       "source": "ot_recent_fallback",
       "drug": "BCX7353",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2025-09-18"
     },
     {
       "gene": "HMGCR",
@@ -5650,8 +5650,8 @@ const PIPELINE = {
       "score": 0.703,
       "source": "ot_recent_fallback",
       "drug": "Digoxin",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2018-03-01"
     }
   ],
   "BIIB": [
@@ -5696,8 +5696,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "SAGE-217",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-05-06"
     },
     {
       "gene": "ITGA4",
@@ -5707,8 +5707,8 @@ const PIPELINE = {
       "score": 0.832,
       "source": "ot_recent_fallback",
       "drug": "natalizumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2021-08-26"
     },
     {
       "gene": "KEAP1",
@@ -5729,8 +5729,8 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "SAGE-217",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-07-18"
     },
     {
       "gene": "PPARG",
@@ -5740,8 +5740,8 @@ const PIPELINE = {
       "score": 0.559,
       "source": "ot_recent_fallback",
       "drug": "Bardoxolone methyl",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-12-08"
     },
     {
       "gene": "SCN9A",
@@ -5762,8 +5762,8 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "SAGE-217",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-05-06"
     }
   ],
   "BMRN": [
@@ -6034,8 +6034,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-02-01"
     },
     {
       "gene": "MAP2K2",
@@ -6045,8 +6045,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Trametinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2013-12-05"
     }
   ],
   "CPRX": [
@@ -6058,8 +6058,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Amifampridine Phosphate",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2018-08-16"
     }
   ],
   "CYTK": [
@@ -6183,8 +6183,8 @@ const PIPELINE = {
       "score": 0.953,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "FLT4",
@@ -6216,8 +6216,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "ABL1",
@@ -6227,8 +6227,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-08-01"
     }
   ],
   "EPZM": [
@@ -6308,8 +6308,8 @@ const PIPELINE = {
       "score": 0.987,
       "source": "ot_recent_fallback",
       "drug": "Ezetimibe 10mg",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-12-06"
     },
     {
       "gene": "ACLY",
@@ -6330,8 +6330,8 @@ const PIPELINE = {
       "score": 0.638,
       "source": "ot_recent_fallback",
       "drug": "Ezetimibe",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-12-06"
     },
     {
       "gene": "ACLY",
@@ -6374,8 +6374,8 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "Ezetimibe",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "ACLY",
@@ -6431,8 +6431,8 @@ const PIPELINE = {
       "score": 0.943,
       "source": "ot_recent_fallback",
       "drug": "Sorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "MET",
@@ -6475,8 +6475,8 @@ const PIPELINE = {
       "score": 0.943,
       "source": "ot_recent_fallback",
       "drug": "Sorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2025-03-11"
     },
     {
       "gene": "FLT3",
@@ -6486,8 +6486,8 @@ const PIPELINE = {
       "score": 0.943,
       "source": "ot_recent_fallback",
       "drug": "Sorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "BRAF",
@@ -6519,8 +6519,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Cabozantinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-03-01"
     },
     {
       "gene": "MET",
@@ -6530,8 +6530,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Cabozantinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1997-05-01"
     },
     {
       "gene": "KDR",
@@ -6644,8 +6644,8 @@ const PIPELINE = {
       "score": 0.984,
       "source": "ot_recent_fallback",
       "drug": "Entospletinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-03-29"
     },
     {
       "gene": "ESR1",
@@ -6666,8 +6666,8 @@ const PIPELINE = {
       "score": 0.967,
       "source": "ot_recent_fallback",
       "drug": "Cidofovir",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "PIK3CD",
@@ -6688,8 +6688,8 @@ const PIPELINE = {
       "score": 0.956,
       "source": "ot_recent_fallback",
       "drug": "Entospletinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2025-03-11"
     },
     {
       "gene": "PIK3CD",
@@ -6776,8 +6776,8 @@ const PIPELINE = {
       "score": 0.928,
       "source": "ot_recent_fallback",
       "drug": "Entospletinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-03-29"
     },
     {
       "gene": "BTK",
@@ -6853,8 +6853,8 @@ const PIPELINE = {
       "score": 0.919,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "TYK2",
@@ -6886,8 +6886,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-12-23"
     },
     {
       "gene": "JAK3",
@@ -6897,8 +6897,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1995-09-01"
     },
     {
       "gene": "BTK",
@@ -6930,8 +6930,8 @@ const PIPELINE = {
       "score": 0.902,
       "source": "ot_recent_fallback",
       "drug": "Magrolimab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "PTGIR",
@@ -7084,8 +7084,8 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "Filgotinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "TYK2",
@@ -7128,8 +7128,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Magrolimab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "JAK2",
@@ -7150,8 +7150,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Allopurinol",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1997-05-01"
     },
     {
       "gene": "MMP9",
@@ -7194,8 +7194,8 @@ const PIPELINE = {
       "score": 0.195,
       "source": "ot_recent_fallback",
       "drug": "Eleclazine",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2018-08-13"
     },
     {
       "gene": "SCN5A",
@@ -7273,8 +7273,8 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2012-08-05"
     },
     {
       "gene": "CDK4",
@@ -7284,8 +7284,8 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Trilaciclib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1969-12-01"
     },
     {
       "gene": "CDK6",
@@ -7295,8 +7295,8 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Trilaciclib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2013-08-04"
     }
   ],
   "ICPT": [
@@ -7444,8 +7444,8 @@ const PIPELINE = {
       "score": 0.978,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-10-18"
     },
     {
       "gene": "JAK1",
@@ -7499,8 +7499,8 @@ const PIPELINE = {
       "score": 0.96,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2020-09-04"
     },
     {
       "gene": "PIK3CD",
@@ -7543,8 +7543,8 @@ const PIPELINE = {
       "score": 0.949,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "JAK1",
@@ -7587,8 +7587,8 @@ const PIPELINE = {
       "score": 0.942,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "DDR2",
@@ -7653,8 +7653,8 @@ const PIPELINE = {
       "score": 0.913,
       "source": "ot_recent_fallback",
       "drug": "Itacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-12-23"
     },
     {
       "gene": "ARG1",
@@ -7697,8 +7697,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "KDR",
@@ -7741,8 +7741,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "JAK1",
@@ -7763,8 +7763,8 @@ const PIPELINE = {
       "score": 0.856,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "PDGFRA",
@@ -7774,8 +7774,8 @@ const PIPELINE = {
       "score": 0.856,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "CSF1R",
@@ -7807,8 +7807,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Retifanlimab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2019-03-28"
     },
     {
       "gene": "AR",
@@ -7818,8 +7818,8 @@ const PIPELINE = {
       "score": 0.794,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2022-08-01"
     },
     {
       "gene": "TOP2A",
@@ -7851,8 +7851,8 @@ const PIPELINE = {
       "score": 0.762,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "JAK1",
@@ -7862,8 +7862,8 @@ const PIPELINE = {
       "score": 0.76,
       "source": "ot_recent_fallback",
       "drug": "itacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2016-12-23"
     },
     {
       "gene": "FGFR2",
@@ -7917,8 +7917,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Itacitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2017-01-19"
     },
     {
       "gene": "ARG1",
@@ -7939,8 +7939,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1980-09-01"
     },
     {
       "gene": "JAK1",
@@ -7950,8 +7950,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2017-01-19"
     },
     {
       "gene": "JAK2",
@@ -7961,8 +7961,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2005-03-01"
     },
     {
       "gene": "JAK3",
@@ -7972,8 +7972,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1995-09-01"
     },
     {
       "gene": "TYK2",
@@ -7983,8 +7983,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2006-11-01"
     },
     {
       "gene": "PDGFRB",
@@ -8005,8 +8005,8 @@ const PIPELINE = {
       "score": 0.661,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2025-08-06"
     },
     {
       "gene": "JAK1",
@@ -8038,8 +8038,8 @@ const PIPELINE = {
       "score": 0.648,
       "source": "ot_recent_fallback",
       "drug": "INCB050465",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "SRD5A1",
@@ -8049,8 +8049,8 @@ const PIPELINE = {
       "score": 0.643,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "JAK1",
@@ -8104,8 +8104,8 @@ const PIPELINE = {
       "score": 0.604,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2025-04-07"
     },
     {
       "gene": "BTK",
@@ -8115,8 +8115,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Ibrutinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1973-05-01"
     },
     {
       "gene": "ABL1",
@@ -8126,8 +8126,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Imatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-08-01"
     },
     {
       "gene": "KIT",
@@ -8137,8 +8137,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Imatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1992-02-01"
     },
     {
       "gene": "ARG1",
@@ -8170,8 +8170,8 @@ const PIPELINE = {
       "score": 0.516,
       "source": "ot_recent_fallback",
       "drug": "Abiraterone",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2015-09-07"
     },
     {
       "gene": "PIK3CD",
@@ -8247,8 +8247,8 @@ const PIPELINE = {
       "score": 0.486,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "IDO1",
@@ -8258,8 +8258,8 @@ const PIPELINE = {
       "score": 0.471,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "LOXL2",
@@ -8302,8 +8302,8 @@ const PIPELINE = {
       "score": 0.304,
       "source": "ot_recent_fallback",
       "drug": "Epacadostat",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "ARG1",
@@ -8313,8 +8313,8 @@ const PIPELINE = {
       "score": 0.284,
       "source": "ot_recent_fallback",
       "drug": "INCB001158",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2020-05-06"
     },
     {
       "gene": "JAK3",
@@ -8335,8 +8335,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Ruxolitinib cream",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "TYMS",
@@ -8346,8 +8346,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "5-Fluorouracil",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2017-06-12"
     },
     {
       "gene": "FGFR2",
@@ -8357,8 +8357,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2007-05-27"
     },
     {
       "gene": "FGFR3",
@@ -8368,8 +8368,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1995-03-01"
     },
     {
       "gene": "FGFR1",
@@ -8379,8 +8379,8 @@ const PIPELINE = {
       "score": 0.279,
       "source": "ot_recent_fallback",
       "drug": "Pemigatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1980-09-01"
     },
     {
       "gene": "TYK2",
@@ -8425,8 +8425,8 @@ const PIPELINE = {
       "score": 0.257,
       "source": "ot_recent_fallback",
       "drug": "Volanesorsen",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2023-01-18"
     }
   ],
   "IRWD": [
@@ -8484,8 +8484,8 @@ const PIPELINE = {
       "score": 0.642,
       "source": "ot_recent_fallback",
       "drug": "Tesevatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1993-12-01"
     },
     {
       "gene": "ROCK2",
@@ -8506,8 +8506,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Belumosudil",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "ATP4A",
@@ -8528,8 +8528,8 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "Belumosudil",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     }
   ],
   "KPTI": [
@@ -8563,8 +8563,8 @@ const PIPELINE = {
       "score": 0.897,
       "source": "ot_recent_fallback",
       "drug": "Belantamab Mafodotin",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2008-10-10"
     },
     {
       "gene": "CD38",
@@ -8631,8 +8631,8 @@ const PIPELINE = {
       "score": 0.182,
       "source": "ot_recent_fallback",
       "drug": "Tipifarnib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     }
   ],
   "MDCO": [
@@ -8701,8 +8701,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "margetuximab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2004-09-01"
     },
     {
       "gene": "PDCD1",
@@ -8723,8 +8723,8 @@ const PIPELINE = {
       "score": 0.012,
       "source": "ot_recent_fallback",
       "drug": "Margetuximab 15 mg",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2004-09-01"
     }
   ],
   "MRTX": [
@@ -8769,8 +8769,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "MGCD265",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1997-05-01"
     },
     {
       "gene": "KDR",
@@ -8780,8 +8780,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-03-01"
     },
     {
       "gene": "MET",
@@ -8791,8 +8791,8 @@ const PIPELINE = {
       "score": 0.796,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1997-05-01"
     },
     {
       "gene": "KDR",
@@ -8802,8 +8802,8 @@ const PIPELINE = {
       "score": 0.779,
       "source": "ot_recent_fallback",
       "drug": "Sitravatinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-03-01"
     },
     {
       "gene": "AXL",
@@ -8870,8 +8870,8 @@ const PIPELINE = {
       "score": 0.865,
       "source": "ot_recent_fallback",
       "drug": "abiraterone acetate",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "CYP17A1",
@@ -8931,8 +8931,8 @@ const PIPELINE = {
       "score": 0.981,
       "source": "ot_recent_fallback",
       "drug": "Neratinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2025-01-03"
     },
     {
       "gene": "ERBB2",
@@ -9104,8 +9104,8 @@ const PIPELINE = {
       "score": 0.953,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "DMD",
@@ -9126,8 +9126,8 @@ const PIPELINE = {
       "score": 0.947,
       "source": "ot_recent_fallback",
       "drug": "Blisibimod",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2024-07-19"
     },
     {
       "gene": "FLT4",
@@ -9159,8 +9159,8 @@ const PIPELINE = {
       "score": 0.669,
       "source": "ot_recent_fallback",
       "drug": "Bupivacaine",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2023-01-18"
     },
     {
       "gene": "ABL1",
@@ -9170,8 +9170,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Rebastinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-08-01"
     },
     {
       "gene": "TNFSF13B",
@@ -9249,8 +9249,8 @@ const PIPELINE = {
       "score": 0.951,
       "source": "ot_recent_fallback",
       "drug": "Dupilumab",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2021-11-04"
     },
     {
       "gene": "IL33",
@@ -9293,8 +9293,8 @@ const PIPELINE = {
       "score": 0.827,
       "source": "ot_recent_fallback",
       "drug": "REGN475",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_post_2020",
+      "evidence_date": "2025-04-09"
     },
     {
       "gene": "PDCD1",
@@ -9304,8 +9304,8 @@ const PIPELINE = {
       "score": 0.806,
       "source": "ot_recent_fallback",
       "drug": "REGN2810",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2019-03-28"
     },
     {
       "gene": "VEGFA",
@@ -9326,8 +9326,8 @@ const PIPELINE = {
       "score": 0.426,
       "source": "ot_recent_fallback",
       "drug": "Warfarin",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2020-06-08"
     },
     {
       "gene": "PTGS2",
@@ -9383,8 +9383,8 @@ const PIPELINE = {
       "score": 0.698,
       "source": "ot_recent_fallback",
       "drug": "Setmelanotide",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1998-10-01"
     },
     {
       "gene": "MC4R",
@@ -9394,8 +9394,8 @@ const PIPELINE = {
       "score": 0.608,
       "source": "ot_recent_fallback",
       "drug": "Setmelanotide",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1998-10-01"
     }
   ],
   "SGEN": [
@@ -9429,8 +9429,8 @@ const PIPELINE = {
       "score": 0.684,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1980-09-01"
     },
     {
       "gene": "CDK4",
@@ -9440,8 +9440,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Palbociclib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1969-12-01"
     },
     {
       "gene": "ABL1",
@@ -9451,8 +9451,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Regorafenib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-08-01"
     },
     {
       "gene": "KIT",
@@ -9462,8 +9462,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1992-02-01"
     },
     {
       "gene": "KDR",
@@ -9473,8 +9473,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2002-03-01"
     },
     {
       "gene": "FLT1",
@@ -9484,8 +9484,8 @@ const PIPELINE = {
       "score": 0.547,
       "source": "ot_recent_fallback",
       "drug": "Sunitinib",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2024-07-19"
     }
   ],
   "SGMO": [
@@ -9637,8 +9637,8 @@ const PIPELINE = {
       "score": 0.857,
       "source": "ot_recent_fallback",
       "drug": "Topotecan",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "2012-08-05"
     },
     {
       "gene": "PTGIR",
@@ -9696,8 +9696,8 @@ const PIPELINE = {
       "score": 0.819,
       "source": "ot_recent_fallback",
       "drug": "Lumacaftor",
-      "validation": "",
-      "evidence_date": ""
+      "validation": "bq_confirmed",
+      "evidence_date": "1989-02-01"
     }
   ],
   "BLUE": [

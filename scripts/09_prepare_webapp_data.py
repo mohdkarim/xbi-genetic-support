@@ -172,15 +172,15 @@ def build_pipeline():
                 bq_method = row.get("bq_validation_method", "")
                 validation = ""
                 if row["ot_score_source"] == "ot_recent_fallback":
-                    if bq_method == "tier2_mendelian":
-                        validation = "mendelian"
-                    elif bq_method == "bq_direct":
+                    if bq_method in ("bq_direct", "bq_ancestor", "bq_descendant"):
                         validation = "bq_confirmed"
                     elif bq_method == "mendelian_ancestor":
                         validation = "mendelian_ancestor"
-                # Evidence date for BQ-confirmed and ancestor rows
+                    elif bq_method == "bq_post_2020":
+                        validation = "bq_post_2020"
+                # Evidence date for any BQ-verified rows
                 evidence_date = ""
-                if bq_method in ("bq_direct", "mendelian_ancestor"):
+                if bq_method in ("bq_direct", "bq_ancestor", "bq_descendant", "mendelian_ancestor", "bq_post_2020"):
                     evidence_date = row.get("bq_earliest_date", "")
                 pairs[key] = {
                     "gene": row["gene_symbol"],
