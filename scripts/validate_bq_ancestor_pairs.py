@@ -1,6 +1,6 @@
 """
 validate_bq_ancestor_pairs.py
-Re-validate 6 bq_ancestor gene-disease pairs using BQ association tables
+Re-validate all bq_ancestor gene-disease pairs using BQ association tables
 and disease ontology — fully reproducible, no cached API scores.
 
 Approach per pair:
@@ -48,12 +48,19 @@ BROAD_ANCESTORS = {
 }
 
 PAIRS = [
+    # Original 6 (from first validation round)
     {"ticker": "ACHN", "gene": "CFD",   "ensembl_id": "ENSG00000197766", "disease_efo": "MONDO_0013892", "disease_name": "C3 Glomerulonephritis"},
     {"ticker": "ALXN", "gene": "C5",    "ensembl_id": "ENSG00000106804", "disease_efo": "MONDO_0016244", "disease_name": "aHUS"},
     {"ticker": "CPRX", "gene": "PDE4B", "ensembl_id": "ENSG00000184588", "disease_efo": "EFO_0008525",   "disease_name": "Spinal Muscular Atrophy"},
     {"ticker": "KPTI", "gene": "TUBB1", "ensembl_id": "ENSG00000101162", "disease_efo": "EFO_0001378",   "disease_name": "Multiple Myeloma"},
     {"ticker": "SGEN", "gene": "FGFR1", "ensembl_id": "ENSG00000077782", "disease_efo": "EFO_0000335",   "disease_name": "Non-Hodgkin Lymphoma"},
     {"ticker": "UTHR", "gene": "TOP1",  "ensembl_id": "ENSG00000198900", "disease_efo": "EFO_0000702",   "disease_name": "Small Cell Lung Cancer"},
+    # Additional 5 bq_ancestor lead programs
+    {"ticker": "ACAD", "gene": "HTR2A", "ensembl_id": "ENSG00000102468", "disease_efo": "MONDO_0004975", "disease_name": "Alzheimer Disease"},
+    {"ticker": "ARQL", "gene": "MET",   "ensembl_id": "ENSG00000105976", "disease_efo": "EFO_0000178",   "disease_name": "Gastric Cancer"},
+    {"ticker": "GTHX", "gene": "CDK4",  "ensembl_id": "ENSG00000135446", "disease_efo": "EFO_0000702",   "disease_name": "Small Cell Lung Cancer"},
+    {"ticker": "INCY", "gene": "PDCD1", "ensembl_id": "ENSG00000188389", "disease_efo": "EFO_0003060",   "disease_name": "Bladder Cancer"},
+    {"ticker": "MRTX", "gene": "MET",   "ensembl_id": "ENSG00000105976", "disease_efo": "EFO_0003060",   "disease_name": "Bladder Cancer"},
 ]
 
 
