@@ -18,64 +18,64 @@ const RESULTS = {
     "all_universe_median_pct": -5.4
   },
   "primary": {
-    "n_gs": 56,
-    "n_nongs": 70,
-    "gs_mean": 55.47,
-    "nongs_mean": 37.93,
-    "gs_median": 1.75,
-    "nongs_median": -31.34,
-    "gs_ci_lo": 17.78,
-    "gs_ci_hi": 95.34,
-    "nongs_ci_lo": -0.44,
-    "nongs_ci_hi": 82.75,
-    "gs_dollar": 1554.66,
-    "nongs_dollar": 1379.27,
-    "alpha_vs_nongs": 17.54,
-    "alpha_vs_xbi": 22.65
+    "n_gs": 55,
+    "n_nongs": 71,
+    "gs_mean": 56.44,
+    "nongs_mean": 37.42,
+    "gs_median": 1.8,
+    "nongs_median": -25.89,
+    "gs_ci_lo": 16.06,
+    "gs_ci_hi": 98.08,
+    "nongs_ci_lo": -2.14,
+    "nongs_ci_hi": 81.45,
+    "gs_dollar": 1564.44,
+    "nongs_dollar": 1374.16,
+    "alpha_vs_nongs": 19.03,
+    "alpha_vs_xbi": 23.62
   },
   "mendelian": {
-    "n_gs": 32,
-    "n_nongs": 94,
-    "gs_mean": 67.73,
-    "nongs_mean": 38.23,
-    "gs_median": 18.31,
-    "nongs_median": -18.08,
-    "gs_ci_lo": 17.68,
-    "gs_ci_hi": 124.0,
-    "nongs_ci_lo": 6.1,
-    "nongs_ci_hi": 73.25,
-    "alpha": 29.5
+    "n_gs": 31,
+    "n_nongs": 95,
+    "gs_mean": 69.86,
+    "nongs_mean": 37.85,
+    "gs_median": 18.77,
+    "nongs_median": -16.7,
+    "gs_ci_lo": 15.48,
+    "gs_ci_hi": 128.76,
+    "nongs_ci_lo": 6.49,
+    "nongs_ci_hi": 73.29,
+    "alpha": 32.01
   },
   "sensitivity": [
     {
       "label": "0.10",
-      "n_gs": 56,
-      "n_nongs": 70,
-      "gs_mean": 55.47,
-      "nongs_mean": 37.93,
-      "alpha": 17.54,
-      "gs_ci_lo": 17.78,
-      "gs_ci_hi": 95.34
+      "n_gs": 55,
+      "n_nongs": 71,
+      "gs_mean": 56.44,
+      "nongs_mean": 37.42,
+      "alpha": 19.02,
+      "gs_ci_lo": 16.06,
+      "gs_ci_hi": 98.08
     },
     {
       "label": "0.50",
-      "n_gs": 52,
-      "n_nongs": 74,
-      "gs_mean": 61.15,
-      "nongs_mean": 34.88,
-      "alpha": 26.27,
-      "gs_ci_lo": 19.29,
-      "gs_ci_hi": 105.09
+      "n_gs": 51,
+      "n_nongs": 75,
+      "gs_mean": 62.32,
+      "nongs_mean": 34.44,
+      "alpha": 27.88,
+      "gs_ci_lo": 18.86,
+      "gs_ci_hi": 105.61
     },
     {
       "label": "0.80",
-      "n_gs": 42,
-      "n_nongs": 84,
-      "gs_mean": 64.99,
-      "nongs_mean": 36.09,
-      "alpha": 28.9,
-      "gs_ci_lo": 22.58,
-      "gs_ci_hi": 110.79
+      "n_gs": 41,
+      "n_nongs": 85,
+      "gs_mean": 66.53,
+      "nongs_mean": 35.69,
+      "alpha": 30.84,
+      "gs_ci_lo": 24.17,
+      "gs_ci_hi": 115.67
     },
     {
       "label": "0.95",
@@ -91,12 +91,12 @@ const RESULTS = {
   "subgroup": {
     "oncology_gs_mean_pct": 17.01,
     "oncology_nongs_mean_pct": 33.71,
-    "nonog_gs_mean_pct": 68.29,
-    "nonog_nongs_mean_pct": 39.5,
+    "nonog_gs_mean_pct": 69.91,
+    "nonog_nongs_mean_pct": 38.77,
     "n_oncology_gs": 14,
     "n_oncology_nongs": 19,
-    "n_nonog_gs": 42,
-    "n_nonog_nongs": 51
+    "n_nonog_gs": 41,
+    "n_nonog_nongs": 52
   }
 };
 
@@ -144,8 +144,8 @@ const COMPANIES = [
     "company": "Achillion Pharmaceuticals Inc",
     "return_pct": 1.7,
     "outcome": "acquired",
-    "is_gs": true,
-    "mendelian_only": true,
+    "is_gs": false,
+    "mendelian_only": false,
     "lead_score": 0.886059,
     "lead_phase": "PHASE2",
     "lead_gene": "CFD",
@@ -155,8 +155,8 @@ const COMPANIES = [
     "n_gs": 1,
     "is_oncology": false,
     "score_source": "ot_recent_fallback",
-    "confirmed_pre_2020": true,
-    "validation_method": "bq_ancestor"
+    "confirmed_pre_2020": false,
+    "validation_method": null
   },
   {
     "ticker": "ADVM",
@@ -3677,19 +3677,6 @@ const PIPELINE = {
       "drug": "Pimavanserin",
       "validation": "bq_confirmed",
       "evidence_date": "1998-06-01"
-    }
-  ],
-  "ACHN": [
-    {
-      "gene": "CFD",
-      "ensembl_id": "ENSG00000197766",
-      "disease": "C3 Glomerulonephritis",
-      "efo_id": "MONDO_0013892",
-      "score": 0.886,
-      "source": "ot_recent_fallback",
-      "drug": "Danicopan",
-      "validation": "bq_confirmed",
-      "evidence_date": "1984-12-01"
     }
   ],
   "AGIO": [

@@ -20,67 +20,67 @@
   "primary": {
     "gs_label": "XBI-G (lead program score > 0.10)",
     "nongs_label": "XBI-nonG",
-    "n_gs": 56,
-    "n_nongs": 70,
-    "gs_mean_return_pct": 55.47,
-    "nongs_mean_return_pct": 37.93,
-    "gs_median_return_pct": 1.75,
-    "nongs_median_return_pct": -31.34,
-    "gs_ci_lo": 17.78,
-    "gs_ci_hi": 95.34,
-    "nongs_ci_lo": -0.44,
-    "nongs_ci_hi": 82.75,
-    "gs_dollar_1000": 1554.66,
-    "nongs_dollar_1000": 1379.27,
-    "alpha_pct": 17.54
+    "n_gs": 55,
+    "n_nongs": 71,
+    "gs_mean_return_pct": 56.44,
+    "nongs_mean_return_pct": 37.42,
+    "gs_median_return_pct": 1.8,
+    "nongs_median_return_pct": -25.89,
+    "gs_ci_lo": 16.06,
+    "gs_ci_hi": 98.08,
+    "nongs_ci_lo": -2.14,
+    "nongs_ci_hi": 81.45,
+    "gs_dollar_1000": 1564.44,
+    "nongs_dollar_1000": 1374.16,
+    "alpha_pct": 19.03
   },
   "mendelian_only": {
     "gs_label": "XBI-G-Mendelian (lead program, Mendelian-only, zero look-ahead)",
     "nongs_label": "XBI-nonG-Mendelian",
-    "n_gs": 32,
-    "n_nongs": 94,
-    "gs_mean_return_pct": 67.73,
-    "nongs_mean_return_pct": 38.23,
-    "gs_median_return_pct": 18.31,
-    "nongs_median_return_pct": -18.08,
-    "gs_ci_lo": 17.68,
-    "gs_ci_hi": 124.0,
-    "nongs_ci_lo": 6.1,
-    "nongs_ci_hi": 73.25,
-    "gs_dollar_1000": 1677.3,
-    "nongs_dollar_1000": 1382.3,
-    "alpha_pct": 29.5
+    "n_gs": 31,
+    "n_nongs": 95,
+    "gs_mean_return_pct": 69.86,
+    "nongs_mean_return_pct": 37.85,
+    "gs_median_return_pct": 18.77,
+    "nongs_median_return_pct": -16.7,
+    "gs_ci_lo": 15.48,
+    "gs_ci_hi": 128.76,
+    "nongs_ci_lo": 6.49,
+    "nongs_ci_hi": 73.29,
+    "gs_dollar_1000": 1698.6,
+    "nongs_dollar_1000": 1378.46,
+    "alpha_pct": 32.01
   },
   "sensitivity": {
     "0.10": {
       "threshold": 0.1,
-      "n_gs": 56,
-      "n_nongs": 70,
-      "gs_mean_pct": 55.47,
-      "nongs_mean_pct": 37.93,
-      "alpha_pct": 17.54,
-      "gs_ci_lo": 17.78,
-      "gs_ci_hi": 95.34
+      "n_gs": 55,
+      "n_nongs": 71,
+      "gs_mean_pct": 56.44,
+      "nongs_mean_pct": 37.42,
+      "alpha_pct": 19.02,
+      "gs_ci_lo": 16.06,
+      "gs_ci_hi": 98.08
     },
     "0.50": {
       "threshold": 0.5,
-      "n_gs": 52,
-      "n_nongs": 74,
-      "gs_mean_pct": 61.15,
-      "nongs_mean_pct": 34.88,
-      "alpha_pct": 26.27,
-      "gs_ci_lo": 19.29,
-      "gs_ci_hi": 105.09
+      "n_gs": 51,
+      "n_nongs": 75,
+      "gs_mean_pct": 62.32,
+      "nongs_mean_pct": 34.44,
+      "alpha_pct": 27.88,
+      "gs_ci_lo": 18.86,
+      "gs_ci_hi": 105.61
     },
     "0.80": {
       "threshold": 0.8,
-      "n_gs": 42,
-      "n_nongs": 84,
-      "gs_mean_pct": 64.99,
-      "nongs_mean_pct": 36.09,
-      "alpha_pct": 28.9,
-      "gs_ci_lo": 22.58,
-      "gs_ci_hi": 110.79
+      "n_gs": 41,
+      "n_nongs": 85,
+      "gs_mean_pct": 66.53,
+      "nongs_mean_pct": 35.69,
+      "alpha_pct": 30.84,
+      "gs_ci_lo": 24.17,
+      "gs_ci_hi": 115.67
     },
     "0.95": {
       "threshold": 0.95,
@@ -96,12 +96,12 @@
   "subgroup": {
     "oncology_gs_mean_pct": 17.01,
     "oncology_nongs_mean_pct": 33.71,
-    "nonog_gs_mean_pct": 68.29,
-    "nonog_nongs_mean_pct": 39.5,
+    "nonog_gs_mean_pct": 69.91,
+    "nonog_nongs_mean_pct": 38.77,
     "n_oncology_gs": 14,
     "n_oncology_nongs": 19,
-    "n_nonog_gs": 42,
-    "n_nonog_nongs": 51
+    "n_nonog_gs": 41,
+    "n_nonog_nongs": 52
   },
   "gs_companies": [
     {
@@ -327,14 +327,6 @@
       "outcome": "acquired",
       "lead_score": 0.731806,
       "lead_phase": "PHASE4"
-    },
-    {
-      "ticker": "ACHN",
-      "company": "Achillion Pharmaceuticals Inc",
-      "return_total_pct": 1.7,
-      "outcome": "acquired",
-      "lead_score": 0.886059,
-      "lead_phase": "PHASE2"
     },
     {
       "ticker": "ARQL",
@@ -729,6 +721,12 @@
       "outcome": "acquired"
     },
     {
+      "ticker": "ACHN",
+      "company": "Achillion Pharmaceuticals Inc",
+      "return_total_pct": 1.7,
+      "outcome": "acquired"
+    },
+    {
       "ticker": "ARWR",
       "company": "Arrowhead Pharmaceuticals Inc",
       "return_total_pct": 0.74,
@@ -957,6 +955,12 @@
       "outcome": "active"
     },
     {
+      "ticker": "ADVM",
+      "company": "Adverum Biotechnologies Inc",
+      "return_total_pct": -100.0,
+      "outcome": "bankrupt"
+    },
+    {
       "ticker": "ALLK",
       "company": "Allakos Inc",
       "return_total_pct": -100.0,
@@ -965,12 +969,6 @@
     {
       "ticker": "NVTA",
       "company": "Invitae Corp",
-      "return_total_pct": -100.0,
-      "outcome": "bankrupt"
-    },
-    {
-      "ticker": "ADVM",
-      "company": "Adverum Biotechnologies Inc",
       "return_total_pct": -100.0,
       "outcome": "bankrupt"
     }
@@ -1044,22 +1042,22 @@
       "company_type": "biotech",
       "return_total_pct": 1.7,
       "outcome": "acquired",
-      "is_gs": true,
-      "mendelian_only_gs": true,
+      "is_gs": false,
+      "mendelian_only_gs": false,
       "lead_score": 0.886059,
       "lead_phase": "PHASE2",
       "lead_gene": "CFD",
       "lead_conditions": "C3 Glomerulonephritis | C3 Glomerulopathy | Dense Deposit Disease | Immune Complex Mediated Membranoproliferative Glomer",
       "lead_ot_source": "ot_recent_fallback",
       "lead_evidence_predates": "True",
-      "lead_confirmed_pre_2020": true,
-      "lead_validation_method": "bq_ancestor",
+      "lead_confirmed_pre_2020": false,
+      "lead_validation_method": NaN,
       "best_genetic_assoc_score": 0.886059,
       "n_scoreable_pairs": 1,
       "n_gs_pairs": 1,
-      "n_confirmed_pairs": 1,
-      "n_confirmed_gs_pairs": 1,
-      "best_confirmed_score": 0.886059,
+      "n_confirmed_pairs": 0,
+      "n_confirmed_gs_pairs": 0,
+      "best_confirmed_score": 0.0,
       "target_gene": "CFD",
       "indication": "C3 Glomerulonephritis | C3 Glomerulopathy | Dense Deposit Disease | Immune Complex Mediated Membranoproliferative Glomer",
       "ot_score_source_best": "ot_recent_fallback",
