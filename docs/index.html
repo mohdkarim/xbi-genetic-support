@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genetic Alpha — Do Genetically-Supported Biotechs Outperform?</title>
+  <meta name="description" content="Analysis of 126 XBI ETF holdings testing whether biotech companies with genetically-supported drug pipelines outperform those without.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22><text y=%2228%22 font-size=%2228%22>🧬</text></svg>">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="container">
+      <a href="#" class="nav-brand">Genetic Alpha</a>
+      <ul class="nav-links">
+        <li><a href="#findings">Findings</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#companies">Companies</a></li>
+        <li><a href="#methods">Methods</a></li>
+        <li><a href="https://github.com/mohdkarim/xbi-genetic-support" target="_blank" rel="noopener" class="nav-code" title="View source & reproduce"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:-3px;margin-right:4px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Code</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Section 1: Findings -->
+    <section id="findings">
+      <div class="container">
+        <div class="hero-header">
+          <h1>Genetic Alpha</h1>
+          <p>Do biotech companies with genetically-supported drug pipelines outperform?<br>
+          An analysis of 126 XBI ETF holdings from January 2020 to April 2026.</p>
+        </div>
+
+        <div class="metric-cards" id="metric-cards">
+          <!-- Populated by app.js -->
+        </div>
+
+        <div class="results-table-wrap">
+          <table class="results-table" id="results-table">
+            <!-- Populated by app.js -->
+          </table>
+        </div>
+        <p class="disclaimer-hero">This is an academic research exercise, not investment advice. Past performance does not predict future results.</p>
+      </div>
+    </section>
+
+    <!-- Section 2: Performance -->
+    <section id="performance" class="section-alt">
+      <div class="container">
+        <h2 class="section-title">Portfolio Performance</h2>
+        <p class="section-subtitle">Equal-weight portfolios of genetically-supported vs non-supported companies, benchmarked against XBI ETF, S&P 500, and 10,000 random portfolios.</p>
+
+        <div class="chart-container">
+          <h3 class="chart-title">$1,000 Invested January 2, 2020</h3>
+          <p class="chart-subtitle">Cumulative portfolio value over time</p>
+          <div id="nav-chart" style="width:100%;height:450px;"></div>
+          <p class="chart-insight">GS companies doubled an initial investment while non-GS companies and the XBI ETF grew modestly, with the gap widening from mid-2023 onward.</p>
+        </div>
+
+        <div class="chart-container">
+          <h3 class="chart-title">Drawdown from Peak</h3>
+          <p class="chart-subtitle">Decline from running peak — closer to 0% is better</p>
+          <div id="drawdown-chart" style="width:100%;height:350px;"></div>
+          <p class="chart-insight">GS companies experienced shallower drawdowns than both non-GS and XBI throughout the period, suggesting genetic support may also confer downside resilience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Analysis -->
+    <section id="analysis">
+      <div class="container">
+        <h2 class="section-title">Analysis</h2>
+        <p class="section-subtitle">Testing whether XBI-G outperformance is statistically meaningful versus random selection.</p>
+
+        <div class="chart-grid">
+          <div class="chart-container">
+            <h3 class="chart-title">XBI-G vs Random Portfolios</h3>
+            <p class="chart-subtitle">Distribution of 10,000 random portfolios (N=<span id="random-n">20</span>) drawn from 126 XBI companies. Vertical line shows XBI-G actual return.</p>
+            <div id="histogram-chart" style="width:100%;height:400px;"></div>
+            <p class="chart-insight">XBI-G's return sits in the right tail of the distribution, outperforming the vast majority of randomly assembled portfolios of the same size.</p>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Genetic Score vs Return</h3>
+            <p class="chart-subtitle">Each dot is a company — hover for details. Dashed line shows the GS classification threshold (0.80).</p>
+            <div id="scatter-chart" style="width:100%;height:400px;"></div>
+            <p class="chart-insight">Companies above the 0.80 threshold (right of dashed line) cluster toward positive returns, while unscored and low-scored companies show a wider, lower distribution.</p>
+          </div>
+        </div>
+
+        <h2 class="section-title" style="margin-top:60px;">Robustness</h2>
+        <p class="section-subtitle">Testing whether the finding is robust across thresholds, universe definitions, and individual company influence.</p>
+
+        <div class="chart-container">
+          <h3 class="chart-title">Phase Control</h3>
+          <p class="chart-subtitle">Does the genetic signal persist when pipeline maturity is equalized?</p>
+          <table class="results-table" id="phase-control-table">
+            <thead>
+              <tr>
+                <th>Comparison</th>
+                <th>GS</th>
+                <th>Non-GS</th>
+                <th>Alpha</th>
+                <th>Percentile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="row-label">Scoreable Phase 3+ only</td>
+                <td>n=14, +85.9%</td>
+                <td>n=3, +22.5%</td>
+                <td>+63.4pp</td>
+                <td>83.2%ile</td>
+              </tr>
+              <tr>
+                <td class="row-label">All Phase 3+ companies</td>
+                <td>n=14, +85.9%</td>
+                <td>n=6, -17.0%</td>
+                <td>+102.9pp</td>
+                <td>97.6%ile</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="chart-insight">Among the 17 scoreable companies that had reached Phase 3 or beyond, the genetically-supported group returned +85.9% versus +22.5% for the non-GS group — an alpha of +63pp with pipeline maturity equalized. The non-GS comparison is only 3 companies, so this should be read as directional. The broader test against all 20 Phase 3+ companies (including unscored) yields +103pp at the 97.6th percentile. Genetic scores are correlated with phase (mean lead score of 0.94 for Phase 3+ vs 0.76 for Phase 1–2), consistent with published evidence that genetically-supported programs survive attrition at higher rates. But the phase-controlled analysis shows the score isn't simply proxying for pipeline maturity — it adds predictive value even among companies that have already de-risked to Phase 3.</p>
+        </div>
+
+        <div class="chart-grid">
+          <div class="chart-container">
+            <h3 class="chart-title">Restricted Universe</h3>
+            <p class="chart-subtitle">Full universe (126 companies) vs scoreable-only (companies with OT 20.02 scores).</p>
+            <div id="restricted-chart" style="width:100%;height:400px;"></div>
+            <p class="chart-insight">When comparing only companies that could be scored, the alpha widens — the full-universe result is a conservative estimate diluted by unmappable companies.</p>
+          </div>
+          <div class="chart-container">
+            <h3 class="chart-title">Leave-One-Out Robustness</h3>
+            <p class="chart-subtitle">Portfolio mean when each GS company is excluded. Dashed line shows the full portfolio mean.</p>
+            <div id="loo-chart" style="width:100%;height:500px;"></div>
+            <p class="chart-insight">No single company drives the result. Even removing the top performer, the portfolio still beats the vast majority of random draws.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Companies -->
+    <section id="companies" class="section-alt">
+      <div class="container">
+        <h2 class="section-title">Company Explorer</h2>
+        <p class="section-subtitle">All 126 companies in the XBI January 2020 universe with genetic support classification and returns.</p>
+
+        <div class="filters" id="filters">
+          <select id="filter-gs">
+            <option value="all">All Companies</option>
+            <option value="gs">GS Only</option>
+            <option value="nongs">Non-GS Only</option>
+          </select>
+          <select id="filter-outcome">
+            <option value="all">All Outcomes</option>
+            <option value="active">Active</option>
+            <option value="acquired">Acquired</option>
+            <option value="bankrupt">Bankrupt</option>
+          </select>
+          <select id="filter-oncology">
+            <option value="all">All Sectors</option>
+            <option value="oncology">Oncology</option>
+            <option value="non-oncology">Non-Oncology</option>
+          </select>
+          <input type="text" id="filter-search" placeholder="Search ticker or company...">
+          <span class="filter-count" id="filter-count">Showing 126 of 126</span>
+        </div>
+
+        <div class="company-table-wrap">
+          <table class="company-table" id="company-table">
+            <thead>
+              <tr>
+                <th data-sort="ticker">Ticker <span class="sort-arrow"></span></th>
+                <th data-sort="company">Company <span class="sort-arrow"></span></th>
+                <th data-sort="return_pct">Return <span class="sort-arrow"></span></th>
+                <th data-sort="is_gs">GS <span class="th-tip" data-tip="Genetically-supported: lead program's OT 20.02 genetic association score > 0.80.">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="lead_score">Lead Score <span class="th-tip" data-tip="Open Targets 20.02 genetic association score of the company's most advanced scoreable program (0–1 scale).">?</span> <span class="sort-arrow"></span></th>
+                <th data-sort="lead_phase">Phase <span class="sort-arrow"></span></th>
+                <th data-sort="lead_gene">Gene <span class="sort-arrow"></span></th>
+                <th data-sort="outcome">Outcome <span class="sort-arrow"></span></th>
+                <th data-sort="is_oncology">Oncology <span class="sort-arrow"></span></th>
+              </tr>
+            </thead>
+            <tbody id="company-tbody">
+              <!-- Populated by table.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Methodology -->
+    <section id="methods">
+      <div class="container">
+        <h2 class="section-title">Methodology</h2>
+        <div class="methods-content">
+          <h3>Study Design</h3>
+          <p>We analyzed the complete set of 126 holdings in the SPDR S&P Biotech ETF (XBI) as of January 2020, sourced from the fund's SEC N-PORT filing. Companies were classified as genetically-supported (GS) or non-GS based on their most advanced clinical program's overlap with genetic evidence from the Open Targets Platform. Equal-weight portfolio returns were measured from January 2, 2020 to April 1, 2026.</p>
+
+          <h3>Genetic Support Classification</h3>
+          <p>A company is classified as <strong>genetically-supported (GS)</strong> if its most advanced scoreable clinical program has an Open Targets genetic association score greater than 0.80. The "lead program" is the gene–disease pair at the highest clinical phase; ties are broken by genetic association score. Both direct and indirect (ontology-propagated) associations are included.</p>
+
+          <h3>Open Targets Data</h3>
+          <p>Genetic association scores were obtained exclusively from the <strong>Open Targets release 20.02</strong> (February 2020) — the most recent data available at the study start date, ensuring zero look-ahead bias. Only germline genetic datasources are used; somatic evidence is excluded. Each scored pair is annotated with its <code>is_direct</code> flag and contributing germline datasources.</p>
+
+          <h3>Random Portfolio Benchmark</h3>
+          <p>To test whether XBI-G outperformance is distinguishable from chance, we drew 10,000 random portfolios of N companies (where N equals the GS count) from the 126-company universe without replacement. The distribution of random portfolio returns provides a null hypothesis against which XBI-G's return can be compared, yielding an empirical percentile rank equivalent to a p-value.</p>
+
+          <h3>Data Sources</h3>
+          <ul>
+            <li><strong>Holdings:</strong> XBI ETF N-PORT filing (December 31, 2019)</li>
+            <li><strong>Pipeline:</strong> ClinicalTrials.gov + ChEMBL drug-target annotations</li>
+            <li><strong>Genetic data:</strong> Open Targets Platform release 20.02 (February 2020 NDJSON snapshot)</li>
+            <li><strong>Stock returns:</strong> Yahoo Finance, with manual research for delisted, acquired, and bankrupt companies</li>
+          </ul>
+
+          <h3>Statistical Methods</h3>
+          <p>Portfolio returns are computed as the simple (equal-weight) mean of individual company total returns over the study period. 95% confidence intervals are estimated via the percentile bootstrap method with 2,000 iterations (seed = 42). Alpha is defined as the difference in mean returns between GS and non-GS portfolios. The Monte Carlo benchmark uses 10,000 random draws (seed = 42) without replacement.</p>
+
+          <h3>Limitations</h3>
+          <ul>
+            <li>Equal-weight portfolios do not reflect actual XBI ETF weighting (modified equal-weight with quarterly rebalancing).</li>
+            <li>Classification depends on a single lead program per company; individual drug outcomes may vary.</li>
+            <li>No transaction costs, slippage, or rebalancing are modeled.</li>
+            <li>Companies whose drug targets could not be mapped to Ensembl IDs, or whose gene-disease pairs are absent from OT 20.02, default to non-GS.</li>
+            <li>This is an in-sample analysis of a single ETF (XBI) over a single time period. Out-of-sample validation &mdash; applying the same methodology to IBB (iShares Biotechnology ETF) holdings or using a different start date &mdash; would strengthen the finding but has not been performed.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Genetic Alpha &middot; Data as of April 1, 2026</p>
+      <p class="disclaimer">This is a research analysis, not investment advice. Past performance does not guarantee future results.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.plot.ly/plotly-basic-2.35.2.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Large data files (download separately, see README)
+opentargets/20.02_association_data.json.gz
+
+# Generated outputs
+final/
+processed/scored_pipeline.tsv
+processed/stock_prices_daily.json
+
+# Python
+*.pyc
+__pycache__/
+
+# macOS
+.DS_Store
